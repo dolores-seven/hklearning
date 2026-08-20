@@ -80,7 +80,7 @@
 
   /* ---------- 详情面板 ---------- */
   #detail {
-    position:absolute; top:12px; right:12px; width:340px; max-height:calc(100% - 24px);
+    position:absolute; top:12px; right:12px; width:400px; max-height:calc(100% - 24px);
     background:var(--panel); border:1px solid var(--line); border-radius:10px;
     overflow-y:auto; display:none; box-shadow:0 8px 30px rgba(0,0,0,.5);
   }
@@ -98,8 +98,12 @@
     overflow-x:auto; margin-bottom:8px;
   }
   #detail .pitfall { font-size:12.5px; line-height:1.7; color:#fbbf24; }
-  #detail .leafitem { padding:7px 0; border-bottom:1px dashed rgba(51,65,85,.6); font-size:13px; }
+  #detail .leafitem { padding:6px 0; border-bottom:1px dashed rgba(51,65,85,.6); font-size:13px; }
   #detail .leafitem:last-child { border-bottom:none; }
+  #detail .leafitem summary { cursor:pointer; user-select:none; list-style:none; display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+  #detail .leafitem summary::-webkit-details-marker { display:none; }
+  #detail .leafitem summary::before { content:'▸'; color:var(--muted); font-size:11px; transition:transform .15s; }
+  #detail .leafitem[open] summary::before { transform:rotate(90deg); }
   #detail .leafitem .fname { font-weight:600; }
   #detail .kttag { font-size:9px; padding:1px 5px; border-radius:6px; border:1px solid; margin-left:6px; vertical-align:1px; }
   #detail .leafitem .fen { color:var(--muted); font-size:11px; font-style:italic; margin-left:6px; }
@@ -631,12 +635,14 @@
         html += `<div class="sec"><h4>${t('leaves')} (${node.leaves.length})</h4>`;
         node.leaves.forEach(l => {
           const kt = G.meta.knowledgeTypes[l.knowledgeType];
-          html += `<div class="leafitem">
-            <div><span class="fname">${esc(nm(l.name))}</span><span class="fen">${esc(nm({zh:l.name.en,en:l.name.zh}))}</span>
-              ${kt?`<span class="kttag" style="background:${kt.color}22;color:${kt.color};border-color:${kt.color}">${kt[LANG]||kt.zh}</span>`:''}</div>
+          html += `<details class="leafitem">
+            <summary><span class="fname">${esc(nm(l.name))}</span><span class="fen">${esc(nm({zh:l.name.en,en:l.name.zh}))}</span>
+              ${kt?`<span class="kttag" style="background:${kt.color}22;color:${kt.color};border-color:${kt.color}">${kt[LANG]||kt.zh}</span>`:''}</summary>
+            <div style="padding-left:14px">
             ${l.formula?`<div class="fformula">${renderFormula(l.formula)}</div>`:''}
             ${l.pitfall?`<div class="fpit">⚠ ${esc(nm(l.pitfall))}</div>`:''}
-          </div>`;
+            </div>
+          </details>`;
         });
         html += `</div>`;
       }
@@ -675,10 +681,11 @@
         </div>`;
       }
       const renderMP = m => {
-        const skel = m.solutionSkeleton || m.skeleton;
-        const skelStr = Array.isArray(skel) ? skel.join(' → ') : String(skel||'').replace(/\n/g, ' → ');
-        const vart = m.variation || m.variations;
-        const varStr = Array.isArray(vart) ? vart.join('；') : String(vart||'');
+        // 英文模式优先 En 字段，缺则回退中文
+        const skelRaw = LANG==='zh' ? (m.solutionSkeleton||m.skeleton) : (m.solutionSkeletonEn||m.skeletonEn||m.solutionSkeleton||m.skeleton);
+        const skelStr = Array.isArray(skelRaw) ? skelRaw.join(' → ') : String(skelRaw||'').replace(/\n/g, ' → ');
+        const vartRaw = LANG==='zh' ? (m.variation||m.variations) : (m.variationEn||m.variationsEn||m.variation||m.variations);
+        const varStr = Array.isArray(vartRaw) ? vartRaw.join('；') : String(vartRaw||'');
         // 变式题（variants）：具体可刷的题，含题干+答案要点+难度+评分点+自评
         const diffMap = { basic:'diffBasic', intermediate:'diffInt', challenge:'diffChal', comprehensive:'diffComp', calc:'diffCalc', concept:'diffConcept', experiment:'diffExp' };
         const variants = (m.variants||[]).map((v,i) => {
@@ -689,7 +696,7 @@
           const done = isDone(vKey);
           const vstem = LANG==='zh' ? (v.stemZh||v.stemEn||'') : (v.stemEn||v.stemZh||'');
           const vans = LANG==='zh' ? (v.answerZh||v.answerEn||'') : (v.answerEn||v.answerZh||'');
-          const marks = (v.marks||[]).map(mk => `<div class="vmark">✓ ${esc(mk.content)} <span class="vpts">(${mk.pts}分)</span></div>`).join('');
+          const marks = (v.marks||[]).map(mk => `<div class="vmark">✓ ${esc(LANG==='zh' ? mk.content : (mk.contentEn||mk.content))} <span class="vpts">(${mk.pts}分)</span></div>`).join('');
           const loss = LANG==='zh' ? (v.lossZh||v.lossEn||'') : (v.lossEn||v.lossZh||'');
           const yrs = (v.years||[]).length ? ` <span class="mp-vtag" style="border-color:#64748b;color:#94a3b8">${v.years.join('/')}</span>` : '';
           return `<div class="mp-v"><details>

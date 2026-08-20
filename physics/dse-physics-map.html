@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSE Physics Knowledge Map · DSE物理全景知识图谱</title>
+<title>DSE Physics Knowledge Map · DSE物理全景知識圖譜</title>
 <style>
   :root {
     --bg: #0f172a;
@@ -22,7 +22,7 @@
   }
   #app { display:flex; height:100vh; }
 
-  /* ---------- 左侧工具栏 ---------- */
+  /* ---------- 左側工具欄 ---------- */
   #sidebar {
     width: 300px; min-width: 300px; height:100%;
     background: var(--panel); border-right:1px solid var(--line);
@@ -69,7 +69,7 @@
 
   .statline { font-size:11px; color:var(--muted); line-height:1.7; }
 
-  /* ---------- 主画布 ---------- */
+  /* ---------- 主畫布 ---------- */
   #stage { flex:1; position:relative; overflow:hidden; }
   #stage svg { width:100%; height:100%; display:block; cursor:grab; }
   #stage svg:active { cursor:grabbing; }
@@ -78,7 +78,7 @@
     background:var(--tooltip-bg); padding:5px 10px; border-radius:6px; pointer-events:none;
   }
 
-  /* ---------- 详情面板 ---------- */
+  /* ---------- 詳情面板 ---------- */
   #detail {
     position:absolute; top:12px; right:12px; width:400px; max-height:calc(100% - 24px);
     background:var(--panel); border:1px solid var(--line); border-radius:10px;
@@ -163,7 +163,7 @@
   #detail .meta-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:2px; }
   #detail .tag2 { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--panel2); color:var(--muted); }
 
-  /* 图上节点 */
+  /* 圖上節點 */
   .node circle { stroke-width:1.5; cursor:pointer; transition:filter .15s; }
   .node circle:hover { filter: brightness(1.3); }
   .node text {
@@ -183,7 +183,7 @@
     #detail { width:calc(100vw - 260px); }
   }
 
-  /* ===== 主题: 深色(默认) / 浅色 ===== */
+  /* ===== 主題: 深色(默認) / 淺色 ===== */
   :root{
     --tooltip-bg:rgba(15,23,42,.75);
     --track:#334155;
@@ -206,12 +206,12 @@
 <div id="app">
   <div id="sidebar">
     <div class="brand">
-      <h1 id="ui-title">DSE 物理 · 全景知识图谱</h1>
-      <div class="sub" id="ui-sub">必修(5大课题) + 選修 + SBA · 课题级骨架<br>点击节点看详情 · 双击课题下钻公式</div>
+      <h1 id="ui-title">DSE 物理 · 全景知識圖譜</h1>
+      <div class="sub" id="ui-sub">必修(5大課題) + 選修 + SBA · 課題級骨架<br>點擊節點看詳情 · 雙擊課題下鑽公式</div>
     </div>
 
     <div class="block">
-      <h3 id="ui-t-view">视图模块</h3>
+      <h3 id="ui-t-view">視圖模塊</h3>
       <div class="btnrow" id="module-btns">
         <button class="b on" data-mod="all" id="ui-mod-all">全部</button>
         <button class="b" data-mod="core" id="ui-mod-core">必修</button>
@@ -221,7 +221,7 @@
     </div>
 
     <div class="block">
-      <h3 id="ui-t-filter">年级过滤</h3>
+      <h3 id="ui-t-filter">年級過濾</h3>
       <div class="chips" id="grade-chips">
         <span class="chip on" data-grade="S4">中四 S4</span>
         <span class="chip on" data-grade="S5">中五 S5</span>
@@ -230,22 +230,22 @@
     </div>
 
     <div class="block">
-      <h3 id="ui-t-lang">语言 / Language</h3>
+      <h3 id="ui-t-lang">語言 / Language</h3>
       <div class="btnrow">
-        <button class="b on" id="lang-zh">中文</button>
+        <button class="b on" id="lang-zh">繁體</button>
         <button class="b" id="lang-en">English</button>
-        <button class="b" id="theme-btn" title="切换主题 / Theme">🌙 深色</button>
+        <button class="b" id="theme-btn" title="切換主題 / Theme">🌙 深色</button>
 
       </div>
     </div>
 
     <div class="block">
       <h3 id="ui-t-search">搜索</h3>
-      <input class="search" id="search" placeholder="知识点名称… (如 判别式 / circle)">
+      <input class="search" id="search" placeholder="知識點名稱… (如 判別式 / circle)">
     </div>
 
     <div class="block">
-      <h3 id="ui-t-legend">图例</h3>
+      <h3 id="ui-t-legend">圖例</h3>
       <div class="legend" id="legend"></div>
     </div>
 
@@ -256,7 +256,7 @@
 
   <div id="stage">
     <svg id="svg"></svg>
-    <div class="hint" id="hint">拖拽平移 · 滚轮缩放 · 单击节点看详情(自动高亮关联) · 双击课题展开公式 · 空白关闭</div>
+    <div class="hint" id="hint">拖拽平移 · 滾輪縮放 · 單擊節點看詳情(自動高亮關聯) · 雙擊課題展開公式 · 空白關閉</div>
   </div>
 
   <div id="detail"></div>
@@ -266,7 +266,7 @@
 <script>
 /* ============================================================
  * Renderer: hand-rolled force-directed layout on SVG
- * 零依赖：力导向 + 缩放平移 + 下钻 + 双语 + 过滤 + 搜索
+ * 零依賴：力導向 + 縮放平移 + 下鑽 + 雙語 + 過濾 + 搜索
  * ============================================================ */
 (function () {
   const G = DSE_PHYSICS_GRAPH;
@@ -276,70 +276,70 @@
   /* ---------- i18n ---------- */
   let LANG = 'zh';
   const T = {
-    viewModule:  { zh:'视图模块', en:'Module view' },
-    gradeFilter: { zh:'年级过滤', en:'Grade filter' },
+    viewModule:  { zh:'視圖模塊', en:'Module view' },
+    gradeFilter: { zh:'年級過濾', en:'Grade filter' },
     search:      { zh:'搜索', en:'Search' },
-    legendT:     { zh:'图例', en:'Legend' },
-    domainT:     { zh:'范畴', en:'Domain' },
-    edgeT:       { zh:'关系', en:'Relations' },
-    topic:       { zh:'课题', en:'Topic' },
-    leafW:       { zh:'公式/知识点', en:'Formula / Concept' },
-    formulas:    { zh:'基础公式', en:'Key formulas' },
-    pitfalls:    { zh:'难点·易错点', en:'Pitfalls' },
-    leaves:      { zh:'下钻：公式级知识点', en:'Drill-down: formula leaves' },
-    relations:   { zh:'关联知识点', en:'Related topics' },
-    noRel:       { zh:'（暂无关联数据）', en:'(no relations yet)' },
-    grade:       { zh:'年级', en:'Grades' },
-    weight:      { zh:'考频', en:'Exam weight' },
-    difficulty:  { zh:'难度', en:'Difficulty' },
-    examFreq:    { zh:'考试频率', en:'Exam frequency' },
-    examSec:     { zh:'主要出题位置', en:'Main section' },
-    marks:       { zh:'卷一占分', en:'Marks (P1)' },
-    marksNote:   { zh:'出题说明', en:'Exam note' },
-    weightMap:   { zh:{ high:'高频', mid:'中频', low:'低频' }, en:{ high:'High', mid:'Mid', low:'Low' } },
-    tabLeaves:   { zh:'基础知识点', en:'Knowledge' },
-    tabMp:       { zh:'母题与变式', en:'Problems' },
-    tabRel:      { zh:'关联知识点', en:'Related' },
-    expandHint:  { zh:'双击展开公式', en:'Double-click to expand' },
-    collapseHint:{ zh:'双击收起', en:'Double-click to collapse' },
-    searchPh:    { zh:'知识点名称… (如 判别式 / circle)', en:'Topic name… (e.g. discriminant / circle)' },
-    hint:        { zh:'拖拽平移 · 滚轮缩放 · 单击节点看详情(自动高亮关联) · 双击课题展开公式 · 空白关闭',
+    legendT:     { zh:'圖例', en:'Legend' },
+    domainT:     { zh:'範疇', en:'Domain' },
+    edgeT:       { zh:'關係', en:'Relations' },
+    topic:       { zh:'課題', en:'Topic' },
+    leafW:       { zh:'公式/知識點', en:'Formula / Concept' },
+    formulas:    { zh:'基礎公式', en:'Key formulas' },
+    pitfalls:    { zh:'難點·易錯點', en:'Pitfalls' },
+    leaves:      { zh:'下鑽：公式級知識點', en:'Drill-down: formula leaves' },
+    relations:   { zh:'關聯知識點', en:'Related topics' },
+    noRel:       { zh:'（暫無關聯數據）', en:'(no relations yet)' },
+    grade:       { zh:'年級', en:'Grades' },
+    weight:      { zh:'考頻', en:'Exam weight' },
+    difficulty:  { zh:'難度', en:'Difficulty' },
+    examFreq:    { zh:'考試頻率', en:'Exam frequency' },
+    examSec:     { zh:'主要出題位置', en:'Main section' },
+    marks:       { zh:'卷一佔分', en:'Marks (P1)' },
+    marksNote:   { zh:'出題説明', en:'Exam note' },
+    weightMap:   { zh:{ high:'高頻', mid:'中頻', low:'低頻' }, en:{ high:'High', mid:'Mid', low:'Low' } },
+    tabLeaves:   { zh:'基礎知識點', en:'Knowledge' },
+    tabMp:       { zh:'母題與變式', en:'Problems' },
+    tabRel:      { zh:'關聯知識點', en:'Related' },
+    expandHint:  { zh:'雙擊展開公式', en:'Double-click to expand' },
+    collapseHint:{ zh:'雙擊收起', en:'Double-click to collapse' },
+    searchPh:    { zh:'知識點名稱… (如 判別式 / circle)', en:'Topic name… (e.g. discriminant / circle)' },
+    hint:        { zh:'拖拽平移 · 滾輪縮放 · 單擊節點看詳情(自動高亮關聯) · 雙擊課題展開公式 · 空白關閉',
                    en:'Drag to pan · wheel to zoom · click node = details (highlights neighbours) · dbl-click topic = formulas · click blank to close' },
-    nodesShown:  { zh:'显示', en:'Showing' },
-    topicsWord:  { zh:'课题', en:'topics' },
-    leavesWord:  { zh:'公式叶', en:'formula leaves' },
-    edgesWord:   { zh:'关系边', en:'edges' },
-    evidenceW:   { zh:'出题证据', en:'Exam evidence' },
-    coTested:    { zh:'组合出题', en:'Co-tested' },
-    motherP:     { zh:'母题', en:'Mother problems' },
-    asCore:      { zh:'作为主角', en:'As core topic' },
-    asRelated:   { zh:'作为配角', en:'As related topic' },
-    variants:    { zh:'变式题', en:'Variants' },
-    diffBasic:   { zh:'基础', en:'Basic' },
-    diffInt:     { zh:'进阶', en:'Intermediate' },
-    diffChal:    { zh:'挑战', en:'Challenge' },
-    diffComp:    { zh:'综合', en:'Comprehensive' },
-    diffCalc:    { zh:'计算', en:'Calculation' },
+    nodesShown:  { zh:'顯示', en:'Showing' },
+    topicsWord:  { zh:'課題', en:'topics' },
+    leavesWord:  { zh:'公式葉', en:'formula leaves' },
+    edgesWord:   { zh:'關係邊', en:'edges' },
+    evidenceW:   { zh:'出題證據', en:'Exam evidence' },
+    coTested:    { zh:'組合出題', en:'Co-tested' },
+    motherP:     { zh:'母題', en:'Mother problems' },
+    asCore:      { zh:'作為主角', en:'As core topic' },
+    asRelated:   { zh:'作為配角', en:'As related topic' },
+    variants:    { zh:'變式題', en:'Variants' },
+    diffBasic:   { zh:'基礎', en:'Basic' },
+    diffInt:     { zh:'進階', en:'Intermediate' },
+    diffChal:    { zh:'挑戰', en:'Challenge' },
+    diffComp:    { zh:'綜合', en:'Comprehensive' },
+    diffCalc:    { zh:'計算', en:'Calculation' },
     diffConcept: { zh:'概念', en:'Concept' },
-    diffExp:     { zh:'实验', en:'Experiment' },
+    diffExp:     { zh:'實驗', en:'Experiment' },
     vAnswer:     { zh:'答案', en:'Answer' },
-    mastery:     { zh:'掌握度（自评）', en:'Mastery (self-check)' },
-    mS4:         { zh:'中四达标', en:'S4 target' },
-    mS5:         { zh:'中五达标', en:'S5 target' },
-    mS6:         { zh:'冲5门槛', en:'Level 5 gate' },
-    markPoints:  { zh:'评分点', en:'Mark points' },
-    vloss:       { zh:'常见失分', en:'Common loss' },
-    mastered:    { zh:'✔ 我会了', en:'✔ I can do it' },
+    mastery:     { zh:'掌握度（自評）', en:'Mastery (self-check)' },
+    mS4:         { zh:'中四達標', en:'S4 target' },
+    mS5:         { zh:'中五達標', en:'S5 target' },
+    mS6:         { zh:'衝5門檻', en:'Level 5 gate' },
+    markPoints:  { zh:'評分點', en:'Mark points' },
+    vloss:       { zh:'常見失分', en:'Common loss' },
+    mastered:    { zh:'✔ 我會了', en:'✔ I can do it' },
     doneMark:    { zh:'✓ 已掌握', en:'✓ Mastered' },
-    stem:        { zh:'题干', en:'Stem' },
+    stem:        { zh:'題幹', en:'Stem' },
     solution:    { zh:'解法骨架', en:'Solution skeleton' },
-    variation:   { zh:'变式方向', en:'Variations' },
-    appears:     { zh:'出现记录', en:'Appearances' },
-    edgeToggle:  { zh:'点击图例中的边可开关', en:'Click an edge in the legend to toggle' },
-    freqHighlight: { zh:'频率高亮', en:'Frequency highlight' },
-    freqHighlightHint: { zh:'节点边框颜色→考试频率', en:'Node border color → exam frequency' },
+    variation:   { zh:'變式方向', en:'Variations' },
+    appears:     { zh:'出現記錄', en:'Appearances' },
+    edgeToggle:  { zh:'點擊圖例中的邊可開關', en:'Click an edge in the legend to toggle' },
+    freqHighlight: { zh:'頻率高亮', en:'Frequency highlight' },
+    freqHighlightHint: { zh:'節點邊框顏色→考試頻率', en:'Node border color → exam frequency' },
     beginnerMode: { zh:'新手模式', en:'Beginner mode' },
-    beginnerHint: { zh:'只看必修基础(S4/S5) · 前置学习链 · 必背公式', en:'Core only (S4/S5) · learning path · must-memorise formulas' },
+    beginnerHint: { zh:'只看必修基礎(S4/S5) · 前置學習鏈 · 必背公式', en:'Core only (S4/S5) · learning path · must-memorise formulas' },
   };
   const t = k => T[k][LANG];
   const nm = o => typeof o === 'string' ? o : (o ? (o[LANG] || o.zh || o.en || '') : '');
@@ -351,19 +351,19 @@
   /* ---------- state ---------- */
   let moduleView = 'all';                    // all | core | M2
   let grades = new Set(['S4','S5','S6']);
-  let beginnerMode = false;                  // 新手模式：只看必修基础+学习链+必背公式
+  let beginnerMode = false;                  // 新手模式：只看必修基礎+學習鏈+必背公式
   let expanded = new Set();                  // expanded topic ids
   let selected = null;
   let searchTerm = '';
-  let focusId = null;                        // 焦点辐射中心（选中时高亮其邻居）
+  let focusId = null;                        // 焦點輻射中心（選中時高亮其鄰居）
   let edgeVis = { prereq:true, derives:true, related:true, cotested:true, child:true };
-  let frequencyHighlight = false;            // 频率高亮模式：节点边框映射到 examFrequency
+  let frequencyHighlight = false;            // 頻率高亮模式：節點邊框映射到 examFrequency
   let simNodes = [], simEdges = [];          // simulation model
   let alpha = 1;
   const domGroup = id => (G.domains.find(d=>d.id===id)||{}).group;
   const inModule = n => moduleView==='all' || domGroup(n.domain)===moduleView;
   const inGrades = n => n.grades.some(g => grades.has(g));
-  // 新手模式：只显示必修 + S4/S5 的基础课题（隐藏 S6 复习性课题与选修/SBA）
+  // 新手模式：只顯示必修 + S4/S5 的基礎課題（隱藏 S6 複習性課題與選修/SBA）
   const beginnerOK = n => domGroup(n.domain)==='core' && (n.grades.includes('S4')||n.grades.includes('S5'));
   const visibleNode = n => inModule(n) && inGrades(n) && !(beginnerMode && !beginnerOK(n));
 
@@ -380,7 +380,7 @@
 
     const has = id => simNodes.some(s=>s.id===id);
     G.edges.forEach(e => {
-      if (beginnerMode && e.type!=='prereq') return;   // 新手模式：只保留前置学习链
+      if (beginnerMode && e.type!=='prereq') return;   // 新手模式：只保留前置學習鏈
       if (has(e.from) && has(e.to) && e.from!==e.to) {
         simEdges.push({ source:e.from, target:e.to, type:e.type, evidence:e.evidence });
       }
@@ -437,7 +437,7 @@
       let dx=t2.x-s.x, dy=t2.y-s.y;
       const d=Math.sqrt(dx*dx+dy*dy)||1;
       let k = 0.02, len = e.type==='child' ? 70 : 150;
-      if (e.type==='cotested') { k=0.045; len=110; }   // 题群引力：组合出题边更强、更近，常考知识点抱团
+      if (e.type==='cotested') { k=0.045; len=110; }   // 題羣引力：組合出題邊更強、更近，常考知識點抱團
       const f = k*(d-len)*alpha;
       const fx=dx/d*f, fy=dy/d*f;
       s.vx+=fx; s.vy+=fy; t2.vx-=fx; t2.vy-=fy;
@@ -473,7 +473,7 @@
 
     // links
     simEdges.forEach(e => {
-      if (!edgeVis[e.type]) return;          // 边类型开关：被关掉的不画
+      if (!edgeVis[e.type]) return;          // 邊類型開關：被關掉的不畫
       const s=simNodes.find(x=>x.id===e.source), t2=simNodes.find(x=>x.id===e.target);
       if (!s || !t2) return;
       const isChild = e.type==='child';
@@ -485,12 +485,12 @@
         const dimL = !(showSet.has(e.source) && showSet.has(e.target));
         op = dimL ? 0.06 : 0.5;
         if (focusId && op > 0.06) {
-          // 焦点辐射：只高亮中心节点的边，其余淡出
+          // 焦點輻射：只高亮中心節點的邊，其餘淡出
           const on = e.source===focusId || e.target===focusId;
           op = on ? 0.9 : 0.06;
         }
       }
-      const color = isChild ? '#64748b' : '#94a3b8';   // 边统一中性色，靠线型区分类型
+      const color = isChild ? '#64748b' : '#94a3b8';   // 邊統一中性色，靠線型區分類型
       const w = e.type==='cotested' ? 2.6 : isChild ? 1 : 1.5;
       const dash = isChild ? '2 3' : (def.dash==='none' ? 'none' : def.dash);
       drawLink(s,t2,color,w,dash,op,e);
@@ -500,11 +500,11 @@
     simNodes.forEach(s => {
       const visible = showSet.has(s.id);
       const r = s.level==='topic' ? (s.ref.weight==='high'?13:s.ref.weight==='mid'?11:9) : 7;
-      // 颜色编码：课题层=范畴色；公式叶子=知识类型色（公式/定理/推论）
+      // 顏色編碼：課題層=範疇色；公式葉子=知識類型色（公式/定理/推論）
       const color = s.level==='topic' ? domColor(s.ref.domain) : ktColor(s.ref.knowledgeType);
       let dimmed = !visible;
       if (focusId && !dimmed) {
-        // 焦点辐射：中心节点 + 其一阶邻居保持，其余淡出
+        // 焦點輻射：中心節點 + 其一階鄰居保持，其餘淡出
         const isF = s.id===focusId;
         const isNei = simEdges.some(e => (e.source===focusId&&e.target===s.id)||(e.target===focusId&&e.source===s.id));
         if (!isF && !isNei) dimmed = true;
@@ -514,18 +514,18 @@
       gEl.setAttribute('class','node'+(dimmed?' dim':''));
       gEl.dataset.id = s.id;
 
-      // 边框颜色逻辑：频率高亮模式 vs 默认模式
+      // 邊框顏色邏輯：頻率高亮模式 vs 默認模式
       let strokeColor;
       if (frequencyHighlight && s.level==='topic' && s.ref.examFrequency !== undefined) {
         const freq = s.ref.examFrequency;
-        // 频率映射到颜色：0=灰色, 1-4=浅红, 5-9=橙色, 10-13=深红
+        // 頻率映射到顏色：0=灰色, 1-4=淺紅, 5-9=橙色, 10-13=深紅
         if (freq === 0) strokeColor = '#64748b';
         else if (freq <= 4) strokeColor = '#fca5a5';
         else if (freq <= 9) strokeColor = '#f97316';
         else strokeColor = '#dc2626';
       }
       if (!strokeColor) {
-        // 默认边框色
+        // 默認邊框色
         strokeColor = dimmed ? '#475569' : (selected===s.id ? '#fff' : 'rgba(255,255,255,.35)');
       }
 
@@ -536,7 +536,7 @@
       if (selected===s.id) c.setAttribute('stroke-width','2.5');
       gEl.appendChild(c);
 
-      // 必背公式标记：dataSheet=true 的公式叶加金色外圈
+      // 必背公式標記：dataSheet=true 的公式葉加金色外圈
       if (s.level==='leaf' && s.ref.dataSheet) {
         const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
         ring.setAttribute('r', r+3);
@@ -622,7 +622,7 @@
     if (!node) { closeDetail(); return; }
 
     const isLeaf = !!parentId;
-    focusId = isLeaf ? parentId : id;        // 焦点辐射：leaf 以其父课题为中心
+    focusId = isLeaf ? parentId : id;        // 焦點輻射：leaf 以其父課題為中心
     const color = isLeaf ? ktColor(node.knowledgeType) : domColor(node.domain);
     const typeStr = isLeaf ? (ktName(node.knowledgeType)||t('leafW')) : t('topic');
     const weightMap = T.weightMap[LANG];
@@ -632,11 +632,11 @@
       <h2>${esc(nm(node.name))}</h2>
       <div class="en">${esc(nm({...node.name, zh:node.name.en, en:node.name.zh}))}</div>
       <div class="d-actions">
-        <button id="detail-zoom" title="加宽/还原">&#8596;</button>
+        <button id="detail-zoom" title="加寬/還原">&#8596;</button>
         <span class="close" onclick="closeDetail()">×</span>
       </div>`;
 
-    // 头部概要（强化层级：类型 → 标题 → 概要标签行）
+    // 頭部概要（強化層級：類型 → 標題 → 概要標籤行）
     if (!isLeaf) {
       html += `<div class="dmeta">`;
       html += `<span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
@@ -667,7 +667,7 @@
       <button class="tab" data-tab="rel">${t('tabRel')}</button>
     </div>`;
 
-    // ===== Tab 1: 基础知识点 =====
+    // ===== Tab 1: 基礎知識點 =====
     let tab1 = '';
     if (isLeaf) {
       if (node.formula) tab1 += `<div class="sec"><h4>${t('formulas')}</h4>
@@ -691,7 +691,7 @@
     }
     html += `<div class="tab-panel" data-panel="leaves">${tab1}</div>`;
 
-    // ===== Tab 2: 母题与变式 =====
+    // ===== Tab 2: 母題與變式 =====
     let tab2 = '';
     const topicId = isLeaf ? parentId : id;
     const asCore = (G.motherProblems||[]).filter(m => (m.coreTopics||[]).includes(topicId));
@@ -763,7 +763,7 @@
     }
     html += `<div class="tab-panel" data-panel="mp" hidden>${tab2}</div>`;
 
-    // ===== Tab 3: 关联知识点 =====
+    // ===== Tab 3: 關聯知識點 =====
     let tab3 = '';
     const rels = G.edges.filter(e => e.from===id || e.to===id);
     if (rels.length) {
@@ -802,10 +802,10 @@
         detailEl.querySelectorAll('.tab-panel').forEach(p => p.hidden = p.dataset.panel !== t);
       };
     });
-    // wire zoom (宽 400 ↔ 600)
+    // wire zoom (寬 400 ↔ 600)
     const zoomBtn = detailEl.querySelector('#detail-zoom');
     if (zoomBtn) zoomBtn.onclick = () => detailEl.classList.toggle('wide');
-    // wire drag (拖动头部移动面板)
+    // wire drag (拖動頭部移動面板)
     const dh = detailEl.querySelector('.dhead');
     if (dh) dh.addEventListener('mousedown', e => {
       if (e.target.closest('.close') || e.target.closest('#detail-zoom') || e.target.closest('.tab')) return;
@@ -856,7 +856,7 @@
       .replace(/\\int_\{([^{}]*)\}\^\{([^{}]*)\}/g,'∫($1→$2)')
       .replace(/\\int/g,'∫').replace(/\\to/g,'→').replace(/\\iff/g,'⇔')
       .replace(/\\Rightarrow/g,'⇒').replace(/\\left|\\right/g,'')
-      // 三角函数与常用物理符号（必须在最后的 \\[a-zA-Z]+ 兜底删除之前）
+      // 三角函數與常用物理符號（必須在最後的 \\[a-zA-Z]+ 兜底刪除之前）
       .replace(/\\sinh/g,' sinh ').replace(/\\cosh/g,' cosh ').replace(/\\tanh/g,' tanh ')
       .replace(/\\arcsin/g,' arcsin ').replace(/\\arccos/g,' arccos ').replace(/\\arctan/g,' arctan ')
       .replace(/\\sin/g,' sin ').replace(/\\cos/g,' cos ').replace(/\\tan/g,' tan ')
@@ -893,7 +893,7 @@
         (d.marksRange ? ` <span style="font-size:10px;color:var(--muted)">${d.marksRange}</span>` : '') +
         `</div>`;
     });
-    h += `<div class="lg-cap">${LANG==='zh'?'知识类型':'Knowledge type'} · ${t('leafW')}</div>`;
+    h += `<div class="lg-cap">${LANG==='zh'?'知識類型':'Knowledge type'} · ${t('leafW')}</div>`;
     Object.entries(G.meta.knowledgeTypes).forEach(([k,v]) => {
       h += `<div class="li"><span class="dot" style="background:${v.color}"></span> ${v[LANG]||v.zh}</div>`;
     });
@@ -906,9 +906,9 @@
     });
     h += `<div class="li edge-toggle ${edgeVis.child?'':'off'}" data-edge="child">
       <svg><line x1="0" y1="5" x2="26" y2="5" stroke="#64748b" stroke-width="1" stroke-dasharray="2 3"/></svg>
-      <span>${LANG==='zh'?'下钻·公式叶':'leaf link'}</span></div>`;
+      <span>${LANG==='zh'?'下鑽·公式葉':'leaf link'}</span></div>`;
 
-    // 频率高亮模式切换
+    // 頻率高亮模式切換
     h += `<div class="lg-cap" style="margin-top:8px">${t('edgeToggle')}</div>`;
     h += `<div class="li edge-toggle ${frequencyHighlight?'':'off'}" data-freq-highlight="1">
       <div style="width:14px;height:14px;border:2px solid;border-radius:50%;margin-right:6px;
@@ -920,7 +920,7 @@
         ${t('freqHighlightHint')}
       </div>`;
     }
-    // 新手模式切换
+    // 新手模式切換
     h += `<div class="li edge-toggle ${beginnerMode?'':'off'}" data-beginner="1">
       <div style="width:14px;height:14px;border:2px solid;border-radius:3px;margin-right:6px;${beginnerMode?'background:#10b981;border-color:#10b981':'border-color:#94a3b8'}"></div>
       <span>${t('beginnerMode')}</span>
@@ -938,14 +938,14 @@
         buildLegend(); render();
       };
     });
-    // 频率高亮切换
+    // 頻率高亮切換
     lg.querySelectorAll('[data-freq-highlight]').forEach(el => {
       el.onclick = () => {
         frequencyHighlight = !frequencyHighlight;
         buildLegend(); render();
       };
     });
-    // 新手模式切换
+    // 新手模式切換
     lg.querySelectorAll('[data-beginner]').forEach(el => {
       el.onclick = () => {
         beginnerMode = !beginnerMode;
@@ -1025,9 +1025,9 @@
     LANG = l;
     document.getElementById('lang-zh').classList.toggle('on', l==='zh');
     document.getElementById('lang-en').classList.toggle('on', l==='en');
-    document.getElementById('ui-title').textContent = l==='zh' ? 'DSE 物理 · 全景知识图谱' : 'DSE Physics · Knowledge Graph Atlas';
+    document.getElementById('ui-title').textContent = l==='zh' ? 'DSE 物理 · 全景知識圖譜' : 'DSE Physics · Knowledge Graph Atlas';
     document.getElementById('ui-sub').innerHTML = l==='zh'
-      ? '必修(5大課題) + 選修 + SBA · 课题级骨架<br>点击节点看详情 · 双击课题下钻公式'
+      ? '必修(5大課題) + 選修 + SBA · 課題級骨架<br>點擊節點看詳情 · 雙擊課題下鑽公式'
       : 'Compulsory + Elective + SBA · topic skeleton<br>click node = details · dbl-click topic = formulas';
     document.getElementById('ui-t-view').textContent = t('viewModule');
     document.getElementById('ui-t-filter').textContent = t('gradeFilter');
@@ -1086,14 +1086,14 @@
 </script>
 
 <script>
-/* 主题切换: 深色(默认) / 浅色, localStorage 记忆 */
+/* 主題切換: 深色(默認) / 淺色, localStorage 記憶 */
 (function(){
   var t = localStorage.getItem('dse-theme');
   if(t !== 'light' && t !== 'dark') t = 'dark';
   var btn = document.getElementById('theme-btn');
   function apply(){
     document.documentElement.setAttribute('data-theme', t);
-    if(btn){ btn.textContent = t === 'light' ? '☀️ 浅色' : '🌙 深色'; }
+    if(btn){ btn.textContent = t === 'light' ? '☀️ 淺色' : '🌙 深色'; }
   }
   if(btn){ btn.onclick = function(){ t = t === 'light' ? 'dark' : 'light'; localStorage.setItem('dse-theme', t); apply(); }; }
   apply();

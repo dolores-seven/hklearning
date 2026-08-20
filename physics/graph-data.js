@@ -117,34 +117,34 @@ const DSE_PHYSICS_GRAPH = {
    },
    "derives": {
     "dash": "4 2",
-    "nameZh": "推导",
+    "nameZh": "推導",
     "nameEn": "Derives",
     "color": "#0ea5e9",
-    "zh": "推导",
+    "zh": "推導",
     "en": "Derives"
    },
    "related": {
     "dash": "2 4",
-    "nameZh": "相关",
+    "nameZh": "相關",
     "nameEn": "Related",
     "color": "#94a3b8",
-    "zh": "相关",
+    "zh": "相關",
     "en": "Related"
    },
    "cotested": {
     "dash": "none",
-    "nameZh": "组合出题",
+    "nameZh": "組合出題",
     "nameEn": "Co-tested",
     "color": "#f59e0b",
-    "zh": "组合出题",
+    "zh": "組合出題",
     "en": "Co-tested"
    },
    "child": {
     "dash": "2 3",
-    "nameZh": "下钻",
+    "nameZh": "下鑽",
     "nameEn": "Drill-down",
     "color": "#64748b",
-    "zh": "下钻",
+    "zh": "下鑽",
     "en": "Drill-down"
    }
   },
@@ -563,7 +563,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "v = u + at, s = ut + ½at², v² = u² + 2as",
      "dataSheet": true,
      "pitfall": {
-      "zh": "僅適用於匀加速運動；用對稱性求上拋時間（t上=t下）",
+      "zh": "僅適用於勻加速運動；用對稱性求上拋時間（t上=t下）",
       "en": "Only valid for uniformly accelerated motion; use symmetry to find time of flight (t_up = t_down)"
      }
     },
@@ -633,10 +633,10 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Newton's First Law"
      },
      "knowledgeType": "law",
-     "formula": "若淨力=0，物體保持靜止或匀速運動",
+     "formula": "若淨力=0，物體保持靜止或勻速運動",
      "dataSheet": false,
      "pitfall": {
-      "zh": "物體不受力或合力為零時，不一定靜止（可能匀速）",
+      "zh": "物體不受力或合力為零時，不一定靜止（可能勻速）",
       "en": "With no force (or zero resultant), an object is not necessarily at rest — it may move at constant velocity"
      }
     },
@@ -751,7 +751,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "p = mv",
      "dataSheet": true,
      "pitfall": {
-      "zh": "動量是向量，方向與速度相同；動量與參考系有關",
+      "zh": "動量是向量，方向與速度相同；動量與參考繫有關",
       "en": "Momentum is a vector, in the same direction as velocity; it depends on the reference frame"
      }
     },
@@ -1026,7 +1026,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "KE = ½mv²",
      "dataSheet": true,
      "pitfall": {
-      "zh": "動能是標量；與速度平方成正比；静止時KE=0",
+      "zh": "動能是標量；與速度平方成正比；靜止時KE=0",
       "en": "Kinetic energy is a scalar; proportional to the square of speed; KE = 0 when at rest"
      }
     },
@@ -1225,10 +1225,10 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Types of Waves"
      },
      "knowledgeType": "concept",
-     "formula": "横波：振動⊥傳播方向；縱波：振動∥傳播方向",
+     "formula": "橫波：振動⊥傳播方向；縱波：振動∥傳播方向",
      "dataSheet": false,
      "pitfall": {
-      "zh": "水波是横波與縱波的混合；聲波是縱波；光是横波",
+      "zh": "水波是橫波與縱波的混合；聲波是縱波；光是橫波",
       "en": "Water waves are a mixture of transverse and longitudinal waves; sound is longitudinal; light is transverse"
      }
     },
@@ -1368,7 +1368,7 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Phase"
      },
      "knowledgeType": "concept",
-     "formula": "描述波在周期中的位置",
+     "formula": "描述波在週期中的位置",
      "dataSheet": false,
      "pitfall": {
       "zh": "相位差決定干涉性質；同相（相位差0或2π）相長；反相（相位差π）相消",
@@ -1427,7 +1427,7 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Properties of Water Waves"
      },
      "knowledgeType": "concept",
-     "formula": "水波是横波與縱波的混合",
+     "formula": "水波是橫波與縱波的混合",
      "dataSheet": false,
      "pitfall": {
       "zh": "水粒子運動軌跡是圓形；淺水波速度與深度有關",
@@ -1437,14 +1437,14 @@ const DSE_PHYSICS_GRAPH = {
     {
      "id": "ph-wv-water-02",
      "name": {
-      "zh": "波峰與波谷",
+      "zh": "波峯與波谷",
       "en": "Crest and Trough"
      },
      "knowledgeType": "definition",
-     "formula": "波峰：最高點；波谷：最低點",
+     "formula": "波峯：最高點；波谷：最低點",
      "dataSheet": false,
      "pitfall": {
-      "zh": "波峰和波谷是横波的概念；縱波是密部和疏部",
+      "zh": "波峯和波谷是橫波的概念；縱波是密部和疏部",
       "en": "Crests and troughs are transverse-wave concepts; longitudinal waves have compressions and rarefactions"
      }
     },
@@ -1590,7 +1590,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "光具有波粒二象性",
      "dataSheet": false,
      "pitfall": {
-      "zh": "干涉衍射現象說明光是波；光電效應說明光是粒子",
+      "zh": "干涉衍射現象説明光是波；光電效應説明光是粒子",
       "en": "Interference and diffraction show that light is a wave; the photoelectric effect shows it behaves as particles"
      }
     },
@@ -1860,7 +1860,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "I相同，V總=V₁+V₂，R總=R₁+R₂",
      "dataSheet": false,
      "pitfall": {
-      "zh": "一個元件斷路全电路斷；電壓分配與電阻成正比",
+      "zh": "一個元件斷路全電路斷；電壓分配與電阻成正比",
       "en": "One broken component breaks the whole circuit; voltage is shared in proportion to resistance"
      }
     },
@@ -2073,7 +2073,7 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Rated Power"
      },
      "knowledgeType": "concept",
-     "formula": "用电器正常工作時的功率",
+     "formula": "用電器正常工作時的功率",
      "dataSheet": false,
      "pitfall": {
       "zh": "電壓低於額定值時功率不足；高於額定值可能損壞",
@@ -2090,7 +2090,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "電費 = (功率×時間×電價)",
      "dataSheet": false,
      "pitfall": {
-      "zh": "注意單位換算（W→kW）；峰谷電價不同",
+      "zh": "注意單位換算（W→kW）；峯谷電價不同",
       "en": "Mind unit conversion (W → kW); peak and off-peak tariffs differ"
      }
     }
@@ -2219,7 +2219,7 @@ const DSE_PHYSICS_GRAPH = {
       "en": "Lenz's Law"
      },
      "knowledgeType": "law",
-     "formula": "感應電流方向阻碍磁通量變化",
+     "formula": "感應電流方向阻礙磁通量變化",
      "dataSheet": false,
      "pitfall": {
       "zh": "用右手定則判斷感應電流方向；能量守恆體現",
@@ -2511,7 +2511,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "γ射線或高能粒子殺死癌細胞",
      "dataSheet": false,
      "pitfall": {
-      "zh": "鈷-60常用源；精確照射避免傷害健康組織；副作用如脱发噁心",
+      "zh": "鈷-60常用源；精確照射避免傷害健康組織；副作用如脫髮噁心",
       "en": "Cobalt-60 is a common source; precise targeting avoids damaging healthy tissue; side effects such as hair loss and nausea"
      }
     },
@@ -2640,7 +2640,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "新月→上弦→滿月→下弦→新月",
      "dataSheet": false,
      "pitfall": {
-      "zh": "月相由太陽地球月球相對位置決定；月相周期約29.5天",
+      "zh": "月相由太陽地球月球相對位置決定；月相週期約29.5天",
       "en": "Lunar phases are set by the relative positions of the Sun, Earth and Moon; the lunar month is about 29.5 days"
      }
     },
@@ -2696,7 +2696,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "宇宙起源於約138億年前的一次大爆炸",
      "dataSheet": false,
      "pitfall": {
-      "zh": "證據包括宇宙膨脹、宇宙微波背景輻射；哈勃定律支持膨脹說",
+      "zh": "證據包括宇宙膨脹、宇宙微波背景輻射；哈勃定律支持膨脹説",
       "en": "Evidence includes cosmic expansion and the cosmic microwave background; Hubble's law supports expansion"
      }
     },
@@ -3113,7 +3113,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "表格記錄原始數據；標注單位",
      "dataSheet": false,
      "pitfall": {
-      "zh": "不要修改原始數據；記錄所有觀測；注明實驗條件",
+      "zh": "不要修改原始數據；記錄所有觀測；註明實驗條件",
       "en": "Do not modify raw data; record all observations; note the experimental conditions"
      }
     },
@@ -3228,7 +3228,7 @@ const DSE_PHYSICS_GRAPH = {
      "knowledgeType": "concept",
      "dataSheet": false,
      "pitfall": {
-      "zh": "輻射不需介質，可在真空中傳播；黑面吸輻射強，白面反射強。",
+      "zh": "輻射不需介質，可在真空中傳播；黑麪吸輻射強，白麪反射強。",
       "en": "Radiation needs no medium; dark surfaces absorb well, white reflect."
      }
     },
@@ -3461,14 +3461,14 @@ const DSE_PHYSICS_GRAPH = {
     {
      "id": "ph-fm-gravitation-03",
      "name": {
-      "zh": "衛星運動",
+      "zh": "衞星運動",
       "en": "Satellite Motion"
      },
      "knowledgeType": "concept",
      "formula": "G\\frac{Mm}{r^2}=m\\frac{v^2}{r}",
      "dataSheet": true,
      "pitfall": {
-      "zh": "衛星圓周運動中萬有引力=向心力；軌道半徑越大速度越小、週期越大。",
+      "zh": "衞星圓周運動中萬有引力=向心力；軌道半徑越大速度越小、週期越大。",
       "en": "Gravitation provides centripetal force; larger orbit → smaller v, larger T."
      }
     },
@@ -3496,7 +3496,7 @@ const DSE_PHYSICS_GRAPH = {
      "formula": "M=\\frac{4\\pi^2 r^3}{GT^2}",
      "dataSheet": true,
      "pitfall": {
-      "zh": "由衛星軌道半徑和週期可求中心天體質量——考衛星題的標準套路。",
+      "zh": "由衞星軌道半徑和週期可求中心天體質量——考衞星題的標準套路。",
       "en": "Mass from orbital radius & period; standard satellite question."
      }
     }
@@ -4463,7 +4463,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "聲波說成橫波。",
+     "lossZh": "聲波説成橫波。",
      "lossEn": "Calling sound transverse."
     },
     {
@@ -4738,7 +4738,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "穿透與電離次序說反。",
+     "lossZh": "穿透與電離次序説反。",
      "lossEn": "Reversing penetration and ionisation."
     }
    ]
@@ -4837,7 +4837,7 @@ const DSE_PHYSICS_GRAPH = {
        "contentEn": "Right-hand rule for the current direction"
       }
      ],
-     "lossZh": "只說「抗拒」未用右手定則給出方向。",
+     "lossZh": "只説「抗拒」未用右手定則給出方向。",
      "lossEn": "Saying \"opposes\" without giving direction via right-hand rule."
     },
     {
@@ -4909,7 +4909,7 @@ const DSE_PHYSICS_GRAPH = {
      "question": "Q11"
     }
    ],
-   "stem": "雙縫實驗中，兩個相干光源在屏幕上形成明暗相間的條紋。解釋明條紋的成因，並說明增大雙縫間距對條紋間距的影響。",
+   "stem": "雙縫實驗中，兩個相干光源在屏幕上形成明暗相間的條紋。解釋明條紋的成因，並説明增大雙縫間距對條紋間距的影響。",
    "stemEn": "In a double-slit experiment, coherent sources form bright and dark fringes on a screen. Explain the cause of bright fringes and the effect of increasing the slit separation on the fringe spacing.",
    "solutionSkeleton": [
     "判定相干條件(同頻率同相位)",
@@ -5605,7 +5605,7 @@ const DSE_PHYSICS_GRAPH = {
      "question": "Q17"
     }
    ],
-   "stem": "地球質量為 6.0×10²⁴ kg，一顆衛星在距地心 7.0×10⁶ m 的圓形軌道上運行。求衛星的軌道速度。（G = 6.67×10⁻¹¹ N m² kg⁻²）",
+   "stem": "地球質量為 6.0×10²⁴ kg，一顆衞星在距地心 7.0×10⁶ m 的圓形軌道上運行。求衞星的軌道速度。（G = 6.67×10⁻¹¹ N m² kg⁻²）",
    "stemEn": "The Earth has mass 6.0×10²⁴ kg. A satellite moves in a circular orbit at 7.0×10⁶ m from the Earth's centre. Find its orbital speed. (G = 6.67×10⁻¹¹ N m² kg⁻²)",
    "solutionSkeleton": [
     "萬有引力提供向心力(F=GMm/r²=mv²/r)",
@@ -5614,7 +5614,7 @@ const DSE_PHYSICS_GRAPH = {
     "解釋季節變化(地軸傾角)"
    ],
    "variation": [
-    "衛星軌道計算",
+    "衞星軌道計算",
     "行星運動開普勒定律",
     "日月食形成條件",
     "潮汐力分析"
@@ -5646,7 +5646,7 @@ const DSE_PHYSICS_GRAPH = {
     },
     {
      "difficulty": "intermediate",
-     "stemZh": "衛星繞地球半徑 7000 km，求軌道速度（M=6×10²⁴ kg）。",
+     "stemZh": "衞星繞地球半徑 7000 km，求軌道速度（M=6×10²⁴ kg）。",
      "stemEn": "Satellite at r=7000 km; orbital speed?",
      "answerZh": "v=√(GM/r)=√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=√(5.72×10⁷)=7560 m/s≈7.6 km/s。",
      "answerEn": "v = √(GM/r) ≈ 7.6 km/s.",
@@ -5895,7 +5895,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       },
       {
-       "content": "說明比例關係",
+       "content": "説明比例關係",
        "pts": 1
       }
      ],
@@ -6073,7 +6073,7 @@ const DSE_PHYSICS_GRAPH = {
      "question": "Q12"
     }
    ],
-   "stem": "一根兩端固定的弦長 1 m，以基頻振動時頻率為 200 Hz。求波速；並說明如何產生第二諧波。",
+   "stem": "一根兩端固定的弦長 1 m，以基頻振動時頻率為 200 Hz。求波速；並説明如何產生第二諧波。",
    "stemEn": "A string fixed at both ends has length 1 m. At the fundamental frequency it vibrates at 200 Hz. Find the wave speed and explain how the second harmonic is produced.",
    "solutionSkeleton": [
     "入射波與反射波疊加",
@@ -6470,14 +6470,14 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "說 CT 只是更強 X 光。",
+     "lossZh": "説 CT 只是更強 X 光。",
      "lossEn": "Calling CT just stronger X-ray."
     },
     {
      "difficulty": "challenge",
      "stemZh": "超聲波成像：原理與 X 光的本質區別？",
      "stemEn": "Ultrasound imaging: principle and difference from X-ray?",
-     "answerZh": "超聲波是機械波，靠組織介面反射成像，無游離輻射；X 光是電磁輻射，有輻射風險。",
+     "answerZh": "超聲波是機械波，靠組織介面反射成像，無遊離輻射；X 光是電磁輻射，有輻射風險。",
      "answerEn": "Ultrasound = mechanical waves, reflections at tissue boundaries, no radiation; X-ray = ionising EM.",
      "years": [
       "2021"
@@ -6488,7 +6488,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       },
       {
-       "content": "X 光是電磁輻射（游離）",
+       "content": "X 光是電磁輻射（遊離）",
        "pts": 1
       },
       {
@@ -6496,7 +6496,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "本質區別說錯。",
+     "lossZh": "本質區別説錯。",
      "lossEn": "Wrong fundamental difference."
     }
    ]
@@ -6527,7 +6527,7 @@ const DSE_PHYSICS_GRAPH = {
      "question": "Q22"
     }
    ],
-   "stem": "某實驗測得 5 組數據：2.1, 2.3, 2.2, 2.9, 2.1（單位 cm）。求平均值與不確定度，並判斷 2.9 是否為應刪除的離群值。",
+   "stem": "某實驗測得 5 組數據：2.1, 2.3, 2.2, 2.9, 2.1（單位 cm）。求平均值與不確定度，並判斷 2.9 是否為應刪除的離羣值。",
    "stemEn": "Five measurements are recorded: 2.1, 2.3, 2.2, 2.9, 2.1 (in cm). Find the mean and the uncertainty, and decide whether 2.9 is an outlier that should be rejected.",
    "solutionSkeleton": [
     "記錄原始數據(表格)",
@@ -6538,7 +6538,7 @@ const DSE_PHYSICS_GRAPH = {
    "variation": [
     "v-t圖求加速度",
     "I-V圖求電阻",
-    "周期測量求頻率",
+    "週期測量求頻率",
     "直線化求斜率(如g=4π²L/T²)"
    ],
    "variants": [
@@ -6588,14 +6588,14 @@ const DSE_PHYSICS_GRAPH = {
     },
     {
      "difficulty": "challenge",
-     "stemZh": "如何判斷一組數據中的離群點（outlier）並處理？",
+     "stemZh": "如何判斷一組數據中的離羣點（outlier）並處理？",
      "stemEn": "How to identify and handle outliers?",
      "answerZh": "用平均值±範圍/標準差判斷明顯偏離者；核對實驗記錄確認錯誤後剔除，不隨意刪除。",
      "answerEn": "Identify via deviation from mean; verify then exclude only if justified.",
      "years": [],
      "marks": [
       {
-       "content": "用偏差/範圍判離群",
+       "content": "用偏差/範圍判離羣",
        "pts": 1
       },
       {
@@ -6675,7 +6675,7 @@ const DSE_PHYSICS_GRAPH = {
     },
     {
      "difficulty": "intermediate",
-     "stemZh": "風力發電的局限？",
+     "stemZh": "風力發電的侷限？",
      "stemEn": "Limitations of wind power?",
      "answerZh": "依賴風況不穩定、需大片土地、噪音、對鳥類影響；儲能困難。",
      "answerEn": "Intermittent, land use, noise, bird impact; storage difficult.",
@@ -6714,7 +6714,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "說成光能→熱能。",
+     "lossZh": "説成光能→熱能。",
      "lossEn": "Saying light→heat."
     }
    ]
@@ -6862,8 +6862,8 @@ const DSE_PHYSICS_GRAPH = {
    "stemEn": "A ball is released from rest at a height of 20 m (g = 10 m/s²). Find the time to reach the ground and the impact speed. If it is instead thrown horizontally at 5 m/s, find the horizontal range.",
    "solutionSkeleton": [
     "分解水平/垂直運動",
-    "垂直：匀加速(a=g)",
-    "水平：匀速(vx=v₀cosθ)",
+    "垂直：勻加速(a=g)",
+    "水平：勻速(vx=v₀cosθ)",
     "合成運動軌跡(拋物線)"
    ],
    "variation": [
@@ -6981,12 +6981,12 @@ const DSE_PHYSICS_GRAPH = {
     "向心力公式(F=mv²/r=mrω²)",
     "分析受力(張力/重力/摩擦力提供向心力)",
     "計算線速度與角速度(ω=v/r)",
-    "應用於衛星/行星運動"
+    "應用於衞星/行星運動"
    ],
    "variation": [
     "水平圓周運動(圓錐擺)",
     "豎直圓周運動(過山車最高點)",
-    "衛星軌道(萬有引力提供向心力)",
+    "衞星軌道(萬有引力提供向心力)",
     "轉彎摩擦力分析"
    ],
    "variants": [
@@ -7200,7 +7200,7 @@ const DSE_PHYSICS_GRAPH = {
    "stem": "帶電粒子以速度 v 垂直進入磁場強度為 B 的均勻磁場。導出軌道半徑 r = mv/(qB)；若速度加倍，半徑如何變化？",
    "stemEn": "A charged particle enters a uniform magnetic field of strength B perpendicularly at speed v. Derive the orbital radius r = mv/(qB). If the speed doubles, how does the radius change?",
    "solutionSkeleton": [
-    "電場中：F=qE，匀加速運動",
+    "電場中：F=qE，勻加速運動",
     "磁場中：F=qvB，勻速圓周運動",
     "電磁場中：螺旋運動",
     "應用於質譜儀/迴旋加速器"
@@ -7370,7 +7370,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「線圈儲能」不講維持電流。",
+     "lossZh": "只説「線圈儲能」不講維持電流。",
      "lossEn": "No current-maintenance logic."
     },
     {
@@ -7446,7 +7446,7 @@ const DSE_PHYSICS_GRAPH = {
      "difficulty": "basic",
      "stemZh": "實驗「驗證牛頓第二定律」需控制哪些變量？",
      "stemEn": "Verifying F=ma: controlled variables?",
-     "answerZh": "控制質量不變，改變力（掛鉤碼質量）；或控制力不變，改變質量。",
+     "answerZh": "控制質量不變，改變力（掛鈎碼質量）；或控制力不變，改變質量。",
      "answerEn": "Hold mass constant, vary force (or vice versa).",
      "years": [],
      "marks": [
@@ -7596,7 +7596,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "說成吸收光子。",
+     "lossZh": "説成吸收光子。",
      "lossEn": "Saying absorbs photon."
     },
     {
@@ -7620,7 +7620,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「有譜線」不推能級。",
+     "lossZh": "只説「有譜線」不推能級。",
      "lossEn": "No inference to quantised levels."
     }
    ]
@@ -7732,7 +7732,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "彎曲方向說反。",
+     "lossZh": "彎曲方向説反。",
      "lossEn": "Wrong bend direction."
     }
    ]
@@ -7849,7 +7849,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「分子運動快」不接「壓強」。",
+     "lossZh": "只説「分子運動快」不接「壓強」。",
      "lossEn": "No link to pressure."
     }
    ]
@@ -8112,7 +8112,7 @@ const DSE_PHYSICS_GRAPH = {
      "question": "Q40"
     }
    ],
-   "stem": "用波紋槽產生水波，測得相鄰波峰的距離為 2 cm，頻率為 5 Hz。求波速；若水深變淺，波速如何變化？",
+   "stem": "用波紋槽產生水波，測得相鄰波峯的距離為 2 cm，頻率為 5 Hz。求波速；若水深變淺，波速如何變化？",
    "stemEn": "Water waves are produced in a ripple tank. Adjacent crests are 2 cm apart and the frequency is 5 Hz. Find the wave speed. If the water becomes shallower, how does the wave speed change?",
    "solutionSkeleton": [
     "水波槽實驗裝置",
@@ -8129,14 +8129,14 @@ const DSE_PHYSICS_GRAPH = {
    "variants": [
     {
      "difficulty": "basic",
-     "stemZh": "水波槽實驗中，用什麼方法顯示波的波峰？",
+     "stemZh": "水波槽實驗中，用什麼方法顯示波的波峯？",
      "stemEn": "How to visualise wave crests in a ripple tank?",
-     "answerZh": "頻閃燈照射使波峰看似靜止；或用投影看到明暗條紋。",
+     "answerZh": "頻閃燈照射使波峯看似靜止；或用投影看到明暗條紋。",
      "answerEn": "Strobe light freezes crests; projection shows fringes.",
      "years": [],
      "marks": [
       {
-       "content": "頻閃燈使波峰看似靜止",
+       "content": "頻閃燈使波峯看似靜止",
        "pts": 1
       },
       {
@@ -8164,7 +8164,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "條件說反。",
+     "lossZh": "條件説反。",
      "lossEn": "Reversed condition."
     },
     {
@@ -8195,7 +8195,7 @@ const DSE_PHYSICS_GRAPH = {
   },
   {
    "id": "ph-mp-38",
-   "titleZh": "電荷分布與電場計算",
+   "titleZh": "電荷分佈與電場計算",
    "titleEn": "Charge Distribution and Electric Field",
    "coreTopics": [
     "ph-em-charge"
@@ -8231,7 +8231,7 @@ const DSE_PHYSICS_GRAPH = {
     "點電荷電場",
     "均勻電場中運動",
     "帶電粒子平衡",
-    "導體球電荷分布"
+    "導體球電荷分佈"
    ],
    "variants": [
     {
@@ -8279,7 +8279,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "異號電荷說成排斥。",
+     "lossZh": "異號電荷説成排斥。",
      "lossEn": "Calling opposite charges repulsive."
     },
     {
@@ -8507,7 +8507,7 @@ const DSE_PHYSICS_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "用途說反。",
+     "lossZh": "用途説反。",
      "lossEn": "Swapped uses."
     },
     {
@@ -8815,7 +8815,7 @@ const DSE_PHYSICS_GRAPH = {
        "contentEn": "Vertical component → balances weight"
       }
      ],
-     "lossZh": "分量作用說反。",
+     "lossZh": "分量作用説反。",
      "lossEn": "Swapped component roles."
     },
     {
@@ -8855,7 +8855,7 @@ const DSE_PHYSICS_GRAPH = {
   },
   {
    "id": "ph-mp-fm-gravitation-01",
-   "titleZh": "衛星運動題",
+   "titleZh": "衞星運動題",
    "titleEn": "Satellite Orbital Motion",
    "coreTopics": [
     "ph-fm-gravitation"
@@ -8865,7 +8865,7 @@ const DSE_PHYSICS_GRAPH = {
     "ph-as-astro"
    ],
    "questionType": "計算題",
-   "stem": "一顆衛星以 7000 km 半徑繞地球運動，地球質量 6×10²⁴ kg，求衛星軌道速度與週期。",
+   "stem": "一顆衞星以 7000 km 半徑繞地球運動，地球質量 6×10²⁴ kg，求衞星軌道速度與週期。",
    "solutionSkeleton": [
     "萬有引力 = 向心力：GMm/r² = mv²/r",
     "消去 m 求 v = √(GM/r)",
@@ -8873,7 +8873,7 @@ const DSE_PHYSICS_GRAPH = {
    ],
    "variation": [
     "求中心天體質量（由軌道半徑和週期反推）",
-    "同步衛星/靜止軌道條件",
+    "同步衞星/靜止軌道條件",
     "與選修天文結合：行星運動定律"
    ],
    "appearances": [
@@ -8888,7 +8888,7 @@ const DSE_PHYSICS_GRAPH = {
    "variants": [
     {
      "difficulty": "basic",
-     "stemZh": "衛星軌道半徑 7000 km，軌道速度？",
+     "stemZh": "衞星軌道半徑 7000 km，軌道速度？",
      "stemEn": "Satellite r=7000 km; orbital speed?",
      "answerZh": "v=√(GM/r)≈√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=7560 m/s≈7.6 km/s。",
      "answerEn": "v ≈ 7.6 km/s.",
@@ -8908,9 +8908,9 @@ const DSE_PHYSICS_GRAPH = {
     },
     {
      "difficulty": "intermediate",
-     "stemZh": "同步衛星：為何軌道必須在赤道正上方？",
+     "stemZh": "同步衞星：為何軌道必須在赤道正上方？",
      "stemEn": "Geostationary: why equatorial orbit?",
-     "answerZh": "衛星須與地球同角速度且週期 24h，軌道面必須通過地心；要在赤道平面才能始終對準同一點。",
+     "answerZh": "衞星須與地球同角速度且週期 24h，軌道面必須通過地心；要在赤道平面才能始終對準同一點。",
      "answerEn": "Must orbit in equatorial plane to stay above same point with 24h period.",
      "years": [],
      "marks": [
@@ -8932,7 +8932,7 @@ const DSE_PHYSICS_GRAPH = {
     },
     {
      "difficulty": "challenge",
-     "stemZh": "兩衛星軌道半徑比 4:1，週期比？",
+     "stemZh": "兩衞星軌道半徑比 4:1，週期比？",
      "stemEn": "Two satellites, r ratio 4:1; period ratio?",
      "answerZh": "T²∝r³（開普勒第三定律）→ T₁/T₂=(4)³ᐟ²=8:1。",
      "answerEn": "T² ∝ r³ → ratio 8:1.",
@@ -8970,7 +8970,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "12-18",
    "difficultyLevel": 3,
-   "marksNoteZh": "每年 MC + 乙部一条结构题",
+   "marksNoteZh": "每年 MC + 乙部一條結構題",
    "marksNoteEn": "MC + one Section B structured question yearly"
   },
   {
@@ -8985,7 +8985,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "25-35",
    "difficultyLevel": 4,
-   "marksNoteZh": "最重模块，常以一条10-14分多部分大题出现",
+   "marksNoteZh": "最重模塊，常以一條10-14分多部分大題出現",
    "marksNoteEn": "Heaviest module, often a 10-14 mark multi-part question"
   },
   {
@@ -9000,7 +9000,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "18-25",
    "difficultyLevel": 3,
-   "marksNoteZh": "光、声、叠加、透镜光学",
+   "marksNoteZh": "光、聲、疊加、透鏡光學",
    "marksNoteEn": "Light, sound, superposition, lens optics"
   },
   {
@@ -9015,7 +9015,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "22-30",
    "difficultyLevel": 4,
-   "marksNoteZh": "常是乙部最长一条题；光电效应与必修衔接是失分点",
+   "marksNoteZh": "常是乙部最長一條題；光電效應與必修銜接是失分點",
    "marksNoteEn": "Often the longest Section B question; photoelectric link is a common pitfall"
   },
   {
@@ -9030,7 +9030,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "8-14",
    "difficultyLevel": 3,
-   "marksNoteZh": "通常捆绑一条情境丰富题目（反应堆/医学同位素）",
+   "marksNoteZh": "通常捆綁一條情境豐富題目（反應堆/醫學同位素）",
    "marksNoteEn": "Usually tied to a context-rich question (reactor/medical isotopes)"
   },
   {
@@ -9045,7 +9045,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "10-13 (Paper 2)",
    "difficultyLevel": 3,
-   "marksNoteZh": "选修 E1；赫罗图数据题考起很多人",
+   "marksNoteZh": "選修 E1；赫羅圖數據題考起很多人",
    "marksNoteEn": "Elective E1; H-R diagram data questions challenge many"
   },
   {
@@ -9060,7 +9060,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "10-13 (Paper 2)",
    "difficultyLevel": 4,
-   "marksNoteZh": "选修 E2；一半内容与必修放射重叠",
+   "marksNoteZh": "選修 E2；一半內容與必修放射重疊",
    "marksNoteEn": "Elective E2; half overlaps with core Radioactivity"
   },
   {
@@ -9075,7 +9075,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "10-13 (Paper 2)",
    "difficultyLevel": 2,
-   "marksNoteZh": "选修 E3；适合热学底子好的同学",
+   "marksNoteZh": "選修 E3；適合熱學底子好的同學",
    "marksNoteEn": "Elective E3; good for students with solid thermal foundation"
   },
   {
@@ -9090,7 +9090,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "10-13 (Paper 2)",
    "difficultyLevel": 3,
-   "marksNoteZh": "选修 E4；奖励肯细读情境的人",
+   "marksNoteZh": "選修 E4；獎勵肯細讀情境的人",
    "marksNoteEn": "Elective E4; rewards careful context reading"
   },
   {
@@ -9105,7 +9105,7 @@ const DSE_PHYSICS_GRAPH = {
    },
    "marksRange": "SBA 20%",
    "difficultyLevel": 2,
-   "marksNoteZh": "校本评核，非卷面分",
+   "marksNoteZh": "校本評核，非卷面分",
    "marksNoteEn": "School-based assessment, not paper marks"
   }
  ]

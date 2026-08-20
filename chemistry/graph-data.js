@@ -1084,7 +1084,7 @@ const DSE_CHEM_GRAPH = {
      },
      "knowledgeType": "concept",
      "pitfall": {
-      "zh": "導電需自由電子或游離離子；金屬/石墨導電，離子化合物熔融才導電。",
+      "zh": "導電需自由電子或遊離離子；金屬/石墨導電，離子化合物熔融才導電。",
       "en": "Conduction needs free electrons or mobile ions; metals/graphite conduct, ionic only molten."
      }
     }
@@ -1200,7 +1200,7 @@ const DSE_CHEM_GRAPH = {
      "knowledgeType": "equation",
      "formula": "2NaCl → 2Na + Cl₂",
      "pitfall": {
-      "zh": "陰極 Na⁺+e⁻→Na；陽極 2Cl⁻→Cl₂+2e⁻；熔融態才能游離離子。",
+      "zh": "陰極 Na⁺+e⁻→Na；陽極 2Cl⁻→Cl₂+2e⁻；熔融態才能遊離離子。",
       "en": "Cathode Na⁺+e⁻→Na; anode 2Cl⁻→Cl₂+2e⁻; molten state gives mobile ions."
      }
     },
@@ -1618,7 +1618,7 @@ const DSE_CHEM_GRAPH = {
      },
      "knowledgeType": "concept",
      "pitfall": {
-      "zh": "只影響氣體；增壓→向氣體分子數少的方向移動。",
+      "zh": "隻影響氣體；增壓→向氣體分子數少的方向移動。",
       "en": "Affects gases only; higher pressure shifts toward fewer gas molecules."
      }
     },
@@ -1759,7 +1759,7 @@ const DSE_CHEM_GRAPH = {
      "knowledgeType": "reaction",
      "formula": "C₂H₅OH + [O] → CH₃CHO + H₂O",
      "pitfall": {
-      "zh": "醛可被氧化成酸（費林/托倫斯試劑區分）；酮難氧化。",
+      "zh": "醛可被氧化成酸（費林/託倫斯試劑區分）；酮難氧化。",
       "en": "Aldehydes oxidise to acids (Fehling/Tollens distinguish); ketones resist oxidation."
      }
     },
@@ -2310,7 +2310,7 @@ const DSE_CHEM_GRAPH = {
      },
      "knowledgeType": "concept",
      "pitfall": {
-      "zh": "官能團指紋區：-OH 寬峰、C=O 1700 附近；鑑定官能團。",
+      "zh": "官能團指紋區：-OH 寬峯、C=O 1700 附近；鑑定官能團。",
       "en": "Functional group fingerprint: -OH broad, C=O near 1700; identifies groups."
      }
     },
@@ -2322,7 +2322,7 @@ const DSE_CHEM_GRAPH = {
      },
      "knowledgeType": "concept",
      "pitfall": {
-      "zh": "測相對分子質量（分子離子峰）與碎片；同位素豐度也可測。",
+      "zh": "測相對分子質量（分子離子峯）與碎片；同位素豐度也可測。",
       "en": "Measures Mr (molecular ion peak) and fragments; also isotope abundance."
      }
     }
@@ -2400,7 +2400,7 @@ const DSE_CHEM_GRAPH = {
      },
      "knowledgeType": "lab",
      "pitfall": {
-      "zh": "作圖求斜率/外推；離群點識別；平均值與誤差。",
+      "zh": "作圖求斜率/外推；離羣點識別；平均值與誤差。",
       "en": "Graph for gradient/extrapolation; identify outliers; mean and error."
      }
     },
@@ -2636,7 +2636,7 @@ const DSE_CHEM_GRAPH = {
  "motherProblems": [
   {
    "id": "ch-mp-acidbase-01",
-   "titleZh": "酸碱滴定計算題",
+   "titleZh": "酸鹼滴定計算題",
    "titleEn": "Acid-Base Titration Calculation",
    "coreTopics": [
     "ch-acidbase"
@@ -2789,12 +2789,12 @@ const DSE_CHEM_GRAPH = {
     "ch-ind"
    ],
    "questionType": "preparation",
-   "stem": "電解熔融氯化鈉，寫出陰陽極反應並說明產物如何收集。",
+   "stem": "電解熔融氯化鈉，寫出陰陽極反應並説明產物如何收集。",
    "stemEn": "Electrolyse molten NaCl; write anode/cathode reactions and explain product collection.",
    "solutionSkeleton": [
     "陰極（還原）：Na⁺ + e⁻ → Na",
     "陽極（氧化）：2Cl⁻ → Cl₂ + 2e⁻",
-    "說明離子移動方向與產物收集方法",
+    "説明離子移動方向與產物收集方法",
     "（延伸）電解 NaCl 溶液時的差異"
    ],
    "variation": [
@@ -2842,7 +2842,7 @@ const DSE_CHEM_GRAPH = {
     },
     {
      "difficulty": "intermediate",
-     "stemZh": "電解硫酸銅溶液（銅電極），說明兩極現象與電解液變化。",
+     "stemZh": "電解硫酸銅溶液（銅電極），説明兩極現象與電解液變化。",
      "stemEn": "Electrolyse CuSO₄(aq) with copper electrodes; describe observations.",
      "answerZh": "陽極銅溶解：Cu→Cu²⁺+2e⁻（電鍍）；陰極銅沉積：Cu²⁺+2e⁻→Cu；溶液濃度不變。",
      "answerEn": "Anode Cu dissolves (Cu→Cu²⁺+2e⁻); cathode Cu deposits; concentration unchanged.",
@@ -3027,7 +3027,7 @@ const DSE_CHEM_GRAPH = {
        "contentEn": "Conclusion: equilibrium [SO₃] decreases"
       }
      ],
-     "lossZh": "只說「升溫逆向」而無 Kc 變化邏輯：放熱反應 Kc 隨升溫而降。",
+     "lossZh": "只説「升溫逆向」而無 Kc 變化邏輯：放熱反應 Kc 隨升溫而降。",
      "lossEn": "Saying \"heat shifts reverse\" without Kc logic: exothermic Kc decreases on heating."
     }
    ],
@@ -3296,11 +3296,11 @@ const DSE_CHEM_GRAPH = {
     "ch-fossil"
    ],
    "questionType": "concept",
-   "stem": "說明空氣中主要成分（氮、氧、二氧化碳）的比例及二氧化碳濃度上升對環境的影響。",
+   "stem": "説明空氣中主要成分（氮、氧、二氧化碳）的比例及二氧化碳濃度上升對環境的影響。",
    "stemEn": "Describe the proportions of main air components (N₂, O₂, CO₂) and the environmental effect of rising CO₂.",
    "solutionSkeleton": [
     "列出空氣成分及體積比例（N₂ ~78%、O₂ ~21%）",
-    "說明 CO₂ 是溫室氣體",
+    "説明 CO₂ 是溫室氣體",
     "討論化石燃料燃燒與 CO₂ 上升的關聯"
    ],
    "variation": [
@@ -3356,7 +3356,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「石灰水」不寫現象或漏方程式。",
+     "lossZh": "只説「石灰水」不寫現象或漏方程式。",
      "lossEn": "Not stating the milky observation or equation."
     },
     {
@@ -3376,7 +3376,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       },
       {
-       "content": "（加分）說明減排機制",
+       "content": "（加分）説明減排機制",
        "pts": 1
       }
      ],
@@ -3403,7 +3403,7 @@ const DSE_CHEM_GRAPH = {
     "按 2,8,1 排布電子",
     "最外層 1 個電子 → 傾向失去",
     "形成 Na⁺（2,8 穩定八隅體）",
-    "說明離子符號與電子得失"
+    "説明離子符號與電子得失"
    ],
    "variation": [
     "氯（Cl）的電子排布與 Cl⁻ 形成",
@@ -3573,12 +3573,12 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "把 Cu 說成「與酸反應」（Cu 不與稀酸）。",
+     "lossZh": "把 Cu 説成「與酸反應」（Cu 不與稀酸）。",
      "lossEn": "Saying Cu reacts with dilute acid."
     },
     {
      "difficulty": "challenge",
-     "stemZh": "如何從氧化鐵中提取鐵？寫出方程式並說明冶煉方法的選擇依據。",
+     "stemZh": "如何從氧化鐵中提取鐵？寫出方程式並説明冶煉方法的選擇依據。",
      "stemEn": "Extract iron from Fe₂O₃; equation and method choice.",
      "answerZh": "Fe₂O₃+3CO→2Fe+3CO₂（高爐，碳還原）；鐵在活動序中位於碳之下，可用碳還原；比鐵活潑的金屬需電解。",
      "answerEn": "Reduce with CO in blast furnace; Fe below C in series so carbon works; more reactive need electrolysis.",
@@ -3615,7 +3615,7 @@ const DSE_CHEM_GRAPH = {
     "ch-carbon"
    ],
    "questionType": "concept",
-   "stem": "說明石油分餾的原理，並列出三個主要餾分及其用途。",
+   "stem": "説明石油分餾的原理，並列出三個主要餾分及其用途。",
    "stemEn": "Explain the principle of fractional distillation of petroleum; list three fractions and uses.",
    "solutionSkeleton": [
     "原理：不同沸點，塔中溫度梯度分離",
@@ -3653,7 +3653,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "說成「密度分離」或「化學性質不同」。",
+     "lossZh": "説成「密度分離」或「化學性質不同」。",
      "lossEn": "Saying separated by density or chemical property."
     },
     {
@@ -3723,7 +3723,7 @@ const DSE_CHEM_GRAPH = {
    "solutionSkeleton": [
     "NaCl：巨大離子結構，熔融/溶液態導電，固態不導電",
     "石墨：層狀結構，層內共價鍵+自由電子",
-    "石墨可導電（自由電子），NaCl 需游離離子",
+    "石墨可導電（自由電子），NaCl 需遊離離子",
     "比較熔點/硬度等性質"
    ],
    "variation": [
@@ -3822,7 +3822,7 @@ const DSE_CHEM_GRAPH = {
        "contentEn": "Ice: hydrogen bonds/van der Waals (weakest)"
       }
      ],
-     "lossZh": "把冰的氫鍵說成「共價鍵」（氫鍵是分子間力）。",
+     "lossZh": "把冰的氫鍵説成「共價鍵」（氫鍵是分子間力）。",
      "lossEn": "Calling ice's H-bonds \"covalent bonds\" (they're intermolecular)."
     }
    ],
@@ -4087,7 +4087,7 @@ const DSE_CHEM_GRAPH = {
     "ch-metals"
    ],
    "questionType": "concept",
-   "stem": "解釋同一週期內從鈉到氯，金屬性如何變化，並用原子結構說明原因。",
+   "stem": "解釋同一週期內從鈉到氯，金屬性如何變化，並用原子結構説明原因。",
    "stemEn": "Explain how metallic character changes across Period 3 (Na→Cl) using atomic structure.",
    "solutionSkeleton": [
     "金屬性遞減（Na 金屬 → Cl 非金屬）",
@@ -4174,7 +4174,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "把非金屬說成易失電子。",
+     "lossZh": "把非金屬説成易失電子。",
      "lossEn": "Calling non-metal electron-losing."
     }
    ]
@@ -4191,7 +4191,7 @@ const DSE_CHEM_GRAPH = {
     "ch-mw2"
    ],
    "questionType": "concept",
-   "stem": "比較加成聚合與縮合聚合的區別，並以聚乙烯與尼龍為例說明。",
+   "stem": "比較加成聚合與縮合聚合的區別，並以聚乙烯與尼龍為例説明。",
    "stemEn": "Compare addition vs condensation polymerisation using polyethylene and nylon as examples.",
    "solutionSkeleton": [
     "加成聚合：單體含 C=C，無小分子釋出",
@@ -4256,12 +4256,12 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「電木難回收」不講交聯原因。",
+     "lossZh": "只説「電木難回收」不講交聯原因。",
      "lossEn": "No cross-linking reason."
     },
     {
      "difficulty": "challenge",
-     "stemZh": "比較加成聚合與縮合聚合，用聚乙烯與尼龍為例說明單體與產物。",
+     "stemZh": "比較加成聚合與縮合聚合，用聚乙烯與尼龍為例説明單體與產物。",
      "stemEn": "Compare addition vs condensation; PE vs nylon.",
      "answerZh": "加成：單體含 C=C（乙烯），無小分子；縮合：單體含兩個官能團（己二酸+己二胺），釋出水成尼龍。",
      "answerEn": "Addition: alkene monomer, no by-product; condensation: two functional monomers release H₂O (nylon).",
@@ -4282,7 +4282,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "把尼龍說成加成聚合（它是縮合）。",
+     "lossZh": "把尼龍説成加成聚合（它是縮合）。",
      "lossEn": "Calling nylon addition polymerisation."
     }
    ]
@@ -4348,7 +4348,7 @@ const DSE_CHEM_GRAPH = {
     },
     {
      "difficulty": "intermediate",
-     "stemZh": "海水淡化可用蒸餾，說明原理與裝置要點。",
+     "stemZh": "海水淡化可用蒸餾，説明原理與裝置要點。",
      "stemEn": "Desalinate seawater by distillation; principle and setup.",
      "answerZh": "加熱海水使水蒸發→冷凝管冷凝→收集純水；溫度計測蒸氣溫度；海鹽留在燒瓶。",
      "answerEn": "Heat seawater, condense vapour in condenser, collect pure water; salt remains.",
@@ -4367,12 +4367,12 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "溫度計位置/作用說錯（測蒸氣溫度）。",
+     "lossZh": "溫度計位置/作用説錯（測蒸氣溫度）。",
      "lossEn": "Wrong thermometer position/role (measures vapour)."
     },
     {
      "difficulty": "challenge",
-     "stemZh": "混合液含乙醇（沸點 78°C）和水，用分餾分離。說明裝置與注意事項。",
+     "stemZh": "混合液含乙醇（沸點 78°C）和水，用分餾分離。説明裝置與注意事項。",
      "stemEn": "Separate ethanol (bp 78°C) and water by fractional distillation.",
      "answerZh": "分餾柱（填充物）讓蒸氣多次冷凝蒸發；控制溫度在 78°C 收集乙醇；防暴沸加沸石。",
      "answerEn": "Fractionating column refines separation; collect at 78°C; add boiling chips.",
@@ -4567,7 +4567,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「有氣泡」而未檢驗 CO₂（需指明石灰水變乳白）。",
+     "lossZh": "只説「有氣泡」而未檢驗 CO₂（需指明石灰水變乳白）。",
      "lossEn": "Saying \"bubbles\" without testing CO₂ (limewater milky)."
     },
     {
@@ -4971,7 +4971,7 @@ const DSE_CHEM_GRAPH = {
    "solutionSkeleton": [
     "熔點高→離子或共價網狀",
     "固態不導電、熔融導電→離子化合物",
-    "離子鍵：陰陽離子，熔融游離導電",
+    "離子鍵：陰陽離子，熔融遊離導電",
     "對比共價網狀（熔融也不導電）"
    ],
    "variation": [
@@ -5001,7 +5001,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       },
       {
-       "content": "熔融才導電 → 離子化合物（游離離子）",
+       "content": "熔融才導電 → 離子化合物（遊離離子）",
        "pts": 1
       },
       {
@@ -5016,7 +5016,7 @@ const DSE_CHEM_GRAPH = {
      "difficulty": "intermediate",
      "stemZh": "兩種物質 B 熔點高、固態不導電、熔融也不導電。推斷並與 A 比較。",
      "stemEn": "B has high mp, never conducts. Deduce and compare with A.",
-     "answerZh": "B 是共價網狀結構（如鑽石/SiO₂）；沒有自由電子或游離離子，熔融也不導電。",
+     "answerZh": "B 是共價網狀結構（如鑽石/SiO₂）；沒有自由電子或遊離離子，熔融也不導電。",
      "answerEn": "B is giant covalent (diamond/SiO₂); no charge carriers even molten.",
      "years": [
       "2020"
@@ -5035,7 +5035,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "共價網狀熔融態以為可導電（其實沒有游離離子）。",
+     "lossZh": "共價網狀熔融態以為可導電（其實沒有遊離離子）。",
      "lossEn": "Thinking molten covalent network conducts (no free ions)."
     },
     {
@@ -5119,7 +5119,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「碰撞更多」未區分有效/無效碰撞。",
+     "lossZh": "只説「碰撞更多」未區分有效/無效碰撞。",
      "lossEn": "Saying \"more collisions\" without distinguishing effective ones."
     },
     {
@@ -5186,7 +5186,7 @@ const DSE_CHEM_GRAPH = {
     "ch-carbon"
    ],
    "questionType": "data-analysis",
-   "stem": "用紙色譜分離墨水中的色素，說明實驗步驟並用 Rf 值鑑定各成分。",
+   "stem": "用紙色譜分離墨水中的色素，説明實驗步驟並用 Rf 值鑑定各成分。",
    "stemEn": "Separate ink pigments by paper chromatography; describe steps and use Rf values to identify components.",
    "solutionSkeleton": [
     "畫鉛筆基線、點樣品",
@@ -5275,7 +5275,7 @@ const DSE_CHEM_GRAPH = {
        "pts": 1
       }
      ],
-     "lossZh": "只說「成分不同」不講分配機制。",
+     "lossZh": "只説「成分不同」不講分配機制。",
      "lossEn": "Saying \"different components\" without partition mechanism."
     }
    ]

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSE 理科读题训练 · Reading Trainer</title>
+<title>DSE 理科讀題訓練 · Reading Trainer</title>
 <style>
   :root {
     --bg:#0f172a; --panel:#1e293b; --panel2:#273449; --text:#e2e8f0;
@@ -121,7 +121,7 @@
   .wrong-item button { font-size:11px; padding:3px 10px; border-radius:12px; border:1px solid var(--line); background:var(--panel); color:var(--text); cursor:pointer; }
   .hint { font-size:11px; color:var(--muted); margin-top:12px; line-height:1.7; }
 
-  /* ===== 主题: 深色(默认) / 浅色 ===== */
+  /* ===== 主題: 深色(默認) / 淺色 ===== */
   html[data-theme="light"]{
     --bg:#f1f5f9; --panel:#ffffff; --panel2:#eef2f7; --text:#1e293b;
     --muted:#64748b; --accent:#4f46e5; --line:#e2e8f0;
@@ -149,44 +149,44 @@
 <body>
 <div id="app">
   <div class="brand">
-    <h1>📖 DSE 理科读题训练</h1>
-    <div class="sub">读真实真题题干 · 点读术语 · 判断是否读懂（不是背单词）</div>
-    <button id="theme-btn" title="切换主题 / Theme" style="margin-left:auto;padding:4px 12px;border-radius:14px;font-size:12px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);white-space:nowrap">🌙 深色</button>
+    <h1>📖 DSE 理科讀題訓練</h1>
+    <div class="sub">讀真實真題題幹 · 點讀術語 · 判斷是否讀懂（不是背單詞）</div>
+    <button id="theme-btn" title="切換主題 / Theme" style="margin-left:auto;padding:4px 12px;border-radius:14px;font-size:12px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);white-space:nowrap">🌙 深色</button>
   </div>
 
   <div class="chips" id="subj-chips">
     <span class="chip on" data-sub="all">全部</span>
-    <span class="chip" data-sub="math">数学</span>
+    <span class="chip" data-sub="math">數學</span>
     <span class="chip" data-sub="physics">物理</span>
-    <span class="chip" data-sub="chemistry">化学</span>
+    <span class="chip" data-sub="chemistry">化學</span>
   </div>
 
   <div class="stats" id="stats">
-    <span>进度 <b id="stat-done">0</b>/<b id="stat-total">0</b></span>
-    <span>读懂了 <b id="stat-ok" style="color:#4ade80">0</b></span>
-    <span>没读懂 <b id="stat-no" style="color:#f87171">0</b></span>
-    <span>错词本 <b id="stat-wrong" style="color:#fbbf24">0</b></span>
+    <span>進度 <b id="stat-done">0</b>/<b id="stat-total">0</b></span>
+    <span>讀懂了 <b id="stat-ok" style="color:#4ade80">0</b></span>
+    <span>沒讀懂 <b id="stat-no" style="color:#f87171">0</b></span>
+    <span>錯詞本 <b id="stat-wrong" style="color:#fbbf24">0</b></span>
   </div>
 
   <div class="card">
     <div class="card-head">
       <span class="idx" id="c-index">#1</span>
-      <span class="subj-tag" id="c-subj">数学</span>
+      <span class="subj-tag" id="c-subj">數學</span>
       <span id="c-topic"></span>
     </div>
     <div class="stem-en" id="stem-en"></div>
     <div class="dict-box" id="dict-box"></div>
     <div class="zh-row">
-      <button class="zh-btn" id="zh-toggle">显示中文翻译</button>
+      <button class="zh-btn" id="zh-toggle">顯示中文翻譯</button>
       <div class="zh-body" id="zh-body"></div>
     </div>
 
     <div class="self-check">
-      <div class="label">我读懂了吗？（诚实自评，错题会进错题本）</div>
+      <div class="label">我讀懂了嗎？（誠實自評，錯題會進錯題本）</div>
       <div class="self-btns">
-        <button class="sb ok" data-s="ok">✅ 读懂了</button>
+        <button class="sb ok" data-s="ok">✅ 讀懂了</button>
         <button class="sb part" data-s="part">🟡 部分</button>
-        <button class="sb no" data-s="no">❌ 没读懂</button>
+        <button class="sb no" data-s="no">❌ 沒讀懂</button>
       </div>
     </div>
 
@@ -197,21 +197,21 @@
     </div>
 
     <div class="nav">
-      <button class="ghost" id="btn-prev">← 上一题</button>
-      <button id="btn-next">下一题 →</button>
+      <button class="ghost" id="btn-prev">← 上一題</button>
+      <button id="btn-next">下一題 →</button>
     </div>
   </div>
 
   <div class="wronglist">
-    <h3>错词本（没读懂的题 + 术语答错的词）</h3>
+    <h3>錯詞本（沒讀懂的題 + 術語答錯的詞）</h3>
     <div id="wrong-items"></div>
-    <div id="wrong-empty" style="font-size:12px;color:var(--muted)">暂无错题，继续加油</div>
+    <div id="wrong-empty" style="font-size:12px;color:var(--muted)">暫無錯題，繼續加油</div>
   </div>
 
   <div class="hint">
-    用法：读英文题干 → 点击<b style="color:#93c5fd">蓝色下划线</b>的术语看中文（语境学词，不是背单词）→ 判断自己读懂没 →
-    点「考考你」抽查一个术语 → 没读懂的自动进错词本，可随时回练。<br>
-    数据：366 道真实 DSE 风格题干（数学 165 / 物理 132 / 化学 69），来自三套知识图谱。
+    用法：讀英文題幹 → 點擊<b style="color:#93c5fd">藍色下劃線</b>的術語看中文（語境學詞，不是背單詞）→ 判斷自己讀懂沒 →
+    點「考考你」抽查一個術語 → 沒讀懂的自動進錯詞本，可隨時回練。<br>
+    數據：366 道真實 DSE 風格題幹（數學 165 / 物理 132 / 化學 69），來自三套知識圖譜。
   </div>
 </div>
 
@@ -220,11 +220,11 @@
 <script src="../chemistry/graph-data.js"></script>
 <script>
 (function(){
-  // ============ 数据聚合 ============
+  // ============ 數據聚合 ============
   const SUBJECTS = [
-    { key:'math', label:'数学', cls:'math', graph: DSE_MATH_GRAPH },
+    { key:'math', label:'數學', cls:'math', graph: DSE_MATH_GRAPH },
     { key:'physics', label:'物理', cls:'physics', graph: DSE_PHYSICS_GRAPH },
-    { key:'chemistry', label:'化学', cls:'chemistry', graph: DSE_CHEM_GRAPH },
+    { key:'chemistry', label:'化學', cls:'chemistry', graph: DSE_CHEM_GRAPH },
   ];
   const dict = [];   // {en, zh, subject}
   const dictBySub = {};
@@ -248,7 +248,7 @@
       });
     });
   });
-  // 词典去重（en+subject），并按长度降序
+  // 詞典去重（en+subject），並按長度降序
   const seen = new Set();
   const uniq = dict.filter(d => { const k = d.en.toLowerCase()+'|'+d.subject; if (seen.has(k)) return false; seen.add(k); return true; });
   uniq.sort((a,b) => b.en.length - a.en.length);
@@ -256,7 +256,7 @@
   const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
-  // ============ 状态 ============
+  // ============ 狀態 ============
   let curSub = 'all';
   let curIdx = 0;
   let filtered = cards.slice();
@@ -267,9 +267,9 @@
   const selfReport = LS.get('self', {});   // cardIdx -> 'ok'|'part'|'no'
   const wrongWords = LS.get('wrong', {});  // en -> {zh, subject, count}
 
-  // ============ 术语高亮 ============
+  // ============ 術語高亮 ============
   function highlight(text, terms) {
-    // 按词包裹：术语词加 data-zh（精确释义），普通词可点（显示整句中文）
+    // 按詞包裹：術語詞加 data-zh（精確釋義），普通詞可點（顯示整句中文）
     const termMap = {};
     terms.forEach(t => termMap[t.en.toLowerCase()] = t);
     return text.replace(/([A-Za-z][A-Za-z0-9'-]*)/g, function(m){
@@ -279,7 +279,7 @@
       return '<span class="word" data-w="'+esc(m)+'">'+esc(m)+'</span>';
     });
   }
-  // 匹配题干的术语（优先同科目 + 长词）
+  // 匹配題乾的術語（優先同科目 + 長詞）
   function matchTerms(stemEn, subject) {
     const lower = ' '+stemEn.toLowerCase()+' ';
     const hit = [];
@@ -310,7 +310,7 @@
   }
   function renderCard() {
     const c = current();
-    if (!c) { document.getElementById('stem-en').textContent = '（该科目暂无读题卡）'; return; }
+    if (!c) { document.getElementById('stem-en').textContent = '（該科目暫無讀題卡）'; return; }
     document.getElementById('c-index').textContent = '#'+(curIdx+1)+' / '+filtered.length;
     const s = SUBJECTS.find(x=>x.key===c.subject);
     const sj = document.getElementById('c-subj');
@@ -321,22 +321,22 @@
     document.getElementById('stem-en').innerHTML = highlight(c.stemEn, terms);
     document.getElementById('zh-body').textContent = c.stemZh;
     document.getElementById('zh-body').classList.remove('show');
-    document.getElementById('zh-toggle').textContent = '显示中文翻译';
+    document.getElementById('zh-toggle').textContent = '顯示中文翻譯';
     document.getElementById('dict-box').classList.remove('show');
     document.getElementById('quiz-q').textContent = '';
     document.getElementById('quiz-opts').innerHTML = '';
     document.getElementById('quiz-fb').textContent = '';
-    // 自评状态
+    // 自評狀態
     const rep = selfReport[c._gid];
     document.querySelectorAll('.sb').forEach(b => b.classList.toggle('done', rep===b.dataset.s));
-    // 下一题禁用判断
+    // 下一題禁用判斷
     document.getElementById('btn-next').disabled = curIdx >= filtered.length-1;
     document.getElementById('btn-prev').disabled = curIdx <= 0;
     renderWrong();
     refreshStats();
   }
-  // 点读：任何词可点（术语词给精确释义+考考你，普通词给整句中文=语境理解）
-  const subjLabel = k => k==='math'?'数学':k==='physics'?'物理':'化学';
+  // 點讀：任何詞可點（術語詞給精確釋義+考考你，普通詞給整句中文=語境理解）
+  const subjLabel = k => k==='math'?'數學':k==='physics'?'物理':'化學';
   document.getElementById('stem-en').addEventListener('click', e => {
     const w = e.target.closest('.word');
     if (!w) return;
@@ -354,14 +354,14 @@
       document.getElementById('quiz-fb').textContent = '';
     }
   });
-  // 中文对照
+  // 中文對照
   document.getElementById('zh-toggle').addEventListener('click', function(){
     const b = document.getElementById('zh-body');
     const show = !b.classList.contains('show');
     b.classList.toggle('show', show);
-    this.textContent = show ? '隐藏中文翻译' : '显示中文翻译';
+    this.textContent = show ? '隱藏中文翻譯' : '顯示中文翻譯';
   });
-  // 自评
+  // 自評
   document.querySelectorAll('.sb').forEach(btn => {
     btn.addEventListener('click', () => {
       const c = current(); if (!c) return;
@@ -371,9 +371,9 @@
       refreshStats();
     });
   });
-  // 术语测验
+  // 術語測驗
   function startQuiz(en, zh, subject) {
-    document.getElementById('quiz-q').innerHTML = '考考你：「<b>'+esc(en)+'</b>」是什么意思？';
+    document.getElementById('quiz-q').innerHTML = '考考你：「<b>'+esc(en)+'</b>」是什麼意思？';
     const pool = dictBySub[subject].filter(d => d.zh !== zh);
     const opts = [{text:zh, correct:true}];
     const picked = new Set([zh]);
@@ -390,12 +390,12 @@
         box.querySelectorAll('.qo').forEach(b => b.classList.remove('correct','wrong'));
         if (o.correct) {
           btn.classList.add('correct');
-          document.getElementById('quiz-fb').textContent = '✓ 答对了！';
+          document.getElementById('quiz-fb').textContent = '✓ 答對了！';
         } else {
           btn.classList.add('wrong');
           const okBtn = box.querySelectorAll('.qo')[opts.findIndex(x=>x.correct)];
           okBtn.classList.add('correct');
-          document.getElementById('quiz-fb').textContent = '✗ 记错了 → 已加入错词本';
+          document.getElementById('quiz-fb').textContent = '✗ 記錯了 → 已加入錯詞本';
           wrongWords[en.toLowerCase()] = {zh, subject, count:(wrongWords[en.toLowerCase()]||{}).count+1 || 1};
           LS.set('wrong', wrongWords);
           renderWrong(); refreshStats();
@@ -403,11 +403,11 @@
       };
     });
   }
-  // 错词本
+  // 錯詞本
   function renderWrong() {
     const wrap = document.getElementById('wrong-items');
     const items = [];
-    // 1. 自评「没读懂」的题
+    // 1. 自評「沒讀懂」的題
     Object.entries(selfReport).forEach(([gid, v]) => {
       if (v !== 'no') return;
       const c = cards[+gid];
@@ -415,9 +415,9 @@
       const s = SUBJECTS.find(x=>x.key===c.subject);
       items.push('<div class="wrong-item"><span class="wzh">'+esc(c.stemZh.slice(0,38))+'…</span>'+
         '<span class="wsub">'+s.label+'</span>'+
-        '<button data-g="'+gid+'">回练</button></div>');
+        '<button data-g="'+gid+'">回練</button></div>');
     });
-    // 2. 术语答错的词
+    // 2. 術語答錯的詞
     Object.entries(wrongWords).forEach(([en,d]) => {
       items.push('<div class="wrong-item"><span class="wzh">'+esc(d.zh)+'</span>'+
         '<span style="color:#93c5fd">'+esc(en)+'</span>'+
@@ -433,7 +433,7 @@
       b.onclick = () => { delete wrongWords[b.dataset.w]; LS.set('wrong', wrongWords); renderWrong(); refreshStats(); };
     });
   }
-  // 科目切换
+  // 科目切換
   document.getElementById('subj-chips').addEventListener('click', e => {
     const chip = e.target.closest('.chip'); if (!chip) return;
     curSub = chip.dataset.sub;
@@ -442,10 +442,10 @@
     curIdx = 0;
     renderCard();
   });
-  // 导航
+  // 導航
   document.getElementById('btn-next').addEventListener('click', () => { if (curIdx < filtered.length-1) { curIdx++; renderCard(); } });
   document.getElementById('btn-prev').addEventListener('click', () => { if (curIdx > 0) { curIdx--; renderCard(); } });
-  // 键盘
+  // 鍵盤
   document.addEventListener('keydown', e => {
     if (e.key==='ArrowRight') document.getElementById('btn-next').click();
     if (e.key==='ArrowLeft') document.getElementById('btn-prev').click();
@@ -456,14 +456,14 @@
 </script>
 
 <script>
-/* 主题切换: 深色(默认) / 浅色, localStorage 记忆 */
+/* 主題切換: 深色(默認) / 淺色, localStorage 記憶 */
 (function(){
   var t = localStorage.getItem('dse-theme');
   if(t !== 'light' && t !== 'dark') t = 'dark';
   var btn = document.getElementById('theme-btn');
   function apply(){
     document.documentElement.setAttribute('data-theme', t);
-    if(btn){ btn.textContent = t === 'light' ? '☀️ 浅色' : '🌙 深色'; }
+    if(btn){ btn.textContent = t === 'light' ? '☀️ 淺色' : '🌙 深色'; }
   }
   if(btn){ btn.onclick = function(){ t = t === 'light' ? 'dark' : 'light'; localStorage.setItem('dse-theme', t); apply(); }; }
   apply();

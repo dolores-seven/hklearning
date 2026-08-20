@@ -4360,7 +4360,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "v=340 m/s, f=170 Hz; wavelength?",
      "answerZh": "λ=v/f=340/170=2 m。",
      "answerEn": "λ = v/f = 2 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "λ = v/f",
+       "pts": 1
+      },
+      {
+       "content": "λ = 340/170",
+       "pts": 1
+      },
+      {
+       "content": "λ = 2 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "公式用反（λ=vf）。",
+     "lossEn": "Using λ=vf instead of v/f."
     },
     {
      "difficulty": "intermediate",
@@ -4368,7 +4384,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Difference between transverse and longitudinal? Sound type?",
      "answerZh": "橫波質點垂直傳播方向振動（繩波）；縱波平行（聲波）；聲波是縱波。",
      "answerEn": "Transverse perpendicular, longitudinal parallel; sound is longitudinal.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "橫波：質點垂直傳播方向",
+       "pts": 1
+      },
+      {
+       "content": "縱波：平行",
+       "pts": 1
+      },
+      {
+       "content": "聲波是縱波",
+       "pts": 1
+      }
+     ],
+     "lossZh": "聲波說成橫波。",
+     "lossEn": "Calling sound transverse."
     },
     {
      "difficulty": "challenge",
@@ -4378,7 +4410,19 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "f unchanged (source); λ decreases.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "頻率由波源決定，不變",
+       "pts": 1
+      },
+      {
+       "content": "λ = v/f，v 減 → λ 減",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為頻率隨介質變。",
+     "lossEn": "Thinking frequency changes with medium."
     }
    ]
   },
@@ -4549,7 +4593,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Half-life 5 y; fraction left after 20 y?",
      "answerZh": "20/5=4 個半衰期 → (½)⁴=1/16。",
      "answerEn": "4 half-lives → 1/16.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "20/5 = 4 個半衰期",
+       "pts": 1
+      },
+      {
+       "content": "剩 (½)⁴ = 1/16",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把半衰期數算反（20/5 而非 5/20）。",
+     "lossEn": "Wrong half-life count."
     },
     {
      "difficulty": "intermediate",
@@ -4559,7 +4615,19 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "3 half-lives → 1000.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "9/3 = 3 個半衰期",
+       "pts": 1
+      },
+      {
+       "content": "8000×(½)³ = 1000",
+       "pts": 1
+      }
+     ],
+     "lossZh": "指數寫錯（(½)³ 而非 ×3）。",
+     "lossEn": "Wrong power."
     },
     {
      "difficulty": "challenge",
@@ -4569,7 +4637,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Penetration γ>β>α; ionising α>β>γ.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "穿透：γ>β>α",
+       "pts": 1
+      },
+      {
+       "content": "電離：α>β>γ",
+       "pts": 1
+      },
+      {
+       "content": "屏蔽：紙/鋁/鉛",
+       "pts": 1
+      }
+     ],
+     "lossZh": "穿透與電離次序說反。",
+     "lossEn": "Reversing penetration and ionisation."
     }
    ]
   },
@@ -4739,7 +4823,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Double slit: d=0.1 mm, D=1 m, λ=600 nm; fringe spacing?",
      "answerZh": "Δy=λD/d=600×10⁻⁹×1/10⁻⁴=6×10⁻³ m=6 mm。",
      "answerEn": "Δy = λD/d = 6 mm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Δy = λD/d",
+       "pts": 1
+      },
+      {
+       "content": "代入 600×10⁻⁹×1/10⁻⁴",
+       "pts": 1
+      },
+      {
+       "content": "Δy = 6 mm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "單位沒統一（nm→m）。",
+     "lossEn": "Not converting nm to m."
     },
     {
      "difficulty": "intermediate",
@@ -4747,7 +4847,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Single slit: a=0.05 mm, λ=500 nm, D=2 m; central maximum width?",
      "answerZh": "半寬 y=λD/a=500×10⁻⁹×2/5×10⁻⁵=0.02 m；全寬 0.04 m。",
      "answerEn": "Half-width 0.02 m; full width 0.04 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "半寬 y = λD/a",
+       "pts": 1
+      },
+      {
+       "content": "y = 500×10⁻⁹×2/5×10⁻⁵ = 0.02 m",
+       "pts": 1
+      },
+      {
+       "content": "全寬 = 2y = 0.04 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "問「中央明紋寬度」卻只給半寬。",
+     "lossEn": "Giving half-width when full asked."
     },
     {
      "difficulty": "challenge",
@@ -4757,7 +4873,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "2nt = (m+½)λ → λ ≈ 520 nm.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "薄膜加強條件 2nt = (m+½)λ",
+       "pts": 1
+      },
+      {
+       "content": "代入 n=1.3, t=0.3μm",
+       "pts": 1
+      },
+      {
+       "content": "λ ≈ 520 nm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏半波損失（膜一側反射相位反轉）。",
+     "lossEn": "Forgetting half-wave loss on reflection."
     }
    ]
   },
@@ -4808,7 +4940,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Heat to raise 2 kg water 10°C?",
      "answerZh": "Q=mcΔT=2×4200×10=84000 J。",
      "answerEn": "Q = 84000 J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Q = mcΔT",
+       "pts": 1
+      },
+      {
+       "content": "Q = 2×4200×10",
+       "pts": 1
+      },
+      {
+       "content": "Q = 84000 J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "質量/比熱容/溫差任一代入錯。",
+     "lossEn": "Wrong m/c/ΔT substitution."
     },
     {
      "difficulty": "intermediate",
@@ -4816,7 +4964,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Mix 0.5 kg 80°C and 0.5 kg 20°C water; equilibrium?",
      "answerZh": "熱平衡：0.5×4200×(80-T)=0.5×4200×(T-20) → T=50°C。",
      "answerEn": "Heat gained = heat lost → T = 50°C.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "熱平衡：放熱 = 吸熱",
+       "pts": 1
+      },
+      {
+       "content": "0.5×4200×(80-T) = 0.5×4200×(T-20)",
+       "pts": 1
+      },
+      {
+       "content": "T = 50°C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "溫差方向寫反。",
+     "lossEn": "Wrong ΔT direction."
     },
     {
      "difficulty": "challenge",
@@ -4826,7 +4990,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "0.2×c×75 = 0.4×4200×5 → c = 560 J/kg°C.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "金屬放熱 = 水吸熱",
+       "pts": 1
+      },
+      {
+       "content": "0.2×c×75 = 0.4×4200×5",
+       "pts": 1
+      },
+      {
+       "content": "c = 560 J/kg°C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "水溫升算錯（25-20=5 而非 25）。",
+     "lossEn": "Wrong water ΔT (should be 5)."
     }
    ]
   },
@@ -4877,7 +5057,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Ideal gas 3 L, 1 atm, isothermal to 6 L; P?",
      "answerZh": "P₁V₁=P₂V₂ → P₂=0.5 atm。",
      "answerEn": "P₂ = 0.5 atm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "P₁V₁ = P₂V₂（等溫）",
+       "pts": 1
+      },
+      {
+       "content": "P₂ = 1×3/6",
+       "pts": 1
+      },
+      {
+       "content": "0.5 atm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 P₁V₁ = P₂ 漏體積比。",
+     "lossEn": "Using P₁V₁=P₂."
     },
     {
      "difficulty": "intermediate",
@@ -4885,7 +5081,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Gas 27°C 2 atm 4 L → 127°C 6 L; P?",
      "answerZh": "P₁V₁/T₁=P₂V₂/T₂ → P₂=2×4×400/(300×6)=1.78 atm。",
      "answerEn": "P₂ = 2×4×400/(300×6) = 1.78 atm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "P₁V₁/T₁ = P₂V₂/T₂",
+       "pts": 1
+      },
+      {
+       "content": "P₂ = 2×4×400/(300×6)",
+       "pts": 1
+      },
+      {
+       "content": "1.78 atm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "溫度沒換算成開爾文（27°C→300K）。",
+     "lossEn": "Not converting °C to K."
     },
     {
      "difficulty": "challenge",
@@ -4893,7 +5105,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Melt 0.5 kg ice at 0°C; heat needed?",
      "answerZh": "Q=mL=0.5×3.34×10⁵=1.67×10⁵ J。",
      "answerEn": "Q = mL = 1.67×10⁵ J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Q = mL",
+       "pts": 1
+      },
+      {
+       "content": "Q = 0.5×3.34×10⁵",
+       "pts": 1
+      },
+      {
+       "content": "1.67×10⁵ J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 mcΔT 而非 mL（熔解是相變）。",
+     "lossEn": "Using mcΔT instead of mL."
     }
    ]
   },
@@ -4944,7 +5172,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "5 kg at rest on 30° incline; find friction.",
      "answerZh": "f=mg sin30°=5×10×0.5=25 N。",
      "answerEn": "f = mg sin30° = 25 N.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "靜止 → 摩擦力 = 下滑分量",
+       "pts": 1
+      },
+      {
+       "content": "f = mg sin30° = 25 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 μN（靜止不一定達最大靜摩擦）。",
+     "lossEn": "Using μN (static friction not necessarily max)."
     },
     {
      "difficulty": "intermediate",
@@ -4952,7 +5192,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "2 kg slides down 30° incline with μ=0.2; find a.",
      "answerZh": "下滑分量 2×10×0.5=10 N；摩擦 μN=0.2×2×10×cos30°=3.46 N；a=(10-3.46)/2=3.27 m/s²。",
      "answerEn": "a = (mg sinθ - μmg cosθ)/m = 3.27 m/s².",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "下滑分量 mg sinθ = 10 N",
+       "pts": 1
+      },
+      {
+       "content": "摩擦 μN = μmg cosθ = 3.46 N",
+       "pts": 1
+      },
+      {
+       "content": "a = (10-3.46)/2 = 3.27 m/s²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "法向力 N 用 mg 而非 mg cosθ。",
+     "lossEn": "N as mg instead of mg cosθ."
     },
     {
      "difficulty": "challenge",
@@ -4962,7 +5218,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "-g sinθ - μg cosθ = a → μ ≈ 0.40.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "上滑：-mg sinθ - μmg cosθ = ma",
+       "pts": 1
+      },
+      {
+       "content": "代入 -10×0.707 - μ×10×0.707 = -2",
+       "pts": 1
+      },
+      {
+       "content": "μ ≈ 0.40",
+       "pts": 1
+      }
+     ],
+     "lossZh": "摩擦力方向設反（上滑時沿斜面向下）。",
+     "lossEn": "Friction direction wrong (down slope while sliding up)."
     }
    ]
   },
@@ -5130,7 +5402,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Spring-mass k=100, m=0.25; angular frequency?",
      "answerZh": "ω=√(k/m)=√(100/0.25)=20 rad/s。",
      "answerEn": "ω = √(k/m) = 20 rad/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ω = √(k/m)",
+       "pts": 1
+      },
+      {
+       "content": "ω = √(100/0.25)",
+       "pts": 1
+      },
+      {
+       "content": "ω = 20 rad/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 ω = √(m/k)（反了）。",
+     "lossEn": "Using √(m/k) reversed."
     },
     {
      "difficulty": "intermediate",
@@ -5138,7 +5426,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Pendulum L=1 m; period?",
      "answerZh": "T=2π√(L/g)=2π√0.1=1.99 s。",
      "answerEn": "T = 2π√(L/g) ≈ 1.99 s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "T = 2π√(L/g)",
+       "pts": 1
+      },
+      {
+       "content": "T = 2π√(1/10)",
+       "pts": 1
+      },
+      {
+       "content": "T ≈ 1.99 s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "g 代入錯（香港 g≈9.8-10）。",
+     "lossEn": "Wrong g value."
     },
     {
      "difficulty": "challenge",
@@ -5148,7 +5452,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "v = √(kA²/m) = 2 m/s.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "½kA² = ½mv²",
+       "pts": 1
+      },
+      {
+       "content": "v = √(kA²/m)",
+       "pts": 1
+      },
+      {
+       "content": "v = 2 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "總能量漏 ½。",
+     "lossEn": "Missing ½ in energy."
     }
    ]
   },
@@ -5199,7 +5519,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "g at height 6400 km above surface (R=6400 km)?",
      "answerZh": "g'=g(R/(R+h))²=9.8×(6400/12800)²=2.45 m/s²。",
      "answerEn": "g' = g/4 = 2.45 m/s².",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "g ∝ 1/r²",
+       "pts": 1
+      },
+      {
+       "content": "g' = g(R/(R+h))² = 9.8/4",
+       "pts": 1
+      },
+      {
+       "content": "2.45 m/s²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "r 算錯（離地 h 時 r=R+h）。",
+     "lossEn": "Wrong r (should be R+h)."
     },
     {
      "difficulty": "intermediate",
@@ -5207,7 +5543,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Satellite at r=7000 km; orbital speed?",
      "answerZh": "v=√(GM/r)=√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=√(5.72×10⁷)=7560 m/s≈7.6 km/s。",
      "answerEn": "v = √(GM/r) ≈ 7.6 km/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "v = √(GM/r)",
+       "pts": 1
+      },
+      {
+       "content": "代入 G、M、r",
+       "pts": 1
+      },
+      {
+       "content": "≈ 7.6 km/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "r 單位沒轉 m（7000 km = 7×10⁶ m）。",
+     "lossEn": "r not in metres."
     },
     {
      "difficulty": "challenge",
@@ -5217,7 +5569,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "M = 4π²r³/GT² ≈ 6.0×10²⁴ kg.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "M = 4π²r³/(GT²)",
+       "pts": 1
+      },
+      {
+       "content": "T 換算秒（27.3×86400）",
+       "pts": 1
+      },
+      {
+       "content": "≈ 6.0×10²⁴ kg",
+       "pts": 1
+      }
+     ],
+     "lossZh": "週期單位沒換秒。",
+     "lossEn": "Period not in seconds."
     }
    ]
   },
@@ -5268,7 +5636,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Machine does 500 J in 10 s; power?",
      "answerZh": "P=W/t=500/10=50 W。",
      "answerEn": "P = 500/10 = 50 W.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "P = W/t",
+       "pts": 1
+      },
+      {
+       "content": "500/10",
+       "pts": 1
+      },
+      {
+       "content": "50 W",
+       "pts": 1
+      }
+     ],
+     "lossZh": "公式用反（P=W×t）。",
+     "lossEn": "Using P=W×t."
     },
     {
      "difficulty": "intermediate",
@@ -5276,7 +5660,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Motor input 200 W, output 150 W; efficiency?",
      "answerZh": "η=150/200=75%。",
      "answerEn": "η = 150/200 = 75%.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "η = 輸出/輸入",
+       "pts": 1
+      },
+      {
+       "content": "150/200",
+       "pts": 1
+      },
+      {
+       "content": "75%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "效率定義反。",
+     "lossEn": "Reversed efficiency."
     },
     {
      "difficulty": "challenge",
@@ -5286,7 +5686,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "P = Fv = 16 kW.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "P = Fv",
+       "pts": 1
+      },
+      {
+       "content": "800×20",
+       "pts": 1
+      },
+      {
+       "content": "16 kW",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 P=F×a 之類。",
+     "lossEn": "Wrong formula."
     }
    ]
   },
@@ -5454,7 +5870,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Angle of incidence 45°, refraction 30°; n?",
      "answerZh": "n=sin45°/sin30°=0.707/0.5=1.414。",
      "answerEn": "n = sin45°/sin30° = 1.414.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "n = sin i / sin r",
+       "pts": 1
+      },
+      {
+       "content": "n = sin45°/sin30°",
+       "pts": 1
+      },
+      {
+       "content": "n = 1.414",
+       "pts": 1
+      }
+     ],
+     "lossZh": "入射/折射角上下顛倒。",
+     "lossEn": "Reversing i and r."
     },
     {
      "difficulty": "intermediate",
@@ -5464,7 +5896,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "sin C = 1/n → C = 41.8°.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "sin C = 1/n",
+       "pts": 1
+      },
+      {
+       "content": "sin C = 1/1.5 = 0.667",
+       "pts": 1
+      },
+      {
+       "content": "C = 41.8°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "全反射條件：光從光密→光疏（玻璃→空氣）。",
+     "lossEn": "Critical angle requires denser→rarer."
     },
     {
      "difficulty": "challenge",
@@ -5472,7 +5920,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Optical fibre n₁=1.5, n₂=1.45; critical angle?",
      "answerZh": "sin C=n₂/n₁=1.45/1.5=0.967 → C=75.2°。",
      "answerEn": "sin C = n₂/n₁ → C = 75.2°.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "sin C = n₂/n₁",
+       "pts": 1
+      },
+      {
+       "content": "sin C = 1.45/1.5 = 0.967",
+       "pts": 1
+      },
+      {
+       "content": "C = 75.2°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 1/n₁（漏包層折射率）。",
+     "lossEn": "Using 1/n₁ (ignoring cladding)."
     }
    ]
   },
@@ -5523,7 +5987,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Standing wave on 1 m string, fundamental; λ?",
      "answerZh": "基頻：λ/2=L → λ=2 m。",
      "answerEn": "Fundamental: λ/2 = L → λ = 2 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "基頻駐波 λ/2 = L",
+       "pts": 1
+      },
+      {
+       "content": "λ = 2L = 2 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 λ/4（閉管才 λ/4）。",
+     "lossEn": "Using λ/4 (that's closed pipe)."
     },
     {
      "difficulty": "intermediate",
@@ -5531,7 +6007,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Closed pipe 0.5 m, fundamental; λ?",
      "answerZh": "閉管：λ/4=L → λ=2 m。",
      "answerEn": "Closed: λ/4 = L → λ = 2 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "閉管基頻 λ/4 = L",
+       "pts": 1
+      },
+      {
+       "content": "λ = 4L = 2 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "閉管用 λ/2。",
+     "lossEn": "Using λ/2 for closed pipe."
     },
     {
      "difficulty": "challenge",
@@ -5539,7 +6027,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Resonance: amplitude max when driving = natural; two examples.",
      "answerZh": "應用：樂器共鳴箱、微波爐加熱水分子；危害：地震使建築共振倒塌、橋樑風振。",
      "answerEn": "Uses: musical resonance, microwave; hazards: seismic/structural resonance.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "共振：驅動頻率 = 固有頻率",
+       "pts": 1
+      },
+      {
+       "content": "舉一應用例",
+       "pts": 1
+      },
+      {
+       "content": "舉一危害例",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只舉應用或只舉危害。",
+     "lossEn": "Only one category of examples."
     }
    ]
   },
@@ -5590,7 +6094,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Photon energy at λ=500 nm?",
      "answerZh": "E=hc/λ=6.63×10⁻³⁴×3×10⁸/5×10⁻⁷=3.98×10⁻¹⁹ J。",
      "answerEn": "E = hc/λ ≈ 3.98×10⁻¹⁹ J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "E = hc/λ",
+       "pts": 1
+      },
+      {
+       "content": "E = 6.63×10⁻³⁴×3×10⁸/5×10⁻⁷",
+       "pts": 1
+      },
+      {
+       "content": "E = 3.98×10⁻¹⁹ J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "波長單位沒換 m。",
+     "lossEn": "λ not in metres."
     },
     {
      "difficulty": "intermediate",
@@ -5598,7 +6118,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Work function 2 eV, photon 3 eV; max KE?",
      "answerZh": "KEmax=hf-W=3-2=1 eV=1.6×10⁻¹⁹ J。",
      "answerEn": "KEmax = 1 eV.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "KEmax = hf - W",
+       "pts": 1
+      },
+      {
+       "content": "= 3 - 2 = 1 eV",
+       "pts": 1
+      },
+      {
+       "content": "= 1.6×10⁻¹⁹ J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "電子伏特→焦耳換算錯。",
+     "lossEn": "eV to J conversion wrong."
     },
     {
      "difficulty": "challenge",
@@ -5608,7 +6144,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "KE = h(f-f₀); V = KE/e ≈ 0.83 V.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "KEmax = h(f - f₀)",
+       "pts": 1
+      },
+      {
+       "content": "= 6.63×10⁻³⁴×2×10¹⁴ J",
+       "pts": 1
+      },
+      {
+       "content": "V = KEmax/e ≈ 0.83 V",
+       "pts": 1
+      }
+     ],
+     "lossZh": "紅限與截止電壓概念混淆。",
+     "lossEn": "Confusing threshold frequency and stopping voltage."
     }
    ]
   },
@@ -5659,7 +6211,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Mass defect 0.01 kg; energy released?",
      "answerZh": "E=mc²=0.01×9×10¹⁶=9×10¹⁴ J。",
      "answerEn": "E = mc² = 9×10¹⁴ J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "E = mc²",
+       "pts": 1
+      },
+      {
+       "content": "0.01×9×10¹⁶",
+       "pts": 1
+      },
+      {
+       "content": "9×10¹⁴ J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "c² 算錯（3×10⁸ 平方 = 9×10¹⁶）。",
+     "lossEn": "c² arithmetic error."
     },
     {
      "difficulty": "intermediate",
@@ -5667,7 +6235,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "²³⁵U fission ~200 MeV; energy per kg?",
      "answerZh": "每核子數 6.02×10²³/235≈2.56×10²⁴ 核/kg；E=2.56×10²⁴×200×1.6×10⁻¹³=8.2×10¹³ J。",
      "answerEn": "E ≈ 8.2×10¹³ J/kg.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "每 kg 核數 = 6.02×10²³/235×1000",
+       "pts": 1
+      },
+      {
+       "content": "E = 核數×200 MeV",
+       "pts": 1
+      },
+      {
+       "content": "換算成 J ≈ 8.2×10¹³ J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 kg 換算（每 g 是 /235，每 kg ×1000）。",
+     "lossEn": "Not converting g to kg."
     },
     {
      "difficulty": "challenge",
@@ -5677,7 +6261,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Fission: heavy nuclei, neutron-triggered, controllable; fusion: light nuclei, extreme heat, denser.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "裂變：重核+中子、可控",
+       "pts": 1
+      },
+      {
+       "content": "聚變：輕核、極高溫、能量密度大",
+       "pts": 1
+      },
+      {
+       "content": "聚變燃料豐富（氫）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把兩者條件/原料對調。",
+     "lossEn": "Swapping fission/fusion conditions."
     }
    ]
   },
@@ -5728,7 +6328,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "X-ray imaging: why do bones appear white?",
      "answerZh": "骨含鈣密度高，吸收 X 射線多 → 底片少曝光 → 白色。",
      "answerEn": "Bones dense (calcium) absorb more X-rays → whiter image.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "骨含鈣密度高",
+       "pts": 1
+      },
+      {
+       "content": "吸收 X 射線多",
+       "pts": 1
+      },
+      {
+       "content": "底片少曝光 → 白色",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「骨頭硬」無輻射吸收邏輯。",
+     "lossEn": "No absorption logic."
     },
     {
      "difficulty": "intermediate",
@@ -5736,7 +6352,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "CT vs plain X-ray?",
      "answerZh": "CT 多角度掃描+電腦重組橫斷面圖像，可看軟組織；普通 X 光是單一投影。",
      "answerEn": "CT takes many angles and reconstructs cross-sections; sees soft tissue.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "CT 多角度掃描 + 電腦重組",
+       "pts": 1
+      },
+      {
+       "content": "可看橫斷面/軟組織",
+       "pts": 1
+      }
+     ],
+     "lossZh": "說 CT 只是更強 X 光。",
+     "lossEn": "Calling CT just stronger X-ray."
     },
     {
      "difficulty": "challenge",
@@ -5746,7 +6374,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Ultrasound = mechanical waves, reflections at tissue boundaries, no radiation; X-ray = ionising EM.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "超聲是機械波（反射成像）",
+       "pts": 1
+      },
+      {
+       "content": "X 光是電磁輻射（游離）",
+       "pts": 1
+      },
+      {
+       "content": "超聲無輻射風險",
+       "pts": 1
+      }
+     ],
+     "lossZh": "本質區別說錯。",
+     "lossEn": "Wrong fundamental difference."
     }
    ]
   },
@@ -5797,7 +6441,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Five readings 2.1,2.2,2.0,2.1,2.1; mean?",
      "answerZh": "平均=(2.1+2.2+2.0+2.1+2.1)/5=2.1。",
      "answerEn": "Mean = 2.1.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "求和：2.1+2.2+2.0+2.1+2.1 = 10.5",
+       "pts": 1
+      },
+      {
+       "content": "平均 = 10.5/5 = 2.1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "求和或除法錯。",
+     "lossEn": "Sum or division error."
     },
     {
      "difficulty": "intermediate",
@@ -5805,7 +6461,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Line through (1,3),(5,7); slope?",
      "answerZh": "斜率=(7-3)/(5-1)=1。",
      "answerEn": "Slope = 1.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "斜率 = Δy/Δx",
+       "pts": 1
+      },
+      {
+       "content": "(7-3)/(5-1)",
+       "pts": 1
+      },
+      {
+       "content": "= 1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "Δx/Δy 倒置。",
+     "lossEn": "Reversed slope."
     },
     {
      "difficulty": "challenge",
@@ -5813,7 +6485,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "How to identify and handle outliers?",
      "answerZh": "用平均值±範圍/標準差判斷明顯偏離者；核對實驗記錄確認錯誤後剔除，不隨意刪除。",
      "answerEn": "Identify via deviation from mean; verify then exclude only if justified.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "用偏差/範圍判離群",
+       "pts": 1
+      },
+      {
+       "content": "核對記錄後才剔除",
+       "pts": 1
+      },
+      {
+       "content": "不隨意刪除",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接刪除不核對。",
+     "lossEn": "Deleting without verification."
     }
    ]
   },
@@ -5864,7 +6552,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Two renewable and two non-renewable examples.",
      "answerZh": "可再生：太陽能、風能、水能；不可再生：煤、石油、天然氣。",
      "answerEn": "Renewable: solar, wind, hydro; non-renewable: coal, oil, gas.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "可再生：太陽/風/水/生物質",
+       "pts": 1
+      },
+      {
+       "content": "不可再生：煤/油/氣",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分類錯（如把核能當可再生）。",
+     "lossEn": "Misclassifying (e.g. nuclear as renewable)."
     },
     {
      "difficulty": "intermediate",
@@ -5872,7 +6572,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Limitations of wind power?",
      "answerZh": "依賴風況不穩定、需大片土地、噪音、對鳥類影響；儲能困難。",
      "answerEn": "Intermittent, land use, noise, bird impact; storage difficult.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "風況不穩定（間歇）",
+       "pts": 1
+      },
+      {
+       "content": "需土地/噪音/鳥類影響",
+       "pts": 1
+      },
+      {
+       "content": "儲能困難",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「貴」不講技術限制。",
+     "lossEn": "Only \"expensive\" without technical limits."
     },
     {
      "difficulty": "challenge",
@@ -5880,7 +6596,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Solar cell energy conversion? Efficiency bottleneck?",
      "answerZh": "光能→電能（光伏效應）；瓶頸：材料吸收光譜有限、反射損失、熱效應。",
      "answerEn": "Light→electricity; bottlenecks: spectral response, reflection, heat.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "光能 → 電能（光伏效應）",
+       "pts": 1
+      },
+      {
+       "content": "瓶頸：光譜響應/反射/熱",
+       "pts": 1
+      }
+     ],
+     "lossZh": "說成光能→熱能。",
+     "lossEn": "Saying light→heat."
     }
    ]
   },
@@ -5931,7 +6659,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Two medical uses of radioisotopes.",
      "answerZh": "放射治療（殺癌細胞）、醫學影像（示蹤劑如 I-131 甲狀腺）。",
      "answerEn": "Radiotherapy; medical imaging/tracers (I-131).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "放射治療（殺癌細胞）",
+       "pts": 1
+      },
+      {
+       "content": "示蹤劑/醫學影像（I-131）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩個應用重複或非醫學。",
+     "lossEn": "Duplicated or non-medical uses."
     },
     {
      "difficulty": "intermediate",
@@ -5939,7 +6679,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "C-14 half-life 5730 y; sample has 1/8; age?",
      "answerZh": "1/8=(½)³ → 3 個半衰期 → 3×5730=17190 年。",
      "answerEn": "3 half-lives → 17190 y.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "1/8 = (½)³",
+       "pts": 1
+      },
+      {
+       "content": "3 個半衰期",
+       "pts": 1
+      },
+      {
+       "content": "3×5730 = 17190 年",
+       "pts": 1
+      }
+     ],
+     "lossZh": "半衰期個數算錯。",
+     "lossEn": "Wrong number of half-lives."
     },
     {
      "difficulty": "challenge",
@@ -5949,7 +6705,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Time, distance, shielding.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "時間：縮短暴露",
+       "pts": 1
+      },
+      {
+       "content": "距離：遠離源",
+       "pts": 1
+      },
+      {
+       "content": "屏蔽：鉛/混凝土",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏其中一原則。",
+     "lossEn": "Missing one principle."
     }
    ]
   },
@@ -6234,7 +7006,15 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Speed of sound in air?",
      "answerZh": "約 340 m/s（室溫）。",
      "answerEn": "~340 m/s at room temperature.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "約 340 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "答真空聲速（真空不能傳聲）。",
+     "lossEn": "Sound speed in vacuum (no medium)."
     },
     {
      "difficulty": "intermediate",
@@ -6242,7 +7022,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "What determines pitch and loudness?",
      "answerZh": "音調由頻率決定（頻率高音調高）；響度由振幅決定。",
      "answerEn": "Pitch by frequency; loudness by amplitude.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "音調 = 頻率",
+       "pts": 1
+      },
+      {
+       "content": "響度 = 振幅",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩者對調。",
+     "lossEn": "Swapping pitch and loudness."
     },
     {
      "difficulty": "challenge",
@@ -6252,7 +7044,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "d = v×t/2 = 3.4 m.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "d = vt/2",
+       "pts": 1
+      },
+      {
+       "content": "d = 340×0.02/2",
+       "pts": 1
+      },
+      {
+       "content": "3.4 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏「往返」除以 2。",
+     "lossEn": "Not dividing by 2 for round trip."
     }
    ]
   },
@@ -6303,7 +7111,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Charged particle moving perpendicular to B; direction rule?",
      "answerZh": "佛萊明左手定則（若為正電荷）；洛倫茲力 F=qvB 垂直於 v 和 B。",
      "answerEn": "Fleming's left-hand rule; F=qvB perpendicular to v and B.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "佛萊明左手定則",
+       "pts": 1
+      },
+      {
+       "content": "F 垂直 v 和 B",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用右手定則（那是電流方向）。",
+     "lossEn": "Using right-hand rule for force."
     },
     {
      "difficulty": "intermediate",
@@ -6311,7 +7131,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Proton at 2×10⁶ m/s in B=0.5 T; Lorentz force?",
      "answerZh": "F=qvB=1.6×10⁻¹⁹×2×10⁶×0.5=1.6×10⁻¹³ N。",
      "answerEn": "F = qvB = 1.6×10⁻¹³ N.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "F = qvB",
+       "pts": 1
+      },
+      {
+       "content": "F = 1.6×10⁻¹⁹×2×10⁶×0.5",
+       "pts": 1
+      },
+      {
+       "content": "1.6×10⁻¹³ N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 q 或 v 或 B 任一代入。",
+     "lossEn": "Missing one substitution."
     },
     {
      "difficulty": "challenge",
@@ -6321,7 +7157,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "T = 2πm/qB, independent of v.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "qvB = mv²/r → r = mv/qB",
+       "pts": 1
+      },
+      {
+       "content": "T = 2πr/v = 2πm/qB",
+       "pts": 1
+      },
+      {
+       "content": "不含 v → 週期與速度無關",
+       "pts": 1
+      }
+     ],
+     "lossZh": "推導中途斷掉。",
+     "lossEn": "Incomplete derivation."
     }
    ]
   },
@@ -6372,7 +7224,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Coil L=0.5 H, dI/dt=2 A/s; induced emf?",
      "answerZh": "ε=L(dI/dt)=0.5×2=1 V。",
      "answerEn": "ε = L dI/dt = 1 V.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ε = L(dI/dt)",
+       "pts": 1
+      },
+      {
+       "content": "ε = 0.5×2",
+       "pts": 1
+      },
+      {
+       "content": "1 V",
+       "pts": 1
+      }
+     ],
+     "lossZh": "公式用反（ε=L·dI/dt）。",
+     "lossEn": "Wrong formula."
     },
     {
      "difficulty": "intermediate",
@@ -6380,7 +7248,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Why does a bulb flash when circuit is broken?",
      "answerZh": "電流突降→線圈產生自感電動勢維持電流→燈泡短暫閃亮。",
      "answerEn": "Sudden current drop induces emf maintaining current → flash.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "電流突降",
+       "pts": 1
+      },
+      {
+       "content": "自感電動勢維持電流",
+       "pts": 1
+      },
+      {
+       "content": "燈泡短暫閃亮",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「線圈儲能」不講維持電流。",
+     "lossEn": "No current-maintenance logic."
     },
     {
      "difficulty": "challenge",
@@ -6390,7 +7274,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Back emf nearly balances supply voltage → small net driving voltage → small current.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "初級產生反電動勢",
+       "pts": 1
+      },
+      {
+       "content": "接近電源電壓 → 淨驅動電壓小",
+       "pts": 1
+      },
+      {
+       "content": "電流小",
+       "pts": 1
+      }
+     ],
+     "lossZh": "解釋不到「反電動勢」。",
+     "lossEn": "No back-emf reasoning."
     }
    ]
   },
@@ -6441,7 +7341,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Verifying F=ma: controlled variables?",
      "answerZh": "控制質量不變，改變力（掛鉤碼質量）；或控制力不變，改變質量。",
      "answerEn": "Hold mass constant, vary force (or vice versa).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "控制質量不變，改變力",
+       "pts": 1
+      },
+      {
+       "content": "或控制力，改變質量",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩個都變。",
+     "lossEn": "Changing both variables."
     },
     {
      "difficulty": "intermediate",
@@ -6449,7 +7361,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Measured acceleration on incline less than theoretical; why?",
      "answerZh": "有摩擦力（未完全光滑）、空氣阻力、計時誤差。",
      "answerEn": "Friction, air resistance, timing errors.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "摩擦力",
+       "pts": 1
+      },
+      {
+       "content": "空氣阻力",
+       "pts": 1
+      },
+      {
+       "content": "計時誤差",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答一個誤差源。",
+     "lossEn": "Only one error source."
     },
     {
      "difficulty": "challenge",
@@ -6457,7 +7385,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Design experiment to measure density.",
      "answerZh": "天平測質量；量筒排水法測體積；ρ=m/V；誤差：讀數、排水殘留、溫度。",
      "answerEn": "Balance for m; displacement for V; ρ=m/V; reading errors.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "天平測質量",
+       "pts": 1
+      },
+      {
+       "content": "量筒排水法測體積",
+       "pts": 1
+      },
+      {
+       "content": "ρ = m/V + 誤差討論",
+       "pts": 1
+      }
+     ],
+     "lossZh": "缺誤差來源。",
+     "lossEn": "No error discussion."
     }
    ]
   },
@@ -6508,7 +7452,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Key conclusion of Rutherford's α-scattering?",
      "answerZh": "原子有微小緻密的帶正電核；大部分空間是空的，電子繞核運動。",
      "answerEn": "Atom has tiny dense positive nucleus; mostly empty space.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "原子有微小緻密帶正電核",
+       "pts": 1
+      },
+      {
+       "content": "大部分是空的",
+       "pts": 1
+      },
+      {
+       "content": "電子繞核",
+       "pts": 1
+      }
+     ],
+     "lossZh": "結論不完整（漏「核很小」）。",
+     "lossEn": "Incomplete conclusion."
     },
     {
      "difficulty": "intermediate",
@@ -6518,7 +7478,19 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Emits photon, ΔE = hf = level difference.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "高→低能級發射光子",
+       "pts": 1
+      },
+      {
+       "content": "ΔE = hf 對應能級差",
+       "pts": 1
+      }
+     ],
+     "lossZh": "說成吸收光子。",
+     "lossEn": "Saying absorbs photon."
     },
     {
      "difficulty": "challenge",
@@ -6526,7 +7498,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "How do line spectra confirm energy levels?",
      "answerZh": "譜線是離散波長→電子躍遷只在特定能級差→能級量子化。",
      "answerEn": "Discrete wavelengths → only specific level differences → quantised levels.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "譜線離散波長",
+       "pts": 1
+      },
+      {
+       "content": "→ 躍遷只在特定能級差",
+       "pts": 1
+      },
+      {
+       "content": "→ 能級量子化",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「有譜線」不推能級。",
+     "lossEn": "No inference to quantised levels."
     }
    ]
   },
@@ -6576,7 +7564,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Convert 25°C to Kelvin.",
      "answerZh": "T=25+273=298 K。",
      "answerEn": "T = 298 K.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "T = 25 + 273",
+       "pts": 1
+      },
+      {
+       "content": "298 K",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用減 273。",
+     "lossEn": "Subtracting 273."
     },
     {
      "difficulty": "intermediate",
@@ -6584,7 +7584,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Rod 1 m, α=2×10⁻⁵, ΔT=50; elongation?",
      "answerZh": "ΔL=αL₀ΔT=2×10⁻⁵×1×50=1×10⁻³ m=1 mm。",
      "answerEn": "ΔL = αL₀ΔT = 1 mm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ΔL = αL₀ΔT",
+       "pts": 1
+      },
+      {
+       "content": "2×10⁻⁵×1×50",
+       "pts": 1
+      },
+      {
+       "content": "1 mm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏乘原長 L₀。",
+     "lossEn": "Missing original length."
     },
     {
      "difficulty": "challenge",
@@ -6594,7 +7610,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Different expansion coefficients → unequal elongation → bends toward smaller α.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "兩金屬膨脹係數不同",
+       "pts": 1
+      },
+      {
+       "content": "伸長量不同 → 彎曲",
+       "pts": 1
+      },
+      {
+       "content": "向係數小的一側彎",
+       "pts": 1
+      }
+     ],
+     "lossZh": "彎曲方向說反。",
+     "lossEn": "Wrong bend direction."
     }
    ]
   },
@@ -6645,7 +7677,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Isothermal: 1 atm, 2 L → 1 L; pressure?",
      "answerZh": "P₁V₁=P₂V₂ → P₂=1×2/1=2 atm。",
      "answerEn": "P₂ = 2 atm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "等溫：P₁V₁ = P₂V₂",
+       "pts": 1
+      },
+      {
+       "content": "P₂ = 1×2/1",
+       "pts": 1
+      },
+      {
+       "content": "2 atm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "反比關係算反。",
+     "lossEn": "Inverse relation reversed."
     },
     {
      "difficulty": "intermediate",
@@ -6653,7 +7701,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Charles/constant V: 27°C 1 atm → 127°C; P?",
      "answerZh": "P/T 不變 → P₂=P₁×T₂/T₁=1×400/300=1.33 atm。",
      "answerEn": "P₂ = 1×400/300 = 1.33 atm.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "P/T 不變（體積固定）",
+       "pts": 1
+      },
+      {
+       "content": "P₂ = 1×400/300",
+       "pts": 1
+      },
+      {
+       "content": "1.33 atm",
+       "pts": 1
+      }
+     ],
+     "lossZh": "溫度未換開爾文。",
+     "lossEn": "Not using Kelvin."
     },
     {
      "difficulty": "challenge",
@@ -6663,7 +7727,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Higher T → faster molecules → more frequent/harder wall collisions → higher P.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "溫度升 → 分子平均動能升",
+       "pts": 1
+      },
+      {
+       "content": "撞擊器壁頻率與力度升",
+       "pts": 1
+      },
+      {
+       "content": "壓強增大",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「分子運動快」不接「壓強」。",
+     "lossEn": "No link to pressure."
     }
    ]
   },
@@ -6714,7 +7794,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "2 kg under 10 N for 3 s; impulse and Δp?",
      "answerZh": "J=Ft=30 N·s；Δp=30 kg·m/s。",
      "answerEn": "J = Ft = 30 N·s; Δp = 30 kg·m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "J = Ft = 10×3 = 30 N·s",
+       "pts": 1
+      },
+      {
+       "content": "Δp = J = 30 kg·m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "衝量與動量變化單位/概念混淆。",
+     "lossEn": "Confusing impulse and momentum change."
     },
     {
      "difficulty": "intermediate",
@@ -6724,7 +7816,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Δp = 3.5; F = 70 N.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "Δp = m(v₂ - v₁) = 0.5×(3-(-4)) = 3.5",
+       "pts": 1
+      },
+      {
+       "content": "F = Δp/t = 3.5/0.05",
+       "pts": 1
+      },
+      {
+       "content": "70 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "反彈速度符號沒處理（方向相反取負）。",
+     "lossEn": "Rebound velocity sign."
     },
     {
      "difficulty": "challenge",
@@ -6734,7 +7842,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "a = v²/2s = 100; F = m(g+a) = 110 N.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "落地 v = √(2gh) = 10 m/s",
+       "pts": 1
+      },
+      {
+       "content": "a = v²/2s = 100/1 = 100 m/s²",
+       "pts": 1
+      },
+      {
+       "content": "F = m(g+a) = 110 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏加重力（F 是地面力 = mg+ma）。",
+     "lossEn": "Missing mg in force."
     }
    ]
   },
@@ -6785,7 +7909,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Raise 2 kg by 3 m; ΔPE?",
      "answerZh": "ΔPE=mgh=2×10×3=60 J。",
      "answerEn": "ΔPE = mgh = 60 J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ΔPE = mgh",
+       "pts": 1
+      },
+      {
+       "content": "2×10×3",
+       "pts": 1
+      },
+      {
+       "content": "60 J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "高度 h 用錯（舉高 3 m）。",
+     "lossEn": "Wrong h."
     },
     {
      "difficulty": "intermediate",
@@ -6793,7 +7933,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Spring k=100 stretched 0.2 m; elastic PE?",
      "answerZh": "PE=½kx²=½×100×0.04=2 J。",
      "answerEn": "PE = ½kx² = 2 J.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "PE = ½kx²",
+       "pts": 1
+      },
+      {
+       "content": "½×100×0.04",
+       "pts": 1
+      },
+      {
+       "content": "2 J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 ½。",
+     "lossEn": "Missing ½."
     },
     {
      "difficulty": "challenge",
@@ -6803,7 +7959,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "v² = 2g(h-2r) = 40 → v = 6.32 m/s.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "mgh = mg(2r) + ½mv²",
+       "pts": 1
+      },
+      {
+       "content": "v² = 2g(h-2r)",
+       "pts": 1
+      },
+      {
+       "content": "v = 6.32 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "圓環頂部高度寫成 r 而非 2r。",
+     "lossEn": "Loop top height as r not 2r."
     }
    ]
   },
@@ -6854,7 +8026,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "How to visualise wave crests in a ripple tank?",
      "answerZh": "頻閃燈照射使波峰看似靜止；或用投影看到明暗條紋。",
      "answerEn": "Strobe light freezes crests; projection shows fringes.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "頻閃燈使波峰看似靜止",
+       "pts": 1
+      },
+      {
+       "content": "或投影見明暗條紋",
+       "pts": 1
+      }
+     ],
+     "lossZh": "答不出具體顯示方法。",
+     "lossEn": "No concrete visualisation method."
     },
     {
      "difficulty": "intermediate",
@@ -6862,7 +8046,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Water waves diffract: effect of λ vs slit width?",
      "answerZh": "波長接近或大於縫寬時繞射明顯；縫寬遠大於波長時繞射弱。",
      "answerEn": "Diffraction significant when λ ≈ or > slit width.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "波長≈或>縫寬 → 繞射明顯",
+       "pts": 1
+      },
+      {
+       "content": "縫寬>>波長 → 繞射弱",
+       "pts": 1
+      }
+     ],
+     "lossZh": "條件說反。",
+     "lossEn": "Reversed condition."
     },
     {
      "difficulty": "challenge",
@@ -6870,7 +8066,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Measure wave speed in ripple tank?",
      "answerZh": "量波長（明紋間距）和頻率（閃光燈頻率）；v=fλ。",
      "answerEn": "Measure λ (fringe spacing) and f (strobe); v = fλ.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "量波長（明紋間距）",
+       "pts": 1
+      },
+      {
+       "content": "量頻率（閃光燈）",
+       "pts": 1
+      },
+      {
+       "content": "v = fλ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏量頻率方法。",
+     "lossEn": "Missing frequency measurement."
     }
    ]
   },
@@ -7157,7 +8369,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Definition of isotopes?",
      "answerZh": "同元素（質子數相同）中子數不同的原子。",
      "answerEn": "Same element (same protons), different neutrons.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "同質子數",
+       "pts": 1
+      },
+      {
+       "content": "不同中子數",
+       "pts": 1
+      }
+     ],
+     "lossZh": "定義反（同中子數不同質子）。",
+     "lossEn": "Reversed definition."
     },
     {
      "difficulty": "intermediate",
@@ -7165,7 +8389,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "U-235 vs U-238 uses?",
      "answerZh": "U-235 可裂變用於核燃料/核武；U-238 不可裂變，用於增殖或貧鈾。",
      "answerEn": "U-235 fissile (fuel); U-238 non-fissile.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "U-235 可裂變（核燃料）",
+       "pts": 1
+      },
+      {
+       "content": "U-238 不可裂變",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用途說反。",
+     "lossEn": "Swapped uses."
     },
     {
      "difficulty": "challenge",
@@ -7173,7 +8409,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Why use short half-life isotopes as medical tracers?",
      "answerZh": "短半衰期→輻射快速衰減，減少患者暴露；仍有足夠活性完成成像。",
      "answerEn": "Short half-life → radiation decays fast, less patient exposure, still detectable.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "短半衰期 → 輻射快衰減",
+       "pts": 1
+      },
+      {
+       "content": "減少患者暴露",
+       "pts": 1
+      },
+      {
+       "content": "仍足夠活性成像",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「安全」不講活性折衷。",
+     "lossEn": "Only \"safe\" without activity trade-off."
     }
    ]
   },
@@ -7214,7 +8466,15 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Three modes of heat transfer?",
      "answerZh": "傳導、對流、輻射。",
      "answerEn": "Conduction, convection, radiation.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "傳導、對流、輻射",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏其中一種。",
+     "lossEn": "Missing one mode."
     },
     {
      "difficulty": "intermediate",
@@ -7222,7 +8482,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Purpose of silvering in a vacuum flask?",
      "answerZh": "鍍銀表面反射輻射，減少輻射熱損。",
      "answerEn": "Silver reflects radiation, reducing radiative heat loss.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "鍍銀反射輻射",
+       "pts": 1
+      },
+      {
+       "content": "減少輻射熱損",
+       "pts": 1
+      }
+     ],
+     "lossZh": "答「保溫」不指明輻射。",
+     "lossEn": "Vague \"insulation\" not radiation."
     },
     {
      "difficulty": "challenge",
@@ -7232,7 +8504,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Air gap reduces conduction; sealed prevents convection; double panes limit radiation.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "夾層空氣減少傳導",
+       "pts": 1
+      },
+      {
+       "content": "密閉防對流",
+       "pts": 1
+      },
+      {
+       "content": "雙層減少輻射交換",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏一種機制。",
+     "lossEn": "Missing one mechanism."
     }
    ]
   },
@@ -7274,7 +8562,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Horizontal throw from 45 m at 20 m/s; time and range?",
      "answerZh": "t=√(2×45/10)=3 s；x=20×3=60 m。",
      "answerEn": "t = 3 s; x = 60 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "t = √(2h/g)",
+       "pts": 1
+      },
+      {
+       "content": "t = √(2×45/10) = 3 s",
+       "pts": 1
+      },
+      {
+       "content": "x = vt = 20×3 = 60 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "落地時間由高度決定，非水平速度。",
+     "lossEn": "Time from height, not horizontal v."
     },
     {
      "difficulty": "intermediate",
@@ -7282,7 +8586,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Projectile 30°, 20 m/s; range and max height?",
      "answerZh": "R=u²sin2θ/g=400×sin60°/10=34.6 m；H=u²sin²θ/2g=400×0.25/20=5 m。",
      "answerEn": "R = 34.6 m; H = 5 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "R = u²sin2θ/g",
+       "pts": 1
+      },
+      {
+       "content": "H = u²sin²θ/2g",
+       "pts": 1
+      },
+      {
+       "content": "R=34.6 m, H=5 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩公式混淆。",
+     "lossEn": "Swapping range/height formulae."
     },
     {
      "difficulty": "challenge",
@@ -7290,7 +8610,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "At apex of projectile, acceleration and velocity?",
      "answerZh": "加速度=g（向下不變）；速度=水平分量 u cosθ（垂直分量為 0）。",
      "answerEn": "a = g downward; v = u cosθ horizontal.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "加速度 = g（向下不變）",
+       "pts": 1
+      },
+      {
+       "content": "速度 = u cosθ（水平）",
+       "pts": 1
+      },
+      {
+       "content": "垂直分量 = 0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為最高點速度為 0（只有垂直分量為 0）。",
+     "lossEn": "Thinking v=0 at apex (only vertical is 0)."
     }
    ]
   },
@@ -7332,7 +8668,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "0.5 kg at 4 m/s on 1 m string; tension?",
      "answerZh": "T=mv²/r=0.5×16/1=8 N。",
      "answerEn": "T = 8 N.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "T = mv²/r",
+       "pts": 1
+      },
+      {
+       "content": "T = 0.5×16/1",
+       "pts": 1
+      },
+      {
+       "content": "8 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "水平圓周張力直接 = 向心力（無垂直分量平衡）。",
+     "lossEn": "Horizontal circle tension = centripetal directly."
     },
     {
      "difficulty": "intermediate",
@@ -7340,7 +8692,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "In a conical pendulum, what do tension components provide?",
      "answerZh": "水平分量提供向心力；垂直分量平衡重力。",
      "answerEn": "Horizontal: centripetal; vertical: balances weight.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "水平分量 → 向心力",
+       "pts": 1
+      },
+      {
+       "content": "垂直分量 → 平衡重力",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分量作用說反。",
+     "lossEn": "Swapped component roles."
     },
     {
      "difficulty": "challenge",
@@ -7350,7 +8714,19 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "mg = mv²/r → v = √(gr).",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "mg = mv²/r",
+       "pts": 1
+      },
+      {
+       "content": "v = √(gr)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏臨界條件（N=0）。",
+     "lossEn": "Missing N=0 condition."
     }
    ]
   },
@@ -7393,7 +8769,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Satellite r=7000 km; orbital speed?",
      "answerZh": "v=√(GM/r)≈√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=7560 m/s≈7.6 km/s。",
      "answerEn": "v ≈ 7.6 km/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "v = √(GM/r)",
+       "pts": 1
+      },
+      {
+       "content": "代入得 ≈ 7.6 km/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "r 單位錯誤。",
+     "lossEn": "Wrong r units."
     },
     {
      "difficulty": "intermediate",
@@ -7401,7 +8789,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Geostationary: why equatorial orbit?",
      "answerZh": "衛星須與地球同角速度且週期 24h，軌道面必須通過地心；要在赤道平面才能始終對準同一點。",
      "answerEn": "Must orbit in equatorial plane to stay above same point with 24h period.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "同步需 24h 週期",
+       "pts": 1
+      },
+      {
+       "content": "軌道面須過地心",
+       "pts": 1
+      },
+      {
+       "content": "要在赤道平面才能對準同一點",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「24h」不講赤道條件。",
+     "lossEn": "Only 24h without equatorial condition."
     },
     {
      "difficulty": "challenge",
@@ -7409,7 +8813,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Two satellites, r ratio 4:1; period ratio?",
      "answerZh": "T²∝r³（開普勒第三定律）→ T₁/T₂=(4)³ᐟ²=8:1。",
      "answerEn": "T² ∝ r³ → ratio 8:1.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "T² ∝ r³（開普勒第三）",
+       "pts": 1
+      },
+      {
+       "content": "T₁/T₂ = (4)^(3/2)",
+       "pts": 1
+      },
+      {
+       "content": "8:1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "指數用錯（3/2 次方）。",
+     "lossEn": "Wrong exponent."
     }
    ]
   }

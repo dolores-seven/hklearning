@@ -3133,7 +3133,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "~200 atm, 450°C, iron catalyst.",
      "years": [
       "2018"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "高壓 ~200 atm",
+       "pts": 1
+      },
+      {
+       "content": "450°C + 鐵催化劑",
+       "pts": 1
+      },
+      {
+       "content": "N₂/H₂ 原料",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏溫度或催化劑。",
+     "lossEn": "Missing temperature or catalyst."
     },
     {
      "difficulty": "intermediate",
@@ -3143,7 +3159,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Exothermic; higher T lowers yield; 450°C balances rate and yield.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "反應放熱 → 升溫逆向（產率降）",
+       "pts": 1
+      },
+      {
+       "content": "450°C 是速率與產率的折衷",
+       "pts": 1
+      },
+      {
+       "content": "兼顧催化劑活性",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「高溫速率快」不講平衡代價。",
+     "lossEn": "Only saying higher T speeds reaction."
     },
     {
      "difficulty": "challenge",
@@ -3151,7 +3183,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Why recycle unreacted N₂/H₂? Effect on conversion?",
      "answerZh": "一次性通過轉化率僅約 15%；循環使反應物多次通過催化劑，總轉化率接近 100%，節省原料。",
      "answerEn": "Single pass ~15%; recycling lets reactants pass repeatedly, overall conversion nears 100%.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "單次轉化率僅 ~15%",
+       "pts": 1
+      },
+      {
+       "content": "循環使反應物多次通過催化劑",
+       "pts": 1
+      },
+      {
+       "content": "總轉化率接近 100% + 省原料",
+       "pts": 1
+      }
+     ],
+     "lossZh": "不理解循環的經濟意義。",
+     "lossEn": "Not grasping economic benefit of recycling."
     }
    ]
   },
@@ -3193,7 +3241,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Most abundant gas in air? Approx volume %?",
      "answerZh": "氮氣 N₂，約 78%。",
      "answerEn": "Nitrogen N₂, ~78%.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "答氮氣 N₂",
+       "pts": 1
+      },
+      {
+       "content": "答約 78%（體積）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "答氧氣或比例記錯（氧約 21%）。",
+     "lossEn": "Saying O₂ or wrong proportion."
     },
     {
      "difficulty": "intermediate",
@@ -3203,7 +3263,19 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Bubble into limewater → milky: CO₂+Ca(OH)₂→CaCO₃↓+H₂O.",
      "years": [
       "2018"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "通入石灰水變乳白",
+       "pts": 1
+      },
+      {
+       "content": "方程式 CO₂+Ca(OH)₂→CaCO₃↓+H₂O",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「石灰水」不寫現象或漏方程式。",
+     "lossEn": "Not stating the milky observation or equation."
     },
     {
      "difficulty": "challenge",
@@ -3211,7 +3283,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "How does burning fuels enhance greenhouse effect? Two mitigation measures.",
      "answerZh": "燃燒產 CO₂ 吸收紅外輻射使地表升溫；措施：發展再生能源（太陽/風）、提高能源效率、植樹。",
      "answerEn": "CO₂ absorbs IR; mitigation: renewables, efficiency, reforestation.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "燃燒產 CO₂ 是溫室氣體",
+       "pts": 1
+      },
+      {
+       "content": "舉一項：再生能源/提效/植樹",
+       "pts": 1
+      },
+      {
+       "content": "（加分）說明減排機制",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「節能」而不具體到措施。",
+     "lossEn": "Answering \"save energy\" without specific measures."
     }
    ]
   },
@@ -3255,7 +3343,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Write electron arrangement of Cl (Z=17).",
      "answerZh": "2, 8, 7（三層，最外層 7 個電子）。",
      "answerEn": "2, 8, 7 (three shells, 7 outer electrons).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "三層 2, 8, 7",
+       "pts": 1
+      },
+      {
+       "content": "最外層 7 個",
+       "pts": 1
+      }
+     ],
+     "lossZh": "排布順序錯（如 2,7,8 或漏層）。",
+     "lossEn": "Wrong shell order or missing shell."
     },
     {
      "difficulty": "intermediate",
@@ -3265,7 +3365,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "2, 8, 8, 2; loses 2 → Ca²⁺.",
      "years": [
       "2017"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "排布 2,8,8,2",
+       "pts": 1
+      },
+      {
+       "content": "最外層 2 個 → 失 2 電子",
+       "pts": 1
+      },
+      {
+       "content": "形成 Ca²⁺",
+       "pts": 1
+      }
+     ],
+     "lossZh": "得失電子方向錯（非金屬得電子）。",
+     "lossEn": "Wrong electron gain/loss direction."
     },
     {
      "difficulty": "challenge",
@@ -3273,7 +3389,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Ion X²⁻ has 18 electrons. Find Z of X.",
      "answerZh": "X²⁻ 有 18 電子→X 原子有 16 電子→Z=16（硫 S）；排布 2,8,6。",
      "answerEn": "X has 16 electrons → Z=16 (S); arrangement 2,8,6.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "X²⁻ 有 18 電子 → X 有 16 電子",
+       "pts": 1
+      },
+      {
+       "content": "Z = 16（硫 S）",
+       "pts": 1
+      },
+      {
+       "content": "排布 2,8,6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把陰離子電子數直接當原子電子數。",
+     "lossEn": "Taking anion electrons as atomic electrons."
     }
    ]
   },
@@ -3318,7 +3450,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Zn+CuSO₄→ZnSO₄+Cu; zinc turns red, solution fades.",
      "years": [
       "2016"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "方程式 Zn+CuSO₄→ZnSO₄+Cu",
+       "pts": 1
+      },
+      {
+       "content": "鋅片表面出現紅色沉澱",
+       "pts": 1
+      },
+      {
+       "content": "溶液藍色變淺",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏「藍色變淺」或誤寫成鋅變黑。",
+     "lossEn": "Missing colour fade or wrong observation."
     },
     {
      "difficulty": "intermediate",
@@ -3328,7 +3476,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Mg fastest, Zn slower, Cu no reaction (reactivity Mg>Zn>H>Cu).",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "速率順序 Mg>Zn>Cu",
+       "pts": 1
+      },
+      {
+       "content": "Mg/Zn 放氫、Cu 不反應",
+       "pts": 1
+      },
+      {
+       "content": "用活動序 Mg>Zn>H>Cu 解釋",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 Cu 說成「與酸反應」（Cu 不與稀酸）。",
+     "lossEn": "Saying Cu reacts with dilute acid."
     },
     {
      "difficulty": "challenge",
@@ -3338,7 +3502,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Reduce with CO in blast furnace; Fe below C in series so carbon works; more reactive need electrolysis.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "方程式 Fe₂O₃+3CO→2Fe+3CO₂（或 C 還原）",
+       "pts": 1
+      },
+      {
+       "content": "鐵在活動序中位於碳之下 → 可用碳還原",
+       "pts": 1
+      },
+      {
+       "content": "比鐵活潑的金屬需電解",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接用電解法提鐵（鐵用碳還原更經濟）。",
+     "lossEn": "Using electrolysis for Fe (carbon reduction is economic)."
     }
    ]
   },
@@ -3380,7 +3560,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Principle of fractional distillation of petroleum?",
      "answerZh": "利用各餾分沸點不同，在分餾塔中按溫度梯度分離。",
      "answerEn": "Components have different boiling points, separated in a temperature-gradient tower.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "各成分沸點不同",
+       "pts": 1
+      },
+      {
+       "content": "分餾塔溫度梯度分離",
+       "pts": 1
+      }
+     ],
+     "lossZh": "說成「密度分離」或「化學性質不同」。",
+     "lossEn": "Saying separated by density or chemical property."
     },
     {
      "difficulty": "intermediate",
@@ -3390,7 +3582,19 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "LPG (fuel), petrol (cars), diesel/kerosene, bitumen (roads).",
      "years": [
       "2018"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "列 2-3 個餾分（石油氣/汽油/煤油/柴油/瀝青）",
+       "pts": 1
+      },
+      {
+       "content": "各給一個正確用途",
+       "pts": 1
+      }
+     ],
+     "lossZh": "餾分與用途配錯（如瀝青作燃料）。",
+     "lossEn": "Mismatching fraction and use."
     },
     {
      "difficulty": "challenge",
@@ -3400,7 +3604,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Cracking shortens chains for petrol; pyrolysis produces alkenes at higher temp; both raise yields.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "裂化：長鏈→短鏈增產汽油",
+       "pts": 1
+      },
+      {
+       "content": "裂解：高溫產烯烴",
+       "pts": 1
+      },
+      {
+       "content": "兩者提高輕質產品產量",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把裂化與裂解混為一談。",
+     "lossEn": "Conflating cracking and pyrolysis."
     }
    ]
   },
@@ -3555,7 +3775,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Given C(s)+O₂→CO₂ ΔH=-394, heat from burning 12 g C?",
      "answerZh": "n(C)=12/12=1 mol；放熱=394 kJ。",
      "answerEn": "n(C)=1 mol; heat = 394 kJ.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "n(C) = 12/12 = 1 mol",
+       "pts": 1
+      },
+      {
+       "content": "放熱 = 1×394 = 394 kJ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "質量算錯或漏乘以摩爾數。",
+     "lossEn": "Wrong moles or missing multiplication."
     },
     {
      "difficulty": "intermediate",
@@ -3565,7 +3797,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "ΔH = (436+243) - 2×431 = -183 kJ/mol (exothermic).",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "ΔH = 斷鍵 - 成鍵",
+       "pts": 1
+      },
+      {
+       "content": "代入 (436+243) - 2×431",
+       "pts": 1
+      },
+      {
+       "content": "ΔH = -183 kJ/mol（放熱）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "公式寫成成鍵-斷鍵（符號反）。",
+     "lossEn": "Formula reversed (wrong sign)."
     },
     {
      "difficulty": "challenge",
@@ -3573,7 +3821,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Hess: find ΔH for C→CO given C→CO₂ and CO→CO₂.",
      "answerZh": "ΔH(C→CO)=ΔH(C→CO₂)-ΔH(CO→CO₂)=-394-(-283)=-111 kJ/mol。",
      "answerEn": "ΔH = -394 - (-283) = -111 kJ/mol.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ΔH(C→CO) = ΔH(C→CO₂) - ΔH(CO→CO₂)",
+       "pts": 1
+      },
+      {
+       "content": "代入 -394 - (-283)",
+       "pts": 1
+      },
+      {
+       "content": "= -111 kJ/mol",
+       "pts": 1
+      }
+     ],
+     "lossZh": "減法方向錯（應用 CO 的 ΔH 減去）。",
+     "lossEn": "Wrong subtraction direction."
     }
    ]
   },
@@ -3729,7 +3993,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Across a period, how does metallic character change?",
      "answerZh": "金屬性減弱（Na 金屬→Cl 非金屬）。",
      "answerEn": "Metallic character decreases (Na metal → Cl non-metal).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "金屬性減弱",
+       "pts": 1
+      },
+      {
+       "content": "Na 金屬 → Cl 非金屬",
+       "pts": 1
+      }
+     ],
+     "lossZh": "答「增強」（同週期右移金屬性減弱）。",
+     "lossEn": "Saying metallic character increases."
     },
     {
      "difficulty": "intermediate",
@@ -3737,7 +4013,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Compare Na vs K with water.",
      "answerZh": "K 更劇烈（同一族下移金屬性增強，最外層電子更易失去）。",
      "answerEn": "K more vigorous (down group, easier to lose outer electron).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "K 更劇烈",
+       "pts": 1
+      },
+      {
+       "content": "同族下移金屬性增強",
+       "pts": 1
+      },
+      {
+       "content": "最外層電子更易失去",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「K 劇烈」不給原子結構原因。",
+     "lossEn": "No atomic-structure reason."
     },
     {
      "difficulty": "challenge",
@@ -3745,7 +4037,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Element in Period 3 Group VI: arrangement, ion, acid/base character.",
      "answerZh": "排布 2,8,6（硫）；易得 2 電子成 S²⁻；其氧化物 SO₃ 溶於水成酸性（亞硫酸/硫酸）。",
      "answerEn": "Arrangement 2,8,6 (S); forms S²⁻; SO₃ acidic oxide.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "排布 2,8,6（硫）",
+       "pts": 1
+      },
+      {
+       "content": "易得 2 電子成 S²⁻",
+       "pts": 1
+      },
+      {
+       "content": "氧化物 SO₃ 酸性",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把非金屬說成易失電子。",
+     "lossEn": "Calling non-metal electron-losing."
     }
    ]
   },
@@ -3791,7 +4099,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Thermoplastic remouldable (PE); thermosetting irreversible (Bakelite).",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "熱塑性可重熔（PE）",
+       "pts": 1
+      },
+      {
+       "content": "熱固性不可逆（電木）",
+       "pts": 1
+      },
+      {
+       "content": "各舉一例",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩者定義/例子配反。",
+     "lossEn": "Swapping definitions/examples."
     },
     {
      "difficulty": "intermediate",
@@ -3799,7 +4123,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Why recycle PE but not Bakelite?",
      "answerZh": "PE 熱塑性加熱可重熔重新塑形；電木熱固性加熱已交聯固化，重熔會分解不變形。",
      "answerEn": "PE melts and remoulds; Bakelite is cross-linked, decomposition on heating.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "PE 加熱可重熔再塑形",
+       "pts": 1
+      },
+      {
+       "content": "電木交聯固化，重熔會分解",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「電木難回收」不講交聯原因。",
+     "lossEn": "No cross-linking reason."
     },
     {
      "difficulty": "challenge",
@@ -3809,7 +4145,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Addition: alkene monomer, no by-product; condensation: two functional monomers release H₂O (nylon).",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "加成：單體含 C=C，無小分子（PE）",
+       "pts": 1
+      },
+      {
+       "content": "縮合：兩個官能團單體，釋 H₂O（尼龍）",
+       "pts": 1
+      },
+      {
+       "content": "比較產物/條件差異",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把尼龍說成加成聚合（它是縮合）。",
+     "lossEn": "Calling nylon addition polymerisation."
     }
    ]
   },
@@ -3966,7 +4318,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Insulated cup/calorimeter, thermometer (0.1°C), measuring cylinder, stirrer.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "保溫杯/量熱器",
+       "pts": 1
+      },
+      {
+       "content": "溫度計（0.1°C）+ 量筒",
+       "pts": 1
+      },
+      {
+       "content": "攪拌棒",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏溫度計精度要求。",
+     "lossEn": "Missing thermometer precision."
     },
     {
      "difficulty": "intermediate",
@@ -3974,7 +4342,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Calculate ΔH: 50 mL 0.200 mol/L each, ΔT=1.36°C.",
      "answerZh": "n(H₂O)=0.01 mol；q=mcΔT=100×4.2×1.36=571 J；ΔH=-571/0.01=-57.1 kJ/mol。",
      "answerEn": "q=100×4.2×1.36=571 J; ΔH=-571/0.01=-57.1 kJ/mol.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "n(H₂O) = 0.01 mol",
+       "pts": 1
+      },
+      {
+       "content": "q = mcΔT = 100×4.2×1.36 = 571 J",
+       "pts": 1
+      },
+      {
+       "content": "ΔH = -571/0.01 = -57.1 kJ/mol",
+       "pts": 1
+      }
+     ],
+     "lossZh": "質量用錯（應是混合液總質量 100 g）。",
+     "lossEn": "Wrong mass (total solution 100 g)."
     },
     {
      "difficulty": "challenge",
@@ -3984,7 +4368,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Heat loss (insulate); c approximated as water; thermometer lag (stir, read fast).",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "熱散失到環境",
+       "pts": 1
+      },
+      {
+       "content": "比熱容用水的近似",
+       "pts": 1
+      },
+      {
+       "content": "改進：加蓋/快速讀數/精確 c",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只列誤差不改進方法。",
+     "lossEn": "Listing errors without improvements."
     }
    ]
   },

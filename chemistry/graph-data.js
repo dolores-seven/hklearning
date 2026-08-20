@@ -1,0 +1,3412 @@
+const DSE_CHEM_GRAPH = {
+ "meta": {
+  "version": "0.1.0-P1",
+  "generated": "2026-08-20",
+  "updated": "2026-08-20",
+  "domains": [
+   {
+    "id": "CH-STRUCT",
+    "nameZh": "物質與結構",
+    "nameEn": "Matter & Structure",
+    "group": "core"
+   },
+   {
+    "id": "CH-INORG",
+    "nameZh": "無機轉化",
+    "nameEn": "Inorganic Transformations",
+    "group": "core"
+   },
+   {
+    "id": "CH-REACT",
+    "nameZh": "反應與能量",
+    "nameEn": "Reactions & Energy",
+    "group": "core"
+   },
+   {
+    "id": "CH-CARBON",
+    "nameZh": "碳化學",
+    "nameEn": "Carbon Chemistry",
+    "group": "core"
+   },
+   {
+    "id": "CH-PATTERN",
+    "nameZh": "化學規律",
+    "nameEn": "Chemical Patterns",
+    "group": "core"
+   },
+   {
+    "id": "CH-IND",
+    "nameZh": "工業化學",
+    "nameEn": "Industrial Chemistry",
+    "group": "elective"
+   },
+   {
+    "id": "CH-MAT",
+    "nameZh": "材料化學",
+    "nameEn": "Materials Chemistry",
+    "group": "elective"
+   },
+   {
+    "id": "CH-ANA",
+    "nameZh": "分析化學",
+    "nameEn": "Analytical Chemistry",
+    "group": "elective"
+   },
+   {
+    "id": "CH-LAB",
+    "nameZh": "實驗技能",
+    "nameEn": "Experimental Skills",
+    "group": "sba"
+   }
+  ],
+  "knowledgeTypes": {
+   "concept": {
+    "id": "concept",
+    "zh": "概念",
+    "en": "Concept",
+    "color": "#3b82f6",
+    "nameZh": "概念",
+    "nameEn": "Concept"
+   },
+   "equation": {
+    "id": "equation",
+    "zh": "方程式",
+    "en": "Equation",
+    "color": "#22c55e",
+    "nameZh": "方程式",
+    "nameEn": "Equation"
+   },
+   "reaction": {
+    "id": "reaction",
+    "zh": "反應",
+    "en": "Reaction",
+    "color": "#f59e0b",
+    "nameZh": "反應",
+    "nameEn": "Reaction"
+   },
+   "law": {
+    "id": "law",
+    "zh": "定律/原理",
+    "en": "Law/Principle",
+    "color": "#a855f7",
+    "nameZh": "定律/原理",
+    "nameEn": "Law/Principle"
+   },
+   "lab": {
+    "id": "lab",
+    "zh": "實驗",
+    "en": "Lab",
+    "color": "#06b6d4",
+    "nameZh": "實驗",
+    "nameEn": "Lab"
+   }
+  },
+  "edgeTypes": {
+   "prereq": {
+    "dash": "6 3",
+    "zh": "前置",
+    "en": "Prerequisite",
+    "color": "#8b5cf6",
+    "nameZh": "前置",
+    "nameEn": "Prerequisite"
+   },
+   "derives": {
+    "dash": "4 2",
+    "zh": "推導",
+    "en": "Derives",
+    "color": "#0ea5e9",
+    "nameZh": "推導",
+    "nameEn": "Derives"
+   },
+   "related": {
+    "dash": "2 4",
+    "zh": "相關",
+    "en": "Related",
+    "color": "#94a3b8",
+    "nameZh": "相關",
+    "nameEn": "Related"
+   },
+   "cotested": {
+    "dash": "none",
+    "zh": "組合出題",
+    "en": "Co-tested",
+    "color": "#f59e0b",
+    "nameZh": "組合出題",
+    "nameEn": "Co-tested"
+   },
+   "child": {
+    "dash": "2 3",
+    "zh": "下鑽",
+    "en": "Drill-down",
+    "color": "#64748b",
+    "nameZh": "下鑽",
+    "nameEn": "Drill-down"
+   }
+  },
+  "grades": [
+   "S4",
+   "S5",
+   "S6"
+  ]
+ },
+ "domains": [
+  {
+   "id": "CH-STRUCT",
+   "color": "#3b82f6",
+   "code": {
+    "zh": "物質與結構",
+    "en": "Matter & Structure"
+   },
+   "group": "core",
+   "marksRange": null
+  },
+  {
+   "id": "CH-INORG",
+   "color": "#22c55e",
+   "code": {
+    "zh": "無機轉化",
+    "en": "Inorganic Transformations"
+   },
+   "group": "core",
+   "marksRange": null
+  },
+  {
+   "id": "CH-REACT",
+   "color": "#f59e0b",
+   "code": {
+    "zh": "反應與能量",
+    "en": "Reactions & Energy"
+   },
+   "group": "core",
+   "marksRange": null
+  },
+  {
+   "id": "CH-CARBON",
+   "color": "#ef4444",
+   "code": {
+    "zh": "碳化學",
+    "en": "Carbon Chemistry"
+   },
+   "group": "core",
+   "marksRange": null
+  },
+  {
+   "id": "CH-PATTERN",
+   "color": "#a855f7",
+   "code": {
+    "zh": "化學規律",
+    "en": "Chemical Patterns"
+   },
+   "group": "core",
+   "marksRange": null
+  },
+  {
+   "id": "CH-IND",
+   "color": "#06b6d4",
+   "code": {
+    "zh": "工業化學",
+    "en": "Industrial Chemistry"
+   },
+   "group": "elective",
+   "marksRange": null
+  },
+  {
+   "id": "CH-MAT",
+   "color": "#eab308",
+   "code": {
+    "zh": "材料化學",
+    "en": "Materials Chemistry"
+   },
+   "group": "elective",
+   "marksRange": null
+  },
+  {
+   "id": "CH-ANA",
+   "color": "#ec4899",
+   "code": {
+    "zh": "分析化學",
+    "en": "Analytical Chemistry"
+   },
+   "group": "elective",
+   "marksRange": null
+  },
+  {
+   "id": "CH-LAB",
+   "color": "#64748b",
+   "code": {
+    "zh": "實驗技能",
+    "en": "Experimental Skills"
+   },
+   "group": "sba",
+   "marksRange": null
+  }
+ ],
+ "nodes": [
+  {
+   "id": "ch-earth",
+   "level": "topic",
+   "domain": "CH-STRUCT",
+   "grades": [
+    "S4"
+   ],
+   "name": {
+    "zh": "地球",
+    "en": "Planet Earth"
+   },
+   "weight": "low",
+   "diff": 1,
+   "leaves": [
+    {
+     "id": "ch-earth-01",
+     "name": {
+      "zh": "空氣成分",
+      "en": "Composition of Air"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氮 ~78%、氧 ~21%、二氧化碳及惰性氣體各約 1%；要記體積比例。",
+      "en": "N₂ ~78%, O₂ ~21%, CO₂ and noble gases ~1% by volume."
+     }
+    },
+    {
+     "id": "ch-earth-02",
+     "name": {
+      "zh": "氧氣的性質",
+      "en": "Properties of Oxygen"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氧支持燃燒、無色無味；用帶火星木條檢驗（復燃）。",
+      "en": "Oxygen supports combustion; test with a glowing splint (relights)."
+     }
+    },
+    {
+     "id": "ch-earth-03",
+     "name": {
+      "zh": "二氧化碳與溫室效應",
+      "en": "CO₂ and Greenhouse Effect"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "CO₂ 是溫室氣體，吸收紅外輻射；用石灰水檢驗（變乳白）。",
+      "en": "CO₂ is a greenhouse gas; test with limewater (turns milky)."
+     }
+    },
+    {
+     "id": "ch-earth-04",
+     "name": {
+      "zh": "惰性氣體",
+      "en": "Noble Gases"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氦/氖/氬等，性質穩定；用於霓虹燈、保護氣體、氣球。",
+      "en": "He/Ne/Ar inert; used in neon signs, protective atmospheres, balloons."
+     }
+    },
+    {
+     "id": "ch-earth-05",
+     "name": {
+      "zh": "海洋資源",
+      "en": "Resources from the Ocean"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "海水含 NaCl 等鹽類；從海水提取鹽、淡水（蒸餾/淡化）。",
+      "en": "Seawater contains NaCl; obtain salt and fresh water (distillation/desalination)."
+     }
+    },
+    {
+     "id": "ch-earth-06",
+     "name": {
+      "zh": "石灰岩循環",
+      "en": "Limestone Cycle"
+     },
+     "knowledgeType": "reaction",
+     "formula": "CaCO₃ → CaO + CO₂",
+     "pitfall": {
+      "zh": "石灰石加熱分解→生石灰 CaO；加水→熟石灰 Ca(OH)₂；再與 CO₂ 反應→碳酸鈣。",
+      "en": "Heat CaCO₃→CaO+CO₂; add water→Ca(OH)₂; react with CO₂→CaCO₃ again."
+     }
+    },
+    {
+     "id": "ch-earth-07",
+     "name": {
+      "zh": "岩石與礦物",
+      "en": "Rocks and Minerals"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "岩石分三大類（火成/沉積/變質）；礦物是含特定元素的天然物質。",
+      "en": "Three rock types (igneous/sedimentary/metamorphic); minerals are natural substances."
+     }
+    },
+    {
+     "id": "ch-earth-08",
+     "name": {
+      "zh": "淨水方法",
+      "en": "Water Purification"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "沉澱→過濾→蒸餾；蒸餾可去除溶解雜質，過濾只能去除不溶雜質。",
+      "en": "Sediment→filter→distill; distillation removes dissolved impurities, filtration only insoluble."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-mw1",
+   "level": "topic",
+   "domain": "CH-STRUCT",
+   "grades": [
+    "S4"
+   ],
+   "name": {
+    "zh": "微觀世界 I",
+    "en": "Microscopic World I"
+   },
+   "weight": "mid",
+   "diff": 1,
+   "leaves": [
+    {
+     "id": "ch-mw1-01",
+     "name": {
+      "zh": "原子結構",
+      "en": "Atomic Structure"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "質子(+)、中子(0)、電子(-)；質子數=電子數=原子序數。",
+      "en": "Protons(+), neutrons(0), electrons(-); proton number = electron number = atomic number."
+     }
+    },
+    {
+     "id": "ch-mw1-02",
+     "name": {
+      "zh": "質量數",
+      "en": "Mass Number"
+     },
+     "knowledgeType": "concept",
+     "formula": "A = Z + N",
+     "pitfall": {
+      "zh": "質量數=質子數+中子數；同位素質量數不同但質子數相同。",
+      "en": "Mass number = protons + neutrons; isotopes share proton number."
+     }
+    },
+    {
+     "id": "ch-mw1-03",
+     "name": {
+      "zh": "電子排布",
+      "en": "Electron Arrangement"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "按 2,8,8 層排布；最外層電子決定化學性質（穩定八隅體）。",
+      "en": "Shells fill 2,8,8; outermost electrons determine reactivity (stable octet)."
+     }
+    },
+    {
+     "id": "ch-mw1-04",
+     "name": {
+      "zh": "離子形成",
+      "en": "Ion Formation"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "金屬失電子成陽離子，非金屬得電子成陰離子；離子符號含電荷。",
+      "en": "Metals lose electrons (cations), non-metals gain (anions); ion symbols carry charge."
+     }
+    },
+    {
+     "id": "ch-mw1-05",
+     "name": {
+      "zh": "同位素",
+      "en": "Isotopes"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "同元素不同中子數；化學性質相同，質量不同（如 C-12/C-14）。",
+      "en": "Same element, different neutrons; same chemistry, different mass."
+     }
+    },
+    {
+     "id": "ch-mw1-06",
+     "name": {
+      "zh": "相對原子質量",
+      "en": "Relative Atomic Mass"
+     },
+     "knowledgeType": "concept",
+     "formula": "Ar",
+     "pitfall": {
+      "zh": "Ar 是相對於 C-12 的比值，無單位；計算式常含同位素加權。",
+      "en": "Ar is relative to C-12, no unit; often weighted by isotope abundance."
+     }
+    },
+    {
+     "id": "ch-mw1-07",
+     "name": {
+      "zh": "摩爾概念",
+      "en": "The Mole"
+     },
+     "knowledgeType": "concept",
+     "formula": "n = N / Nₐ",
+     "pitfall": {
+      "zh": "1 mol = 6.02×10²³ 粒子（阿伏伽德羅常數 Nₐ）；n = m/M。",
+      "en": "1 mol = 6.02×10²³ particles (Avogadro); n = m/M."
+     }
+    },
+    {
+     "id": "ch-mw1-08",
+     "name": {
+      "zh": "摩爾質量",
+      "en": "Molar Mass"
+     },
+     "knowledgeType": "concept",
+     "formula": "M = m / n",
+     "pitfall": {
+      "zh": "摩爾質量數值 = 相對分子/原子質量，單位 g/mol；n=m/M 是核心計算。",
+      "en": "Molar mass in g/mol equals Ar/Mr; n=m/M is the key calculation."
+     }
+    },
+    {
+     "id": "ch-mw1-09",
+     "name": {
+      "zh": "化學式書寫",
+      "en": "Writing Formulae"
+     },
+     "knowledgeType": "equation",
+     "pitfall": {
+      "zh": "化合物電荷守恆：如 Ca²⁺ 與 Cl⁻ → CaCl₂；十字交叉法配電荷。",
+      "en": "Charge balance: Ca²⁺ + Cl⁻ → CaCl₂; use cross-over method."
+     }
+    },
+    {
+     "id": "ch-mw1-10",
+     "name": {
+      "zh": "配平方程",
+      "en": "Balancing Equations"
+     },
+     "knowledgeType": "equation",
+     "pitfall": {
+      "zh": "配平後左右原子數相等；狀態符號 (s)(l)(g)(aq) 不可省略。",
+      "en": "Equal atoms both sides; include state symbols (s)(l)(g)(aq)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-metals",
+   "level": "topic",
+   "domain": "CH-INORG",
+   "grades": [
+    "S4"
+   ],
+   "name": {
+    "zh": "金屬",
+    "en": "Metals"
+   },
+   "weight": "mid",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-metals-01",
+     "name": {
+      "zh": "金屬物理性質",
+      "en": "Physical Properties of Metals"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "金屬：有光澤、導電導熱、延展性、通常為固體（汞除外）。",
+      "en": "Metals: lustrous, conduct heat/electricity, malleable, solid (except Hg)."
+     }
+    },
+    {
+     "id": "ch-metals-02",
+     "name": {
+      "zh": "金屬活動性順序",
+      "en": "Metal Reactivity Series"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "K>Na>Ca>Mg>Al>Zn>Fe>Pb>Cu>Ag>Au；越左越活潑。",
+      "en": "K>Na>Ca>Mg>Al>Zn>Fe>Pb>Cu>Ag>Au; more active to the left."
+     }
+    },
+    {
+     "id": "ch-metals-03",
+     "name": {
+      "zh": "金屬與酸反應",
+      "en": "Metals with Acids"
+     },
+     "knowledgeType": "equation",
+     "formula": "Zn + 2HCl → ZnCl₂ + H₂",
+     "pitfall": {
+      "zh": "活潑金屬（Zn 等）與稀酸放氫氣；Cu/Ag 不與稀酸反應。",
+      "en": "Active metals (Zn) release H₂ with dilute acid; Cu/Ag do not react."
+     }
+    },
+    {
+     "id": "ch-metals-04",
+     "name": {
+      "zh": "金屬與鹽溶液",
+      "en": "Metals with Salt Solutions"
+     },
+     "knowledgeType": "equation",
+     "formula": "Fe + CuSO₄ → FeSO₄ + Cu",
+     "pitfall": {
+      "zh": "較活潑金屬置換較不活潑的（金屬活動序）；觀察顏色/沉澱變化。",
+      "en": "More active metal displaces less active one; note colour/precipitate changes."
+     }
+    },
+    {
+     "id": "ch-metals-05",
+     "name": {
+      "zh": "金屬與氧氣",
+      "en": "Metals with Oxygen"
+     },
+     "knowledgeType": "equation",
+     "formula": "2Mg + O₂ → 2MgO",
+     "pitfall": {
+      "zh": "金屬燃燒成金屬氧化物；鎂耀眼白光，鐵需高溫，銅緩慢變黑。",
+      "en": "Metals burn to oxides; Mg bright white, Fe needs heat, Cu slowly blackens."
+     }
+    },
+    {
+     "id": "ch-metals-06",
+     "name": {
+      "zh": "金屬冶煉",
+      "en": "Extraction of Metals"
+     },
+     "knowledgeType": "equation",
+     "formula": "Fe₂O₃ + 3CO → 2Fe + 3CO₂",
+     "pitfall": {
+      "zh": "用碳/一氧化碳還原氧化物（Zn→Cu）；活潑金屬（Al）用電解。",
+      "en": "Reduce oxides with carbon/CO (Zn→Cu); reactive metals (Al) via electrolysis."
+     }
+    },
+    {
+     "id": "ch-metals-07",
+     "name": {
+      "zh": "金屬腐蝕與防護",
+      "en": "Corrosion and Protection"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "鐵生鏽需氧+水；防鏽：油漆/鍍鋅/犧牲陽極（鋅比鐵活潑）。",
+      "en": "Rust needs O₂+water; protect: paint/galvanise/sacrificial anode (Zn)."
+     }
+    },
+    {
+     "id": "ch-metals-08",
+     "name": {
+      "zh": "合金",
+      "en": "Alloys"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "合金=金屬+其他元素混合物，通常更硬/更耐腐蝕（鋼、黃銅）。",
+      "en": "Alloy = metal + other elements, usually harder/more resistant (steel, brass)."
+     }
+    },
+    {
+     "id": "ch-metals-09",
+     "name": {
+      "zh": "金屬回收",
+      "en": "Recycling Metals"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "回收鋁比電解製鋁省能 95%；保護資源、減少污染。",
+      "en": "Recycling Al saves ~95% energy vs electrolysis; conserves resources."
+     }
+    },
+    {
+     "id": "ch-metals-10",
+     "name": {
+      "zh": "金屬與冶煉方法",
+      "en": "Metal Activity & Extraction Method"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "活動序頂端用電解、中間用碳還原、底部天然存在（Au）。",
+      "en": "Top of series: electrolysis; middle: carbon reduction; bottom: native (Au)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-acidbase",
+   "level": "topic",
+   "domain": "CH-INORG",
+   "grades": [
+    "S4"
+   ],
+   "name": {
+    "zh": "酸和鹽基",
+    "en": "Acids and Bases"
+   },
+   "weight": "high",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-acidbase-01",
+     "name": {
+      "zh": "強酸強鹼",
+      "en": "Strong Acids and Bases"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "強酸/強鹼完全電離；HCl、H₂SO₄、HNO₃、NaOH、KOH 要背熟。",
+      "en": "Strong acids/bases fully dissociate; memorize HCl, H₂SO₄, HNO₃, NaOH, KOH."
+     }
+    },
+    {
+     "id": "ch-acidbase-02",
+     "name": {
+      "zh": "中和反應",
+      "en": "Neutralisation"
+     },
+     "knowledgeType": "equation",
+     "formula": "HCl + NaOH → NaCl + H₂O",
+     "pitfall": {
+      "zh": "酸+鹼→鹽+水；離子方程式是 H⁺ + OH⁻ → H₂O。",
+      "en": "Acid + base → salt + water; ionic: H⁺ + OH⁻ → H₂O."
+     }
+    },
+    {
+     "id": "ch-acidbase-03",
+     "name": {
+      "zh": "pH 定義",
+      "en": "Definition of pH"
+     },
+     "knowledgeType": "concept",
+     "formula": "pH = -log[H⁺]",
+     "pitfall": {
+      "zh": "pH 每差 1，[H⁺] 相差 10 倍；pH < 7 酸性，= 7 中性，> 7 鹼性。",
+      "en": "Each pH unit = 10× in [H⁺]; <7 acid, =7 neutral, >7 alkaline."
+     }
+    },
+    {
+     "id": "ch-acidbase-04",
+     "name": {
+      "zh": "弱酸弱鹼",
+      "en": "Weak Acids and Bases"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "弱酸（CH₃COOH、H₂CO₃）只部分電離；弱鹼（NH₃）同理。",
+      "en": "Weak acids (CH₃COOH, H₂CO₃) partially dissociate; weak bases (NH₃) too."
+     }
+    },
+    {
+     "id": "ch-acidbase-05",
+     "name": {
+      "zh": "酸的化學性質",
+      "en": "Chemical Properties of Acids"
+     },
+     "knowledgeType": "equation",
+     "formula": "2HCl + MgO → MgCl₂ + H₂O",
+     "pitfall": {
+      "zh": "酸+金屬→鹽+氫；酸+鹼→鹽+水；酸+碳酸鹽→鹽+水+CO₂。",
+      "en": "Acid+metal→salt+H₂; +base→salt+water; +carbonate→salt+water+CO₂."
+     }
+    },
+    {
+     "id": "ch-acidbase-06",
+     "name": {
+      "zh": "鹼的化學性質",
+      "en": "Chemical Properties of Bases"
+     },
+     "knowledgeType": "equation",
+     "formula": "CO₂ + 2NaOH → Na₂CO₃ + H₂O",
+     "pitfall": {
+      "zh": "鹼+酸→鹽+水；鹼吸收酸性氣體（CO₂/SO₂）；氨水是弱鹼。",
+      "en": "Base+acid→salt+water; bases absorb acidic gases (CO₂/SO₂); ammonia is weak base."
+     }
+    },
+    {
+     "id": "ch-acidbase-07",
+     "name": {
+      "zh": "酸鹼指示劑",
+      "en": "Acid-Base Indicators"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "石蕊：酸紅鹼藍；酚酞：酸無色鹼粉紅；要記指示劑顏色變化。",
+      "en": "Litmus: red acid/blue alkali; phenolphthalein: colourless/ pink; memorise colours."
+     }
+    },
+    {
+     "id": "ch-acidbase-08",
+     "name": {
+      "zh": "鹽的生成",
+      "en": "Formation of Salts"
+     },
+     "knowledgeType": "equation",
+     "formula": "NaOH + HCl → NaCl + H₂O",
+     "pitfall": {
+      "zh": "中和生成鹽；鹽=金屬陽離子+酸根陰離子；可溶性規則要背。",
+      "en": "Neutralisation forms salts; salt = cation + acid anion; learn solubility rules."
+     }
+    },
+    {
+     "id": "ch-acidbase-09",
+     "name": {
+      "zh": "摩爾濃度",
+      "en": "Molar Concentration"
+     },
+     "knowledgeType": "concept",
+     "formula": "c = n / V",
+     "pitfall": {
+      "zh": "c 單位 mol/L；稀釋計算 c₁V₁=c₂V₂；滴定計算核心。",
+      "en": "c in mol/L; dilution c₁V₁=c₂V₂; core of titration calculations."
+     }
+    },
+    {
+     "id": "ch-acidbase-10",
+     "name": {
+      "zh": "滴定操作",
+      "en": "Titration Technique"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "用滴定管加標準液到錐形瓶，近終點逐滴；記錄初讀/終讀。",
+      "en": "Add standard solution from burette, dropwise near endpoint; record initial/final readings."
+     }
+    },
+    {
+     "id": "ch-acidbase-11",
+     "name": {
+      "zh": "酸雨",
+      "en": "Acid Rain"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "SO₂/NOₓ 溶於雨水成酸；來源：燃燒化石燃料；影響建築/生態。",
+      "en": "SO₂/NOₓ dissolve in rain; from burning fossil fuels; harms buildings/ecosystems."
+     }
+    },
+    {
+     "id": "ch-acidbase-12",
+     "name": {
+      "zh": "鹽類溶解性規則",
+      "en": "Solubility of Salts"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "所有鈉鉀銨鹽可溶；硝酸鹽全溶；硫酸鹽多數溶（除 Ba/Pb）；氯化物多溶（除 Ag/Pb）。",
+      "en": "All Na/K/NH₄ salts soluble; all nitrates; most sulphates (not Ba/Pb); most chlorides (not Ag/Pb)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-fossil",
+   "level": "topic",
+   "domain": "CH-CARBON",
+   "grades": [
+    "S4",
+    "S5"
+   ],
+   "name": {
+    "zh": "化石燃料和碳化合物",
+    "en": "Fossil Fuels and Carbon Compounds"
+   },
+   "weight": "mid",
+   "diff": 1,
+   "leaves": [
+    {
+     "id": "ch-fossil-01",
+     "name": {
+      "zh": "石油分餾",
+      "en": "Fractional Distillation of Petroleum"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "按沸點分離；塔頂低沸點（石油氣/汽油），塔底高沸點（瀝青）。",
+      "en": "Separate by boiling point; top = low bp (LPG/petrol), bottom = high bp (bitumen)."
+     }
+    },
+    {
+     "id": "ch-fossil-02",
+     "name": {
+      "zh": "汽油與辛烷值",
+      "en": "Petrol and Octane Number"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "辛烷值越高抗爆性越好；支鏈烷烴辛烷值較高。",
+      "en": "Higher octane = better anti-knock; branched alkanes have higher octane."
+     }
+    },
+    {
+     "id": "ch-fossil-03",
+     "name": {
+      "zh": "煤的乾餾",
+      "en": "Destructive Distillation of Coal"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "隔絕空氣加熱煤→焦炭+煤焦油+煤氣；焦炭用於冶鐵。",
+      "en": "Heat coal without air→coke+coal tar+coal gas; coke used in iron-making."
+     }
+    },
+    {
+     "id": "ch-fossil-04",
+     "name": {
+      "zh": "天然氣與甲烷",
+      "en": "Natural Gas and Methane"
+     },
+     "knowledgeType": "equation",
+     "formula": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+     "pitfall": {
+      "zh": "天然氣主要成分甲烷；完全燃燒產 CO₂+H₂O，是清潔化石燃料。",
+      "en": "NG is mostly methane; complete combustion gives CO₂+H₂O."
+     }
+    },
+    {
+     "id": "ch-fossil-05",
+     "name": {
+      "zh": "燃燒反應",
+      "en": "Combustion Reactions"
+     },
+     "knowledgeType": "equation",
+     "formula": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O",
+     "pitfall": {
+      "zh": "碳氫化合物完全燃燒產 CO₂+H₂O；缺氧時生成 CO（劇毒）。",
+      "en": "Hydrocarbons burn to CO₂+H₂O; incomplete gives toxic CO."
+     }
+    },
+    {
+     "id": "ch-fossil-06",
+     "name": {
+      "zh": "裂解與裂化",
+      "en": "Cracking"
+     },
+     "knowledgeType": "reaction",
+     "formula": "C₁₀H₂₂ → C₅H₁₀ + C₅H₁₂",
+     "pitfall": {
+      "zh": "長鏈烷烴高溫裂解成短鏈+烯烴；用於增產汽油和烯烴。",
+      "en": "Crack long alkanes into shorter ones + alkenes; boosts petrol yield."
+     }
+    },
+    {
+     "id": "ch-fossil-07",
+     "name": {
+      "zh": "碳氫化合物通式",
+      "en": "Hydrocarbon General Formulae"
+     },
+     "knowledgeType": "concept",
+     "formula": "烷CₙH₂ₙ₊₂ / 烯CₙH₂ₙ",
+     "pitfall": {
+      "zh": "烷烴 CₙH₂ₙ₊₂、烯烴 CₙH₂ₙ、炔烴 CₙH₂ₙ₋₂；根據通式判種類。",
+      "en": "Alkanes CₙH₂ₙ₊₂, alkenes CₙH₂ₙ, alkynes CₙH₂ₙ₋₂."
+     }
+    },
+    {
+     "id": "ch-fossil-08",
+     "name": {
+      "zh": "溫室效應與化石燃料",
+      "en": "Fossil Fuels and Global Warming"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "燃燒化石燃料增 CO₂ → 溫室效應加劇；減排：再生能源/提高效率。",
+      "en": "Burning fuels raises CO₂→global warming; reduce via renewables/efficiency."
+     }
+    },
+    {
+     "id": "ch-fossil-09",
+     "name": {
+      "zh": "生物燃料",
+      "en": "Biofuels"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "生物乙醇/生物柴油可再生；燃燒產 CO₂ 但種植時吸收，碳中性討論。",
+      "en": "Bioethanol/biodiesel renewable; CO₂ neutral argument (absorbed during growth)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-mw2",
+   "level": "topic",
+   "domain": "CH-STRUCT",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "微觀世界 II",
+    "en": "Microscopic World II"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-mw2-01",
+     "name": {
+      "zh": "離子鍵",
+      "en": "Ionic Bonding"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "金屬+非金屬：電子轉移形成正負離子，靠靜電引力結合。",
+      "en": "Metal+non-metal: electron transfer, ions held by electrostatic attraction."
+     }
+    },
+    {
+     "id": "ch-mw2-02",
+     "name": {
+      "zh": "共價鍵",
+      "en": "Covalent Bonding"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "非金屬間共享電子對；單/雙/三鍵共享 1/2/3 對電子。",
+      "en": "Non-metals share electron pairs; single/double/triple bonds share 1/2/3 pairs."
+     }
+    },
+    {
+     "id": "ch-mw2-03",
+     "name": {
+      "zh": "金屬鍵",
+      "en": "Metallic Bonding"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "金屬原子浸在離域電子海；自由電子解釋導電導熱和延展性。",
+      "en": "Metal cations in a sea of delocalised electrons; explains conductivity and malleability."
+     }
+    },
+    {
+     "id": "ch-mw2-04",
+     "name": {
+      "zh": "離子化合物性質",
+      "en": "Properties of Ionic Compounds"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "高熔沸點、固態不導電、熔融/溶液導電；溶於水多數。",
+      "en": "High mp/bp, solid non-conductive, conduct when molten/dissolved."
+     }
+    },
+    {
+     "id": "ch-mw2-05",
+     "name": {
+      "zh": "簡單分子性質",
+      "en": "Properties of Simple Molecules"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "低熔沸點（分子間力弱）、不導電；如 CO₂、H₂O。",
+      "en": "Low mp/bp (weak intermolecular forces), non-conductive; e.g. CO₂, H₂O."
+     }
+    },
+    {
+     "id": "ch-mw2-06",
+     "name": {
+      "zh": "巨大共價結構",
+      "en": "Giant Covalent Structures"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "鑽石/石墨/SiO₂：原子網狀，高熔沸點、堅硬（石墨例外可導電）。",
+      "en": "Diamond/graphite/SiO₂: network atoms, high mp/bp, hard (graphite conducts)."
+     }
+    },
+    {
+     "id": "ch-mw2-07",
+     "name": {
+      "zh": "石墨的結構",
+      "en": "Structure of Graphite"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "層狀結構，層間弱力易滑動（鉛筆）；層內離域電子可導電。",
+      "en": "Layered; weak interlayer forces slide (pencil); delocalised electrons conduct."
+     }
+    },
+    {
+     "id": "ch-mw2-08",
+     "name": {
+      "zh": "極性分子",
+      "en": "Polar Molecules"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "電負性差導致極性鍵；對稱分子可無極性（如 CO₂ 直線）。",
+      "en": "Electronegativity difference creates polar bonds; symmetry may cancel polarity (CO₂ linear)."
+     }
+    },
+    {
+     "id": "ch-mw2-09",
+     "name": {
+      "zh": "氫鍵",
+      "en": "Hydrogen Bonding"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "H 與 N/O/F 之間的強分子間力；解釋水的高沸點。",
+      "en": "Strong intermolecular force between H and N/O/F; explains water high bp."
+     }
+    },
+    {
+     "id": "ch-mw2-10",
+     "name": {
+      "zh": "分子間力",
+      "en": "Intermolecular Forces"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "範德華力隨分子大小增加；影響熔沸點，非化學鍵。",
+      "en": "Van der Waals forces increase with molecular size; affect bp/mp, not chemical bonds."
+     }
+    },
+    {
+     "id": "ch-mw2-11",
+     "name": {
+      "zh": "晶體結構比較",
+      "en": "Comparing Crystal Structures"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "離子/共價網狀/金屬/分子四類；比熔沸點先看鍵型。",
+      "en": "Four types: ionic/covalent network/metallic/molecular; identify bonding first."
+     }
+    },
+    {
+     "id": "ch-mw2-12",
+     "name": {
+      "zh": "鍵合與導電性",
+      "en": "Bonding and Conductivity"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "導電需自由電子或游離離子；金屬/石墨導電，離子化合物熔融才導電。",
+      "en": "Conduction needs free electrons or mobile ions; metals/graphite conduct, ionic only molten."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-redox",
+   "level": "topic",
+   "domain": "CH-REACT",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "氧化還原、化學電池和電解",
+    "en": "Redox, Chemical Cells and Electrolysis"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-redox-01",
+     "name": {
+      "zh": "氧化還原定義",
+      "en": "Redox Definition"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氧化=失電子/失氫/得氧；還原=得電子；氧化還原同時發生。",
+      "en": "Oxidation = lose e⁻/H, gain O; reduction = gain e⁻; both always together."
+     }
+    },
+    {
+     "id": "ch-redox-02",
+     "name": {
+      "zh": "氧化劑與還原劑",
+      "en": "Oxidising and Reducing Agents"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氧化劑被還原（自身得電子）；還原劑被氧化（自身失電子）。",
+      "en": "Oxidising agent is reduced (gains e⁻); reducing agent is oxidised (loses e⁻)."
+     }
+    },
+    {
+     "id": "ch-redox-03",
+     "name": {
+      "zh": "半反應方程",
+      "en": "Half Equations"
+     },
+     "knowledgeType": "equation",
+     "formula": "Zn → Zn²⁺ + 2e⁻",
+     "pitfall": {
+      "zh": "分別寫氧化半反應和還原半反應，再合併；電子數必須相等。",
+      "en": "Write oxidation and reduction half equations, then combine; balance electrons."
+     }
+    },
+    {
+     "id": "ch-redox-04",
+     "name": {
+      "zh": "氧化數",
+      "en": "Oxidation Number"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "氧化數變化判斷氧化還原；單質 0、離子=電荷、H+1、O-2。",
+      "en": "Oxidation number change identifies redox; element 0, ion=charge, H+1, O-2."
+     }
+    },
+    {
+     "id": "ch-redox-05",
+     "name": {
+      "zh": "標準電極電位",
+      "en": "Standard Electrode Potentials"
+     },
+     "knowledgeType": "concept",
+     "formula": "E°",
+     "providedInfo": "electrode-potentials",
+     "pitfall": {
+      "zh": "E° 表（考試提供）判斷氧化還原能力；E° 高者作氧化劑強。",
+      "en": "E° table (provided) ranks redox strength; higher E° = stronger oxidising agent."
+     }
+    },
+    {
+     "id": "ch-redox-06",
+     "name": {
+      "zh": "電化學電池",
+      "en": "Chemical Cells"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "自發氧化還原產生電流；陽極氧化、陰極還原；鹽橋維持電中性。",
+      "en": "Spontaneous redox generates current; anode oxidises, cathode reduces."
+     }
+    },
+    {
+     "id": "ch-redox-07",
+     "name": {
+      "zh": "電解原理",
+      "en": "Principles of Electrolysis"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "外部電源驅動非自發反應；陽極氧化、陰極還原；電解質導電。",
+      "en": "External power drives non-spontaneous reactions; anode oxidises, cathode reduces."
+     }
+    },
+    {
+     "id": "ch-redox-08",
+     "name": {
+      "zh": "電解熔融氯化鈉",
+      "en": "Electrolysis of Molten NaCl"
+     },
+     "knowledgeType": "equation",
+     "formula": "2NaCl → 2Na + Cl₂",
+     "pitfall": {
+      "zh": "陰極 Na⁺+e⁻→Na；陽極 2Cl⁻→Cl₂+2e⁻；熔融態才能游離離子。",
+      "en": "Cathode Na⁺+e⁻→Na; anode 2Cl⁻→Cl₂+2e⁻; molten state gives mobile ions."
+     }
+    },
+    {
+     "id": "ch-redox-09",
+     "name": {
+      "zh": "電解氯化鈉溶液",
+      "en": "Electrolysis of NaCl(aq)"
+     },
+     "knowledgeType": "equation",
+     "formula": "2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂",
+     "pitfall": {
+      "zh": "水中 H₂O 優先還原產 H₂，OH⁻ 優先氧化產 O₂；產氫氧化鈉。",
+      "en": "H₂O reduces first (H₂), OH⁻ oxidises first (O₂); produces NaOH."
+     }
+    },
+    {
+     "id": "ch-redox-10",
+     "name": {
+      "zh": "電鍍",
+      "en": "Electroplating"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "用活性金屬作陽極補充金屬離子；陰極鍍件；鍍層防鏽美觀。",
+      "en": "Active metal anode replenishes ions; cathode is the object; coating protects."
+     }
+    },
+    {
+     "id": "ch-redox-11",
+     "name": {
+      "zh": "電解精煉銅",
+      "en": "Electrolytic Refining of Copper"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "粗銅陽極溶解，純銅陰極沉積；雜質掉落為陽極泥。",
+      "en": "Impure Cu anode dissolves, pure Cu deposits at cathode; impurities form anode sludge."
+     }
+    },
+    {
+     "id": "ch-redox-12",
+     "name": {
+      "zh": "電解的工業應用",
+      "en": "Industrial Applications of Electrolysis"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "製鋁/氯氣/氫氧化鈉/電鍍/精煉；電解製鋁需熔融氧化鋁。",
+      "en": "Produces Al/Cl₂/NaOH, plating, refining; aluminium via molten Al₂O₃."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-energy",
+   "level": "topic",
+   "domain": "CH-REACT",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "化學反應和能量",
+    "en": "Chemical Reactions and Energy"
+   },
+   "weight": "mid",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-energy-01",
+     "name": {
+      "zh": "放熱與吸熱反應",
+      "en": "Exothermic and Endothermic"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "放熱：反應物能量>生成物，溫度升（燃燒/中和）；吸熱相反。",
+      "en": "Exothermic: reactants higher energy, temp rises (combustion/neutralisation); endothermic opposite."
+     }
+    },
+    {
+     "id": "ch-energy-02",
+     "name": {
+      "zh": "活化能",
+      "en": "Activation Energy"
+     },
+     "knowledgeType": "concept",
+     "formula": "Eₐ",
+     "pitfall": {
+      "zh": "反應所需最小能量；活化能越低反應越易進行；催化劑降低 Eₐ。",
+      "en": "Minimum energy for reaction; lower Eₐ easier; catalyst lowers Eₐ."
+     }
+    },
+    {
+     "id": "ch-energy-03",
+     "name": {
+      "zh": "反應能圖",
+      "en": "Energy Profile Diagrams"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "能圖橫軸反應進程縱軸能量；ΔH = 產物-反應物；標註 Eₐ。",
+      "en": "Energy vs reaction progress; ΔH = products - reactants; label Eₐ."
+     }
+    },
+    {
+     "id": "ch-energy-04",
+     "name": {
+      "zh": "燃燒熱",
+      "en": "Heat of Combustion"
+     },
+     "knowledgeType": "concept",
+     "formula": "ΔHc",
+     "pitfall": {
+      "zh": "1 mol 物質完全燃燒放出的熱；測定用量熱器。",
+      "en": "Heat released when 1 mol burns completely; measured with calorimeter."
+     }
+    },
+    {
+     "id": "ch-energy-05",
+     "name": {
+      "zh": "中和熱",
+      "en": "Heat of Neutralisation"
+     },
+     "knowledgeType": "concept",
+     "formula": "ΔHn",
+     "pitfall": {
+      "zh": "酸鹼中和生成 1 mol 水的熱；強酸強鹼約 -57 kJ/mol。",
+      "en": "Heat to form 1 mol water; strong acid-base ≈ -57 kJ/mol."
+     }
+    },
+    {
+     "id": "ch-energy-06",
+     "name": {
+      "zh": "鍵能",
+      "en": "Bond Energy"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "斷鍵吸熱、成鍵放熱；ΔH ≈ 斷鍵總和 - 成鍵總和。",
+      "en": "Breaking bonds absorbs, forming releases; ΔH ≈ bonds broken - bonds formed."
+     }
+    },
+    {
+     "id": "ch-energy-07",
+     "name": {
+      "zh": "Hess 定律",
+      "en": "Hess's Law"
+     },
+     "knowledgeType": "law",
+     "pitfall": {
+      "zh": "反應熱只與始末態有關，與途徑無關；可疊加方程式求 ΔH。",
+      "en": "ΔH depends only on initial/final states; add equations to find ΔH."
+     }
+    },
+    {
+     "id": "ch-energy-08",
+     "name": {
+      "zh": "標準生成焓",
+      "en": "Standard Enthalpy of Formation"
+     },
+     "knowledgeType": "concept",
+     "formula": "ΔHf°",
+     "pitfall": {
+      "zh": "1 mol 化合物由元素生成的反應熱；元素自身 ΔHf°=0。",
+      "en": "Heat to form 1 mol compound from elements; elements ΔHf°=0."
+     }
+    },
+    {
+     "id": "ch-energy-09",
+     "name": {
+      "zh": "量熱實驗",
+      "en": "Calorimetry"
+     },
+     "knowledgeType": "lab",
+     "formula": "ΔH = -mcΔT",
+     "pitfall": {
+      "zh": "量熱器測溫升；ΔH = mcΔT 取負；質量用溶液總質量、c≈4.2 J/g°C。",
+      "en": "Calorimeter measures temp rise; ΔH=-mcΔT; use total solution mass, c≈4.2 J/g°C."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-rate",
+   "level": "topic",
+   "domain": "CH-REACT",
+   "grades": [
+    "S5",
+    "S6"
+   ],
+   "name": {
+    "zh": "反應速率",
+    "en": "Rate of Reaction"
+   },
+   "weight": "high",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-rate-01",
+     "name": {
+      "zh": "速率定義與量度",
+      "en": "Rate Definition and Measurement"
+     },
+     "knowledgeType": "concept",
+     "formula": "速率 = Δ濃度/Δt",
+     "pitfall": {
+      "zh": "量度：氣體體積/質量損失/顏色變化/濁度；取斜率得速率。",
+      "en": "Measure: gas volume/mass loss/colour/turbidity; rate = gradient."
+     }
+    },
+    {
+     "id": "ch-rate-02",
+     "name": {
+      "zh": "濃度對速率的影響",
+      "en": "Effect of Concentration"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "濃度增→碰撞頻率增→速率增；速率-濃度圖呈線性。",
+      "en": "Higher concentration→more collisions→faster; rate-concentration roughly linear."
+     }
+    },
+    {
+     "id": "ch-rate-03",
+     "name": {
+      "zh": "表面積對速率的影響",
+      "en": "Effect of Surface Area"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "顆粒越細表面積越大→碰撞機會越多→速率越快。",
+      "en": "Smaller particles = larger surface area = more collisions = faster."
+     }
+    },
+    {
+     "id": "ch-rate-04",
+     "name": {
+      "zh": "溫度對速率的影響",
+      "en": "Effect of Temperature"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "溫度升→粒子動能增→有效碰撞比例增；溫度每升 10°C 速率約翻倍。",
+      "en": "Higher temp→more kinetic energy→more effective collisions; ~2× per 10°C."
+     }
+    },
+    {
+     "id": "ch-rate-05",
+     "name": {
+      "zh": "催化劑",
+      "en": "Catalysts"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "降低活化能、加快反應但不被消耗；不改變平衡位置。",
+      "en": "Lowers Eₐ, speeds reaction, not consumed; does not change equilibrium."
+     }
+    },
+    {
+     "id": "ch-rate-06",
+     "name": {
+      "zh": "碰撞理論",
+      "en": "Collision Theory"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "粒子需碰撞且能量≥Eₐ 且有正確取向才算有效碰撞。",
+      "en": "Particles must collide with energy ≥ Eₐ and correct orientation to react."
+     }
+    },
+    {
+     "id": "ch-rate-07",
+     "name": {
+      "zh": "速率實驗設計",
+      "en": "Rate Experiment Design"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "控制變量：一次只改一個因素；用「消失的標記」等方法測時間。",
+      "en": "Control one variable at a time; use disappearing cross etc. to time."
+     }
+    },
+    {
+     "id": "ch-rate-08",
+     "name": {
+      "zh": "速率-時間圖",
+      "en": "Rate-Time Graphs"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "隨反應進行濃度降→速率減；斜率代表瞬時速率。",
+      "en": "Rate decreases as reactants deplete; gradient = instantaneous rate."
+     }
+    },
+    {
+     "id": "ch-rate-09",
+     "name": {
+      "zh": "光催化與工業",
+      "en": "Catalysts in Industry"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "催化劑降低工業反應溫度和成本；如鐵催化 Haber 法。",
+      "en": "Catalysts lower industrial temperature/cost; iron in Haber process."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-equil",
+   "level": "topic",
+   "domain": "CH-REACT",
+   "grades": [
+    "S6"
+   ],
+   "name": {
+    "zh": "化學平衡",
+    "en": "Chemical Equilibrium"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-equil-01",
+     "name": {
+      "zh": "可逆反應",
+      "en": "Reversible Reactions"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "正逆反應同時進行；用 ⇌ 表示；如 N₂+3H₂⇌2NH₃。",
+      "en": "Forward and reverse proceed together; use ⇌; e.g. N₂+3H₂⇌2NH₃."
+     }
+    },
+    {
+     "id": "ch-equil-02",
+     "name": {
+      "zh": "平衡狀態特徵",
+      "en": "Characteristics of Equilibrium"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "正逆速率相等、濃度不變、是動態平衡（宏觀不變微觀仍在反應）。",
+      "en": "Forward rate = reverse rate, concentrations constant; dynamic equilibrium."
+     }
+    },
+    {
+     "id": "ch-equil-03",
+     "name": {
+      "zh": "平衡常數 Kc",
+      "en": "Equilibrium Constant Kc"
+     },
+     "knowledgeType": "concept",
+     "formula": "Kc = [產物]/[反應物]",
+     "pitfall": {
+      "zh": "Kc 只與溫度有關；濃度高次冪；純固體/液體不寫入。",
+      "en": "Kc depends only on temperature; powers from coefficients; pure solids/liquids omitted."
+     }
+    },
+    {
+     "id": "ch-equil-04",
+     "name": {
+      "zh": "反應商 Q",
+      "en": "Reaction Quotient Q"
+     },
+     "knowledgeType": "concept",
+     "formula": "Q = [產物]/[反應物]",
+     "pitfall": {
+      "zh": "任意時刻的濃度比（同 Kc 形式）；Q 與 Kc 比較判斷移動方向。",
+      "en": "Concentration ratio at any time (same form as Kc); compare Q with Kc for shift."
+     }
+    },
+    {
+     "id": "ch-equil-05",
+     "name": {
+      "zh": "Q vs Kc 判斷移動",
+      "en": "Shift Prediction: Q vs Kc"
+     },
+     "knowledgeType": "law",
+     "pitfall": {
+      "zh": "Q < Kc 正向移動；Q > Kc 逆向移動；Q = Kc 平衡。⚠ 2022 新綱用 Q，不用勒沙特列。",
+      "en": "Q<Kc forward; Q>Kc reverse; Q=Kc at equilibrium. New syllabus uses Q not Le Chatelier."
+     }
+    },
+    {
+     "id": "ch-equil-06",
+     "name": {
+      "zh": "濃度對平衡的影響",
+      "en": "Effect of Concentration"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "增反應物→Q 降→正向移動；移除產物→正向移動。",
+      "en": "Add reactant→Q decreases→forward; remove product→forward."
+     }
+    },
+    {
+     "id": "ch-equil-07",
+     "name": {
+      "zh": "溫度對平衡的影響",
+      "en": "Effect of Temperature"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "升溫有利吸熱方向；Kc 隨溫度改變（放/吸熱 Kc 變大變小不同）。",
+      "en": "Heating favours endothermic; Kc changes with temperature."
+     }
+    },
+    {
+     "id": "ch-equil-08",
+     "name": {
+      "zh": "壓力對平衡的影響",
+      "en": "Effect of Pressure"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "只影響氣體；增壓→向氣體分子數少的方向移動。",
+      "en": "Affects gases only; higher pressure shifts toward fewer gas molecules."
+     }
+    },
+    {
+     "id": "ch-equil-09",
+     "name": {
+      "zh": "催化劑與平衡",
+      "en": "Catalyst and Equilibrium"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "催化劑同時加快正逆反應，平衡位置不變，只更快到達平衡。",
+      "en": "Catalyst speeds both directions, equilibrium position unchanged, reaches faster."
+     }
+    },
+    {
+     "id": "ch-equil-10",
+     "name": {
+      "zh": "平衡體系實例",
+      "en": "Equilibrium Systems"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "Haber 法、Contact 法、碳酸氫鹽溶解等；用 Q/Kc 分析工業條件。",
+      "en": "Haber, Contact, bicarbonate systems; use Q/Kc to analyse industrial conditions."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-carbon",
+   "level": "topic",
+   "domain": "CH-CARBON",
+   "grades": [
+    "S6"
+   ],
+   "name": {
+    "zh": "碳化合物的化學",
+    "en": "Chemistry of Carbon Compounds"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-carbon-01",
+     "name": {
+      "zh": "烷烴通式",
+      "en": "Alkane General Formula"
+     },
+     "knowledgeType": "concept",
+     "formula": "CₙH₂ₙ₊₂",
+     "pitfall": {
+      "zh": "烷烴只含單鍵（飽和）；甲烷 CH₄、乙烷 C₂H₆。",
+      "en": "Alkanes are saturated (single bonds); methane CH₄, ethane C₂H₆."
+     }
+    },
+    {
+     "id": "ch-carbon-02",
+     "name": {
+      "zh": "烯烴加成反應",
+      "en": "Alkene Addition"
+     },
+     "knowledgeType": "reaction",
+     "formula": "C₂H₄ + H₂O → C₂H₅OH",
+     "pitfall": {
+      "zh": "烯烴含 C=C 雙鍵，可加 H₂/H₂O/HX；加水分步寫反應條件。",
+      "en": "Alkenes have C=C, add H₂/H₂O/HX; write conditions for hydration."
+     }
+    },
+    {
+     "id": "ch-carbon-03",
+     "name": {
+      "zh": "酯化反應",
+      "en": "Esterification"
+     },
+     "knowledgeType": "reaction",
+     "formula": "RCOOH + R'OH ⇌ RCOOR' + H₂O",
+     "pitfall": {
+      "zh": "酸+醇→酯+水，需濃硫酸催化+加熱；可逆反應，酯有果香。",
+      "en": "Acid + alcohol → ester + water, conc. H₂SO₄ catalyst + heat; reversible, fruity smell."
+     }
+    },
+    {
+     "id": "ch-carbon-04",
+     "name": {
+      "zh": "同系列",
+      "en": "Homologous Series"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "同系列：通式相同、結構相似、性質遞變（烷/烯/醇/酸）。",
+      "en": "Homologous series: same general formula, similar structure, gradation of properties."
+     }
+    },
+    {
+     "id": "ch-carbon-05",
+     "name": {
+      "zh": "同分異構",
+      "en": "Isomerism"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "同分子式不同結構；如 C₄H₁₀ 有正丁烷/異丁烷；異構體性質不同。",
+      "en": "Same formula different structure; C₄H₁₀ has n-butane/isobutane; different properties."
+     }
+    },
+    {
+     "id": "ch-carbon-06",
+     "name": {
+      "zh": "官能團",
+      "en": "Functional Groups"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "決定性質的原子團：-OH(醇)、-COOH(酸)、C=C(烯)、-COO-(酯)。",
+      "en": "Groups that define properties: -OH, -COOH, C=C, -COO-."
+     }
+    },
+    {
+     "id": "ch-carbon-07",
+     "name": {
+      "zh": "醇的性質",
+      "en": "Properties of Alcohols"
+     },
+     "knowledgeType": "reaction",
+     "formula": "C₂H₅OH + 3O₂ → 2CO₂ + 3H₂O",
+     "pitfall": {
+      "zh": "醇燃燒產 CO₂+H₂O；與鈉反應放氫氣；氧化成醛/酸。",
+      "en": "Alcohols burn to CO₂+H₂O; react with Na (H₂); oxidise to aldehyde/acid."
+     }
+    },
+    {
+     "id": "ch-carbon-08",
+     "name": {
+      "zh": "醛與酮",
+      "en": "Aldehydes and Ketones"
+     },
+     "knowledgeType": "reaction",
+     "formula": "C₂H₅OH + [O] → CH₃CHO + H₂O",
+     "pitfall": {
+      "zh": "醛可被氧化成酸（費林/托倫斯試劑區分）；酮難氧化。",
+      "en": "Aldehydes oxidise to acids (Fehling/Tollens distinguish); ketones resist oxidation."
+     }
+    },
+    {
+     "id": "ch-carbon-09",
+     "name": {
+      "zh": "羧酸的性質",
+      "en": "Properties of Carboxylic Acids"
+     },
+     "knowledgeType": "reaction",
+     "formula": "CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂",
+     "pitfall": {
+      "zh": "羧酸弱酸性：與 NaHCO₃ 放 CO₂、與鹼中和、與醇酯化。",
+      "en": "Carboxylic acids: with NaHCO₃ give CO₂, neutralise bases, esterify with alcohols."
+     }
+    },
+    {
+     "id": "ch-carbon-10",
+     "name": {
+      "zh": "加成聚合",
+      "en": "Addition Polymerisation"
+     },
+     "knowledgeType": "reaction",
+     "formula": "nCH₂=CH₂ → -(CH₂CH₂)ₙ-",
+     "pitfall": {
+      "zh": "含 C=C 單體加聚：聚乙烯/聚氯乙烯；無小分子放出。",
+      "en": "Alkene monomers add-polymerise: PE/PVC; no small molecule released."
+     }
+    },
+    {
+     "id": "ch-carbon-11",
+     "name": {
+      "zh": "縮合聚合",
+      "en": "Condensation Polymerisation"
+     },
+     "knowledgeType": "reaction",
+     "formula": "二酸 + 二醇 → 聚酯 + H₂O",
+     "pitfall": {
+      "zh": "單體含兩個官能團，釋出水：聚酯/尼龍；需兩類單體。",
+      "en": "Monomers with two groups lose water: polyester/nylon; needs two monomers."
+     }
+    },
+    {
+     "id": "ch-carbon-12",
+     "name": {
+      "zh": "有機命名",
+      "en": "Organic Nomenclature"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "前綴碳數（meth/eth/prop/but）+ 後綴官能團（ane/ene/ol/oic acid）。",
+      "en": "Prefix chain length (meth/eth/prop/but) + suffix functional group (ane/ene/ol/oic acid)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-pattern",
+   "level": "topic",
+   "domain": "CH-PATTERN",
+   "grades": [
+    "S6"
+   ],
+   "name": {
+    "zh": "化學世界的規律",
+    "en": "Patterns in the Chemical World"
+   },
+   "weight": "mid",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-pattern-01",
+     "name": {
+      "zh": "週期表結構",
+      "en": "Structure of the Periodic Table"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "橫行週期（7 個）、縱列族；元素按原子序排列；考試提供週期表。",
+      "en": "7 periods, groups; ordered by atomic number; periodic table provided in exam."
+     }
+    },
+    {
+     "id": "ch-pattern-02",
+     "name": {
+      "zh": "週期趨勢：金屬性",
+      "en": "Periodic Trend: Metallic Character"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "同週期右移金屬性減弱；同族下移金屬性增強（Na→K 更活潑）。",
+      "en": "Across period metallic weakens; down group strengthens (K more reactive than Na)."
+     }
+    },
+    {
+     "id": "ch-pattern-03",
+     "name": {
+      "zh": "週期趨勢：原子半徑",
+      "en": "Periodic Trend: Atomic Radius"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "同週期右移半徑減小（核電荷增）；同族下移半徑增大。",
+      "en": "Across period radius shrinks (nuclear charge); down group radius grows."
+     }
+    },
+    {
+     "id": "ch-pattern-04",
+     "name": {
+      "zh": "鹼金屬族",
+      "en": "Group 1: Alkali Metals"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "Li/Na/K 極活潑金屬；下移熔點降、反應更劇烈；儲存於油中。",
+      "en": "Li/Na/K very reactive; down group lower mp, more vigorous; stored in oil."
+     }
+    },
+    {
+     "id": "ch-pattern-05",
+     "name": {
+      "zh": "鹵素族",
+      "en": "Group 7: Halogens"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "F/Cl/Br/I 非金屬；下移熔沸點升、活潑性降；顏色加深。",
+      "en": "F/Cl/Br/I non-metals; down group higher bp/mp, less reactive, darker colour."
+     }
+    },
+    {
+     "id": "ch-pattern-06",
+     "name": {
+      "zh": "惰性氣體族",
+      "en": "Group 0: Noble Gases"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "最外層滿（He 2、其餘 8）；性質極穩定，幾乎不反應。",
+      "en": "Full outer shell (He 2, others 8); extremely unreactive."
+     }
+    },
+    {
+     "id": "ch-pattern-07",
+     "name": {
+      "zh": "過渡金屬",
+      "en": "Transition Metals"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "中間區塊；多變價態、有顏色化合物、可作催化劑（Fe/Ni）。",
+      "en": "Middle block; variable oxidation states, coloured compounds, catalysts (Fe/Ni)."
+     }
+    },
+    {
+     "id": "ch-pattern-08",
+     "name": {
+      "zh": "元素推斷",
+      "en": "Deducing Element Properties"
+     },
+     "knowledgeType": "concept",
+     "providedInfo": "periodic-table",
+     "pitfall": {
+      "zh": "由位置推性質：同族相似；由性質定位置：金屬性/價態。",
+      "en": "Position predicts properties (group similarity); properties locate position."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-ind",
+   "level": "topic",
+   "domain": "CH-IND",
+   "grades": [
+    "S5",
+    "S6"
+   ],
+   "name": {
+    "zh": "工業化學",
+    "en": "Industrial Chemistry"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-ind-01",
+     "name": {
+      "zh": "Haber 法制氨",
+      "en": "Haber Process"
+     },
+     "knowledgeType": "reaction",
+     "formula": "N₂ + 3H₂ ⇌ 2NH₃（放熱）",
+     "pitfall": {
+      "zh": "條件：高壓 200atm、450°C、鐵催化劑；移走 NH₃ 提高轉化率。",
+      "en": "Conditions: 200 atm, 450°C, iron catalyst; remove NH₃ to boost conversion."
+     }
+    },
+    {
+     "id": "ch-ind-02",
+     "name": {
+      "zh": "Contact 法制硫酸",
+      "en": "Contact Process"
+     },
+     "knowledgeType": "reaction",
+     "formula": "2SO₂ + O₂ ⇌ 2SO₃（放熱）",
+     "pitfall": {
+      "zh": "V₂O₅ 催化、450°C；SO₃ 用濃硫酸吸收成發煙硫酸。",
+      "en": "V₂O₅ catalyst, 450°C; SO₃ absorbed in conc. H₂SO₄ as oleum."
+     }
+    },
+    {
+     "id": "ch-ind-03",
+     "name": {
+      "zh": "工業條件權衡",
+      "en": "Industrial Condition Trade-offs"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "高溫利速率不利產率（放熱）；高壓利產率但成本高——需權衡。",
+      "en": "High temp favours rate not yield (exothermic); high pressure helps yield but costly—trade off."
+     }
+    },
+    {
+     "id": "ch-ind-04",
+     "name": {
+      "zh": "電解製氯氣",
+      "en": "Chlor-Alkali Industry"
+     },
+     "knowledgeType": "equation",
+     "formula": "2NaCl + 2H₂O → 2NaOH + H₂ + Cl₂",
+     "pitfall": {
+      "zh": "電解食鹽水產 Cl₂/H₂/NaOH；隔膜電解槽分離產物。",
+      "en": "Electrolyse brine for Cl₂/H₂/NaOH; membrane cell separates products."
+     }
+    },
+    {
+     "id": "ch-ind-05",
+     "name": {
+      "zh": "電解製鋁",
+      "en": "Extraction of Aluminium"
+     },
+     "knowledgeType": "equation",
+     "formula": "2Al₂O₃ → 4Al + 3O₂",
+     "pitfall": {
+      "zh": "熔融 Al₂O₃ 電解；冰晶石降熔點；陽極碳被消耗。",
+      "en": "Electrolyse molten Al₂O₃; cryolite lowers mp; carbon anodes consumed."
+     }
+    },
+    {
+     "id": "ch-ind-06",
+     "name": {
+      "zh": "能量回收與熱交換",
+      "en": "Energy Recovery & Heat Exchange"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "放熱反應熱交換預熱反應物；節省燃料、提高經濟效益。",
+      "en": "Exothermic heat preheats reactants via exchangers; saves fuel, improves economy."
+     }
+    },
+    {
+     "id": "ch-ind-07",
+     "name": {
+      "zh": "工業催化劑",
+      "en": "Industrial Catalysts"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "鐵(Haber)/五氧化二釩(Contact)/鉑銠(氨氧化)；降低 Eₐ 省能。",
+      "en": "Fe (Haber)/V₂O₅ (Contact)/Pt-Rh (ammonia oxidation); lower Eₐ save energy."
+     }
+    },
+    {
+     "id": "ch-ind-08",
+     "name": {
+      "zh": "反應物循環利用",
+      "en": "Recycling Reactants"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "未轉化的 N₂/H₂ 循環回反應器；提高總轉化率、減少浪費。",
+      "en": "Unreacted N₂/H₂ recycled; raises overall conversion, cuts waste."
+     }
+    },
+    {
+     "id": "ch-ind-09",
+     "name": {
+      "zh": "工業經濟效益",
+      "en": "Economic Factors in Industry"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "綜合考慮：原料成本、能源、設備、催化劑壽命、產率與速率。",
+      "en": "Balance: feedstock cost, energy, equipment, catalyst life, yield vs rate."
+     }
+    },
+    {
+     "id": "ch-ind-10",
+     "name": {
+      "zh": "綠色化學",
+      "en": "Green Chemistry"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "原子經濟性高、少副產物、可再生原料；如替代污染大的傳統工藝。",
+      "en": "High atom economy, fewer by-products, renewable feedstock; greener processes."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-mat",
+   "level": "topic",
+   "domain": "CH-MAT",
+   "grades": [
+    "S5",
+    "S6"
+   ],
+   "name": {
+    "zh": "材料化學",
+    "en": "Materials Chemistry"
+   },
+   "weight": "mid",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-mat-01",
+     "name": {
+      "zh": "塑料分類",
+      "en": "Classification of Plastics"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "熱塑性（可重新加熱塑形：PE/PVC）vs 熱固性（不可逆：電木）。",
+      "en": "Thermoplastic (remouldable: PE/PVC) vs thermosetting (irreversible: Bakelite)."
+     }
+    },
+    {
+     "id": "ch-mat-02",
+     "name": {
+      "zh": "加成聚合物",
+      "en": "Addition Polymers"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "單體含 C=C；聚乙烯/聚丙烯/聚氯乙烯；性質取決單體與結構。",
+      "en": "Monomers have C=C; PE/PP/PVC; properties depend on monomer and structure."
+     }
+    },
+    {
+     "id": "ch-mat-03",
+     "name": {
+      "zh": "縮合聚合物",
+      "en": "Condensation Polymers"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "聚酯（酯鍵）/聚醯胺（醯胺鍵）；釋出水；常為纖維。",
+      "en": "Polyester (ester links)/polyamide (amide links); release water; often fibres."
+     }
+    },
+    {
+     "id": "ch-mat-04",
+     "name": {
+      "zh": "聚合物結構與性質",
+      "en": "Polymer Structure-Property"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "支鏈/交聯影響強度柔軟度；結晶度影響透明性強度。",
+      "en": "Branches/crosslinks affect strength/flexibility; crystallinity affects transparency."
+     }
+    },
+    {
+     "id": "ch-mat-05",
+     "name": {
+      "zh": "塑料回收",
+      "en": "Plastic Recycling"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "回收標誌（1-7）分類；物理回收 vs 化學回收（解聚）；環境問題。",
+      "en": "Recycling codes (1-7); mechanical vs chemical recycling (depolymerisation)."
+     }
+    },
+    {
+     "id": "ch-mat-06",
+     "name": {
+      "zh": "複合材料",
+      "en": "Composite Materials"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "兩種以上材料組合：玻璃纖維+樹脂=玻璃鋼；強度重量比優。",
+      "en": "Two+ materials combined: fibreglass (glass fibre+resin); high strength-to-weight."
+     }
+    },
+    {
+     "id": "ch-mat-07",
+     "name": {
+      "zh": "納米材料",
+      "en": "Nanomaterials"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "1-100 nm 尺度；比表面積大→催化/反應活性強；納米碳管等。",
+      "en": "1-100 nm scale; huge surface area→catalytic activity; e.g. carbon nanotubes."
+     }
+    },
+    {
+     "id": "ch-mat-08",
+     "name": {
+      "zh": "材料選擇",
+      "en": "Choosing Materials"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "根據：強度/密度/耐腐蝕/成本/可回收；如汽車部件選複合材料減重。",
+      "en": "Consider: strength/density/corrosion/cost/recyclability; e.g. composites in cars."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-ana",
+   "level": "topic",
+   "domain": "CH-ANA",
+   "grades": [
+    "S5",
+    "S6"
+   ],
+   "name": {
+    "zh": "分析化學",
+    "en": "Analytical Chemistry"
+   },
+   "weight": "high",
+   "diff": 3,
+   "leaves": [
+    {
+     "id": "ch-ana-01",
+     "name": {
+      "zh": "過濾與蒸發",
+      "en": "Filtration and Evaporation"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "過濾分離不溶固體；蒸發結晶回收可溶鹽；過濾需濾紙漏斗。",
+      "en": "Filter separates insoluble solid; evaporate to crystallise salts."
+     }
+    },
+    {
+     "id": "ch-ana-02",
+     "name": {
+      "zh": "蒸餾",
+      "en": "Distillation"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "分離溶液中的溶劑（沸點差異）；溫度計測蒸氣溫度。",
+      "en": "Separate solvent from solution by boiling point; thermometer measures vapour."
+     }
+    },
+    {
+     "id": "ch-ana-03",
+     "name": {
+      "zh": "分液",
+      "en": "Separating Funnel"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "分離不互溶液體（油/水）；下層從下口放出。",
+      "en": "Separates immiscible liquids (oil/water); drain lower layer from tap."
+     }
+    },
+    {
+     "id": "ch-ana-04",
+     "name": {
+      "zh": "色層分析",
+      "en": "Chromatography"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "依溶質在固定相/流動相分配分離；Rf 值鑑定成分。",
+      "en": "Separates by partition between stationary/mobile phases; Rf identifies components."
+     }
+    },
+    {
+     "id": "ch-ana-05",
+     "name": {
+      "zh": "滴定分析",
+      "en": "Titrimetric Analysis"
+     },
+     "knowledgeType": "lab",
+     "formula": "c₁V₁ = c₂V₂（摩爾比修正）",
+     "pitfall": {
+      "zh": "定量分析：標準液+指示劑；返滴定/空白滴定是常見變化。",
+      "en": "Quantitative: standard solution + indicator; back/blank titrations common variants."
+     }
+    },
+    {
+     "id": "ch-ana-06",
+     "name": {
+      "zh": "焰色試驗",
+      "en": "Flame Tests"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "鈉黃、鉀紫（隔鈷玻璃）、鈣磚紅、銅藍綠；檢驗金屬陽離子。",
+      "en": "Na yellow, K lilac (cobalt glass), Ca brick-red, Cu blue-green."
+     }
+    },
+    {
+     "id": "ch-ana-07",
+     "name": {
+      "zh": "沉澱測試",
+      "en": "Precipitation Tests"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "加試劑生成特徵沉澱：Cl⁻+Ag⁺→白色 AgCl；SO₄²⁻+Ba²⁺→白色 BaSO₄。",
+      "en": "Add reagent for characteristic precipitate: Cl⁻+Ag⁺→white AgCl; SO₄²⁻+Ba²⁺→white BaSO₄."
+     }
+    },
+    {
+     "id": "ch-ana-08",
+     "name": {
+      "zh": "氣體測試",
+      "en": "Gas Tests"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "H₂：爆鳴聲；CO₂：石灰水變乳白；O₂：帶火星復燃；NH₃：濕石蕊變藍。",
+      "en": "H₂ pops; CO₂ milky limewater; O₂ relights splint; NH₃ turns litmus blue."
+     }
+    },
+    {
+     "id": "ch-ana-09",
+     "name": {
+      "zh": "紅外光譜",
+      "en": "Infrared Spectroscopy"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "官能團指紋區：-OH 寬峰、C=O 1700 附近；鑑定官能團。",
+      "en": "Functional group fingerprint: -OH broad, C=O near 1700; identifies groups."
+     }
+    },
+    {
+     "id": "ch-ana-10",
+     "name": {
+      "zh": "質譜法",
+      "en": "Mass Spectrometry"
+     },
+     "knowledgeType": "concept",
+     "pitfall": {
+      "zh": "測相對分子質量（分子離子峰）與碎片；同位素豐度也可測。",
+      "en": "Measures Mr (molecular ion peak) and fragments; also isotope abundance."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ch-lab",
+   "level": "topic",
+   "domain": "CH-LAB",
+   "grades": [
+    "S4",
+    "S5",
+    "S6"
+   ],
+   "name": {
+    "zh": "實驗技能",
+    "en": "Experimental Skills"
+   },
+   "weight": "high",
+   "diff": 2,
+   "leaves": [
+    {
+     "id": "ch-lab-01",
+     "name": {
+      "zh": "實驗安全",
+      "en": "Laboratory Safety"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "護目鏡/通風櫥；濃酸稀釋「酸入水」；易燃品遠離火焰。",
+      "en": "Goggles/fume cupboard; add acid to water; flammables away from flames."
+     }
+    },
+    {
+     "id": "ch-lab-02",
+     "name": {
+      "zh": "儀器使用",
+      "en": "Using Apparatus"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "滴定管讀數到 0.01 mL；移液管到刻度線；量筒不需精確。",
+      "en": "Burette to 0.01 mL; pipette to mark; measuring cylinder for rough volumes."
+     }
+    },
+    {
+     "id": "ch-lab-03",
+     "name": {
+      "zh": "精確測量",
+      "en": "Precise Measurement"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "電子天平測質量；量熱器測溫升；準確度：分析天平>電子秤。",
+      "en": "Balance for mass; calorimeter for ΔT; precision: analytical balance > top pan."
+     }
+    },
+    {
+     "id": "ch-lab-04",
+     "name": {
+      "zh": "變量控制",
+      "en": "Controlling Variables"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "只改自變量，控制其餘（溫度/濃度/表面積）；對照實驗。",
+      "en": "Change only independent variable; control others (temp/concentration/surface area)."
+     }
+    },
+    {
+     "id": "ch-lab-05",
+     "name": {
+      "zh": "數據分析",
+      "en": "Data Analysis"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "作圖求斜率/外推；離群點識別；平均值與誤差。",
+      "en": "Graph for gradient/extrapolation; identify outliers; mean and error."
+     }
+    },
+    {
+     "id": "ch-lab-06",
+     "name": {
+      "zh": "誤差處理",
+      "en": "Handling Errors"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "系統誤差（儀器校準）vs 隨機誤差（讀數）；減少誤差方法。",
+      "en": "Systematic (calibration) vs random (reading) errors; methods to reduce."
+     }
+    },
+    {
+     "id": "ch-lab-07",
+     "name": {
+      "zh": "實驗報告",
+      "en": "Writing Reports"
+     },
+     "knowledgeType": "lab",
+     "pitfall": {
+      "zh": "目的/原理/步驟/結果/結論/誤差；SBA 評核重點。",
+      "en": "Aim/principle/method/results/conclusion/errors; key for SBA assessment."
+     }
+    }
+   ]
+  }
+ ],
+ "edges": [
+  {
+   "from": "ch-mw1",
+   "to": "ch-mw2",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-mw1",
+   "to": "ch-acidbase",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-mw1",
+   "to": "ch-metals",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-mw2",
+   "to": "ch-redox",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-acidbase",
+   "to": "ch-redox",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-metals",
+   "to": "ch-redox",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-fossil",
+   "to": "ch-carbon",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-energy",
+   "to": "ch-equil",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-rate",
+   "to": "ch-equil",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-redox",
+   "to": "ch-ind",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-equil",
+   "to": "ch-ind",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-rate",
+   "to": "ch-ind",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-acidbase",
+   "to": "ch-ana",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-redox",
+   "to": "ch-ana",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-equil",
+   "to": "ch-ana",
+   "type": "prereq"
+  },
+  {
+   "from": "ch-mw2",
+   "to": "ch-carbon",
+   "type": "related"
+  },
+  {
+   "from": "ch-pattern",
+   "to": "ch-mw2",
+   "type": "related"
+  },
+  {
+   "from": "ch-fossil",
+   "to": "ch-energy",
+   "type": "related"
+  },
+  {
+   "from": "ch-acidbase",
+   "to": "ch-redox",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-acidbase",
+   "to": "ch-ana",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-redox",
+   "to": "ch-ind",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-equil",
+   "to": "ch-ind",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-carbon",
+   "to": "ch-fossil",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-rate",
+   "to": "ch-equil",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-equil",
+   "to": "ch-ana",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-metals",
+   "to": "ch-redox",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-mw2",
+   "to": "ch-carbon",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-energy",
+   "to": "ch-rate",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-rate",
+   "to": "ch-ind",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-energy",
+   "to": "ch-equil",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-redox",
+   "to": "ch-ana",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-mat",
+   "to": "ch-carbon",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-earth",
+   "to": "ch-fossil",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-mw1",
+   "to": "ch-mw2",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-ana",
+   "to": "ch-lab",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-metals",
+   "to": "ch-mat",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-ind",
+   "to": "ch-energy",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-mw2",
+   "to": "ch-ana",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-metals",
+   "to": "ch-acidbase",
+   "type": "cotested"
+  },
+  {
+   "from": "ch-ind",
+   "to": "ch-ana",
+   "type": "cotested"
+  }
+ ],
+ "motherProblems": [
+  {
+   "id": "ch-mp-acidbase-01",
+   "titleZh": "酸碱滴定計算題",
+   "titleEn": "Acid-Base Titration Calculation",
+   "coreTopics": [
+    "ch-acidbase"
+   ],
+   "relatedTopics": [
+    "ch-ana"
+   ],
+   "questionType": "titration",
+   "stem": "用 0.100 mol/L 的 NaOH 滴定 25.0 mL 鹽酸，到終點用去 20.0 mL NaOH，求鹽酸濃度。",
+   "stemEn": "25.0 mL of HCl is titrated with 0.100 mol/L NaOH; 20.0 mL NaOH reaches the endpoint. Find the HCl concentration.",
+   "solutionSkeleton": [
+    "寫出中和離子方程式 H⁺ + OH⁻ → H₂O",
+    "n(NaOH) = cV = 0.100 × 20.0/1000",
+    "由 1:1 摩爾比得 n(HCl)",
+    "c(HCl) = n/V = 0.0800 mol/L"
+   ],
+   "variation": [
+    "返滴定（先加過量鹼再回滴）",
+    "含雜質樣品的純度計算",
+    "指示劑選擇與終點顏色判斷"
+   ],
+   "appearances": [
+    {
+     "year": 2021,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-redox-01",
+   "titleZh": "電解質綜合題",
+   "titleEn": "Electrolysis Comprehensive",
+   "coreTopics": [
+    "ch-redox"
+   ],
+   "relatedTopics": [
+    "ch-mw2",
+    "ch-ind"
+   ],
+   "questionType": "preparation",
+   "stem": "電解熔融氯化鈉，寫出陰陽極反應並說明產物如何收集。",
+   "stemEn": "Electrolyse molten NaCl; write anode/cathode reactions and explain product collection.",
+   "solutionSkeleton": [
+    "陰極（還原）：Na⁺ + e⁻ → Na",
+    "陽極（氧化）：2Cl⁻ → Cl₂ + 2e⁻",
+    "說明離子移動方向與產物收集方法",
+    "（延伸）電解 NaCl 溶液時的差異"
+   ],
+   "variation": [
+    "電解 CuSO₄ 溶液（活性電極）",
+    "電鍍原理",
+    "電解質與工業提取金屬的結合"
+   ],
+   "appearances": [
+    {
+     "year": 2019,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-equil-01",
+   "titleZh": "平衡移動題（Q vs Kc）",
+   "titleEn": "Equilibrium Shift (Q vs Kc)",
+   "coreTopics": [
+    "ch-equil"
+   ],
+   "relatedTopics": [
+    "ch-rate",
+    "ch-ind"
+   ],
+   "questionType": "rate-equilibrium",
+   "stem": "對於 N₂ + 3H₂ ⇌ 2NH₃ 的平衡體系，若增加 N₂ 濃度，用 Q 與 Kc 比較解釋平衡如何移動。",
+   "stemEn": "For N₂ + 3H₂ ⇌ 2NH₃ at equilibrium, explain the shift when [N₂] increases, using Q vs Kc.",
+   "solutionSkeleton": [
+    "寫出平衡常數表達式 Kc = [NH₃]²/([N₂][H₂]³)",
+    "增 [N₂] 使分母變大 → Q 瞬時減小",
+    "Q < Kc → 正反應方向移動",
+    "新平衡建立，Kc 不變"
+   ],
+   "variation": [
+    "溫度變化對 Kc 的影響（放熱/吸熱）",
+    "加壓/體積變化對平衡的影響",
+    "催化劑為何不影響平衡位置"
+   ],
+   "appearances": [
+    {
+     "year": 2023,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-carbon-01",
+   "titleZh": "有機推斷題",
+   "titleEn": "Organic Inference",
+   "coreTopics": [
+    "ch-carbon"
+   ],
+   "relatedTopics": [
+    "ch-fossil"
+   ],
+   "questionType": "organic",
+   "stem": "化合物 X（分子式 C₄H₈O₂）可與 NaHCO₃ 反應放出 CO₂。寫出 X 的可能結構並命名。",
+   "stemEn": "Compound X (C₄H₈O₂) releases CO₂ with NaHCO₃. Give possible structures of X and name them.",
+   "solutionSkeleton": [
+    "由與 NaHCO₃ 反應 → X 是羧酸（含 -COOH）",
+    "不飽和度 = 1 → 羧酸中的 C=O",
+    "寫出 C₄H₈O₂ 羧酸的同分異構（丁酸/異丁酸）",
+    "命名並畫結構式"
+   ],
+   "variation": [
+    "酯的同分異構體數目",
+    "官能團轉化鏈（醇→醛→酸→酯）",
+    "由質譜/紅外光譜推結構"
+   ],
+   "appearances": [
+    {
+     "year": 2020,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-ind-01",
+   "titleZh": "工業條件選擇題",
+   "titleEn": "Industrial Condition Selection",
+   "coreTopics": [
+    "ch-ind"
+   ],
+   "relatedTopics": [
+    "ch-equil",
+    "ch-rate",
+    "ch-energy"
+   ],
+   "questionType": "preparation",
+   "stem": "Haber 法制氨 N₂ + 3H₂ ⇌ 2NH₃（放熱）。解釋為何選用高壓、適中溫度（450°C）和鐵催化劑。",
+   "stemEn": "In the Haber process (exothermic), explain the choice of high pressure, moderate temperature (450°C), and iron catalyst.",
+   "solutionSkeleton": [
+    "高壓：增產率（分子數減少，Q/Kc 角度）",
+    "適中溫度：低溫利產率但速率慢，450°C 折衷",
+    "催化劑：加快達平衡但不移動平衡",
+    "持續移走 NH₃ 提高轉化率"
+   ],
+   "variation": [
+    "Contact 法製硫酸的條件",
+    "工業條件中的經濟權衡（成本/速率/轉化率）",
+    "能量循環與熱交換"
+   ],
+   "appearances": [
+    {
+     "year": 2022,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-earth-01",
+   "titleZh": "大氣成分題",
+   "titleEn": "Atmospheric Composition",
+   "coreTopics": [
+    "ch-earth"
+   ],
+   "relatedTopics": [
+    "ch-fossil"
+   ],
+   "questionType": "concept",
+   "stem": "說明空氣中主要成分（氮、氧、二氧化碳）的比例及二氧化碳濃度上升對環境的影響。",
+   "stemEn": "Describe the proportions of main air components (N₂, O₂, CO₂) and the environmental effect of rising CO₂.",
+   "solutionSkeleton": [
+    "列出空氣成分及體積比例（N₂ ~78%、O₂ ~21%）",
+    "說明 CO₂ 是溫室氣體",
+    "討論化石燃料燃燒與 CO₂ 上升的關聯"
+   ],
+   "variation": [
+    "惰性氣體（氬）的用途",
+    "臭氧層與紫外線",
+    "酸雨的成因"
+   ],
+   "appearances": [
+    {
+     "year": 2018,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "MC"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-mw1-01",
+   "titleZh": "原子結構與電子排布",
+   "titleEn": "Atomic Structure & Electron Arrangement",
+   "coreTopics": [
+    "ch-mw1"
+   ],
+   "relatedTopics": [
+    "ch-mw2",
+    "ch-pattern"
+   ],
+   "questionType": "concept",
+   "stem": "寫出鈉（Na，原子序 11）的電子排布，並解釋它傾向形成哪種離子。",
+   "stemEn": "Write the electron arrangement of sodium (Z=11) and explain which ion it tends to form.",
+   "solutionSkeleton": [
+    "按 2,8,1 排布電子",
+    "最外層 1 個電子 → 傾向失去",
+    "形成 Na⁺（2,8 穩定八隅體）",
+    "說明離子符號與電子得失"
+   ],
+   "variation": [
+    "氯（Cl）的電子排布與 Cl⁻ 形成",
+    "穩定八隅體規則與惰性氣體",
+    "離子式與化合物式"
+   ],
+   "appearances": [
+    {
+     "year": 2017,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "MC"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-metals-01",
+   "titleZh": "金屬活動性題",
+   "titleEn": "Metal Reactivity Series",
+   "coreTopics": [
+    "ch-metals"
+   ],
+   "relatedTopics": [
+    "ch-redox"
+   ],
+   "questionType": "concept",
+   "stem": "將鋅片放入硫酸銅溶液中，寫出反應方程式並預測觀察到的現象。",
+   "stemEn": "Add zinc to copper(II) sulphate; write the equation and predict observations.",
+   "solutionSkeleton": [
+    "鋅比銅活潑（活動序：Zn > Cu）",
+    "鋅置換銅：Zn + CuSO₄ → ZnSO₄ + Cu",
+    "現象：鋅片表面出現紅色沉澱，溶液藍色變淺",
+    "離子方程式：Zn + Cu²⁺ → Zn²⁺ + Cu"
+   ],
+   "variation": [
+    "金屬與酸的反應速率比較",
+    "金屬活動序與冶煉方法",
+    "犧牲陽極保護"
+   ],
+   "appearances": [
+    {
+     "year": 2016,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-fossil-01",
+   "titleZh": "石油分餾題",
+   "titleEn": "Fractional Distillation of Petroleum",
+   "coreTopics": [
+    "ch-fossil"
+   ],
+   "relatedTopics": [
+    "ch-carbon"
+   ],
+   "questionType": "concept",
+   "stem": "說明石油分餾的原理，並列出三個主要餾分及其用途。",
+   "stemEn": "Explain the principle of fractional distillation of petroleum; list three fractions and uses.",
+   "solutionSkeleton": [
+    "原理：不同沸點，塔中溫度梯度分離",
+    "低沸點先蒸出（石油氣/汽油），高沸點後蒸出（柴油/瀝青）",
+    "列舉餾分用途（汽油→燃料等）"
+   ],
+   "variation": [
+    "裂解與裂化製烯烴",
+    "燃燒產物與環境影響",
+    "同分異構與辛烷值"
+   ],
+   "appearances": [
+    {
+     "year": 2019,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-mw2-01",
+   "titleZh": "化學鍵與性質題",
+   "titleEn": "Bonding & Properties",
+   "coreTopics": [
+    "ch-mw2"
+   ],
+   "relatedTopics": [
+    "ch-mw1",
+    "ch-metals"
+   ],
+   "questionType": "concept",
+   "stem": "比較氯化鈉（離子化合物）與石墨的結構特點，並解釋它們導電性的差異。",
+   "stemEn": "Compare NaCl (ionic) and graphite structures; explain their different electrical conductivities.",
+   "solutionSkeleton": [
+    "NaCl：巨大離子結構，熔融/溶液態導電，固態不導電",
+    "石墨：層狀結構，層內共價鍵+自由電子",
+    "石墨可導電（自由電子），NaCl 需游離離子",
+    "比較熔點/硬度等性質"
+   ],
+   "variation": [
+    "鑽石 vs 石墨性質對比",
+    "金屬鍵與延展性",
+    "聚合物結構與性質"
+   ],
+   "appearances": [
+    {
+     "year": 2021,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-energy-01",
+   "titleZh": "Hess 定律計算",
+   "titleEn": "Hess's Law Calculation",
+   "coreTopics": [
+    "ch-energy"
+   ],
+   "relatedTopics": [
+    "ch-equil"
+   ],
+   "questionType": "energy",
+   "stem": "已知 C(s) + O₂(g) → CO₂(g) 的 ΔH = -394 kJ/mol，CO(g) + ½O₂(g) → CO₂(g) 的 ΔH = -283 kJ/mol。求 C(s) + ½O₂(g) → CO(g) 的 ΔH。",
+   "stemEn": "Given ΔH for C(s)+O₂→CO₂ = -394 kJ/mol and CO+½O₂→CO₂ = -283 kJ/mol, find ΔH for C(s)+½O₂→CO(g).",
+   "solutionSkeleton": [
+    "目標方程式 = 第一式 - 第二式",
+    "ΔH = -394 - (-283) = -111 kJ/mol",
+    "驗證：中間物 CO₂ 相消",
+    "註明狀態符號"
+   ],
+   "variation": [
+    "鍵能計算 ΔH",
+    "燃燒熱/生成熱的換算",
+    "反應能量圖"
+   ],
+   "appearances": [
+    {
+     "year": 2020,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-rate-01",
+   "titleZh": "反應速率影響因素",
+   "titleEn": "Factors Affecting Reaction Rate",
+   "coreTopics": [
+    "ch-rate"
+   ],
+   "relatedTopics": [
+    "ch-equil",
+    "ch-lab"
+   ],
+   "questionType": "data-analysis",
+   "stem": "設計實驗比較不同濃度鹽酸與大理石的反應速率，指出應控制的變量和量度方法。",
+   "stemEn": "Design an experiment comparing reaction rates of different HCl concentrations with marble; identify controlled variables and measurement.",
+   "solutionSkeleton": [
+    "列出因變量（速率）與自變量（濃度）",
+    "控制變量：溫度、大理石表面積、質量",
+    "量度方法：收集氣體體積/質量隨時間",
+    "安全措施與誤差討論"
+   ],
+   "variation": [
+    "表面積（顆粒大小）的影響",
+    "溫度對速率的影響",
+    "催化劑的作用"
+   ],
+   "appearances": [
+    {
+     "year": 2018,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-pattern-01",
+   "titleZh": "元素週期律題",
+   "titleEn": "Periodic Trends",
+   "coreTopics": [
+    "ch-pattern"
+   ],
+   "relatedTopics": [
+    "ch-mw1",
+    "ch-metals"
+   ],
+   "questionType": "concept",
+   "stem": "解釋同一週期內從鈉到氯，金屬性如何變化，並用原子結構說明原因。",
+   "stemEn": "Explain how metallic character changes across Period 3 (Na→Cl) using atomic structure.",
+   "solutionSkeleton": [
+    "金屬性遞減（Na 金屬 → Cl 非金屬）",
+    "原因：核電荷增大，最外層電子吸引增強",
+    "原子半徑減小，失電子傾向減弱",
+    "對應氧化物酸鹼性變化"
+   ],
+   "variation": [
+    "同一族（鹼金屬）性質遞變",
+    "離子半徑比較",
+    "週期表位置與性質推斷"
+   ],
+   "appearances": [
+    {
+     "year": 2015,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-mat-01",
+   "titleZh": "聚合物結構題",
+   "titleEn": "Polymer Structure & Properties",
+   "coreTopics": [
+    "ch-mat"
+   ],
+   "relatedTopics": [
+    "ch-carbon",
+    "ch-mw2"
+   ],
+   "questionType": "concept",
+   "stem": "比較加成聚合與縮合聚合的區別，並以聚乙烯與尼龍為例說明。",
+   "stemEn": "Compare addition vs condensation polymerisation using polyethylene and nylon as examples.",
+   "solutionSkeleton": [
+    "加成聚合：單體含 C=C，無小分子釋出",
+    "縮合聚合：單體含 -OH/-COOH 等，釋出 H₂O",
+    "聚乙烯：由乙烯加聚",
+    "尼龍：己二酸+己二胺縮聚"
+   ],
+   "variation": [
+    "聚合物的性質與用途（塑料回收標誌）",
+    "降解與環境問題",
+    "交聯與熱固性/熱塑性"
+   ],
+   "appearances": [
+    {
+     "year": 2022,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-ana-01",
+   "titleZh": "分離提純題",
+   "titleEn": "Separation & Purification",
+   "coreTopics": [
+    "ch-ana"
+   ],
+   "relatedTopics": [
+    "ch-lab"
+   ],
+   "questionType": "experiment",
+   "stem": "混合物含 NaCl、沙和水。設計完整流程分離並提純 NaCl，寫出每步原理。",
+   "stemEn": "A mixture contains NaCl, sand and water. Design a full separation scheme and explain each step.",
+   "solutionSkeleton": [
+    "過濾分離不溶的沙",
+    "蒸發結晶回收 NaCl",
+    "（可選）重結晶提純",
+    "每一步註明原理（溶解性/沸點差異）"
+   ],
+   "variation": [
+    "分液漏斗分離不互溶液體",
+    "蒸餾分離溶液",
+    "層析法分離色素"
+   ],
+   "appearances": [
+    {
+     "year": 2019,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-lab-01",
+   "titleZh": "實驗設計題",
+   "titleEn": "Experiment Design",
+   "coreTopics": [
+    "ch-lab"
+   ],
+   "relatedTopics": [
+    "ch-rate",
+    "ch-acidbase"
+   ],
+   "questionType": "experiment",
+   "stem": "設計實驗測定中和反應的焓變，列出所需儀器、步驟、數據處理和誤差來源。",
+   "stemEn": "Design an experiment to measure the enthalpy change of neutralisation; list apparatus, steps, data handling and errors.",
+   "solutionSkeleton": [
+    "儀器：量熱器/保溫杯、溫度計、量筒",
+    "步驟：混合已知濃度的酸鹼，記錄溫升",
+    "ΔH = mcΔT，注意質量與比熱容",
+    "誤差：熱散失、比熱容近似、溫度計讀數"
+   ],
+   "variation": [
+    "測定燃燒熱",
+    "SBA 常見考法（變量控制）",
+    "數據作圖與外推"
+   ],
+   "appearances": [
+    {
+     "year": 2023,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-acidbase-02",
+   "titleZh": "物質鑑別題",
+   "titleEn": "Distinguishing Substances",
+   "coreTopics": [
+    "ch-acidbase"
+   ],
+   "relatedTopics": [
+    "ch-lab",
+    "ch-ana"
+   ],
+   "questionType": "distinguish",
+   "stem": "有三瓶無色溶液：NaCl、Na₂CO₃、Na₂SO₄。設計實驗用最少試劑區分它們。",
+   "stemEn": "Three colourless solutions: NaCl, Na₂CO₃, Na₂SO₄. Design a scheme to distinguish them using minimal reagents.",
+   "solutionSkeleton": [
+    "先用稀鹽酸：Na₂CO₃ 放 CO₂（石灰水變乳白）",
+    "再加 BaCl₂：Na₂SO₄ 生成白色 BaSO₄ 沉澱",
+    "NaCl 兩步都無明顯現象",
+    "寫出各步方程式與觀察"
+   ],
+   "variation": [
+    "區分稀硫酸與稀鹽酸（加 BaCl₂）",
+    "區分碳酸鹽與碳酸氫鹽",
+    "區分三種金屬鹽（焰色+沉澱）"
+   ],
+   "appearances": [
+    {
+     "year": 2017,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-redox-02",
+   "titleZh": "化學電池題",
+   "titleEn": "Chemical Cell",
+   "coreTopics": [
+    "ch-redox"
+   ],
+   "relatedTopics": [
+    "ch-mw2",
+    "ch-metals"
+   ],
+   "questionType": "data-analysis",
+   "stem": "鋅銅原電池：寫出兩極半反應，指出電子流方向，並計算電壓（給定 E°）。",
+   "stemEn": "Zn-Cu cell: write half reactions, electron flow direction, and calculate voltage (E° given).",
+   "solutionSkeleton": [
+    "負極 Zn：Zn → Zn²⁺ + 2e⁻（氧化）",
+    "正極 Cu：Cu²⁺ + 2e⁻ → Cu（還原）",
+    "電子經外電路從 Zn 流向 Cu",
+    "電壓 = E°(Cu) - E°(Zn)，用電極電位表"
+   ],
+   "variation": [
+    "鹽橋的作用與電中性維持",
+    "不同金屬組合的電壓比較",
+    "蓄電池/燃料電池原理"
+   ],
+   "appearances": [
+    {
+     "year": 2020,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-equil-02",
+   "titleZh": "Kc 計算題",
+   "titleEn": "Kc Calculation",
+   "coreTopics": [
+    "ch-equil"
+   ],
+   "relatedTopics": [
+    "ch-mw1"
+   ],
+   "questionType": "rate-equilibrium",
+   "stem": "2.0 mol H₂ 與 1.0 mol I₂ 在 2 L 容器達平衡，生成 1.5 mol HI。求平衡常數 Kc。",
+   "stemEn": "2.0 mol H₂ and 1.0 mol I₂ reach equilibrium in 2 L, forming 1.5 mol HI. Find Kc.",
+   "solutionSkeleton": [
+    "寫平衡方程 H₂ + I₂ ⇌ 2HI 與 Kc 表達式",
+    "列 ICE 表求平衡濃度",
+    "Kc = [HI]²/([H₂][I₂]) 代入",
+    "注意單位與有效數字"
+   ],
+   "variation": [
+    "溫度變化後新 Kc 求平衡濃度",
+    "由 Kc 判斷反應方向",
+    "加壓/惰性氣體對平衡影響"
+   ],
+   "appearances": [
+    {
+     "year": 2021,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-carbon-02",
+   "titleZh": "官能團轉化鏈",
+   "titleEn": "Functional Group Transformations",
+   "coreTopics": [
+    "ch-carbon"
+   ],
+   "relatedTopics": [
+    "ch-fossil"
+   ],
+   "questionType": "organic",
+   "stem": "以乙烯為原料，寫出合成乙醇、乙醛、乙酸的完整反應鏈。",
+   "stemEn": "Starting from ethene, write the reaction chain to ethanol, ethanal, and ethanoic acid.",
+   "solutionSkeleton": [
+    "乙烯 + 水（催化）→ 乙醇",
+    "乙醇氧化 → 乙醛（加 [O]）",
+    "乙醛繼續氧化 → 乙酸",
+    "寫出每步條件與方程式"
+   ],
+   "variation": [
+    "由乙醇制乙烯（脫水）",
+    "酯化合成香料",
+    "加聚與縮聚對比"
+   ],
+   "appearances": [
+    {
+     "year": 2022,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-mw2-02",
+   "titleZh": "結構-性質推斷題",
+   "titleEn": "Structure-Property Inference",
+   "coreTopics": [
+    "ch-mw2"
+   ],
+   "relatedTopics": [
+    "ch-mw1",
+    "ch-pattern"
+   ],
+   "questionType": "concept",
+   "stem": "化合物 A 熔點很高、固態不導電、熔融導電。推斷 A 的鍵型並解釋性質。",
+   "stemEn": "Compound A has high mp, doesn't conduct as solid, conducts when molten. Deduce bonding type and explain.",
+   "solutionSkeleton": [
+    "熔點高→離子或共價網狀",
+    "固態不導電、熔融導電→離子化合物",
+    "離子鍵：陰陽離子，熔融游離導電",
+    "對比共價網狀（熔融也不導電）"
+   ],
+   "variation": [
+    "石墨導電 vs 鑽石不導電",
+    "比較 NaCl 與 Al₂O₃ 熔點",
+    "高分子與小分子熔點比較"
+   ],
+   "appearances": [
+    {
+     "year": 2019,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-rate-02",
+   "titleZh": "碰撞理論分析",
+   "titleEn": "Collision Theory Analysis",
+   "coreTopics": [
+    "ch-rate"
+   ],
+   "relatedTopics": [
+    "ch-energy",
+    "ch-equil"
+   ],
+   "questionType": "data-analysis",
+   "stem": "解釋為何升高溫度能顯著加快反應速率（用碰撞理論和活化能角度）。",
+   "stemEn": "Explain why raising temperature greatly increases rate (collision theory and activation energy).",
+   "solutionSkeleton": [
+    "溫度升→分子平均動能升",
+    "有效碰撞比例增大（能量≥Eₐ 的分子更多）",
+    "速率隨有效碰撞頻率增大",
+    "（對比）濃度只增碰撞頻率不增有效比例"
+   ],
+   "variation": [
+    "催化劑如何加快速率",
+    "酶催化的特性",
+    "工業上為何用高溫高壓"
+   ],
+   "appearances": [
+    {
+     "year": 2018,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  },
+  {
+   "id": "ch-mp-ana-02",
+   "titleZh": "色譜分析題",
+   "titleEn": "Chromatography Analysis",
+   "coreTopics": [
+    "ch-ana"
+   ],
+   "relatedTopics": [
+    "ch-lab",
+    "ch-carbon"
+   ],
+   "questionType": "data-analysis",
+   "stem": "用紙色譜分離墨水中的色素，說明實驗步驟並用 Rf 值鑑定各成分。",
+   "stemEn": "Separate ink pigments by paper chromatography; describe steps and use Rf values to identify components.",
+   "solutionSkeleton": [
+    "畫鉛筆基線、點樣品",
+    "展開劑上升分離色素",
+    "計算各色點 Rf = 距離樣品/距離溶劑前緣",
+    "對照已知樣品 Rf 鑑定"
+   ],
+   "variation": [
+    "不同展開劑的影響",
+    "薄層色譜 vs 紙色譜",
+    "色譜在藥物/食品檢測的應用"
+   ],
+   "appearances": [
+    {
+     "year": 2023,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ]
+  }
+ ]
+};
+
+if (typeof module !== "undefined" && module.exports) module.exports = DSE_CHEM_GRAPH;

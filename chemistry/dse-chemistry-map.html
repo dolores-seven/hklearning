@@ -83,7 +83,28 @@
     position:absolute; top:12px; right:12px; width:400px; max-height:calc(100% - 24px);
     background:var(--panel); border:1px solid var(--line); border-radius:10px;
     overflow-y:auto; display:none; box-shadow:0 8px 30px rgba(0,0,0,.5);
+    z-index:5; transition:width .2s;
   }
+  #detail.wide { width:600px; }
+  #detail .dhead { cursor:move; }
+  #detail .dmeta { margin-top:6px; display:flex; gap:6px; flex-wrap:wrap; }
+  #detail .d-actions { position:absolute; top:10px; right:34px; display:flex; gap:4px; z-index:3; }
+  #detail .d-actions button {
+    font-size:12px; width:26px; height:26px; border-radius:6px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel2); color:var(--muted);
+  }
+  #detail .d-actions button:hover { border-color:var(--accent); color:var(--text); }
+  #detail .tabs {
+    display:flex; border-bottom:1px solid var(--line); background:var(--panel);
+    position:sticky; top:0; z-index:2; margin-bottom:2px;
+  }
+  #detail .tab {
+    flex:1; padding:9px 4px; font-size:12px; background:transparent; border:none;
+    border-bottom:2px solid transparent; color:var(--muted); cursor:pointer;
+    transition:all .15s;
+  }
+  #detail .tab:hover { color:var(--text); }
+  #detail .tab.on { color:var(--text); border-bottom-color:var(--accent); font-weight:600; }
   #detail .dhead { padding:14px 16px 10px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--panel); }
   #detail .dhead .dtype { font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; }
   #detail .dhead h2 { font-size:16px; margin-top:3px; }
@@ -256,6 +277,9 @@
     marks:       { zh:'卷一占分', en:'Marks (P1)' },
     marksNote:   { zh:'出题说明', en:'Exam note' },
     weightMap:   { zh:{ high:'高频', mid:'中频', low:'低频' }, en:{ high:'High', mid:'Mid', low:'Low' } },
+    tabLeaves:   { zh:'基础知识点', en:'Knowledge' },
+    tabMp:       { zh:'母题与变式', en:'Problems' },
+    tabRel:      { zh:'关联知识点', en:'Related' },
     expandHint:  { zh:'双击展开公式', en:'Double-click to expand' },
     collapseHint:{ zh:'双击收起', en:'Double-click to collapse' },
     searchPh:    { zh:'知识点名称… (如 判别式 / circle)', en:'Topic name… (e.g. discriminant / circle)' },
@@ -587,86 +611,84 @@
       <div class="dtype">${typeStr} · ${isLeaf ? domName(G.nodes.find(n=>n.id===parentId).domain) : domName(node.domain)}</div>
       <h2>${esc(nm(node.name))}</h2>
       <div class="en">${esc(nm({...node.name, zh:node.name.en, en:node.name.zh}))}</div>
-      <div class="close" onclick="closeDetail()">×</div>
-    </div>`;
-
-    if (isLeaf) {
-      if (node.formula) html += `<div class="sec"><h4>${t('formulas')}</h4>
-        <div class="formula-box">${renderFormula(node.formula)}</div></div>`;
-      if (node.pitfall) html += `<div class="sec"><h4>${t('pitfalls')}</h4>
-        <div class="pitfall">⚠ ${esc(nm(node.pitfall))}</div></div>`;
-    } else {
-      // topic meta
-      html += `<div class="sec"><div class="meta-row">
-        <span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
-        <span class="tag2">${t('weight')}: ${weightMap[node.weight] || '—'}</span>
-        <span class="tag2">${t('difficulty')}: ${node.diff ? '★'.repeat(node.diff) : '—'}</span>
-        ${node.examWeight ? `<span class="tag2" style="background:#16a34a22;color:#4ade80">${t('marks')}: ${node.examWeight}</span>` : ''}
+      <div class="d-actions">
+        <button id="detail-zoom" title="加宽/还原">&#8596;</button>
+        <span class="close" onclick="closeDetail()">×</span>
       </div>`;
 
-      // 考试频率 & 出题位置（如果有数据）
+    // 头部概要（强化层级：类型 → 标题 → 概要标签行）
+    if (!isLeaf) {
+      html += `<div class="dmeta">`;
+      html += `<span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
+        <span class="tag2">${t('weight')}: ${weightMap[node.weight] || '—'}</span>
+        <span class="tag2">${t('difficulty')}: ${node.diff ? '★'.repeat(node.diff) : '—'}</span>
+        ${node.examWeight ? `<span class="tag2" style="background:#16a34a22;color:#4ade80">${t('marks')}: ${node.examWeight}</span>` : ''}`;
       if (node.examFrequency !== undefined || node.examSection) {
-        html += `<div class="meta-row" style="margin-top:8px">`;
+        html += `<span class="tag2" style="margin-top:4px">`;
         if (node.examFrequency !== undefined) {
           const freq = node.examFrequency;
           const pct = Math.round((freq / 13) * 100);
-          html += `<span class="tag2">${t('examFreq')}: ${freq}/13 年 (${pct}%)</span>`;
+          html += `${t('examFreq')}: ${freq}/13 (${pct}%)`;
         }
-        if (node.examSection) {
-          html += `<span class="tag2">${t('examSec')}: Section ${node.examSection}</span>`;
-        }
-        html += `</div>`;
-
-        // 频率进度条
+        if (node.examSection) html += ` · ${t('examSec')}: ${node.examSection}`;
+        html += `</span>`;
         if (node.examFrequency !== undefined) {
           const freq = node.examFrequency;
           const barColor = freq >= 11 ? '#10b981' : freq >= 7 ? '#f59e0b' : '#64748b';
-          html += `<div style="margin-top:6px;display:flex;align-items:center;gap:8px">
-            <div style="flex:1;height:6px;background:#334155;border-radius:3px;overflow:hidden">
-              <div style="width:${Math.round((freq/13)*100)}%;height:100%;background:${barColor};transition:width .3s"></div>
-            </div>
-            <span style="font-size:10px;color:var(--muted)">${freq}/13</span>
-          </div>`;
+          html += `<div style="width:100%;height:4px;background:#334155;border-radius:2px;overflow:hidden;margin-top:4px"><div style="width:${Math.round((freq/13)*100)}%;height:100%;background:${barColor}"></div></div>`;
         }
       }
       html += `</div>`;
-
-      if (node.leaves && node.leaves.length) {
-        html += `<div class="sec"><h4>${t('leaves')} (${node.leaves.length})</h4>`;
-        node.leaves.forEach(l => {
-          const kt = G.meta.knowledgeTypes[l.knowledgeType];
-          html += `<details class="leafitem">
-            <summary><span class="fname">${esc(nm(l.name))}</span><span class="fen">${esc(nm({zh:l.name.en,en:l.name.zh}))}</span>
-              ${kt?`<span class="kttag" style="background:${kt.color}22;color:${kt.color};border-color:${kt.color}">${kt[LANG]||kt.zh}</span>`:''}</summary>
-            <div style="padding-left:14px">
-            ${l.formula?`<div class="fformula">${renderFormula(l.formula)}</div>`:''}
-            ${l.pitfall?`<div class="fpit">⚠ ${esc(nm(l.pitfall))}</div>`:''}
-            </div>
-          </details>`;
-        });
-        html += `</div>`;
-      }
     }
+    html += `</div>
+    <div class="tabs">
+      <button class="tab on" data-tab="leaves">${t('tabLeaves')}</button>
+      <button class="tab" data-tab="mp">${t('tabMp')}</button>
+      <button class="tab" data-tab="rel">${t('tabRel')}</button>
+    </div>`;
 
-    // mother problems（母题：核心特色）
+    // ===== Tab 1: 基础知识点 =====
+    let tab1 = '';
+    if (isLeaf) {
+      if (node.formula) tab1 += `<div class="sec"><h4>${t('formulas')}</h4>
+        <div class="formula-box">${renderFormula(node.formula)}</div></div>`;
+      if (node.pitfall) tab1 += `<div class="sec"><h4>${t('pitfalls')}</h4>
+        <div class="pitfall">⚠ ${esc(nm(node.pitfall))}</div></div>`;
+    } else if (node.leaves && node.leaves.length) {
+      tab1 += `<div class="sec"><h4>${t('leaves')} (${node.leaves.length})</h4>`;
+      node.leaves.forEach(l => {
+        const kt = G.meta.knowledgeTypes[l.knowledgeType];
+        tab1 += `<details class="leafitem">
+          <summary><span class="fname">${esc(nm(l.name))}</span><span class="fen">${esc(nm({zh:l.name.en,en:l.name.zh}))}</span>
+            ${kt?`<span class="kttag" style="background:${kt.color}22;color:${kt.color};border-color:${kt.color}">${kt[LANG]||kt.zh}</span>`:''}</summary>
+          <div style="padding-left:14px">
+          ${l.formula?`<div class="fformula">${renderFormula(l.formula)}</div>`:''}
+          ${l.pitfall?`<div class="fpit">⚠ ${esc(nm(l.pitfall))}</div>`:''}
+          </div>
+        </details>`;
+      });
+      tab1 += `</div>`;
+    }
+    html += `<div class="tab-panel" data-panel="leaves">${tab1}</div>`;
+
+    // ===== Tab 2: 母题与变式 =====
+    let tab2 = '';
     const topicId = isLeaf ? parentId : id;
     const asCore = (G.motherProblems||[]).filter(m => (m.coreTopics||[]).includes(topicId));
     const asRelated = (G.motherProblems||[]).filter(m => (m.relatedTopics||[]).includes(topicId));
     if (asCore.length || asRelated.length) {
-      html += `<div class="sec"><h4>${t('motherP')}</h4>`;
-      // 掌握度标尺：难度三档 → 中四/中五/冲5 门槛
+      tab2 += `<div class="sec"><h4>${t('motherP')}</h4>`;
       const masteryOf = d => d==='basic' ? {k:'s4', label:t('mS4'), color:'#22c55e'}
         : d==='intermediate' ? {k:'s5', label:t('mS5'), color:'#f59e0b'}
         : {k:'s6', label:t('mS6'), color:'#ef4444'};
       const isDone = k => localStorage.getItem('dse-mastery-'+k)==='1';
-      // 掌握度进度（当前课题下所有变式题，去重）
       const vAll = [], vSeen = new Set();
       [...asCore, ...asRelated].forEach(m => (m.variants||[]).forEach((v,vi) => { const key = m.id+':v'+(vi+1); if(!vSeen.has(key)){ vSeen.add(key); vAll.push({v, key}); } }));
       if (vAll.length) {
         const stat = k => { const list = vAll.filter(x=>masteryOf(x.v.difficulty).k===k); return {n:list.length, d:list.filter(x=>isDone(x.key)).length}; };
         const s4=stat('s4'), s5=stat('s5'), s6=stat('s6');
         const total = Math.max(1, vAll.length);
-        html += `<div class="mp-mastery">
+        tab2 += `<div class="mp-mastery">
           <div class="mm-label">${t('mastery')}</div>
           <div class="mm-row">
             <span class="mm-item" style="color:#22c55e">${t('mS4')} <b>${s4.d}/${s4.n}</b></span>
@@ -681,12 +703,10 @@
         </div>`;
       }
       const renderMP = m => {
-        // 英文模式优先 En 字段，缺则回退中文
         const skelRaw = LANG==='zh' ? (m.solutionSkeleton||m.skeleton) : (m.solutionSkeletonEn||m.skeletonEn||m.solutionSkeleton||m.skeleton);
         const skelStr = Array.isArray(skelRaw) ? skelRaw.join(' → ') : String(skelRaw||'').replace(/\n/g, ' → ');
         const vartRaw = LANG==='zh' ? (m.variation||m.variations) : (m.variationEn||m.variationsEn||m.variation||m.variations);
         const varStr = Array.isArray(vartRaw) ? vartRaw.join('；') : String(vartRaw||'');
-        // 变式题（variants）：具体可刷的题，含题干+答案要点+难度+评分点+自评
         const diffMap = { basic:'diffBasic', intermediate:'diffInt', challenge:'diffChal', comprehensive:'diffComp', calc:'diffCalc', concept:'diffConcept', experiment:'diffExp' };
         const variants = (m.variants||[]).map((v,i) => {
           const vKey = m.id + ':v' + (i+1);
@@ -717,39 +737,71 @@
           ${variants ? `<div class="mp-variants">${variants}</div>` : ''}
         </div>`;
       };
-      if (asCore.length) html += `<div class="mp-group">${t('asCore')}</div>` + asCore.map(renderMP).join('');
-      if (asRelated.length) html += `<div class="mp-group">${t('asRelated')}</div>` + asRelated.map(renderMP).join('');
-      html += `</div>`;
+      if (asCore.length) tab2 += `<div class="mp-group">${t('asCore')}</div>` + asCore.map(renderMP).join('');
+      if (asRelated.length) tab2 += `<div class="mp-group">${t('asRelated')}</div>` + asRelated.map(renderMP).join('');
+      tab2 += `</div>`;
     }
+    html += `<div class="tab-panel" data-panel="mp" hidden>${tab2}</div>`;
 
-    // relations (topic-level, from/to this node)
+    // ===== Tab 3: 关联知识点 =====
+    let tab3 = '';
     const rels = G.edges.filter(e => e.from===id || e.to===id);
     if (rels.length) {
-      html += `<div class="sec"><h4>${t('relations')}</h4>`;
+      tab3 += `<div class="sec"><h4>${t('relations')}</h4>`;
       rels.forEach(e => {
         const other = e.from===id ? e.to : e.from;
         const on = G.nodes.find(n=>n.id===other);
         if (!on) return;
         const def = G.meta.edgeTypes[e.type];
         const dir = e.from===id ? '→' : '←';
-        html += `<div class="relrow">
+        tab3 += `<div class="relrow">
           <span class="rtype" style="color:${def.color||'#94a3b8'};border-color:${def.color||'#94a3b8'}">${def[LANG]||def.zh}${dir}</span>
           <span class="rname" data-goto="${other}">${esc(nm(on.name))}</span>
           ${e.evidence?`<div style="width:100%;font-size:11px;color:var(--muted);margin-top:2px;">📌 ${esc(e.evidence)}</div>`:''}
         </div>`;
       });
-      html += `</div>`;
+      tab3 += `</div>`;
     } else if (!isLeaf) {
-      html += `<div class="sec"><h4>${t('relations')}</h4><div class="statline">${t('noRel')}</div></div>`;
+      tab3 += `<div class="sec"><h4>${t('relations')}</h4><div class="statline">${t('noRel')}</div></div>`;
     }
-
     if (!isLeaf && (node.leaves||[]).length) {
-      html += `<div class="sec"><button class="b" style="width:100%" onclick="toggleExpand('${node.id}')">
+      tab3 += `<div class="sec"><button class="b" style="width:100%" onclick="toggleExpand('${node.id}')">
         ${expanded.has(node.id)?t('collapseHint'):t('expandHint')}</button></div>`;
     }
+    html += `<div class="tab-panel" data-panel="rel" hidden>${tab3}</div>`;
 
     detailEl.innerHTML = html;
+
+
     detailEl.style.display = 'block';
+    // wire tabs
+    detailEl.querySelectorAll('.tab').forEach(btn => {
+      btn.onclick = () => {
+        detailEl.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', b===btn));
+        const t = btn.dataset.tab;
+        detailEl.querySelectorAll('.tab-panel').forEach(p => p.hidden = p.dataset.panel !== t);
+      };
+    });
+    // wire zoom
+    const zoomBtn = detailEl.querySelector('#detail-zoom');
+    if (zoomBtn) zoomBtn.onclick = () => detailEl.classList.toggle('wide');
+    // wire drag
+    const dh = detailEl.querySelector('.dhead');
+    if (dh) dh.addEventListener('mousedown', e => {
+      if (e.target.closest('.close') || e.target.closest('#detail-zoom') || e.target.closest('.tab')) return;
+      e.preventDefault();
+      const startX = e.clientX, startY = e.clientY;
+      const r = detailEl.getBoundingClientRect();
+      const move = ev => {
+        detailEl.style.right = 'auto';
+        detailEl.style.left = (r.left + ev.clientX - startX) + 'px';
+        detailEl.style.top = (r.top + ev.clientY - startY) + 'px';
+      };
+      const up = () => { document.removeEventListener('mousemove', move); document.removeEventListener('mouseup', up); };
+      document.addEventListener('mousemove', move);
+      document.addEventListener('mouseup', up);
+    });
+    // wire goto links
     // wire goto links
     detailEl.querySelectorAll('[data-goto]').forEach(el => {
       el.onclick = () => selectNode(el.dataset.goto);

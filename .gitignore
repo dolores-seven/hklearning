@@ -1,5 +1,12 @@
-_ref/
-*.md
-!README.md
-.git/
+# 临时与备份
 *.bak
+*.tmp
+_newmax/
+.newmax/
+
+# 参考材料（真题 PDF 等，体积大不推 git）
+_ref/
+
+# 系统
+.DS_Store
+Thumbs.db

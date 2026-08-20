@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 知识图谱 · 全景学习工具</title>
+<style>
+  :root {
+    --bg:#0f172a; --panel:#1e293b; --panel2:#273449; --text:#e2e8f0;
+    --muted:#94a3b8; --accent:#6366f1; --line:#334155;
+    --green:#22c55e; --yellow:#f59e0b; --red:#ef4444;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); min-height:100vh;
+  }
+  .wrap { max-width:960px; margin:0 auto; padding:48px 20px; }
+  h1 { font-size:28px; font-weight:800; letter-spacing:.5px; }
+  .sub { font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:32px; }
+  .card {
+    background:var(--panel); border:1px solid var(--line); border-radius:14px;
+    padding:22px 20px; text-decoration:none; color:var(--text);
+    transition:all .2s; display:block;
+  }
+  .card:hover { border-color:var(--accent); transform:translateY(-3px); box-shadow:0 8px 30px rgba(99,102,241,.15); }
+  .card .emoji { font-size:30px; }
+  .card h2 { font-size:18px; margin-top:10px; }
+  .card p { font-size:12.5px; color:var(--muted); margin-top:6px; line-height:1.6; }
+  .tag { display:inline-block; font-size:10.5px; padding:2px 8px; border-radius:10px; margin-top:10px; border:1px solid var(--line); color:var(--muted); }
+  .foot { margin-top:40px; font-size:11px; color:var(--muted); line-height:1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>📚 DSE 知识图谱</h1>
+  <div class="sub">数学 / 物理 / 化学 全景知识图谱 + 读题训练<br>零依赖 · 双击即用 · 366 道可刷题 + 评分点 + 掌握度自评</div>
+
+  <div class="grid">
+    <a class="card" href="math/dse-math-map.html">
+      <div class="emoji">📐</div>
+      <h2>数学图谱</h2>
+      <p>38 课题 · 247 知识点 · 165 道变式题<br>数与代数 / 度量图形 / 数据处理 / M2</p>
+      <span class="tag">打开 →</span>
+    </a>
+    <a class="card" href="physics/dse-physics-map.html">
+      <div class="emoji">⚡</div>
+      <h2>物理图谱</h2>
+      <p>34 课题 · 199 知识点 · 132 道变式题<br>热 / 力 / 波 / 电磁 / 放射 / 选修</p>
+      <span class="tag">打开 →</span>
+    </a>
+    <a class="card" href="chemistry/dse-chemistry-map.html">
+      <div class="emoji">🧪</div>
+      <h2>化学图谱</h2>
+      <p>16 课题 · 156 知识点 · 69 道变式题<br>物质 / 反应 / 平衡 / 有机 / 实验</p>
+      <span class="tag">打开 →</span>
+    </a>
+    <a class="card" href="vocab/dse-reading.html">
+      <div class="emoji">📖</div>
+      <h2>读题训练</h2>
+      <p>366 道真实 DSE 英文题干<br>点读术语 · 判断是否读懂（不是背单词）</p>
+      <span class="tag">打开 →</span>
+    </a>
+  </div>
+
+  <div class="foot">
+    数据：DSE 数学/物理/化学 C&amp;A Guide + 历年真题 + 补习社交叉验证。2026-08-20 构建。
+  </div>
+</div>
+</body>
+</html>

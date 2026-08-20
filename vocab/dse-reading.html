@@ -120,6 +120,30 @@
   .wrong-item .wsub { color:var(--muted); }
   .wrong-item button { font-size:11px; padding:3px 10px; border-radius:12px; border:1px solid var(--line); background:var(--panel); color:var(--text); cursor:pointer; }
   .hint { font-size:11px; color:var(--muted); margin-top:12px; line-height:1.7; }
+
+  /* ===== 主题: 深色(默认) / 浅色 ===== */
+  html[data-theme="light"]{
+    --bg:#f1f5f9; --panel:#ffffff; --panel2:#eef2f7; --text:#1e293b;
+    --muted:#64748b; --accent:#4f46e5; --line:#e2e8f0;
+  }
+  html[data-theme="light"] .subj-tag.math { color:#4338ca; }
+  html[data-theme="light"] .subj-tag.physics { color:#15803d; }
+  html[data-theme="light"] .subj-tag.chemistry { color:#b45309; }
+  html[data-theme="light"] .stem-en .term { color:#2563eb; }
+  html[data-theme="light"] .stem-en .term.known { color:#059669; }
+  html[data-theme="light"] .dict-box { color:#3730a3; }
+  html[data-theme="light"] .dict-box b { color:#1e293b; }
+  html[data-theme="light"] .zh-body { color:#334155; }
+  html[data-theme="light"] .quiz-q b { color:#2563eb; }
+  html[data-theme="light"] .sb.ok { color:#15803d !important; }
+  html[data-theme="light"] .sb.part { color:#b45309 !important; }
+  html[data-theme="light"] .sb.no { color:#b91c1c !important; }
+  html[data-theme="light"] .qo.correct { color:#15803d !important; }
+  html[data-theme="light"] .qo.wrong { color:#b91c1c !important; }
+  html[data-theme="light"] #stat-ok { color:#15803d !important; }
+  html[data-theme="light"] #stat-no { color:#b91c1c !important; }
+  html[data-theme="light"] #stat-wrong { color:#b45309 !important; }
+
 </style>
 </head>
 <body>
@@ -127,6 +151,7 @@
   <div class="brand">
     <h1>📖 DSE 理科读题训练</h1>
     <div class="sub">读真实真题题干 · 点读术语 · 判断是否读懂（不是背单词）</div>
+    <button id="theme-btn" title="切换主题 / Theme" style="margin-left:auto;padding:4px 12px;border-radius:14px;font-size:12px;cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);white-space:nowrap">🌙 深色</button>
   </div>
 
   <div class="chips" id="subj-chips">
@@ -429,5 +454,21 @@
   renderCard();
 })();
 </script>
+
+<script>
+/* 主题切换: 深色(默认) / 浅色, localStorage 记忆 */
+(function(){
+  var t = localStorage.getItem('dse-theme');
+  if(t !== 'light' && t !== 'dark') t = 'dark';
+  var btn = document.getElementById('theme-btn');
+  function apply(){
+    document.documentElement.setAttribute('data-theme', t);
+    if(btn){ btn.textContent = t === 'light' ? '☀️ 浅色' : '🌙 深色'; }
+  }
+  if(btn){ btn.onclick = function(){ t = t === 'light' ? 'dark' : 'light'; localStorage.setItem('dse-theme', t); apply(); }; }
+  apply();
+})();
+</script>
+
 </body>
 </html>

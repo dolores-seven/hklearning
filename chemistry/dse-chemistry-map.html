@@ -75,7 +75,7 @@
   #stage svg:active { cursor:grabbing; }
   .hint {
     position:absolute; left:14px; bottom:12px; font-size:11px; color:var(--muted);
-    background:rgba(15,23,42,.75); padding:5px 10px; border-radius:6px; pointer-events:none;
+    background:var(--tooltip-bg); padding:5px 10px; border-radius:6px; pointer-events:none;
   }
 
   /* ---------- 详情面板 ---------- */
@@ -150,15 +150,15 @@
   #detail .mm-label { font-size:10px; color:var(--muted); letter-spacing:1px; margin-bottom:4px; text-transform:uppercase; }
   #detail .mm-row { display:flex; gap:10px; font-size:11px; margin-bottom:5px; flex-wrap:wrap; }
   #detail .mm-row .mm-item b { font-weight:700; }
-  #detail .mm-bar { display:flex; height:6px; border-radius:3px; overflow:hidden; background:#334155; }
+  #detail .mm-bar { display:flex; height:6px; border-radius:3px; overflow:hidden; background:var(--track); }
   #detail .mm-seg { height:100%; transition:width .3s; }
-  #detail .vmarks { margin-top:4px; padding:4px 8px; background:rgba(15,23,42,.4); border-radius:6px; font-size:11px; }
+  #detail .vmarks { margin-top:4px; padding:4px 8px; background:var(--tooltip-bg); border-radius:6px; font-size:11px; }
   #detail .vmark { color:#93c5fd; line-height:1.5; }
   #detail .vmark .vpts { color:#6ee7b7; font-size:10px; }
   #detail .vloss { font-size:10.5px; color:#fbbf24; margin-top:3px; }
   #detail .vmastery { margin-top:5px; font-size:10.5px; padding:3px 10px; border-radius:12px; cursor:pointer; border:1px solid var(--line); background:var(--panel2); color:var(--muted); }
   #detail .vmastery:hover { border-color:var(--accent); }
-  #detail .vmastery.done { background:#22c55e22; border-color:#22c55e; color:#4ade80; }
+  #detail .vmastery.done { background:var(--done-bg); border-color:#22c55e; color:#4ade80; }
   #detail .mp-group { font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin:6px 0 2px; }
   #detail .meta-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:2px; }
   #detail .tag2 { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--panel2); color:var(--muted); }
@@ -167,8 +167,8 @@
   .node circle { stroke-width:1.5; cursor:pointer; transition:filter .15s; }
   .node circle:hover { filter: brightness(1.3); }
   .node text {
-    font-size:11px; fill:#e2e8f0; pointer-events:none; text-anchor:middle;
-    paint-order:stroke; stroke:#0f172a; stroke-width:3px; stroke-linejoin:round;
+    font-size:11px; fill:var(--svg-text); pointer-events:none; text-anchor:middle;
+    paint-order:stroke; stroke:var(--svg-stroke); stroke-width:3px; stroke-linejoin:round;
   }
   .node text.en { font-size:9.5px; }
   .node .halo { fill:none; }
@@ -182,6 +182,24 @@
     #sidebar { width:240px; min-width:240px; }
     #detail { width:calc(100vw - 260px); }
   }
+
+  /* ===== 主题: 深色(默认) / 浅色 ===== */
+  :root{
+    --tooltip-bg:rgba(15,23,42,.75);
+    --track:#334155;
+    --tag-border:#64748b; --tag-text:#94a3b8;
+    --svg-text:#e2e8f0; --svg-stroke:#0f172a;
+    --done-bg:#22c55e22; --em-bg:#16a34a22;
+  }
+  html[data-theme="light"]{
+    --bg:#f1f5f9; --panel:#ffffff; --panel2:#eef2f7; --text:#1e293b; --muted:#64748b; --accent:#4f46e5; --line:#e2e8f0;
+    --tooltip-bg:rgba(255,255,255,.96);
+    --track:#e2e8f0;
+    --tag-border:#94a3b8; --tag-text:#64748b;
+    --svg-text:#1e293b; --svg-stroke:rgba(255,255,255,.85);
+    --done-bg:#22c55e33; --em-bg:#16a34a33;
+  }
+
 </style>
 </head>
 <body>
@@ -216,6 +234,8 @@
       <div class="btnrow">
         <button class="b on" id="lang-zh">中文</button>
         <button class="b" id="lang-en">English</button>
+        <button class="b" id="theme-btn" title="切换主题 / Theme">🌙 深色</button>
+
       </div>
     </div>
 
@@ -622,7 +642,7 @@
       html += `<span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
         <span class="tag2">${t('weight')}: ${weightMap[node.weight] || '—'}</span>
         <span class="tag2">${t('difficulty')}: ${node.diff ? '★'.repeat(node.diff) : '—'}</span>
-        ${node.examWeight ? `<span class="tag2" style="background:#16a34a22;color:#4ade80">${t('marks')}: ${node.examWeight}</span>` : ''}`;
+        ${node.examWeight ? `<span class="tag2" style="background:var(--em-bg);color:#4ade80">${t('marks')}: ${node.examWeight}</span>` : ''}`;
       if (node.examFrequency !== undefined || node.examSection) {
         html += `<span class="tag2" style="margin-top:4px">`;
         if (node.examFrequency !== undefined) {
@@ -635,7 +655,7 @@
         if (node.examFrequency !== undefined) {
           const freq = node.examFrequency;
           const barColor = freq >= 11 ? '#10b981' : freq >= 7 ? '#f59e0b' : '#64748b';
-          html += `<div style="width:100%;height:4px;background:#334155;border-radius:2px;overflow:hidden;margin-top:4px"><div style="width:${Math.round((freq/13)*100)}%;height:100%;background:${barColor}"></div></div>`;
+          html += `<div style="width:100%;height:4px;background:var(--track);border-radius:2px;overflow:hidden;margin-top:4px"><div style="width:${Math.round((freq/13)*100)}%;height:100%;background:${barColor}"></div></div>`;
         }
       }
       html += `</div>`;
@@ -718,7 +738,7 @@
           const vans = LANG==='zh' ? (v.answerZh||v.answerEn||'') : (v.answerEn||v.answerZh||'');
           const marks = (v.marks||[]).map(mk => `<div class="vmark">✓ ${esc(LANG==='zh' ? mk.content : (mk.contentEn||mk.content))} <span class="vpts">(${mk.pts}分)</span></div>`).join('');
           const loss = LANG==='zh' ? (v.lossZh||v.lossEn||'') : (v.lossEn||v.lossZh||'');
-          const yrs = (v.years||[]).length ? ` <span class="mp-vtag" style="border-color:#64748b;color:#94a3b8">${v.years.join('/')}</span>` : '';
+          const yrs = (v.years||[]).length ? ` <span class="mp-vtag" style="border-color:var(--tag-border);color:var(--tag-text)">${v.years.join('/')}</span>` : '';
           return `<div class="mp-v"><details>
             <summary>${t('variants')} ${i+1} <span class="mp-vtag" style="border-color:${dtColor};color:${dtColor}">${esc(dt)}</span><span class="mp-vtag" style="border-color:${mt.color};color:${mt.color}">${mt.label}</span>${yrs}</summary>
             <div class="vstem">${esc(vstem)}</div>
@@ -1064,5 +1084,21 @@
   loop();
 })();
 </script>
+
+<script>
+/* 主题切换: 深色(默认) / 浅色, localStorage 记忆 */
+(function(){
+  var t = localStorage.getItem('dse-theme');
+  if(t !== 'light' && t !== 'dark') t = 'dark';
+  var btn = document.getElementById('theme-btn');
+  function apply(){
+    document.documentElement.setAttribute('data-theme', t);
+    if(btn){ btn.textContent = t === 'light' ? '☀️ 浅色' : '🌙 深色'; }
+  }
+  if(btn){ btn.onclick = function(){ t = t === 'light' ? 'dark' : 'light'; localStorage.setItem('dse-theme', t); apply(); }; }
+  apply();
+})();
+</script>
+
 </body>
 </html>

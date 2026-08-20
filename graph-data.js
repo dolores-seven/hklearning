@@ -4609,6 +4609,84 @@ const DSE_MATH_GRAPH = {
      "weight": "mid",
      "source": "estimated"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 y = x² - 4x + 3 與 x 軸的交點。",
+     "stemEn": "Find the x-intercepts of y = x² - 4x + 3.",
+     "answerZh": "x²-4x+3=0 → (x-1)(x-3)=0 → x=1,3；交點 (1,0)、(3,0)。",
+     "answerEn": "(x-1)(x-3)=0 → x=1,3.",
+     "marks": [
+      {
+       "content": "因式分解或求根",
+       "pts": 1
+      },
+      {
+       "content": "x=1 與 x=3",
+       "pts": 1
+      },
+      {
+       "content": "寫成交點坐標",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只求 x 值不寫成坐標形式。",
+     "lossEn": "Giving x values without coordinates.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "若 y = x² + 2x + k 與 x 軸有兩個不同交點，求 k 的範圍。",
+     "stemEn": "For y = x² + 2x + k to cut the x-axis twice, find the range of k.",
+     "answerZh": "Δ = 4 - 4k > 0 → k < 1。",
+     "answerEn": "Δ = 4 - 4k > 0 → k < 1.",
+     "marks": [
+      {
+       "content": "寫出判別式 Δ = b²-4ac",
+       "pts": 1
+      },
+      {
+       "content": "兩交點 → Δ>0",
+       "pts": 1
+      },
+      {
+       "content": "解出 k<1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏「Δ>0」條件或符號方向寫反。",
+     "lossEn": "Missing Δ>0 or wrong inequality direction.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "直線 y = mx 與圓 x² + y² = 4 相切，求 m。",
+     "stemEn": "Line y=mx is tangent to x²+y²=4. Find m.",
+     "answerZh": "代入：x²+m²x²=4 → (1+m²)x²-4=0；相切 → Δ=0 → 16(1+m²)²... 直接：圓心到直線距離=半徑：|0|/√(m²+1)=2 不可能；改為圓心 (0,0) 到直線 mx-y=0 距離=2 → 0/√(m²+1)=2 → 矛盾，直線過圓心永不與圓相切；正確：圓心到直線距離 = |c|/√(a²+b²) = 0 ≠ 2。故 m 不存在（直線過圓心必割圓）。",
+     "answerEn": "The line passes through the centre, so it always cuts the circle; no tangent m exists.",
+     "marks": [
+      {
+       "content": "判斷直線過圓心 (0,0)",
+       "pts": 1
+      },
+      {
+       "content": "過圓心的直線必割圓（距離=0≠半徑）",
+       "pts": 1
+      },
+      {
+       "content": "結論：無解",
+       "pts": 1
+      }
+     ],
+     "lossZh": "硬套判別式而不先看幾何位置（過圓心直線不可能相切）。",
+     "lossEn": "Forcing discriminant without seeing line passes through centre.",
+     "years": []
+    }
    ]
   },
   {
@@ -4676,6 +4754,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "圓半徑 5，一條弦到圓心距離 3，求弦長。",
+     "stemEn": "Radius 5, chord 3 from centre; find chord length.",
+     "answerZh": "半弦長 = √(5²-3²) = 4；弦長 = 8。",
+     "answerEn": "Half-chord = √(25-9)=4; chord = 8.",
+     "marks": [
+      {
+       "content": "畫半徑-弦心距-半弦直角三角形",
+       "pts": 1
+      },
+      {
+       "content": "半弦長 = √(r²-d²) = 4",
+       "pts": 1
+      },
+      {
+       "content": "弦長 = 8",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接用 5+3 或漏乘 2。",
+     "lossEn": "Adding or not doubling half-chord.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "圓外一點 P 引切線 PA 長 6，割線交圓於 B、C，PB=4，求 BC。",
+     "stemEn": "Tangent PA=6 from P; secant hits circle at B,C with PB=4. Find BC.",
+     "answerZh": "切線定理 PA² = PB×PC → 36 = 4×PC → PC=9；BC = PC-PB = 5。",
+     "answerEn": "PA²=PB·PC → PC=9; BC=5.",
+     "marks": [
+      {
+       "content": "切線定理 PA²=PB·PC",
+       "pts": 1
+      },
+      {
+       "content": "PC=9",
+       "pts": 1
+      },
+      {
+       "content": "BC=PC-PB=5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 PB 當整段割線長。",
+     "lossEn": "Taking PB as whole secant.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "圓內接四邊形 ABCD 中 ∠A=70°，求 ∠C。",
+     "stemEn": "Cyclic quadrilateral ABCD, ∠A=70°. Find ∠C.",
+     "answerZh": "圓內接四邊形對角互補 → ∠C = 180°-70° = 110°。",
+     "answerEn": "Opposite angles supplementary → ∠C=110°.",
+     "marks": [
+      {
+       "content": "圓內接四邊形對角互補",
+       "pts": 1
+      },
+      {
+       "content": "∠C = 180°-∠A",
+       "pts": 1
+      },
+      {
+       "content": "=110°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "記成對角相等。",
+     "lossEn": "Thinking opposite angles equal.",
+     "years": [
+      "2018"
+     ]
     }
    ]
   },
@@ -4751,6 +4909,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "等差數列 a₁=2, d=3，求 a₁₀ 和 S₁₀。",
+     "stemEn": "AP with a₁=2, d=3; find a₁₀ and S₁₀.",
+     "answerZh": "a₁₀ = 2 + 9×3 = 29；S₁₀ = 10/2×(2+29) = 155。",
+     "answerEn": "a₁₀=29; S₁₀=155.",
+     "marks": [
+      {
+       "content": "通項 aₙ=a₁+(n-1)d",
+       "pts": 1
+      },
+      {
+       "content": "a₁₀=29",
+       "pts": 1
+      },
+      {
+       "content": "求和 Sₙ=n/2(a₁+aₙ)=155",
+       "pts": 1
+      }
+     ],
+     "lossZh": "項數用錯（第 10 項是 +9d 不是 +10d）。",
+     "lossEn": "Wrong term count (+9d not +10d).",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "等比數列 a₃=8, a₆=64，求首項、公比和通項。",
+     "stemEn": "GP with a₃=8, a₆=64; find a₁, r, general term.",
+     "answerZh": "a₆/a₃ = r³ = 8 → r=2；a₃=a₁·2²=8 → a₁=2；aₙ=2ⁿ。",
+     "answerEn": "r³=8 → r=2; a₁=2; aₙ=2ⁿ.",
+     "marks": [
+      {
+       "content": "公比 r³ = a₆/a₃ = 8",
+       "pts": 1
+      },
+      {
+       "content": "r=2",
+       "pts": 1
+      },
+      {
+       "content": "a₁=2，通項 aₙ=2ⁿ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 a₆/a₃ 當 r²（間隔 3 項是 r³）。",
+     "lossEn": "Taking a₆/a₃ as r² (3-step gap → r³).",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "等差數列 40, 37, 34, … 前 n 項和最大時 n 是多少？",
+     "stemEn": "AP 40,37,34,…; for max Sₙ, find n.",
+     "answerZh": "d=-3；aₙ=40-3(n-1)=43-3n；aₙ≥0 → n≤14.3 → n=14（a₁₄=1>0, a₁₅=-2<0）。",
+     "answerEn": "d=-3; aₙ=43-3n≥0 → n≤14; S₁₄ max.",
+     "marks": [
+      {
+       "content": "公差 d=-3，通項 aₙ=43-3n",
+       "pts": 1
+      },
+      {
+       "content": "找最後一個非負項 aₙ≥0",
+       "pts": 1
+      },
+      {
+       "content": "n=14",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把「和最大」誤當「項最大」；用 aₙ>0 判斷。",
+     "lossEn": "Confusing max sum with max term.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4810,6 +5048,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 d/dx[sin(2x)]。",
+     "stemEn": "Differentiate sin(2x).",
+     "answerZh": "鏈式：cos(2x)·2 = 2cos(2x)。",
+     "answerEn": "2cos(2x).",
+     "marks": [
+      {
+       "content": "鏈式法則",
+       "pts": 1
+      },
+      {
+       "content": "內層導數=2",
+       "pts": 1
+      },
+      {
+       "content": "2cos(2x)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏乘內層導數 2。",
+     "lossEn": "Missing inner derivative factor 2.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 d/dx[x²·sin x]。",
+     "stemEn": "Differentiate x²·sin x.",
+     "answerZh": "乘積法則：2x·sin x + x²·cos x。",
+     "answerEn": "2x sin x + x² cos x.",
+     "marks": [
+      {
+       "content": "乘積法則",
+       "pts": 1
+      },
+      {
+       "content": "x² 導=2x",
+       "pts": 1
+      },
+      {
+       "content": "結果 2x sin x + x² cos x",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只導一項。",
+     "lossEn": "Differentiating only one factor.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 y=sin²x 的導數。",
+     "stemEn": "Derivative of sin²x.",
+     "answerZh": "y=(sin x)² → y'=2 sin x · cos x = sin 2x。",
+     "answerEn": "y'=2 sin x cos x = sin 2x.",
+     "marks": [
+      {
+       "content": "鏈式 (sin x)²",
+       "pts": 1
+      },
+      {
+       "content": "2 sin x · cos x",
+       "pts": 1
+      },
+      {
+       "content": "= sin 2x",
+       "pts": 1
+      }
+     ],
+     "lossZh": "寫成 cos²x 或漏內層 cos。",
+     "lossEn": "Writing cos²x or missing inner cos.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -4871,6 +5189,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 y=x² 與 x 軸從 x=0 到 x=2 圍成的面積。",
+     "stemEn": "Area under y=x² from 0 to 2.",
+     "answerZh": "∫₀² x² dx = [x³/3]₀² = 8/3。",
+     "answerEn": "8/3.",
+     "marks": [
+      {
+       "content": "定積分表達",
+       "pts": 1
+      },
+      {
+       "content": "原函數 x³/3",
+       "pts": 1
+      },
+      {
+       "content": "代入上下限 = 8/3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "原函數冪次加錯。",
+     "lossEn": "Wrong antiderivative power.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 y=x² 與 y=x 圍成的面積。",
+     "stemEn": "Area enclosed by y=x² and y=x.",
+     "answerZh": "交點 x²=x → x=0,1；面積=∫₀¹(x-x²)dx = [x²/2-x³/3]₀¹ = 1/2-1/3 = 1/6。",
+     "answerEn": "Intersect at 0,1; area = 1/6.",
+     "marks": [
+      {
+       "content": "求交點 x=0,1",
+       "pts": 1
+      },
+      {
+       "content": "上減下 x-x²",
+       "pts": 1
+      },
+      {
+       "content": "積分 = 1/6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "上下曲線搞反或交點求錯。",
+     "lossEn": "Wrong upper/lower or intersection.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 y²=x 與 y=x 圍成的面積。",
+     "stemEn": "Area enclosed by y²=x and y=x.",
+     "answerZh": "交點：y²=y → y=0,1（x=0,1）；以 y 積分：∫₀¹(y-y²)dy = 1/6。",
+     "answerEn": "Intersect at y=0,1; area = 1/6 (integrate w.r.t. y).",
+     "marks": [
+      {
+       "content": "選對積分變量（對 y）",
+       "pts": 1
+      },
+      {
+       "content": "被積函數 y-y²",
+       "pts": 1
+      },
+      {
+       "content": "1/6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "對 x 積分時上下曲線難分。",
+     "lossEn": "Wrong integration variable.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -4938,6 +5336,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "mid",
      "source": "estimated"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "解 log₂(x-1) = 3。",
+     "stemEn": "Solve log₂(x-1)=3.",
+     "answerZh": "x-1 = 2³ = 8 → x = 9。",
+     "answerEn": "x-1=8 → x=9.",
+     "marks": [
+      {
+       "content": "指數化 x-1=2³",
+       "pts": 1
+      },
+      {
+       "content": "x=9",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏驗定義域（x-1>0）。",
+     "lossEn": "Not checking domain (x-1>0).",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "解 log x + log(x-3) = 1。",
+     "stemEn": "Solve log x + log(x-3) = 1.",
+     "answerZh": "log[x(x-3)]=1 → x(x-3)=10 → x²-3x-10=0 → x=5 或 -2；x>3 → x=5。",
+     "answerEn": "log[x(x-3)]=1 → x²-3x-10=0 → x=5 (reject -2).",
+     "marks": [
+      {
+       "content": "合併 log：log[x(x-3)]=1",
+       "pts": 1
+      },
+      {
+       "content": "x(x-3)=10 → 解二次",
+       "pts": 1
+      },
+      {
+       "content": "驗根捨 -2，取 x=5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏驗根（-2 使 log 無意義）。",
+     "lossEn": "Not rejecting x=-2 (log undefined).",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "解 log₂x - logₓ2 = 1。",
+     "stemEn": "Solve log₂x - logₓ2 = 1.",
+     "answerZh": "logₓ2 = 1/log₂x；設 y=log₂x：y - 1/y = 1 → y²-y-1=0 → y=(1+√5)/2；x = 2^((1+√5)/2)。",
+     "answerEn": "logₓ2 = 1/log₂x; y - 1/y = 1 → y=(1+√5)/2; x = 2^((1+√5)/2).",
+     "marks": [
+      {
+       "content": "換底 logₓ2 = 1/log₂x",
+       "pts": 1
+      },
+      {
+       "content": "設 y 解二次方程",
+       "pts": 1
+      },
+      {
+       "content": "還原 x=2^y",
+       "pts": 1
+      }
+     ],
+     "lossZh": "不會換底公式把兩個不同底統一。",
+     "lossEn": "Not unifying bases via change of base.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -5013,6 +5487,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "細菌每小時翻倍，初始 100，求 5 小時後數量。",
+     "stemEn": "Bacteria double hourly from 100; after 5 h.",
+     "answerZh": "N = 100×2⁵ = 3200。",
+     "answerEn": "100×2⁵ = 3200.",
+     "marks": [
+      {
+       "content": "指數模型 N=N₀·2ᵗ",
+       "pts": 1
+      },
+      {
+       "content": "代入 t=5",
+       "pts": 1
+      },
+      {
+       "content": "3200",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 100×5 當線性增長。",
+     "lossEn": "Using linear growth.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "某物質衰減，初始 80，半衰期 3 年，求 9 年後剩餘。",
+     "stemEn": "Decay from 80, half-life 3 y; after 9 y.",
+     "answerZh": "9/3=3 個半衰期 → 80×(1/2)³ = 10。",
+     "answerEn": "3 half-lives → 10.",
+     "marks": [
+      {
+       "content": "半衰期個數 9/3=3",
+       "pts": 1
+      },
+      {
+       "content": "80×(½)³",
+       "pts": 1
+      },
+      {
+       "content": "10",
+       "pts": 1
+      }
+     ],
+     "lossZh": "指數寫錯（80×½×3）。",
+     "lossEn": "Wrong exponent handling.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "人口年增長率 2%，求多少年翻倍（log2≈0.301）。",
+     "stemEn": "Population grows 2%/yr; doubling time.",
+     "answerZh": "2 = (1.02)ⁿ → n = log2/log1.02 ≈ 0.301/0.0086 ≈ 35 年。",
+     "answerEn": "n = ln2/ln1.02 ≈ 35 yr.",
+     "marks": [
+      {
+       "content": "列 (1.02)ⁿ=2",
+       "pts": 1
+      },
+      {
+       "content": "對數化 n=log2/log1.02",
+       "pts": 1
+      },
+      {
+       "content": "≈35 年",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接 100/2=50 年（線性）。",
+     "lossEn": "Linear 50 yr.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5086,6 +5640,82 @@ const DSE_MATH_GRAPH = {
      "q": "MC",
      "weight": "mid",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "y=f(x) 變為 y=f(x-3)，圖像如何移動？",
+     "stemEn": "y=f(x) → y=f(x-3); shift?",
+     "answerZh": "向右平移 3 單位。",
+     "answerEn": "Shift right 3 units.",
+     "marks": [
+      {
+       "content": "x-3 → 右移",
+       "pts": 1
+      },
+      {
+       "content": "3 單位",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為左移（符號與直覺相反）。",
+     "lossEn": "Thinking left (sign opposite intuition).",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "y=x² 先向右移 1 再向上移 2，求新方程。",
+     "stemEn": "y=x² shifted right 1, up 2.",
+     "answerZh": "y = (x-1)² + 2。",
+     "answerEn": "y=(x-1)²+2.",
+     "marks": [
+      {
+       "content": "水平移動 x-1",
+       "pts": 1
+      },
+      {
+       "content": "垂直移動 +2",
+       "pts": 1
+      },
+      {
+       "content": "y=(x-1)²+2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "水平方向符號錯（y=(x+1)²）。",
+     "lossEn": "Wrong horizontal sign.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "y=f(x) 變為 y=2f(x) 與 y=f(2x) 的區別？",
+     "stemEn": "y=2f(x) vs y=f(2x).",
+     "answerZh": "y=2f(x)：垂直拉伸 2 倍（縱坐標×2）；y=f(2x)：水平壓縮至 1/2（橫坐標÷2）。",
+     "answerEn": "2f(x): vertical stretch ×2; f(2x): horizontal compression by ½.",
+     "marks": [
+      {
+       "content": "垂直拉伸",
+       "pts": 1
+      },
+      {
+       "content": "水平壓縮",
+       "pts": 1
+      },
+      {
+       "content": "方向區分",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 f(2x) 當成水平拉伸 2 倍。",
+     "lossEn": "Treating f(2x) as horizontal stretch.",
+     "years": [
+      "2021"
+     ]
     }
    ]
   },
@@ -5161,6 +5791,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "從地面看樓頂仰角 30°，距樓底 50 m，求樓高。",
+     "stemEn": "Elevation 30°, 50 m from building; height.",
+     "answerZh": "h = 50 tan30° = 50×(√3/3) ≈ 28.9 m。",
+     "answerEn": "h = 50 tan30° ≈ 28.9 m.",
+     "marks": [
+      {
+       "content": "tan30°=h/50",
+       "pts": 1
+      },
+      {
+       "content": "h=50×√3/3",
+       "pts": 1
+      },
+      {
+       "content": "≈28.9",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 sin/cos 混用。",
+     "lossEn": "Wrong trig ratio.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "從 30 m 高樓頂看地面物體俯角 45°，求水平距離。",
+     "stemEn": "From 30 m top, depression 45°; distance.",
+     "answerZh": "俯角 45°=仰角 45° → 距離 = 30/tan45° = 30 m。",
+     "answerEn": "Distance = 30 m.",
+     "marks": [
+      {
+       "content": "俯角轉仰角",
+       "pts": 1
+      },
+      {
+       "content": "tan45°=1",
+       "pts": 1
+      },
+      {
+       "content": "d=30",
+       "pts": 1
+      }
+     ],
+     "lossZh": "俯角當成與水平面的角但方向處理錯。",
+     "lossEn": "Depression angle mishandled.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "從兩點 A、B（相距 40 m）測塔頂仰角 30°、45°，塔在 A、B 之間，求塔高。",
+     "stemEn": "From A,B 40 m apart, elevations 30°,45°; height.",
+     "answerZh": "設塔距 A 為 x：h=x tan30°=(40-x)tan45° → x/√3 = 40-x → x(1+1/√3)=40 → x≈23.4；h=x/√3≈13.5 m。",
+     "answerEn": "x tan30°=(40-x)tan45° → h≈13.5 m.",
+     "marks": [
+      {
+       "content": "設未知數 x",
+       "pts": 1
+      },
+      {
+       "content": "兩個方程 h=x tan30°=(40-x)tan45°",
+       "pts": 1
+      },
+      {
+       "content": "解出 h",
+       "pts": 1
+      }
+     ],
+     "lossZh": "列式時把 40 當全程而設錯。",
+     "lossEn": "Wrong setup with 40.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -5233,6 +5943,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "直角三角形兩直角邊 3、4，求斜邊和一個銳角。",
+     "stemEn": "Right triangle legs 3,4; hypotenuse and angle.",
+     "answerZh": "斜邊=5；tanθ=3/4 → θ≈36.9°（或 53.1°）。",
+     "answerEn": "Hyp=5; θ≈36.9°.",
+     "marks": [
+      {
+       "content": "勾股 3-4-5",
+       "pts": 1
+      },
+      {
+       "content": "三角比求角",
+       "pts": 1
+      },
+      {
+       "content": "θ≈36.9°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "勾股數記錯。",
+     "lossEn": "Wrong Pythagorean triple.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "斜坡長 10 m、仰角 25°，求升高高度。",
+     "stemEn": "Ramp 10 m at 25°; height.",
+     "answerZh": "h = 10 sin25° ≈ 4.23 m。",
+     "answerEn": "h = 10 sin25° ≈ 4.23.",
+     "marks": [
+      {
+       "content": "sin25°=h/10",
+       "pts": 1
+      },
+      {
+       "content": "h=10 sin25°",
+       "pts": 1
+      },
+      {
+       "content": "≈4.23",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 cos（那是水平距離）。",
+     "lossEn": "Using cos (horizontal).",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "一架梯子長 8 m 靠牆，底部離牆 3 m，求梯頂高度與梯子與地面夾角。",
+     "stemEn": "Ladder 8 m, base 3 m from wall; height and angle.",
+     "answerZh": "h=√(64-9)=√55≈7.42 m；cosθ=3/8 → θ≈68°。",
+     "answerEn": "h≈7.42 m; θ≈68°.",
+     "marks": [
+      {
+       "content": "勾股求 h",
+       "pts": 1
+      },
+      {
+       "content": "cosθ=3/8",
+       "pts": 1
+      },
+      {
+       "content": "θ≈68°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "角度用錯三角比。",
+     "lossEn": "Wrong trig ratio.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5300,6 +6090,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "mid",
      "source": "estimated"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求與點 (2,0) 距離恆為 3 的動點軌跡方程。",
+     "stemEn": "Locus: distance to (2,0) always 3.",
+     "answerZh": "(x-2)² + y² = 9（圓）。",
+     "answerEn": "(x-2)²+y²=9.",
+     "marks": [
+      {
+       "content": "距離公式",
+       "pts": 1
+      },
+      {
+       "content": "平方去根號",
+       "pts": 1
+      },
+      {
+       "content": "圓方程",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏平方或圓心錯。",
+     "lossEn": "Wrong centre or missing square.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求與直線 x=2 和點 (0,0) 距離相等的動點軌跡。",
+     "stemEn": "Locus equidistant from x=2 and (0,0).",
+     "answerZh": "√(x²+y²) = |x-2| → x²+y²=(x-2)² → y²=-4x+4 → 拋物線 y²=4-4x。",
+     "answerEn": "x²+y²=(x-2)² → y²=4-4x (parabola).",
+     "marks": [
+      {
+       "content": "等距列式",
+       "pts": 1
+      },
+      {
+       "content": "兩邊平方",
+       "pts": 1
+      },
+      {
+       "content": "化簡為拋物線",
+       "pts": 1
+      }
+     ],
+     "lossZh": "平方後展開錯誤。",
+     "lossEn": "Expansion error after squaring.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求到 A(1,0)、B(-1,0) 距離之和為 4 的動點軌跡。",
+     "stemEn": "Locus: PA+PB=4 with A(1,0),B(-1,0).",
+     "answerZh": "橢圓：2a=4 → a=2；c=1 → b²=a²-c²=3；x²/4 + y²/3 = 1。",
+     "answerEn": "Ellipse: a=2, c=1, b²=3; x²/4+y²/3=1.",
+     "marks": [
+      {
+       "content": "判為橢圓",
+       "pts": 1
+      },
+      {
+       "content": "a=2, c=1",
+       "pts": 1
+      },
+      {
+       "content": "b²=3 寫出方程",
+       "pts": 1
+      }
+     ],
+     "lossZh": "不知橢圓標準式或 a/c 混淆。",
+     "lossEn": "Unknown ellipse standard form.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -5375,6 +6245,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "A(1,2), B(5,6)，求 AB 距離和中點。",
+     "stemEn": "A(1,2), B(5,6); distance and midpoint.",
+     "answerZh": "距離 = √((5-1)²+(6-2)²) = √32 = 4√2；中點 (3,4)。",
+     "answerEn": "d=4√2; midpoint (3,4).",
+     "marks": [
+      {
+       "content": "距離公式",
+       "pts": 1
+      },
+      {
+       "content": "√32=4√2",
+       "pts": 1
+      },
+      {
+       "content": "中點 (3,4)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "距離算成 √(4+16)=√20（應是 16+16）。",
+     "lossEn": "Wrong arithmetic in distance.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 A(2,3)、B(6,5) 的垂直平分線方程。",
+     "stemEn": "Perpendicular bisector of A(2,3), B(6,5).",
+     "answerZh": "AB 中點 (4,4)；斜率 AB = 1/2 → 垂直平分線斜率 -2；y-4 = -2(x-4) → 2x+y=12。",
+     "answerEn": "Mid (4,4); slope AB=1/2 → perp slope -2; y-4=-2(x-4).",
+     "marks": [
+      {
+       "content": "中點 (4,4)",
+       "pts": 1
+      },
+      {
+       "content": "AB 斜率 → 垂直斜率 -2",
+       "pts": 1
+      },
+      {
+       "content": "點斜式 → 2x+y=12",
+       "pts": 1
+      }
+     ],
+     "lossZh": "垂直斜率取反數不取負倒數。",
+     "lossEn": "Taking reciprocal not negative reciprocal.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "圓心 (2,1) 半徑 5，求與直線 3x-4y+8=0 的弦長。",
+     "stemEn": "Circle centre (2,1), r=5; chord cut by 3x-4y+8=0.",
+     "answerZh": "圓心到直線距離 d = |6-4+8|/5 = 10/5 = 2；半弦長 = √(25-4)=√21；弦長=2√21。",
+     "answerEn": "d=2; half-chord=√21; chord=2√21.",
+     "marks": [
+      {
+       "content": "點到直線距離公式",
+       "pts": 1
+      },
+      {
+       "content": "d=2",
+       "pts": 1
+      },
+      {
+       "content": "弦長=2√(r²-d²)=2√21",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 r-d 當弦長。",
+     "lossEn": "Using r-d as chord.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -5449,6 +6399,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "袋有 3 紅 2 藍，抽 2 球，求兩紅概率。",
+     "stemEn": "Bag 3R 2B, draw 2; P(both red).",
+     "answerZh": "C(3,2)/C(5,2) = 3/10。",
+     "answerEn": "3/10.",
+     "marks": [
+      {
+       "content": "分子 C(3,2)",
+       "pts": 1
+      },
+      {
+       "content": "分母 C(5,2)",
+       "pts": 1
+      },
+      {
+       "content": "3/10",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用有放回（無放回才用組合）。",
+     "lossEn": "Using with-replacement formula.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "擲兩骰，求點數和為 7 的概率。",
+     "stemEn": "Two dice; P(sum=7).",
+     "answerZh": "有利：(1,6)(2,5)(3,4)(4,3)(5,2)(6,1) 共 6 種；P=6/36=1/6。",
+     "answerEn": "6 favourable → 1/6.",
+     "marks": [
+      {
+       "content": "總數 36",
+       "pts": 1
+      },
+      {
+       "content": "和 7 有 6 種",
+       "pts": 1
+      },
+      {
+       "content": "P=1/6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏列對稱組合（如 (1,6) 和 (6,1)）。",
+     "lossEn": "Missing symmetric pairs.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "5 人站一排，甲乙相鄰的概率。",
+     "stemEn": "5 in a row; P(A,B adjacent).",
+     "answerZh": "相鄰視為一體：4!×2! = 48；總數 5!=120；P=48/120=2/5。",
+     "answerEn": "(4!×2!)/5! = 2/5.",
+     "marks": [
+      {
+       "content": "捆綁法 4!×2!",
+       "pts": 1
+      },
+      {
+       "content": "總數 5!",
+       "pts": 1
+      },
+      {
+       "content": "2/5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏乘 2!（甲乙內部排列）。",
+     "lossEn": "Missing ×2! for internal order.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5516,6 +6546,86 @@ const DSE_MATH_GRAPH = {
      "weight": "mid",
      "source": "estimated"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "某科平均 60、標準差 10，小明 75 分，求 z 值。",
+     "stemEn": "Mean 60, SD 10, score 75; z-score.",
+     "answerZh": "z = (75-60)/10 = 1.5。",
+     "answerEn": "z = 1.5.",
+     "marks": [
+      {
+       "content": "z=(x-μ)/σ",
+       "pts": 1
+      },
+      {
+       "content": "(75-60)/10",
+       "pts": 1
+      },
+      {
+       "content": "1.5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分子/分母反。",
+     "lossEn": "Reversed formula.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "數學平均 70、SD 8；英文平均 65、SD 6。A 數學 82、英文 74，哪科表現較好？",
+     "stemEn": "Math μ=70,σ=8; Eng μ=65,σ=6. A: math 82, eng 74; compare.",
+     "answerZh": "z_math = (82-70)/8 = 1.5；z_eng = (74-65)/6 = 1.5；相同。",
+     "answerEn": "Both z=1.5 → same.",
+     "marks": [
+      {
+       "content": "兩科各算 z",
+       "pts": 1
+      },
+      {
+       "content": "z_math=1.5, z_eng=1.5",
+       "pts": 1
+      },
+      {
+       "content": "比較",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接比原始分。",
+     "lossEn": "Comparing raw scores.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "平均 50、SD 12，求 z=2 對應的分數。",
+     "stemEn": "μ=50, σ=12, z=2; raw score.",
+     "answerZh": "x = μ + zσ = 50 + 2×12 = 74。",
+     "answerEn": "x = 50+24 = 74.",
+     "marks": [
+      {
+       "content": "反解 x=μ+zσ",
+       "pts": 1
+      },
+      {
+       "content": "50+24",
+       "pts": 1
+      },
+      {
+       "content": "74",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 x=μ-zσ（符號）。",
+     "lossEn": "Wrong sign.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -5582,6 +6692,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 (1+x)⁵ 展開式中 x³ 的係數。",
+     "stemEn": "Coefficient of x³ in (1+x)⁵.",
+     "answerZh": "C(5,3) = 10。",
+     "answerEn": "C(5,3)=10.",
+     "marks": [
+      {
+       "content": "通項 C(5,k)xᵏ",
+       "pts": 1
+      },
+      {
+       "content": "k=3",
+       "pts": 1
+      },
+      {
+       "content": "C(5,3)=10",
+       "pts": 1
+      }
+     ],
+     "lossZh": "C 值算錯。",
+     "lossEn": "Wrong combination value.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 (2x² + 1/x)⁶ 展開中的常數項。",
+     "stemEn": "Constant term in (2x² + 1/x)⁶.",
+     "answerZh": "通項 C(6,k)(2x²)ᵏ(1/x)⁶⁻ᵏ = C(6,k)2ᵏx^(2k-(6-k)) = C(6,k)2ᵏx^(3k-6)；常數 → 3k-6=0 → k=2；項=C(6,2)·2²=15×4=60。",
+     "answerEn": "k=2 → C(6,2)·2²=60.",
+     "marks": [
+      {
+       "content": "寫通項",
+       "pts": 1
+      },
+      {
+       "content": "x 指數 3k-6=0 → k=2",
+       "pts": 1
+      },
+      {
+       "content": "C(6,2)·2²=60",
+       "pts": 1
+      }
+     ],
+     "lossZh": "指數計算錯誤（符號）。",
+     "lossEn": "Wrong exponent sign.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 (x - 1/x)⁸ 展開中 x⁴ 的係數。",
+     "stemEn": "Coefficient of x⁴ in (x-1/x)⁸.",
+     "answerZh": "通項 C(8,k)x^k(-1/x)^(8-k) = C(8,k)(-1)^(8-k)x^(2k-8)；2k-8=4 → k=6；係數=C(8,6)(-1)²=28。",
+     "answerEn": "k=6 → C(8,6)·(-1)²=28.",
+     "marks": [
+      {
+       "content": "通項含 (-1)^(8-k)",
+       "pts": 1
+      },
+      {
+       "content": "2k-8=4 → k=6",
+       "pts": 1
+      },
+      {
+       "content": "28",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏符號 (-1) 的冪。",
+     "lossEn": "Missing sign factor.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -5657,6 +6847,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "用歸納法證明 1+2+…+n = n(n+1)/2。",
+     "stemEn": "Prove 1+2+…+n = n(n+1)/2.",
+     "answerZh": "n=1：1=1✓；設 n=k 成立，n=k+1：左 = k(k+1)/2 + (k+1) = (k+1)(k+2)/2 = 右。",
+     "answerEn": "Base n=1; inductive step works.",
+     "marks": [
+      {
+       "content": "驗 n=1",
+       "pts": 1
+      },
+      {
+       "content": "假設 n=k",
+       "pts": 1
+      },
+      {
+       "content": "推 n=k+1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只寫假設不寫推導。",
+     "lossEn": "Only assumption, no step.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "歸納證明 1+3+5+…+(2n-1) = n²。",
+     "stemEn": "Prove sum of first n odd numbers = n².",
+     "answerZh": "n=1：1=1✓；k→k+1：k²+(2k+1)=(k+1)²。",
+     "answerEn": "Base; k²+2k+1=(k+1)².",
+     "marks": [
+      {
+       "content": "驗證 n=1",
+       "pts": 1
+      },
+      {
+       "content": "k²+(2k+1)",
+       "pts": 1
+      },
+      {
+       "content": "=(k+1)²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "通項寫錯（第 k+1 項是 2k+1）。",
+     "lossEn": "Wrong (k+1)-th term.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "歸納證明 1²+2²+…+n² = n(n+1)(2n+1)/6。",
+     "stemEn": "Prove sum of squares formula.",
+     "answerZh": "n=1：1=1·2·3/6=1✓；k→k+1：k(k+1)(2k+1)/6+(k+1)²=(k+1)[k(2k+1)+6(k+1)]/6=(k+1)(k+2)(2k+3)/6。",
+     "answerEn": "Base; algebra shows (k+1)(k+2)(2k+3)/6.",
+     "marks": [
+      {
+       "content": "驗證 n=1",
+       "pts": 1
+      },
+      {
+       "content": "代 n=k 加 (k+1)²",
+       "pts": 1
+      },
+      {
+       "content": "化簡成 (k+1)(k+2)(2k+3)/6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "代數化簡出錯。",
+     "lossEn": "Algebra simplification error.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5731,6 +7001,82 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 sin(150°) 的值。",
+     "stemEn": "sin 150°.",
+     "answerZh": "sin(180°-30°)=sin30°=1/2。",
+     "answerEn": "1/2.",
+     "marks": [
+      {
+       "content": "化為 sin(180°-30°)",
+       "pts": 1
+      },
+      {
+       "content": "sin30°",
+       "pts": 1
+      },
+      {
+       "content": "1/2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "符號錯（sin 在第二象限為正）。",
+     "lossEn": "Wrong sign (sin positive in QII).",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "化簡 sin(π/2 - θ)。",
+     "stemEn": "Simplify sin(π/2 - θ).",
+     "answerZh": "sin(π/2-θ) = cos θ。",
+     "answerEn": "cos θ.",
+     "marks": [
+      {
+       "content": "餘角公式",
+       "pts": 1
+      },
+      {
+       "content": "=cosθ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "寫成 -cosθ。",
+     "lossEn": "Writing -cosθ.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "若 sinθ=3/5 且 θ 在第二象限，求 cosθ 與 tanθ。",
+     "stemEn": "sinθ=3/5, θ in QII; cosθ, tanθ.",
+     "answerZh": "cosθ = -√(1-9/25) = -4/5；tanθ = (3/5)/(-4/5) = -3/4。",
+     "answerEn": "cosθ=-4/5; tanθ=-3/4.",
+     "marks": [
+      {
+       "content": "cos²θ=1-sin²θ",
+       "pts": 1
+      },
+      {
+       "content": "第二象限 cos 為負",
+       "pts": 1
+      },
+      {
+       "content": "tan=-3/4",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏負號（第二象限 cos 負）。",
+     "lossEn": "Missing negative in QII.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -5795,6 +7141,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "向量 a=(3,-4)，求 |a| 和單位向量。",
+     "stemEn": "a=(3,-4); |a| and unit vector.",
+     "answerZh": "|a|=5；單位向量 = (3/5, -4/5)。",
+     "answerEn": "|a|=5; unit = (3/5,-4/5).",
+     "marks": [
+      {
+       "content": "模長公式",
+       "pts": 1
+      },
+      {
+       "content": "√(9+16)=5",
+       "pts": 1
+      },
+      {
+       "content": "單位向量",
+       "pts": 1
+      }
+     ],
+     "lossZh": "單位向量忘除以模。",
+     "lossEn": "Not dividing by magnitude.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "a=(2,1), b=(-1,2)，求 a·b 並判斷是否垂直。",
+     "stemEn": "a=(2,1), b=(-1,2); dot product, perpendicular?",
+     "answerZh": "a·b = 2×(-1)+1×2 = 0 → 垂直。",
+     "answerEn": "a·b=0 → perpendicular.",
+     "marks": [
+      {
+       "content": "點積公式",
+       "pts": 1
+      },
+      {
+       "content": "=0",
+       "pts": 1
+      },
+      {
+       "content": "垂直",
+       "pts": 1
+      }
+     ],
+     "lossZh": "點積算錯或判斷反。",
+     "lossEn": "Wrong dot or verdict.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "用向量證明：三角形中點連線平行且等於第三邊一半。",
+     "stemEn": "Vector proof: mid-segment parallel & half.",
+     "answerZh": "設 A、B、C，M 為 AB 中點、N 為 AC 中點：MN = (B-A)/2 + ... 得 MN = BC/2 → 平行且一半。",
+     "answerEn": "MN = ½BC → parallel and half.",
+     "marks": [
+      {
+       "content": "中點向量表示",
+       "pts": 1
+      },
+      {
+       "content": "MN = ½(B+C)-½(A+A)... 化簡",
+       "pts": 1
+      },
+      {
+       "content": "得 MN=½BC",
+       "pts": 1
+      }
+     ],
+     "lossZh": "中點坐標向量寫錯。",
+     "lossEn": "Wrong midpoint vector.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -5870,6 +7296,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 lim(n→∞) (3n+1)/(2n-1)。",
+     "stemEn": "Limit as n→∞ of (3n+1)/(2n-1).",
+     "answerZh": "同除 n：(3+1/n)/(2-1/n) → 3/2。",
+     "answerEn": "3/2.",
+     "marks": [
+      {
+       "content": "同除最高次 n",
+       "pts": 1
+      },
+      {
+       "content": "1/n→0",
+       "pts": 1
+      },
+      {
+       "content": "3/2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "不處理直接代入∞。",
+     "lossEn": "Substituting ∞ directly.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 lim(n→∞) (n²+2)/(3n²-5)。",
+     "stemEn": "Limit of (n²+2)/(3n²-5).",
+     "answerZh": "同除 n²：(1+2/n²)/(3-5/n²) → 1/3。",
+     "answerEn": "1/3.",
+     "marks": [
+      {
+       "content": "同除 n²",
+       "pts": 1
+      },
+      {
+       "content": "化簡",
+       "pts": 1
+      },
+      {
+       "content": "1/3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "最高次看錯。",
+     "lossEn": "Wrong highest power.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 lim(n→∞) [√(n²+n) - n]。",
+     "stemEn": "Limit of √(n²+n) - n.",
+     "answerZh": "有理化：n/[√(n²+n)+n] = 1/[√(1+1/n)+1] → 1/2。",
+     "answerEn": "Rationalise → 1/2.",
+     "marks": [
+      {
+       "content": "分子有理化",
+       "pts": 1
+      },
+      {
+       "content": "同除 n",
+       "pts": 1
+      },
+      {
+       "content": "1/2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接當 ∞-∞ 為 0。",
+     "lossEn": "Treating ∞-∞ as 0.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -5935,6 +7441,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "f(x)=(x²-1)/(x-1)，求 lim(x→1) f(x)。",
+     "stemEn": "lim_{x→1} (x²-1)/(x-1).",
+     "answerZh": "因式分解：(x-1)(x+1)/(x-1) = x+1 → 2。",
+     "answerEn": "2.",
+     "marks": [
+      {
+       "content": "因式分解",
+       "pts": 1
+      },
+      {
+       "content": "約分",
+       "pts": 1
+      },
+      {
+       "content": "代 x=1 → 2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "代 x=1 得 0/0 就說不存在。",
+     "lossEn": "Saying DNE at 0/0.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "分段函數 f(x)=x+1 (x<2), =k (x=2), =3x-1 (x>2)，若在 x=2 連續，求 k。",
+     "stemEn": "Piecewise continuous at 2; find k.",
+     "answerZh": "左極限=3，右極限=5 → 極限不存在，無法連續（k 無解）。",
+     "answerEn": "Left=3, right=5 → no limit → not continuous.",
+     "marks": [
+      {
+       "content": "左極限 f(2⁻)",
+       "pts": 1
+      },
+      {
+       "content": "右極限 f(2⁺)",
+       "pts": 1
+      },
+      {
+       "content": "不相等 → 無解",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接令 k=某值不看左右極限。",
+     "lossEn": "Not checking both one-sided limits.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "討論 f(x)=|x|/x 在 x=0 的連續性。",
+     "stemEn": "Continuity of |x|/x at 0.",
+     "answerZh": "x→0⁺：1；x→0⁻：-1；左右極限不等 → 不連續（跳躍間斷）。",
+     "answerEn": "Left -1, right +1 → jump discontinuity.",
+     "marks": [
+      {
+       "content": "右極限 1",
+       "pts": 1
+      },
+      {
+       "content": "左極限 -1",
+       "pts": 1
+      },
+      {
+       "content": "不連續",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為有定義就連續。",
+     "lossEn": "Assuming continuity from definition.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5985,6 +7571,82 @@ const DSE_MATH_GRAPH = {
      "q": "MC",
      "weight": "mid",
      "source": "estimated"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "將 0.6̇（循環小數）化為分數。",
+     "stemEn": "Convert 0.666… to a fraction.",
+     "answerZh": "設 x=0.666…，10x=6.666… → 9x=6 → x=2/3。",
+     "answerEn": "x=2/3.",
+     "marks": [
+      {
+       "content": "設 x 並乘 10",
+       "pts": 1
+      },
+      {
+       "content": "相減得 9x=6",
+       "pts": 1
+      },
+      {
+       "content": "x=2/3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "乘錯倍數（一位循環乘 10）。",
+     "lossEn": "Wrong multiplier.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "化簡 1/√2（分母有理化）。",
+     "stemEn": "Rationalise 1/√2.",
+     "answerZh": "1/√2 × √2/√2 = √2/2。",
+     "answerEn": "√2/2.",
+     "marks": [
+      {
+       "content": "分子分母同乘 √2",
+       "pts": 1
+      },
+      {
+       "content": "√2/2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只把分母變 √2 不處理分子。",
+     "lossEn": "Not rationalising fully.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "將 0.123123…（3 位循環）化為分數。",
+     "stemEn": "Convert 0.123123… to fraction.",
+     "answerZh": "設 x=0.123123…，1000x=123.123… → 999x=123 → x=123/999=41/333。",
+     "answerEn": "x=41/333.",
+     "marks": [
+      {
+       "content": "乘 1000",
+       "pts": 1
+      },
+      {
+       "content": "999x=123",
+       "pts": 1
+      },
+      {
+       "content": "41/333",
+       "pts": 1
+      }
+     ],
+     "lossZh": "乘錯位數。",
+     "lossEn": "Wrong digit shift.",
+     "years": [
+      "2021"
+     ]
     }
    ]
   },
@@ -6060,6 +7722,82 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "售價 500，打八折，求折後價。",
+     "stemEn": "500 with 20% off.",
+     "answerZh": "500×0.8 = 400。",
+     "answerEn": "400.",
+     "marks": [
+      {
+       "content": "折扣率 0.8",
+       "pts": 1
+      },
+      {
+       "content": "400",
+       "pts": 1
+      }
+     ],
+     "lossZh": "八折算成 0.2。",
+     "lossEn": "20% off confused with 0.2.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "成本 200，加價 30% 再打九折出售，求利潤率。",
+     "stemEn": "Cost 200, +30%, then 10% off; profit %?",
+     "answerZh": "售價 = 200×1.3×0.9 = 234；利潤率 = 34/200 = 17%。",
+     "answerEn": "Selling 234; profit 17%.",
+     "marks": [
+      {
+       "content": "先加價 200×1.3",
+       "pts": 1
+      },
+      {
+       "content": "再打折 ×0.9",
+       "pts": 1
+      },
+      {
+       "content": "利潤率 17%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "加價後打折順序或利潤分母錯。",
+     "lossEn": "Wrong order or denominator.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "複利：本金 10000，年利率 5%，每年複利，求 3 年後本利和。",
+     "stemEn": "Compound interest 10000, 5%, 3 yr.",
+     "answerZh": "A = 10000(1.05)³ = 11576.25。",
+     "answerEn": "A = 10000×1.05³ ≈ 11576.25.",
+     "marks": [
+      {
+       "content": "複利公式 A=P(1+r)ⁿ",
+       "pts": 1
+      },
+      {
+       "content": "(1.05)³",
+       "pts": 1
+      },
+      {
+       "content": "11576.25",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用單利 10000×1.15。",
+     "lossEn": "Simple interest instead.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -6134,6 +7872,82 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "化簡 2³×2⁴。",
+     "stemEn": "Simplify 2³×2⁴.",
+     "answerZh": "2⁷ = 128。",
+     "answerEn": "2⁷=128.",
+     "marks": [
+      {
+       "content": "同底相加指數",
+       "pts": 1
+      },
+      {
+       "content": "2⁷=128",
+       "pts": 1
+      }
+     ],
+     "lossZh": "相乘底數變 4。",
+     "lossEn": "Multiplying bases.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "化簡 (a²b³)/(a⁵b)。",
+     "stemEn": "Simplify a²b³/(a⁵b).",
+     "answerZh": "a^(2-5)b^(3-1) = a⁻³b² = b²/a³。",
+     "answerEn": "a⁻³b² = b²/a³.",
+     "marks": [
+      {
+       "content": "指數相減",
+       "pts": 1
+      },
+      {
+       "content": "負指數",
+       "pts": 1
+      },
+      {
+       "content": "b²/a³",
+       "pts": 1
+      }
+     ],
+     "lossZh": "指數相減次序錯。",
+     "lossEn": "Wrong exponent subtraction.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "解 4ˣ = 2^(x+1)。",
+     "stemEn": "Solve 4ˣ = 2^(x+1).",
+     "answerZh": "4ˣ=(2²)ˣ=2²ˣ → 2x=x+1 → x=1。",
+     "answerEn": "2x=x+1 → x=1.",
+     "marks": [
+      {
+       "content": "化成同底 2",
+       "pts": 1
+      },
+      {
+       "content": "2x=x+1",
+       "pts": 1
+      },
+      {
+       "content": "x=1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "不會統一底數。",
+     "lossEn": "Not unifying bases.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -6200,6 +8014,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "f(x)=x³-2x+1，求 f(2)。",
+     "stemEn": "f(x)=x³-2x+1; f(2).",
+     "answerZh": "f(2)=8-4+1=5。",
+     "answerEn": "5.",
+     "marks": [
+      {
+       "content": "代入 x=2",
+       "pts": 1
+      },
+      {
+       "content": "5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "代錯或計算錯。",
+     "lossEn": "Wrong substitution.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "餘式定理：f(x)=x³+ax+1 除以 x-2 餘 9，求 a。",
+     "stemEn": "f(x)=x³+ax+1 divided by x-2 leaves 9; find a.",
+     "answerZh": "f(2)=8+2a+1=9 → 2a=0 → a=0。",
+     "answerEn": "f(2)=9 → a=0.",
+     "marks": [
+      {
+       "content": "餘式定理 f(2)=9",
+       "pts": 1
+      },
+      {
+       "content": "8+2a+1=9",
+       "pts": 1
+      },
+      {
+       "content": "a=0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用長除法或餘式定理混。",
+     "lossEn": "Using long division unnecessarily.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "因式定理：x³+ax²-4x-12 有因式 x-3，求 a 並因式分解。",
+     "stemEn": "x³+ax²-4x-12 has factor x-3; find a, factorise.",
+     "answerZh": "f(3)=27+9a-12-12=0 → 9a=-3 → a=-1/3；分解：(x-3)(x²+2x+4)/3... 實際：代 a=-1/3 → 因式 (x-3)(3x²+2x+4)/3。",
+     "answerEn": "f(3)=0 → a=-1/3.",
+     "marks": [
+      {
+       "content": "因式定理 f(3)=0",
+       "pts": 1
+      },
+      {
+       "content": "解 a",
+       "pts": 1
+      },
+      {
+       "content": "分解",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把因式定理寫成 f(3)=餘數。",
+     "lossEn": "Using f(3) as remainder not factor.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -6275,6 +8165,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "將 y = x² - 6x + 5 配方並求頂點與最小值。",
+     "stemEn": "Complete square of y=x²-6x+5; vertex and min.",
+     "answerZh": "y = (x-3)² - 4；頂點 (3,-4)；最小值 -4。",
+     "answerEn": "y=(x-3)²-4; vertex (3,-4); min -4.",
+     "marks": [
+      {
+       "content": "配方成 (x-3)²-4",
+       "pts": 1
+      },
+      {
+       "content": "頂點 (3,-4)",
+       "pts": 1
+      },
+      {
+       "content": "最小值 -4",
+       "pts": 1
+      }
+     ],
+     "lossZh": "配方常數項算錯（+5 變成 -9+5=-4）。",
+     "lossEn": "Wrong constant in completing square.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "二次函數圖像過 (1,0)、(3,0) 且頂點縱坐標為 -4，求解析式。",
+     "stemEn": "Quadratic through (1,0),(3,0), vertex y=-4. Find equation.",
+     "answerZh": "設 y=a(x-1)(x-3)；頂點 x=2，y=-a=-4 → a=4；y=4(x-1)(x-3)=4x²-16x+12。",
+     "answerEn": "y=a(x-1)(x-3); vertex (2,-4) → a=4; y=4x²-16x+12.",
+     "marks": [
+      {
+       "content": "設交點式 y=a(x-1)(x-3)",
+       "pts": 1
+      },
+      {
+       "content": "對稱軸 x=2，頂點 (2,-4)",
+       "pts": 1
+      },
+      {
+       "content": "a=4，展開",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為頂點橫坐標是 (1+3)/2 以外的值。",
+     "lossEn": "Wrong vertex x-coordinate.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "若 x² + kx + 4 ≥ 0 對所有實數 x 成立，求 k 的範圍。",
+     "stemEn": "x²+kx+4≥0 for all real x; find range of k.",
+     "answerZh": "開口向上 → 需 Δ≤0：k²-16≤0 → -4≤k≤4。",
+     "answerEn": "Δ=k²-16≤0 → -4≤k≤4.",
+     "marks": [
+      {
+       "content": "開口向上且恆 ≥0 → Δ≤0",
+       "pts": 1
+      },
+      {
+       "content": "k²-16≤0",
+       "pts": 1
+      },
+      {
+       "content": "-4≤k≤4",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把「恆≥0」誤當 Δ≥0（開口向上要 Δ≤0）。",
+     "lossEn": "Using Δ≥0 for always-positive (needs Δ≤0).",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -6347,6 +8317,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "y 隨 x 正變，x=2 時 y=6，求 x=5 時 y。",
+     "stemEn": "y ∝ x; y=6 at x=2; y at x=5.",
+     "answerZh": "k=6/2=3 → y=3×5=15。",
+     "answerEn": "15.",
+     "marks": [
+      {
+       "content": "y=kx",
+       "pts": 1
+      },
+      {
+       "content": "k=3",
+       "pts": 1
+      },
+      {
+       "content": "y=15",
+       "pts": 1
+      }
+     ],
+     "lossZh": "比例常數 k 求錯。",
+     "lossEn": "Wrong k.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "y 隨 x 反變，x=3 時 y=4，求 x=6 時 y。",
+     "stemEn": "y ∝ 1/x; y=4 at x=3; y at x=6.",
+     "answerZh": "xy=12 → y=12/6=2。",
+     "answerEn": "2.",
+     "marks": [
+      {
+       "content": "xy=k",
+       "pts": 1
+      },
+      {
+       "content": "k=12",
+       "pts": 1
+      },
+      {
+       "content": "y=2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用正變算。",
+     "lossEn": "Using direct variation.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "y 部分隨 x 正變、部分隨 x² 正變；x=1 時 y=4，x=2 時 y=12，求 x=3 時 y。",
+     "stemEn": "y=ax+bx²; x=1→4, x=2→12; y at x=3.",
+     "answerZh": "a+b=4, 2a+4b=12 → 解 a=2, b=2；y=2x+2x²；x=3 → 6+18=24。",
+     "answerEn": "a=2,b=2; y=24.",
+     "marks": [
+      {
+       "content": "設 y=ax+bx²",
+       "pts": 1
+      },
+      {
+       "content": "代入兩組解方程",
+       "pts": 1
+      },
+      {
+       "content": "a=2,b=2 → y=24",
+       "pts": 1
+      }
+     ],
+     "lossZh": "設成單一正變。",
+     "lossEn": "Single variation assumption.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -6413,6 +8463,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "mid",
      "source": "estimated"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "解 x²-5x+6>0。",
+     "stemEn": "Solve x²-5x+6>0.",
+     "answerZh": "(x-2)(x-3)>0 → x<2 或 x>3。",
+     "answerEn": "x<2 or x>3.",
+     "marks": [
+      {
+       "content": "因式分解",
+       "pts": 1
+      },
+      {
+       "content": "根 2,3",
+       "pts": 1
+      },
+      {
+       "content": "取兩邊",
+       "pts": 1
+      }
+     ],
+     "lossZh": "取中間（>0 取兩邊）。",
+     "lossEn": "Taking middle for >0.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "解 -x²+4x-3≥0。",
+     "stemEn": "Solve -x²+4x-3≥0.",
+     "answerZh": "乘 -1：x²-4x+3≤0 → (x-1)(x-3)≤0 → 1≤x≤3。",
+     "answerEn": "1≤x≤3.",
+     "marks": [
+      {
+       "content": "乘 -1 變號",
+       "pts": 1
+      },
+      {
+       "content": "因式分解",
+       "pts": 1
+      },
+      {
+       "content": "1≤x≤3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "乘負數忘變號。",
+     "lossEn": "Not flipping sign on ×(-1).",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "線性規劃：x≥0, y≥0, x+y≤6, 2x+y≤8，求 P=x+3y 的最大值。",
+     "stemEn": "Linear programming; maximise x+3y.",
+     "answerZh": "頂點 (0,0)→0, (4,0)→4, (0,6)→18, (2,4)→14；最大 18。",
+     "answerEn": "Vertices: max at (0,6) → 18.",
+     "marks": [
+      {
+       "content": "畫可行域",
+       "pts": 1
+      },
+      {
+       "content": "找頂點",
+       "pts": 1
+      },
+      {
+       "content": "代 P 求最大 18",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏頂點或不代回驗證。",
+     "lossEn": "Missing vertex check.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -6488,6 +8618,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "△ABC 中 ∠A=30°, ∠B=45°, a=10（a 對 A），求 b。",
+     "stemEn": "In △ABC, ∠A=30°, ∠B=45°, a=10. Find b.",
+     "answerZh": "正弦定理：b/sin45° = 10/sin30° → b = 10×(√2/2)/(1/2) = 10√2。",
+     "answerEn": "b/sin45°=10/sin30° → b=10√2.",
+     "marks": [
+      {
+       "content": "寫出正弦定理",
+       "pts": 1
+      },
+      {
+       "content": "代入 a/sinA = b/sinB",
+       "pts": 1
+      },
+      {
+       "content": "b=10√2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "對應邊角配錯。",
+     "lossEn": "Wrong side-angle correspondence.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "△ABC 中 a=7, b=8, ∠C=60°，求 c。",
+     "stemEn": "In △ABC, a=7, b=8, ∠C=60°. Find c.",
+     "answerZh": "餘弦定理：c² = 7²+8²-2×7×8×cos60° = 49+64-56 = 57 → c=√57。",
+     "answerEn": "c²=49+64-56=57 → c=√57.",
+     "marks": [
+      {
+       "content": "餘弦定理 c²=a²+b²-2ab cosC",
+       "pts": 1
+      },
+      {
+       "content": "cos60°=½",
+       "pts": 1
+      },
+      {
+       "content": "c=√57",
+       "pts": 1
+      }
+     ],
+     "lossZh": "中間項符號或 cos60° 值錯。",
+     "lossEn": "Wrong sign or cos60° value.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "△ABC 中 a=6, b=8, ∠C=30°，求面積。",
+     "stemEn": "In △ABC, a=6, b=8, ∠C=30°. Find area.",
+     "answerZh": "面積 = ½ab sinC = ½×6×8×½ = 12。",
+     "answerEn": "Area = ½ab sinC = 12.",
+     "marks": [
+      {
+       "content": "面積公式 S=½ab sinC",
+       "pts": 1
+      },
+      {
+       "content": "sin30°=½",
+       "pts": 1
+      },
+      {
+       "content": "S=12",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 ½×底×高但沒對應角。",
+     "lossEn": "Wrong formula application.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -6561,6 +8771,86 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求過 (1,2)、(3,6) 的直線斜率與方程。",
+     "stemEn": "Line through (1,2),(3,6); slope and equation.",
+     "answerZh": "斜率 = (6-2)/(3-1) = 2；y-2=2(x-1) → y=2x。",
+     "answerEn": "y=2x.",
+     "marks": [
+      {
+       "content": "斜率公式",
+       "pts": 1
+      },
+      {
+       "content": "點斜式",
+       "pts": 1
+      },
+      {
+       "content": "y=2x",
+       "pts": 1
+      }
+     ],
+     "lossZh": "斜率次序錯。",
+     "lossEn": "Wrong slope order.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求過 (2,1) 且垂直於直線 y=3x-1 的直線方程。",
+     "stemEn": "Through (2,1), ⊥ y=3x-1.",
+     "answerZh": "垂直斜率 = -1/3；y-1=(-1/3)(x-2) → x+3y=5。",
+     "answerEn": "x+3y=5.",
+     "marks": [
+      {
+       "content": "垂直斜率負倒數",
+       "pts": 1
+      },
+      {
+       "content": "點斜式",
+       "pts": 1
+      },
+      {
+       "content": "x+3y=5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "垂直用相反數不取倒數。",
+     "lossEn": "Wrong perpendicular slope.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "直線 L₁: 2x-y+1=0，L₂: x+2y-4=0，求交點及 L₁ 與 L₂ 的夾角。",
+     "stemEn": "Intersection and angle between L₁, L₂.",
+     "answerZh": "解方程：2x-y=-1, x+2y=4 → x=2/5, y=9/5；斜率 m₁=2, m₂=-1/2，乘積 -1 → 垂直，夾角 90°。",
+     "answerEn": "Intersect (2/5,9/5); perpendicular → 90°.",
+     "marks": [
+      {
+       "content": "解聯立",
+       "pts": 1
+      },
+      {
+       "content": "求兩斜率",
+       "pts": 1
+      },
+      {
+       "content": "m₁m₂=-1 → 垂直",
+       "pts": 1
+      }
+     ],
+     "lossZh": "夾角公式套錯。",
+     "lossEn": "Wrong angle formula.",
+     "years": [
+      "2020"
+     ]
     }
    ]
   },
@@ -6636,6 +8926,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "扇形半徑 6、圓心角 60°，求弧長與面積。",
+     "stemEn": "Sector r=6, θ=60°; arc and area.",
+     "answerZh": "弧長 = 60/360×2π×6 = 2π；面積 = 60/360×π×36 = 6π。",
+     "answerEn": "Arc=2π; area=6π.",
+     "marks": [
+      {
+       "content": "弧長比例",
+       "pts": 1
+      },
+      {
+       "content": "面積比例",
+       "pts": 1
+      },
+      {
+       "content": "2π、6π",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用弧度誤當度數。",
+     "lossEn": "Radians vs degrees.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "圓柱半徑 3、高 5，求體積與表面積。",
+     "stemEn": "Cylinder r=3, h=5; volume and surface area.",
+     "answerZh": "V=π×9×5=45π；S=2π×9+2π×3×5=18π+30π=48π。",
+     "answerEn": "V=45π; S=48π.",
+     "marks": [
+      {
+       "content": "體積公式",
+       "pts": 1
+      },
+      {
+       "content": "表面積=2底+側",
+       "pts": 1
+      },
+      {
+       "content": "45π、48π",
+       "pts": 1
+      }
+     ],
+     "lossZh": "表面積漏側面或底面。",
+     "lossEn": "Missing lateral or bases.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "圓錐底半徑 4、斜高 6，求側面積與體積。",
+     "stemEn": "Cone r=4, slant 6; lateral area and volume.",
+     "answerZh": "側面積 = πrl = 24π；高 = √(36-16)=2√5；體積 = ⅓π×16×2√5 = 32√5π/3。",
+     "answerEn": "Lateral 24π; V = 32√5π/3.",
+     "marks": [
+      {
+       "content": "側面積 πrl",
+       "pts": 1
+      },
+      {
+       "content": "高 √(l²-r²)",
+       "pts": 1
+      },
+      {
+       "content": "⅓πr²h",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 πr² 當側面積。",
+     "lossEn": "Using base area as lateral.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -6709,6 +9079,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "4 人排成一排，有多少種排法？",
+     "stemEn": "4 people in a row; arrangements?",
+     "answerZh": "4! = 24。",
+     "answerEn": "24.",
+     "marks": [
+      {
+       "content": "排列 4!",
+       "pts": 1
+      },
+      {
+       "content": "24",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用組合 4。",
+     "lossEn": "Using combination.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "5 人排隊，其中甲乙必須相鄰，有多少種？",
+     "stemEn": "5 people, A,B adjacent.",
+     "answerZh": "捆綁：4!×2! = 48。",
+     "answerEn": "48.",
+     "marks": [
+      {
+       "content": "捆綁甲乙",
+       "pts": 1
+      },
+      {
+       "content": "4!×2!",
+       "pts": 1
+      },
+      {
+       "content": "48",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏乘 2!。",
+     "lossEn": "Missing ×2!.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "6 人排隊，甲乙不相鄰，有多少種？",
+     "stemEn": "6 people, A,B not adjacent.",
+     "answerZh": "總數 6! - 相鄰 5!×2! = 720-240 = 480。",
+     "answerEn": "6! - 5!×2! = 480.",
+     "marks": [
+      {
+       "content": "總數 6!",
+       "pts": 1
+      },
+      {
+       "content": "相鄰 5!×2!",
+       "pts": 1
+      },
+      {
+       "content": "相減 480",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接算不相鄰排列。",
+     "lossEn": "Counting non-adjacent directly.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -6784,6 +9230,74 @@ const DSE_MATH_GRAPH = {
      "weight": "mid",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "直方圖中一組組距 5、頻率密度 3，求該組頻數。",
+     "stemEn": "Histogram: width 5, freq density 3; frequency.",
+     "answerZh": "頻數 = 密度×組距 = 15。",
+     "answerEn": "Frequency = 15.",
+     "marks": [
+      {
+       "content": "頻數=密度×組距",
+       "pts": 1
+      },
+      {
+       "content": "3×5=15",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把密度當頻數。",
+     "lossEn": "Treating density as frequency.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "箱形圖：最小值 10、下四分位 20、中位數 30、上四分位 40、最大 60，求四分位距。",
+     "stemEn": "Box plot: min10, Q1=20, med30, Q3=40, max60; IQR.",
+     "answerZh": "IQR = 40-20 = 20。",
+     "answerEn": "IQR=20.",
+     "marks": [
+      {
+       "content": "IQR=Q3-Q1",
+       "pts": 1
+      },
+      {
+       "content": "40-20=20",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用中位數減最小值。",
+     "lossEn": "Using median-min.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "累積頻數多邊形中，某點代表「≤某值」的累積頻數。若 50 個數據中 30 個 ≤20，該點縱坐標？",
+     "stemEn": "Cumulative frequency: 30 of 50 ≤20; ordinate?",
+     "answerZh": "縱坐標 = 累積頻數 = 30。",
+     "answerEn": "30.",
+     "marks": [
+      {
+       "content": "累積頻數定義",
+       "pts": 1
+      },
+      {
+       "content": "30",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用相對頻率 30/50。",
+     "lossEn": "Using relative frequency.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -6858,6 +9372,86 @@ const DSE_MATH_GRAPH = {
      "weight": "mid",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "數據 2,4,4,5,7，求平均數、中位數、眾數。",
+     "stemEn": "2,4,4,5,7; mean, median, mode.",
+     "answerZh": "平均 = 22/5 = 4.4；中位數 = 4；眾數 = 4。",
+     "answerEn": "Mean 4.4, median 4, mode 4.",
+     "marks": [
+      {
+       "content": "平均數",
+       "pts": 1
+      },
+      {
+       "content": "中位數排序取中",
+       "pts": 1
+      },
+      {
+       "content": "眾數",
+       "pts": 1
+      }
+     ],
+     "lossZh": "中位數不排序。",
+     "lossEn": "Median without sorting.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "數據 3,5,7,9 加入一個數後平均數為 6，求加入的數。",
+     "stemEn": "3,5,7,9 plus x; mean 6.",
+     "answerZh": "(24+x)/5 = 6 → x = 6。",
+     "answerEn": "x=6.",
+     "marks": [
+      {
+       "content": "總和 24",
+       "pts": 1
+      },
+      {
+       "content": "新總和 30",
+       "pts": 1
+      },
+      {
+       "content": "x=6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "總數算錯。",
+     "lossEn": "Wrong count.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "加權平均：考試佔 60%、作業佔 40%，考試 80 分、作業 90 分，求加權平均。",
+     "stemEn": "Weighted: exam 60%, homework 40%; 80 & 90.",
+     "answerZh": "0.6×80 + 0.4×90 = 48+36 = 84。",
+     "answerEn": "84.",
+     "marks": [
+      {
+       "content": "權重相乘",
+       "pts": 1
+      },
+      {
+       "content": "48+36",
+       "pts": 1
+      },
+      {
+       "content": "84",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接 (80+90)/2。",
+     "lossEn": "Simple average.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -6924,6 +9518,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "mid",
      "source": "estimated"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "數據 2,4,6,8,10，求平均數與標準差。",
+     "stemEn": "2,4,6,8,10; mean and SD.",
+     "answerZh": "平均=6；σ = √[(16+4+0+4+16)/5] = √8 = 2√2。",
+     "answerEn": "Mean 6; σ=2√2.",
+     "marks": [
+      {
+       "content": "平均數",
+       "pts": 1
+      },
+      {
+       "content": "方差公式",
+       "pts": 1
+      },
+      {
+       "content": "σ=2√2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 (x-μ)² 求和錯。",
+     "lossEn": "Wrong squared deviations.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "數據 4,6,8,10 各加 2，平均數和標準差如何變？",
+     "stemEn": "Add 2 to each; mean and SD change?",
+     "answerZh": "平均數 +2；標準差不變。",
+     "answerEn": "Mean +2; SD unchanged.",
+     "marks": [
+      {
+       "content": "平均數同加",
+       "pts": 1
+      },
+      {
+       "content": "標準差不變",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為標準差也 +2。",
+     "lossEn": "Thinking SD also +2.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "一組數據平均 20、SD 4，每個數乘 3 再加 1，求新平均與 SD。",
+     "stemEn": "Each ×3 then +1; new mean and SD.",
+     "answerZh": "新平均 = 3×20+1 = 61；新 SD = 3×4 = 12。",
+     "answerEn": "Mean 61; SD 12.",
+     "marks": [
+      {
+       "content": "平均受線性變換",
+       "pts": 1
+      },
+      {
+       "content": "SD 只受乘影響",
+       "pts": 1
+      },
+      {
+       "content": "61、12",
+       "pts": 1
+      }
+     ],
+     "lossZh": "SD 也被 +1 影響。",
+     "lossEn": "SD affected by +1.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -6999,6 +9669,78 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "化簡 sin²θ + cos²θ。",
+     "stemEn": "Simplify sin²θ+cos²θ.",
+     "answerZh": "= 1。",
+     "answerEn": "1.",
+     "marks": [
+      {
+       "content": "畢氏恆等式",
+       "pts": 1
+      },
+      {
+       "content": "1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "寫成 0。",
+     "lossEn": "Writing 0.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "化簡 sin2θ。",
+     "stemEn": "Simplify sin 2θ.",
+     "answerZh": "= 2 sinθ cosθ。",
+     "answerEn": "2 sinθ cosθ.",
+     "marks": [
+      {
+       "content": "二倍角公式",
+       "pts": 1
+      },
+      {
+       "content": "2 sinθ cosθ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "寫成 sinθ cosθ。",
+     "lossEn": "Missing 2.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "證明 (1 - cos2θ)/sin2θ = tanθ。",
+     "stemEn": "Prove (1-cos2θ)/sin2θ = tanθ.",
+     "answerZh": "1-cos2θ = 2sin²θ；sin2θ=2sinθcosθ → 比值 = sinθ/cosθ = tanθ。",
+     "answerEn": "2sin²θ/2sinθcosθ = tanθ.",
+     "marks": [
+      {
+       "content": "二倍角代入",
+       "pts": 1
+      },
+      {
+       "content": "約分",
+       "pts": 1
+      },
+      {
+       "content": "=tanθ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "二倍角公式記錯。",
+     "lossEn": "Wrong double-angle formula.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -7065,6 +9807,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "矩陣 A=[1 2;3 4]，求 A 的行列式。",
+     "stemEn": "det of [1 2;3 4].",
+     "answerZh": "det = 1×4 - 2×3 = -2。",
+     "answerEn": "-2.",
+     "marks": [
+      {
+       "content": "行列式公式 ad-bc",
+       "pts": 1
+      },
+      {
+       "content": "4-6=-2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "次序反（bc-ad）。",
+     "lossEn": "Reversed order.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 A=[2 1;5 3] 的逆矩陣。",
+     "stemEn": "Inverse of [2 1;5 3].",
+     "answerZh": "det=6-5=1；A⁻¹ = [3 -1;-5 2]。",
+     "answerEn": "A⁻¹=[3 -1;-5 2].",
+     "marks": [
+      {
+       "content": "det=1",
+       "pts": 1
+      },
+      {
+       "content": "交換主對角/變號副對角",
+       "pts": 1
+      },
+      {
+       "content": "除以 det",
+       "pts": 1
+      }
+     ],
+     "lossZh": "逆矩陣公式用錯。",
+     "lossEn": "Wrong inverse formula.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "用矩陣解方程組：2x+y=5, 5x+3y=12。",
+     "stemEn": "Solve via matrices: 2x+y=5, 5x+3y=12.",
+     "answerZh": "A=[2 1;5 3], det=1 → [x;y]=A⁻¹[5;12]=[3·5-1·12; -5·5+2·12]=[3;-1]。",
+     "answerEn": "x=3, y=-1.",
+     "marks": [
+      {
+       "content": "寫成矩陣方程",
+       "pts": 1
+      },
+      {
+       "content": "A⁻¹ 相乘",
+       "pts": 1
+      },
+      {
+       "content": "(3,-1)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "逆矩陣乘反邊。",
+     "lossEn": "Multiplying inverse on wrong side.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -7141,6 +9959,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 y=x² 在 x=3 處的切線斜率。",
+     "stemEn": "Slope of tangent to y=x² at x=3.",
+     "answerZh": "y'=2x → 斜率=6。",
+     "answerEn": "Slope 6.",
+     "marks": [
+      {
+       "content": "求導",
+       "pts": 1
+      },
+      {
+       "content": "代 x=3",
+       "pts": 1
+      },
+      {
+       "content": "6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘代 x。",
+     "lossEn": "Not substituting x.",
+     "years": [
+      "2016"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 y=x³-6x 的極值點。",
+     "stemEn": "Extrema of y=x³-6x.",
+     "answerZh": "y'=3x²-6=0 → x=±√2；x=-√2 極大、x=√2 極小。",
+     "answerEn": "Max at -√2, min at √2.",
+     "marks": [
+      {
+       "content": "導數=0",
+       "pts": 1
+      },
+      {
+       "content": "解 x=±√2",
+       "pts": 1
+      },
+      {
+       "content": "判極大極小",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏判極大/極小。",
+     "lossEn": "Not classifying extrema.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "用長方體水箱（底為正方形、無蓋）體積 32，求最小表面積的尺寸。",
+     "stemEn": "Open-top square-base box, V=32; min surface area.",
+     "answerZh": "設底邊 x、高 h=32/x²；S=x²+4xh=x²+128/x；S'=2x-128/x²=0 → x³=64 → x=4, h=2。",
+     "answerEn": "x=4, h=2.",
+     "marks": [
+      {
+       "content": "表面積函數",
+       "pts": 1
+      },
+      {
+       "content": "求導=0",
+       "pts": 1
+      },
+      {
+       "content": "x=4,h=2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏無蓋（S=x²+4xh 非 +2x²）。",
+     "lossEn": "Including top (no lid).",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7207,6 +10105,82 @@ const DSE_MATH_GRAPH = {
      "q": "LQ",
      "weight": "high",
      "source": "confirmed"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 ∫(3x²+2x)dx。",
+     "stemEn": "Integrate 3x²+2x.",
+     "answerZh": "x³ + x² + C。",
+     "answerEn": "x³+x²+C.",
+     "marks": [
+      {
+       "content": "逐項積分",
+       "pts": 1
+      },
+      {
+       "content": "+C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 +C。",
+     "lossEn": "Missing +C.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 ∫x·sin(x²)dx。",
+     "stemEn": "Integrate x·sin(x²).",
+     "answerZh": "設 u=x²，du=2x dx → ½∫sin u du = -½cos(x²) + C。",
+     "answerEn": "-½cos(x²)+C.",
+     "marks": [
+      {
+       "content": "換元 u=x²",
+       "pts": 1
+      },
+      {
+       "content": "du=2x dx",
+       "pts": 1
+      },
+      {
+       "content": "-½cos(x²)+C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "換元後係數錯。",
+     "lossEn": "Wrong substitution factor.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 ∫₀¹ x e^(x²) dx。",
+     "stemEn": "Definite integral of x e^(x²) from 0 to 1.",
+     "answerZh": "u=x² → ½∫₀¹ e^u du = ½(e-1)。",
+     "answerEn": "½(e-1).",
+     "marks": [
+      {
+       "content": "換元",
+       "pts": 1
+      },
+      {
+       "content": "換上下限",
+       "pts": 1
+      },
+      {
+       "content": "½(e-1)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘換上下限。",
+     "lossEn": "Not updating limits.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -7282,6 +10256,86 @@ const DSE_MATH_GRAPH = {
      "weight": "high",
      "source": "confirmed"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 (1+x)⁶ 展開中 x² 的係數。",
+     "stemEn": "Coefficient of x² in (1+x)⁶.",
+     "answerZh": "C(6,2) = 15。",
+     "answerEn": "15.",
+     "marks": [
+      {
+       "content": "通項 C(6,k)xᵏ",
+       "pts": 1
+      },
+      {
+       "content": "k=2",
+       "pts": 1
+      },
+      {
+       "content": "15",
+       "pts": 1
+      }
+     ],
+     "lossZh": "C(6,2) 算錯。",
+     "lossEn": "Wrong C.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 (2x-1)⁵ 展開中 x³ 的係數。",
+     "stemEn": "Coefficient of x³ in (2x-1)⁵.",
+     "answerZh": "k=3：C(5,3)(2x)³(-1)² = 10×8 = 80。",
+     "answerEn": "80.",
+     "marks": [
+      {
+       "content": "通項含 (2x)ᵏ(-1)⁵⁻ᵏ",
+       "pts": 1
+      },
+      {
+       "content": "k=3",
+       "pts": 1
+      },
+      {
+       "content": "10×8=80",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 (2)³=8。",
+     "lossEn": "Missing 2³.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 (1+x)⁸(1-x)⁶ 展開中 x 的係數。",
+     "stemEn": "Coefficient of x in (1+x)⁸(1-x)⁶.",
+     "answerZh": "x 項來自 C(8,1)x·1 + 1·C(6,1)(-x) = 8 - 6 = 2。",
+     "answerEn": "8-6=2.",
+     "marks": [
+      {
+       "content": "兩項相乘的 x 來源",
+       "pts": 1
+      },
+      {
+       "content": "8-6",
+       "pts": 1
+      },
+      {
+       "content": "2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏一項。",
+     "lossEn": "Missing one term.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7313,6 +10367,82 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "圓心 (2,3) 半徑 4，判斷點 (2,7) 與圓的位置。",
+     "stemEn": "Circle centre (2,3), r=4; point (2,7) inside/on/outside?",
+     "answerZh": "距離 = |7-3| = 4 = 半徑 → 在圓上。",
+     "answerEn": "Distance 4 = r → on circle.",
+     "marks": [
+      {
+       "content": "點到圓心距離",
+       "pts": 1
+      },
+      {
+       "content": "等於半徑 → 圓上",
+       "pts": 1
+      }
+     ],
+     "lossZh": "距離算錯。",
+     "lossEn": "Wrong distance.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "判斷直線 3x+4y-15=0 與圓 x²+y²=9 的位置。",
+     "stemEn": "Line 3x+4y-15=0 vs circle x²+y²=9.",
+     "answerZh": "圓心到直線距離 = |0+0-15|/5 = 3 = 半徑 → 相切。",
+     "answerEn": "Distance 3 = r → tangent.",
+     "marks": [
+      {
+       "content": "點到直線距離",
+       "pts": 1
+      },
+      {
+       "content": "=3=r",
+       "pts": 1
+      },
+      {
+       "content": "相切",
+       "pts": 1
+      }
+     ],
+     "lossZh": "距離公式算錯或比較方向錯。",
+     "lossEn": "Wrong distance or comparison.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "直線 y=x+k 與圓 x²+y²=8 相切，求 k。",
+     "stemEn": "Line y=x+k tangent to x²+y²=8; find k.",
+     "answerZh": "圓心 (0,0) 到直線 x-y+k=0 距離 = |k|/√2 = √8 → |k| = 4 → k=±4。",
+     "answerEn": "k=±4.",
+     "marks": [
+      {
+       "content": "距離=|k|/√2",
+       "pts": 1
+      },
+      {
+       "content": "=半徑 2√2",
+       "pts": 1
+      },
+      {
+       "content": "k=±4",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 ± 或半徑算錯。",
+     "lossEn": "Missing ± or wrong r.",
+     "years": [
+      "2020"
+     ]
     }
    ]
   },
@@ -7347,6 +10477,82 @@ const DSE_MATH_GRAPH = {
      "paper": "P1",
      "question": "Section B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "圓內接四邊形 ABCD 中 ∠A=80°，求 ∠C。",
+     "stemEn": "Cyclic ABCD, ∠A=80°; ∠C.",
+     "answerZh": "∠C = 180°-80° = 100°。",
+     "answerEn": "100°.",
+     "marks": [
+      {
+       "content": "對角互補",
+       "pts": 1
+      },
+      {
+       "content": "100°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "記成相等。",
+     "lossEn": "Thinking equal.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "圓內接四邊形中 ∠A:∠B:∠C = 2:3:4，求 ∠D。",
+     "stemEn": "Cyclic ABCD, A:B:C=2:3:4; find ∠D.",
+     "answerZh": "∠A+∠C=180 → 2k+4k=180 → k=30 → ∠A=60, ∠B=90, ∠C=120；∠D=180-∠B=90。",
+     "answerEn": "∠D=90°.",
+     "marks": [
+      {
+       "content": "∠A+∠C=180 求 k",
+       "pts": 1
+      },
+      {
+       "content": "∠B=90",
+       "pts": 1
+      },
+      {
+       "content": "∠D=90",
+       "pts": 1
+      }
+     ],
+     "lossZh": "比例設錯或漏對角互補。",
+     "lossEn": "Wrong ratio setup.",
+     "years": [
+      "2022"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "圓內接四邊形 ABCD，對角線 AC 平分 ∠DAB，證明 AB·CD = AD·BC（托勒密特例）。",
+     "stemEn": "Cyclic ABCD, AC bisects ∠DAB; prove AB·CD=AD·BC.",
+     "answerZh": "由角平分 + 同弧 → ∠BCA=∠DCA... 用正弦定理在 △ABC 和 △ADC 中，共享 AC，得 AB/BC=AD/CD → AB·CD=AD·BC。",
+     "answerEn": "Sine rule in the two triangles sharing AC.",
+     "marks": [
+      {
+       "content": "角平分得等角",
+       "pts": 1
+      },
+      {
+       "content": "兩三角形用正弦定理",
+       "pts": 1
+      },
+      {
+       "content": "交叉相乘得證",
+       "pts": 1
+      }
+     ],
+     "lossZh": "證明缺關鍵角相等。",
+     "lossEn": "Missing key angle equality.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7378,6 +10584,86 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "數列 Sₙ = n²+2n，求 aₙ。",
+     "stemEn": "Given Sₙ=n²+2n; find aₙ.",
+     "answerZh": "aₙ = Sₙ-Sₙ₋₁ = (n²+2n)-[(n-1)²+2(n-1)] = 2n+1（n≥2；a₁=S₁=3 也符）。",
+     "answerEn": "aₙ=2n+1.",
+     "marks": [
+      {
+       "content": "aₙ=Sₙ-Sₙ₋₁",
+       "pts": 1
+      },
+      {
+       "content": "化簡 2n+1",
+       "pts": 1
+      },
+      {
+       "content": "驗 a₁",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘 aₙ=Sₙ-Sₙ₋₁ 或漏驗首項。",
+     "lossEn": "Forgetting Sₙ-Sₙ₋₁ or checking a₁.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "數列 a₁=2，aₙ = 2aₙ₋₁ + 1（n≥2），求 a₃。",
+     "stemEn": "Recursive aₙ=2aₙ₋₁+1, a₁=2; a₃.",
+     "answerZh": "a₂=5, a₃=11。",
+     "answerEn": "a₃=11.",
+     "marks": [
+      {
+       "content": "代 n=2",
+       "pts": 1
+      },
+      {
+       "content": "代 n=3",
+       "pts": 1
+      },
+      {
+       "content": "11",
+       "pts": 1
+      }
+     ],
+     "lossZh": "遞推代錯。",
+     "lossEn": "Wrong recursion.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "等差數列 aₙ，S₁₀=100, S₂₀=400，求 a₁ 與公差。",
+     "stemEn": "AP, S₁₀=100, S₂₀=400; a₁ and d.",
+     "answerZh": "Sₙ=na₁+n(n-1)d/2：10a₁+45d=100, 20a₁+190d=400 → 解 a₁=1, d=2。",
+     "answerEn": "a₁=1, d=2.",
+     "marks": [
+      {
+       "content": "列兩方程",
+       "pts": 1
+      },
+      {
+       "content": "解聯立",
+       "pts": 1
+      },
+      {
+       "content": "a₁=1,d=2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "求和公式代入錯。",
+     "lossEn": "Wrong sum formula.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -7411,6 +10697,86 @@ const DSE_MATH_GRAPH = {
      "paper": "P1",
      "question": "Section B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "等比數列 a₁=2, r=3，求 a₄ 與 S₄。",
+     "stemEn": "GP a₁=2, r=3; a₄ and S₄.",
+     "answerZh": "a₄=2×27=54；S₄=2(3⁴-1)/(3-1)=80。",
+     "answerEn": "a₄=54, S₄=80.",
+     "marks": [
+      {
+       "content": "通項",
+       "pts": 1
+      },
+      {
+       "content": "求和公式",
+       "pts": 1
+      },
+      {
+       "content": "54、80",
+       "pts": 1
+      }
+     ],
+     "lossZh": "求和公式 a(rⁿ-1)/(r-1) 代入錯。",
+     "lossEn": "Wrong sum substitution.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "等比數列 a₃=12, a₆=96，求首項與公比。",
+     "stemEn": "GP a₃=12, a₆=96; a₁ and r.",
+     "answerZh": "r³ = 96/12 = 8 → r=2；a₁×4=12 → a₁=3。",
+     "answerEn": "a₁=3, r=2.",
+     "marks": [
+      {
+       "content": "r³=a₆/a₃",
+       "pts": 1
+      },
+      {
+       "content": "r=2",
+       "pts": 1
+      },
+      {
+       "content": "a₁=3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "r 的指數錯。",
+     "lossEn": "Wrong exponent.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "等比數列 a₁=1, r=1/2，求無窮級數之和。",
+     "stemEn": "Infinite GP a₁=1, r=½; sum.",
+     "answerZh": "S∞ = a₁/(1-r) = 1/(1-½) = 2。",
+     "answerEn": "S∞=2.",
+     "marks": [
+      {
+       "content": "|r|<1 用 S∞ 公式",
+       "pts": 1
+      },
+      {
+       "content": "1/(1-½)",
+       "pts": 1
+      },
+      {
+       "content": "2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘了 |r|<1 條件或用錯公式。",
+     "lossEn": "Wrong condition or formula.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -7442,6 +10808,82 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section A2/B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "P(A)=0.6, P(B)=0.5，A、B 獨立，求 P(A∩B)。",
+     "stemEn": "Independent A,B; P(A∩B).",
+     "answerZh": "P(A∩B) = 0.6×0.5 = 0.3。",
+     "answerEn": "0.3.",
+     "marks": [
+      {
+       "content": "獨立乘法",
+       "pts": 1
+      },
+      {
+       "content": "0.3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "當互斥相加。",
+     "lossEn": "Adding as mutually exclusive.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "袋 3 紅 5 藍，先抽不放回，求第二次抽紅的概率。",
+     "stemEn": "3R 5B, without replacement; P(2nd is R).",
+     "answerZh": "= P(RR)+P(BR) = 3/8×2/7 + 5/8×3/7 = 6/56+15/56 = 21/56 = 3/8。",
+     "answerEn": "3/8.",
+     "marks": [
+      {
+       "content": "分兩路徑",
+       "pts": 1
+      },
+      {
+       "content": "各算條件概率",
+       "pts": 1
+      },
+      {
+       "content": "3/8",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用有放回。",
+     "lossEn": "With replacement.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "P(A)=0.5, P(B)=0.6, P(A∪B)=0.8，求 P(A|B)。",
+     "stemEn": "Given P(A∪B)=0.8; find P(A|B).",
+     "answerZh": "P(A∩B)=P(A)+P(B)-P(A∪B)=0.3；P(A|B)=0.3/0.6=0.5。",
+     "answerEn": "0.5.",
+     "marks": [
+      {
+       "content": "容斥求交",
+       "pts": 1
+      },
+      {
+       "content": "條件概率公式",
+       "pts": 1
+      },
+      {
+       "content": "0.5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏用容斥公式。",
+     "lossEn": "Not using inclusion-exclusion.",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -7476,6 +10918,86 @@ const DSE_MATH_GRAPH = {
      "paper": "P1",
      "question": "Section B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "擲硬幣 3 次，求恰好 2 次正面的概率。",
+     "stemEn": "3 coin tosses; P(exactly 2 heads).",
+     "answerZh": "C(3,2)(1/2)³ = 3/8。",
+     "answerEn": "3/8.",
+     "marks": [
+      {
+       "content": "二項概率",
+       "pts": 1
+      },
+      {
+       "content": "C(3,2)=3",
+       "pts": 1
+      },
+      {
+       "content": "3/8",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 C 或係數。",
+     "lossEn": "Missing C or factor.",
+     "years": [
+      "2017"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "5 個紅球 3 個藍球抽 3 個，求至少 2 紅的概率。",
+     "stemEn": "5R 3B, draw 3; P(at least 2 R).",
+     "answerZh": "[C(5,2)C(3,1)+C(5,3)]/C(8,3) = (30+10)/56 = 40/56 = 5/7。",
+     "answerEn": "5/7.",
+     "marks": [
+      {
+       "content": "分類 2紅或3紅",
+       "pts": 1
+      },
+      {
+       "content": "分子 40",
+       "pts": 1
+      },
+      {
+       "content": "分母 56 → 5/7",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏其中一類。",
+     "lossEn": "Missing one case.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "獨立試驗成功率 1/4，求第 5 次首次成功的概率。",
+     "stemEn": "Independent success p=¼; P(first success on 5th).",
+     "answerZh": "(3/4)⁴(1/4)。",
+     "answerEn": "(¾)⁴(¼).",
+     "marks": [
+      {
+       "content": "前 4 次失敗",
+       "pts": 1
+      },
+      {
+       "content": "第 5 次成功",
+       "pts": 1
+      },
+      {
+       "content": "(3/4)⁴(1/4)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏前 4 次失敗因數。",
+     "lossEn": "Missing failure factor.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -7506,6 +11028,86 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section A2/B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "A(1,2), B(3,6), C(4,7)，求 △ABC 面積。",
+     "stemEn": "Area of △ABC with A(1,2),B(3,6),C(4,7).",
+     "answerZh": "½|1(6-7)+3(7-2)+4(2-6)| = ½| -1+15-16 | = ½×2 = 1。",
+     "answerEn": "Area 1.",
+     "marks": [
+      {
+       "content": "行列式面積公式",
+       "pts": 1
+      },
+      {
+       "content": "代入",
+       "pts": 1
+      },
+      {
+       "content": "1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "公式展開錯。",
+     "lossEn": "Wrong expansion.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "判斷 A(1,1), B(2,3), C(3,5) 是否共線。",
+     "stemEn": "Collinear? A(1,1),B(2,3),C(3,5).",
+     "answerZh": "斜率 AB=2，BC=2 → 共線。",
+     "answerEn": "Slopes equal → collinear.",
+     "marks": [
+      {
+       "content": "算 AB 斜率",
+       "pts": 1
+      },
+      {
+       "content": "算 BC 斜率",
+       "pts": 1
+      },
+      {
+       "content": "相等 → 共線",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只算一段。",
+     "lossEn": "Only one slope.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "A(1,2), B(5,6)，求在 x 軸上使 △ABC 面積為 6 的 C 點。",
+     "stemEn": "C on x-axis, area ABC=6.",
+     "answerZh": "設 C(c,0)：½|1(6-0)+5(0-2)+c(2-6)|=½|6-10-4c|=|4c+4|/2=6 → |4c+4|=12 → c=2 或 -4。",
+     "answerEn": "C=(2,0) or (-4,0).",
+     "marks": [
+      {
+       "content": "設 C(c,0)",
+       "pts": 1
+      },
+      {
+       "content": "面積公式",
+       "pts": 1
+      },
+      {
+       "content": "解 |4c+4|=12",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘絕對值（兩解）。",
+     "lossEn": "Missing absolute value (two answers).",
+     "years": [
+      "2023"
+     ]
     }
    ]
   },
@@ -7541,6 +11143,82 @@ const DSE_MATH_GRAPH = {
      "paper": "P1",
      "question": "Section B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求圓 x²+y²=25 與直線 x=3 的交點。",
+     "stemEn": "Circle x²+y²=25 and x=3.",
+     "answerZh": "9+y²=25 → y=±4；交點 (3,4),(3,-4)。",
+     "answerEn": "(3,±4).",
+     "marks": [
+      {
+       "content": "代入",
+       "pts": 1
+      },
+      {
+       "content": "y=±4",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏負根。",
+     "lossEn": "Missing negative root.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "直線 y=x+1 與圓 x²+y²=13 的交點間距離（弦長）。",
+     "stemEn": "Chord of y=x+1 in x²+y²=13.",
+     "answerZh": "代入：x²+(x+1)²=13 → 2x²+2x-12=0 → x²+x-6=0 → x=2,-3；點 (2,3),(-3,-2)；弦長=√(25+25)=5√2。",
+     "answerEn": "Chord 5√2.",
+     "marks": [
+      {
+       "content": "聯立求交點",
+       "pts": 1
+      },
+      {
+       "content": "距離公式",
+       "pts": 1
+      },
+      {
+       "content": "5√2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只求交點不求弦長。",
+     "lossEn": "Only intersections, not chord.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "圓心 (1,2) 半徑 3 的圓與直線 4x-3y+12=0，求截弦長。",
+     "stemEn": "Circle centre (1,2), r=3; chord by 4x-3y+12=0.",
+     "answerZh": "圓心距 d=|4-6+12|/5=10/5=2；半弦長=√(9-4)=√5；弦長=2√5。",
+     "answerEn": "2√5.",
+     "marks": [
+      {
+       "content": "距離公式",
+       "pts": 1
+      },
+      {
+       "content": "d=2",
+       "pts": 1
+      },
+      {
+       "content": "弦長 2√5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘半弦-半徑-弦心距關係。",
+     "lossEn": "Missing right-triangle relation.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7573,6 +11251,82 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section A2/B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "方程 x²-5x+6=0 兩根為 α、β，求 α+β 與 αβ。",
+     "stemEn": "Roots α,β of x²-5x+6; sum and product.",
+     "answerZh": "α+β=5；αβ=6。",
+     "answerEn": "Sum 5, product 6.",
+     "marks": [
+      {
+       "content": "韋達定理",
+       "pts": 1
+      },
+      {
+       "content": "5、6",
+       "pts": 1
+      }
+     ],
+     "lossZh": "符號錯（-b/a 是 5 不是 -5）。",
+     "lossEn": "Wrong sign.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "方程 x²+3x-2=0 兩根 α、β，求 α²+β²。",
+     "stemEn": "α,β of x²+3x-2; find α²+β².",
+     "answerZh": "α+β=-3, αβ=-2 → α²+β²=(α+β)²-2αβ = 9+4 = 13。",
+     "answerEn": "13.",
+     "marks": [
+      {
+       "content": "α+β、αβ",
+       "pts": 1
+      },
+      {
+       "content": "(α+β)²-2αβ",
+       "pts": 1
+      },
+      {
+       "content": "13",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘了 2αβ 的符號。",
+     "lossEn": "Wrong 2αβ sign.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "方程 x²-2x-4=0 兩根 α、β，求以 α/β、β/α 為根的方程。",
+     "stemEn": "New equation with roots α/β, β/α.",
+     "answerZh": "α+β=2, αβ=-4；新和=(α²+β²)/αβ=[4+8]/(-4)=-3；新積=1；方程 x²+3x+1=0。",
+     "answerEn": "x²+3x+1=0.",
+     "marks": [
+      {
+       "content": "新根和",
+       "pts": 1
+      },
+      {
+       "content": "新根積",
+       "pts": 1
+      },
+      {
+       "content": "x²+3x+1=0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "新根和化簡錯。",
+     "lossEn": "Wrong new sum.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -7607,6 +11361,82 @@ const DSE_MATH_GRAPH = {
      "paper": "P1",
      "question": "Section A2/B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "f(x)=x³-4x，求 f(x) 除以 x-1 的餘式。",
+     "stemEn": "Remainder of x³-4x ÷ (x-1).",
+     "answerZh": "f(1)=1-4=-3。",
+     "answerEn": "-3.",
+     "marks": [
+      {
+       "content": "餘式定理 f(1)",
+       "pts": 1
+      },
+      {
+       "content": "-3",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用長除法。",
+     "lossEn": "Using long division.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "f(x)=x³+ax²-3x+2，若 f(x) 有因式 x-1，求 a。",
+     "stemEn": "x³+ax²-3x+2 has factor x-1; find a.",
+     "answerZh": "f(1)=1+a-3+2=0 → a=0。",
+     "answerEn": "a=0.",
+     "marks": [
+      {
+       "content": "因式定理 f(1)=0",
+       "pts": 1
+      },
+      {
+       "content": "1+a-3+2=0",
+       "pts": 1
+      },
+      {
+       "content": "a=0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "餘式定理用成 f(1)=1。",
+     "lossEn": "Using f(1)=1.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "多項式 f(x) 除以 x-1 餘 3、除以 x-2 餘 5，求除以 (x-1)(x-2) 的餘式。",
+     "stemEn": "f(1)=3, f(2)=5; remainder mod (x-1)(x-2).",
+     "answerZh": "設餘式 ax+b：a+b=3, 2a+b=5 → a=2, b=1 → 餘式 2x+1。",
+     "answerEn": "2x+1.",
+     "marks": [
+      {
+       "content": "設餘式一次式",
+       "pts": 1
+      },
+      {
+       "content": "代 f(1)、f(2)",
+       "pts": 1
+      },
+      {
+       "content": "a=2,b=1",
+       "pts": 1
+      }
+     ],
+     "lossZh": "餘式設成常數。",
+     "lossEn": "Remainder as constant.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7638,6 +11468,82 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P1",
      "question": "Section A2"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "方程 x³-x=0 的根。",
+     "stemEn": "Roots of x³-x=0.",
+     "answerZh": "x(x²-1)=x(x-1)(x+1)=0 → x=-1,0,1。",
+     "answerEn": "x=-1,0,1.",
+     "marks": [
+      {
+       "content": "因式分解",
+       "pts": 1
+      },
+      {
+       "content": "三根",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏根。",
+     "lossEn": "Missing a root.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "f(x)=x³-3x+2 有多少個實根？",
+     "stemEn": "Real roots of x³-3x+2.",
+     "answerZh": "因式分解：(x-1)²(x+2)=0 → x=1（二重）、-2 → 2 個相異實根。",
+     "answerEn": "x=1 (double), -2.",
+     "marks": [
+      {
+       "content": "因式分解",
+       "pts": 1
+      },
+      {
+       "content": "判重根",
+       "pts": 1
+      },
+      {
+       "content": "2 個相異",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把重根當 2 個相異根。",
+     "lossEn": "Counting double root twice.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "利用圖像判斷 k 的範圍使 x³-3x = k 有三個不同實根。",
+     "stemEn": "Range of k for x³-3x=k to have 3 real roots.",
+     "answerZh": "f(x)=x³-3x 的極值：f'=3x²-3=0 → x=±1，f(1)=-2, f(-1)=2；水平線 y=k 與圖像交 3 點 → -2<k<2。",
+     "answerEn": "-2<k<2.",
+     "marks": [
+      {
+       "content": "求極值點",
+       "pts": 1
+      },
+      {
+       "content": "極值 -2、2",
+       "pts": 1
+      },
+      {
+       "content": "-2<k<2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只想到一個極值。",
+     "lossEn": "Only one extremum.",
+     "years": [
+      "2022"
+     ]
     }
    ]
   },
@@ -7671,6 +11577,86 @@ const DSE_MATH_GRAPH = {
      "paper": "P3",
      "question": "Section A/B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "隱函數 x²+y²=25，求 dy/dx。",
+     "stemEn": "Implicit x²+y²=25; dy/dx.",
+     "answerZh": "2x+2y·y'=0 → y' = -x/y。",
+     "answerEn": "y'=-x/y.",
+     "marks": [
+      {
+       "content": "兩邊對 x 求導",
+       "pts": 1
+      },
+      {
+       "content": "y² 用鏈式",
+       "pts": 1
+      },
+      {
+       "content": "-x/y",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 y² 的 y'。",
+     "lossEn": "Missing y' for y².",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "x³+y³=6xy，求 dy/dx（隱函數）。",
+     "stemEn": "Implicit x³+y³=6xy; dy/dx.",
+     "answerZh": "3x²+3y²y'=6y+6xy' → y'(3y²-6x)=6y-3x² → y'=(6y-3x²)/(3y²-6x)。",
+     "answerEn": "y'=(6y-3x²)/(3y²-6x).",
+     "marks": [
+      {
+       "content": "兩邊求導",
+       "pts": 1
+      },
+      {
+       "content": "6xy 用乘積法則",
+       "pts": 1
+      },
+      {
+       "content": "解 y'",
+       "pts": 1
+      }
+     ],
+     "lossZh": "6xy 的導數錯。",
+     "lossEn": "Wrong derivative of 6xy.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "x²+2y²=9 在點 (1,2) 處的切線方程。",
+     "stemEn": "Tangent to x²+2y²=9 at (1,2).",
+     "answerZh": "2x+4y·y'=0 → y'=-x/(2y)；在 (1,2)：斜率=-1/4；切線 y-2=(-1/4)(x-1)。",
+     "answerEn": "y-2 = -¼(x-1).",
+     "marks": [
+      {
+       "content": "隱函數求導",
+       "pts": 1
+      },
+      {
+       "content": "代點求斜率",
+       "pts": 1
+      },
+      {
+       "content": "點斜式",
+       "pts": 1
+      }
+     ],
+     "lossZh": "代點時 x、y 搞混。",
+     "lossEn": "Swapping x,y at point.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7702,6 +11688,86 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P3",
      "question": "Section A/B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "求 ∫x·eˣ dx。",
+     "stemEn": "Integrate x eˣ.",
+     "answerZh": "分部：x eˣ - ∫eˣ dx = x eˣ - eˣ + C = eˣ(x-1)+C。",
+     "answerEn": "eˣ(x-1)+C.",
+     "marks": [
+      {
+       "content": "選 u=x, dv=eˣdx",
+       "pts": 1
+      },
+      {
+       "content": "分部公式",
+       "pts": 1
+      },
+      {
+       "content": "eˣ(x-1)+C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分部次序選錯。",
+     "lossEn": "Wrong u/dv choice.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 ∫x·sin x dx。",
+     "stemEn": "Integrate x sin x.",
+     "answerZh": "u=x, dv=sin x dx → -x cos x + ∫cos x dx = -x cos x + sin x + C。",
+     "answerEn": "-x cos x + sin x + C.",
+     "marks": [
+      {
+       "content": "分部",
+       "pts": 1
+      },
+      {
+       "content": "-x cos x",
+       "pts": 1
+      },
+      {
+       "content": "+ sin x + C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "符號（∫sinx 的負號）。",
+     "lossEn": "Sign error.",
+     "years": [
+      "2022"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求 ∫₀¹ x e⁻ˣ dx。",
+     "stemEn": "Definite integral x e⁻ˣ from 0 to 1.",
+     "answerZh": "∫x e⁻ˣdx = -x e⁻ˣ - e⁻ˣ = -(x+1)e⁻ˣ；0→1：[-2/e] - [-1] = 1 - 2/e。",
+     "answerEn": "1 - 2/e.",
+     "marks": [
+      {
+       "content": "分部（含負號）",
+       "pts": 1
+      },
+      {
+       "content": "代入上下限",
+       "pts": 1
+      },
+      {
+       "content": "1-2/e",
+       "pts": 1
+      }
+     ],
+     "lossZh": "積分或代入上下限錯。",
+     "lossEn": "Wrong integral or limits.",
+     "years": [
+      "2021"
+     ]
     }
    ]
   },
@@ -7735,6 +11801,74 @@ const DSE_MATH_GRAPH = {
      "paper": "P3",
      "question": "Section A/B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "矩陣 [cosθ -sinθ; sinθ cosθ] 的幾何意義？",
+     "stemEn": "Geometric meaning of rotation matrix.",
+     "answerZh": "繞原點逆時針旋轉 θ。",
+     "answerEn": "Rotation by θ anticlockwise.",
+     "marks": [
+      {
+       "content": "旋轉矩陣",
+       "pts": 1
+      },
+      {
+       "content": "逆時針 θ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "方向說反。",
+     "lossEn": "Wrong direction.",
+     "years": [
+      "2018"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "點 (1,0) 經 [0 -1;1 0] 變換後的位置。",
+     "stemEn": "Image of (1,0) under [0 -1;1 0].",
+     "answerZh": "矩陣×向量 = [0·1-1·0; 1·1+0·0] = (0,1)。",
+     "answerEn": "(0,1).",
+     "marks": [
+      {
+       "content": "矩陣乘向量",
+       "pts": 1
+      },
+      {
+       "content": "(0,1)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "乘錯方向（向量×矩陣）。",
+     "lossEn": "Multiplying wrong order.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "求反射於直線 y=x 的變換矩陣。",
+     "stemEn": "Reflection matrix across y=x.",
+     "answerZh": "[0 1;1 0]。",
+     "answerEn": "[0 1;1 0].",
+     "marks": [
+      {
+       "content": "反射特性 (x,y)→(y,x)",
+       "pts": 1
+      },
+      {
+       "content": "矩陣 [0 1;1 0]",
+       "pts": 1
+      }
+     ],
+     "lossZh": "反射矩陣記錯。",
+     "lossEn": "Wrong reflection matrix.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -7767,6 +11901,82 @@ const DSE_MATH_GRAPH = {
      "paper": "P3",
      "question": "Section B"
     }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "a=(1,2), b=(3,4)，求 a·b 和 a·a。",
+     "stemEn": "Dot products.",
+     "answerZh": "a·b = 3+8 = 11；a·a = 1+4 = 5。",
+     "answerEn": "11, 5.",
+     "marks": [
+      {
+       "content": "點積公式",
+       "pts": 1
+      },
+      {
+       "content": "11、5",
+       "pts": 1
+      }
+     ],
+     "lossZh": "點積算錯。",
+     "lossEn": "Wrong dot.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "a=(2,1), b=(-1,2)，求 cosθ（夾角餘弦）。",
+     "stemEn": "cos of angle between a,b.",
+     "answerZh": "a·b = -2+2 = 0 → cosθ = 0 → θ=90°。",
+     "answerEn": "cosθ=0.",
+     "marks": [
+      {
+       "content": "a·b",
+       "pts": 1
+      },
+      {
+       "content": "|a||b|=5·√5",
+       "pts": 1
+      },
+      {
+       "content": "cosθ=0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分母漏模長。",
+     "lossEn": "Missing magnitudes.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "證明 a·b = |a||b|cosθ 中，若 a⊥b 則 a·b=0（向量證明）。",
+     "stemEn": "Show a⊥b → a·b=0.",
+     "answerZh": "由勾股：|a+b|²=|a|²+|b|² 當垂直 → |a|²+2a·b+|b|²=|a|²+|b|² → a·b=0。",
+     "answerEn": "Pythagoras expansion gives a·b=0.",
+     "marks": [
+      {
+       "content": "垂直 ⇔ 勾股",
+       "pts": 1
+      },
+      {
+       "content": "展開 |a+b|²",
+       "pts": 1
+      },
+      {
+       "content": "a·b=0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "展開漏 2a·b 交叉項。",
+     "lossEn": "Missing 2a·b cross term.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -7798,6 +12008,86 @@ const DSE_MATH_GRAPH = {
      "source": "estimated",
      "paper": "P3",
      "question": "Section A/B"
+    }
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "將 sinθ + cosθ 寫成 R sin(θ+α)。",
+     "stemEn": "Express sinθ+cosθ as R sin(θ+α).",
+     "answerZh": "R=√2，α=45° → √2 sin(θ+45°)。",
+     "answerEn": "√2 sin(θ+45°).",
+     "marks": [
+      {
+       "content": "R=√(a²+b²)",
+       "pts": 1
+      },
+      {
+       "content": "tanα=b/a=1",
+       "pts": 1
+      },
+      {
+       "content": "√2 sin(θ+45°)",
+       "pts": 1
+      }
+     ],
+     "lossZh": "R 或 α 算錯。",
+     "lossEn": "Wrong R or α.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "求 sinθ + cosθ 的最大值（θ 為任意角）。",
+     "stemEn": "Max of sinθ+cosθ.",
+     "answerZh": "= √2 sin(θ+45°) → 最大值 √2。",
+     "answerEn": "√2.",
+     "marks": [
+      {
+       "content": "輔助角",
+       "pts": 1
+      },
+      {
+       "content": "振幅 √2",
+       "pts": 1
+      },
+      {
+       "content": "最大 √2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為最大值 2。",
+     "lossEn": "Thinking max 2.",
+     "years": [
+      "2022"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "解 3sinθ + 4cosθ = 5（0≤θ<360°）。",
+     "stemEn": "Solve 3sinθ+4cosθ=5.",
+     "answerZh": "R=5，α=arctan(4/3)≈53.13°；5sin(θ+53.13°)=5 → sin(θ+α)=1 → θ+α=90° → θ≈36.87°。",
+     "answerEn": "θ≈36.9°.",
+     "marks": [
+      {
+       "content": "輔助角 R=5",
+       "pts": 1
+      },
+      {
+       "content": "sin(...)=1",
+       "pts": 1
+      },
+      {
+       "content": "θ≈36.9°",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 α 的計算或範圍。",
+     "lossEn": "Wrong α or range.",
+     "years": [
+      "2021"
+     ]
     }
    ]
   }

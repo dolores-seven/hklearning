@@ -144,16 +144,17 @@
 <div id="app">
   <div id="sidebar">
     <div class="brand">
-      <h1 id="ui-title">DSE 数学 · 全景知识图谱</h1>
-      <div class="sub" id="ui-sub">Compulsory + M2 · 课题级骨架 v0.1<br>点击节点看详情 · 双击课题下钻公式</div>
+      <h1 id="ui-title">DSE 物理 · 全景知识图谱</h1>
+      <div class="sub" id="ui-sub">必修(5大课题) + 選修 + SBA · 课题级骨架<br>点击节点看详情 · 双击课题下钻公式</div>
     </div>
 
     <div class="block">
       <h3 id="ui-t-view">视图模块</h3>
       <div class="btnrow" id="module-btns">
         <button class="b on" data-mod="all" id="ui-mod-all">全部</button>
-        <button class="b" data-mod="core" id="ui-mod-core">必修</button>
-        <button class="b" data-mod="M2" id="ui-mod-m2">M2</button>
+        <button class="b" data-mod="必修" id="ui-mod-core">必修</button>
+        <button class="b" data-mod="選修" id="ui-mod-elective">選修</button>
+        <button class="b" data-mod="SBA" id="ui-mod-sba">SBA</button>
       </div>
     </div>
 
@@ -253,7 +254,7 @@
     freqHighlightHint: { zh:'节点边框颜色→考试频率', en:'Node border color → exam frequency' },
   };
   const t = k => T[k][LANG];
-  const nm = o => o ? (o[LANG] || o.zh) : '';
+  const nm = o => typeof o === 'string' ? o : (o ? (o[LANG] || o.zh || o.en || '') : '');
   const domColor = id => (G.domains.find(d=>d.id===id)||{}).color || '#888';
   const domName  = id => nm((G.domains.find(d=>d.id===id)||{}).code);
   const ktColor  = kt => (G.meta.knowledgeTypes[kt]||{}).color || '#a5b4fc';
@@ -270,8 +271,8 @@
   let frequencyHighlight = false;            // 频率高亮模式：节点边框映射到 examFrequency
   let simNodes = [], simEdges = [];          // simulation model
   let alpha = 1;
-  const isCore = n => n.domain !== 'M2';
-  const inModule = n => moduleView==='all' || (moduleView==='M2' ? n.domain==='M2' : isCore(n));
+  const domGroup = id => (G.domains.find(d=>d.id===id)||{}).group;
+  const inModule = n => moduleView==='all' || domGroup(n.domain)===moduleView;
   const inGrades = n => n.grades.some(g => grades.has(g));
 
   /* ---------- build simulation model ---------- */
@@ -539,8 +540,8 @@
       // topic meta
       html += `<div class="sec"><div class="meta-row">
         <span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
-        <span class="tag2">${t('weight')}: ${weightMap[node.weight]}</span>
-        <span class="tag2">${t('difficulty')}: ${'★'.repeat(node.diff)}</span>
+        <span class="tag2">${t('weight')}: ${weightMap[node.weight] || '—'}</span>
+        <span class="tag2">${t('difficulty')}: ${node.diff ? '★'.repeat(node.diff) : '—'}</span>
       </div>`;
 
       // 考试频率 & 出题位置（如果有数据）
@@ -591,13 +592,19 @@
     const asRelated = (G.motherProblems||[]).filter(m => (m.relatedTopics||[]).includes(topicId));
     if (asCore.length || asRelated.length) {
       html += `<div class="sec"><h4>${t('motherP')}</h4>`;
-      const renderMP = m => `
+      const renderMP = m => {
+        const skel = m.solutionSkeleton || m.skeleton;
+        const skelStr = Array.isArray(skel) ? skel.join(' → ') : String(skel||'').replace(/\n/g, ' → ');
+        const vart = m.variation || m.variations;
+        const varStr = Array.isArray(vart) ? vart.join('；') : String(vart||'');
+        return `
         <div class="mp">
           <div class="mp-title">${esc(LANG==='zh' ? m.titleZh : (m.titleEn||m.titleZh))}</div>
           ${m.stem ? `<div class="mp-stem">${t('stem')}: ${esc(LANG==='zh' ? m.stem : (m.stemEn||m.stem))}</div>` : ''}
-          ${(m.solutionSkeleton||[]).length ? `<div class="mp-skel">${t('solution')}: ${esc(m.solutionSkeleton.join(' → '))}</div>` : ''}
-          ${(m.variation||[]).length ? `<div class="mp-var">${t('variation')}: ${esc(m.variation.join('；'))}</div>` : ''}
+          ${skelStr ? `<div class="mp-skel">${t('solution')}: ${esc(skelStr)}</div>` : ''}
+          ${varStr ? `<div class="mp-var">${t('variation')}: ${esc(varStr)}</div>` : ''}
         </div>`;
+      };
       if (asCore.length) html += `<div class="mp-group">${t('asCore')}</div>` + asCore.map(renderMP).join('');
       if (asRelated.length) html += `<div class="mp-group">${t('asRelated')}</div>` + asRelated.map(renderMP).join('');
       html += `</div>`;
@@ -614,7 +621,7 @@
         const def = G.meta.edgeTypes[e.type];
         const dir = e.from===id ? '→' : '←';
         html += `<div class="relrow">
-          <span class="rtype" style="color:${def.color};border-color:${def.color}">${def[LANG]||def.zh}${dir}</span>
+          <span class="rtype" style="color:${def.color||'#94a3b8'};border-color:${def.color||'#94a3b8'}">${def[LANG]||def.zh}${dir}</span>
           <span class="rname" data-goto="${other}">${esc(nm(on.name))}</span>
           ${e.evidence?`<div style="width:100%;font-size:11px;color:var(--muted);margin-top:2px;">📌 ${esc(e.evidence)}</div>`:''}
         </div>`;
@@ -799,8 +806,8 @@
     document.getElementById('lang-en').classList.toggle('on', l==='en');
     document.getElementById('ui-title').textContent = l==='zh' ? 'DSE 物理 · 全景知识图谱' : 'DSE Physics · Knowledge Graph Atlas';
     document.getElementById('ui-sub').innerHTML = l==='zh'
-      ? 'Compulsory + M2 · 课题级骨架 v0.1<br>点击节点看详情 · 双击课题下钻公式'
-      : 'Compulsory + M2 · topic skeleton v0.1<br>click node = details · dbl-click topic = formulas';
+      ? '必修(5大課題) + 選修 + SBA · 课题级骨架<br>点击节点看详情 · 双击课题下钻公式'
+      : 'Compulsory + Elective + SBA · topic skeleton<br>click node = details · dbl-click topic = formulas';
     document.getElementById('ui-t-view').textContent = t('viewModule');
     document.getElementById('ui-t-filter').textContent = t('gradeFilter');
     document.getElementById('ui-t-search').textContent = t('search');

@@ -69,60 +69,86 @@ const DSE_PHYSICS_GRAPH = {
         "id": "definition",
         "nameZh": "定義",
         "nameEn": "Definition",
-        "color": "#4CAF50"
+        "color": "#4CAF50",
+        "zh": "定義",
+        "en": "Definition"
       },
       "law": {
         "id": "law",
         "nameZh": "定律",
         "nameEn": "Law",
-        "color": "#2196F3"
+        "color": "#2196F3",
+        "zh": "定律",
+        "en": "Law"
       },
       "formula": {
         "id": "formula",
         "nameZh": "公式",
         "nameEn": "Formula",
-        "color": "#FF9800"
+        "color": "#FF9800",
+        "zh": "公式",
+        "en": "Formula"
       },
       "principle": {
         "id": "principle",
         "nameZh": "原理",
         "nameEn": "Principle",
-        "color": "#9C27B0"
+        "color": "#9C27B0",
+        "zh": "原理",
+        "en": "Principle"
       },
       "concept": {
         "id": "concept",
         "nameZh": "概念",
         "nameEn": "Concept",
-        "color": "#795548"
+        "color": "#795548",
+        "zh": "概念",
+        "en": "Concept"
       }
     },
     "edgeTypes": {
       "prereq": {
         "dash": "6 3",
         "nameZh": "前置",
-        "nameEn": "Prerequisite"
+        "nameEn": "Prerequisite",
+        "color": "#8b5cf6",
+        "zh": "前置",
+        "en": "Prerequisite"
       },
       "derives": {
         "dash": "4 2",
         "nameZh": "推导",
-        "nameEn": "Derives"
+        "nameEn": "Derives",
+        "color": "#0ea5e9",
+        "zh": "推导",
+        "en": "Derives"
       },
       "related": {
         "dash": "2 4",
         "nameZh": "相关",
-        "nameEn": "Related"
+        "nameEn": "Related",
+        "color": "#94a3b8",
+        "zh": "相关",
+        "en": "Related"
       },
       "cotested": {
         "dash": "none",
         "nameZh": "组合出题",
-        "nameEn": "Co-tested"
+        "nameEn": "Co-tested",
+        "color": "#f59e0b",
+        "zh": "组合出题",
+        "en": "Co-tested"
       },
       "child": {
         "dash": "2 3",
         "nameZh": "下钻",
-        "nameEn": "Drill-down"
+        "nameEn": "Drill-down",
+        "color": "#64748b",
+        "zh": "下钻",
+        "en": "Drill-down"
       }
-    }
+    },
+    "updated": "2026-08-20"
   },
   "nodes": [
     {
@@ -192,7 +218,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "膨脹間隙要預留；鐵軌留縫隙防止夏天脫軌"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 1
     },
     {
       "id": "ph-ht-shc",
@@ -261,7 +289,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "要考慮量熱器本身吸熱；雙層容器減少熱散失"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-ht-latent",
@@ -341,7 +371,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": true,
           "pitfall": "R=8.31J/(mol·K)；n是摩爾數；T必須用開爾文"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-ht-kinetic",
@@ -410,7 +442,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "證實分子運動；粒子越大布朗運動越不明顯"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 2
     },
     {
       "id": "ph-fm-motion",
@@ -490,7 +524,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "拋到最高點時速度=0但加速度仍為g；上升時間=下降時間"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-fm-newton",
@@ -581,7 +617,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "繩質量不計時繩內張力各處相等；滑輪無摩擦時兩側張力相等"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-fm-momentum",
@@ -650,7 +688,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "完全非彈性碰撞：物體粘在一起，動能損失最大；爆炸問題：動量守恆但動能增加"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-fm-conserve",
@@ -719,7 +759,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "不需要外界介質；推力來自噴出氣體的動量變化"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-fm-work",
@@ -799,7 +841,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "效率永遠小於100%；能量轉換必有損失"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-fm-energy",
@@ -879,7 +923,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "能量轉換過程中有損失（熱能/聲能）；永動機不可能實現"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-fm-energy-conserve",
@@ -959,7 +1005,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "非彈性碰撞中有動能損失；摩擦生熱導致能量損失"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-wv-prop",
@@ -1050,7 +1098,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "兩波源要相干（同頻率同相位）；干涉圖樣是穩定的"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-wv-trans",
@@ -1119,7 +1169,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "繩波張力T越大波速越大；聲波在固體中傳播最快"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 2
     },
     {
       "id": "ph-wv-water",
@@ -1177,7 +1229,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "折射時頻率不變；入射角與折射角關係符合斯涅爾定律"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 2
     },
     {
       "id": "ph-wv-sound",
@@ -1246,7 +1300,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "超聲波用於醫學成像；次聲波人聽不到但可引起不適"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-wv-light",
@@ -1337,7 +1393,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "d是光柵常數；n是譜線級數；中央亮紋最亮"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-em-charge",
@@ -1406,7 +1464,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "半導體電導率可調控；超導體在低溫下電阻為零"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-em-circuit",
@@ -1486,7 +1546,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "畫圖時規範使用符號；接線圖和電路圖要能互相轉換"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-em-resistance",
@@ -1566,7 +1628,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "臨界溫度以上失去超導性；超導體排斥磁場（邁斯納效應）"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-em-power",
@@ -1635,7 +1699,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "注意單位換算（W→kW）；峰谷電價不同"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-em-force",
@@ -1704,7 +1770,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "洛倫茲力不做功；粒子做勻速圓周運動；半徑r=mv/qB"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-em-induction",
@@ -1784,7 +1852,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "自感係數L與線圈匝數有關；電感儲存磁能"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 3
     },
     {
       "id": "ph-rp-decay",
@@ -1864,7 +1934,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "半衰期是放射性元素特性；不受外界條件影響；用於年代測定"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     },
     {
       "id": "ph-rp-isotope",
@@ -1933,7 +2005,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "基於碳-14半衰期5730年；只適用於有機物；誤差隨年代增大"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 1
     },
     {
       "id": "ph-rp-application",
@@ -2002,7 +2076,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "減少暴露時間；增加距離；使用鉛或混凝土屏蔽；劑量限制"
         }
-      ]
+      ],
+      "weight": "low",
+      "diff": 1
     },
     {
       "id": "ph-as-astro",
@@ -2082,7 +2158,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "證據包括宇宙膨脹、宇宙微波背景輻射；哈勃定律支持膨脹說"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 2
     },
     {
       "id": "ph-aw-atomic",
@@ -2162,7 +2240,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "單色性、方向性、相干性；應用於通信、醫療、工業"
         }
-      ]
+      ],
+      "weight": "mid",
+      "diff": 3
     },
     {
       "id": "ph-ee-energy",
@@ -2242,7 +2322,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "節能與開發新能源同樣重要；建築節能、工業節能、交通節能"
         }
-      ]
+      ],
+      "weight": "low",
+      "diff": 1
     },
     {
       "id": "ph-mp-medical",
@@ -2322,7 +2404,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "示蹤劑聚集在特定組織；PET掃描檢測代謝；碘-131治療甲狀腺癌"
         }
-      ]
+      ],
+      "weight": "low",
+      "diff": 2
     },
     {
       "id": "ph-lab-skills",
@@ -2415,7 +2499,9 @@ const DSE_PHYSICS_GRAPH = {
           "dataSheet": false,
           "pitfall": "電器使用前檢查；化學品處理規範；急停裝置位置熟悉"
         }
-      ]
+      ],
+      "weight": "high",
+      "diff": 2
     }
   ],
   "edges": [

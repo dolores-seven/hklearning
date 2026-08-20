@@ -152,9 +152,9 @@
       <h3 id="ui-t-view">视图模块</h3>
       <div class="btnrow" id="module-btns">
         <button class="b on" data-mod="all" id="ui-mod-all">全部</button>
-        <button class="b" data-mod="必修" id="ui-mod-core">必修</button>
-        <button class="b" data-mod="選修" id="ui-mod-elective">選修</button>
-        <button class="b" data-mod="SBA" id="ui-mod-sba">SBA</button>
+        <button class="b" data-mod="core" id="ui-mod-core">必修</button>
+        <button class="b" data-mod="elective" id="ui-mod-elective">選修</button>
+        <button class="b" data-mod="sba" id="ui-mod-sba">SBA</button>
       </div>
     </div>
 
@@ -278,7 +278,7 @@
   const inModule = n => moduleView==='all' || domGroup(n.domain)===moduleView;
   const inGrades = n => n.grades.some(g => grades.has(g));
   // 新手模式：只显示必修 + S4/S5 的基础课题（隐藏 S6 复习性课题与选修/SBA）
-  const beginnerOK = n => domGroup(n.domain)==='必修' && (n.grades.includes('S4')||n.grades.includes('S5'));
+  const beginnerOK = n => domGroup(n.domain)==='core' && (n.grades.includes('S4')||n.grades.includes('S5'));
   const visibleNode = n => inModule(n) && inGrades(n) && !(beginnerMode && !beginnerOK(n));
 
   /* ---------- build simulation model ---------- */

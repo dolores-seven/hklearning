@@ -4879,7 +4879,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-HT",
    "nameZh": "熱和氣體",
    "nameEn": "Heat and Gases",
-   "group": "必修",
+   "group": "core",
    "color": "#ef4444",
    "code": {
     "zh": "熱和氣體",
@@ -4890,7 +4890,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-FM",
    "nameZh": "力和運動",
    "nameEn": "Force and Motion",
-   "group": "必修",
+   "group": "core",
    "color": "#3b82f6",
    "code": {
     "zh": "力和運動",
@@ -4901,7 +4901,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-WV",
    "nameZh": "波動",
    "nameEn": "Waves",
-   "group": "必修",
+   "group": "core",
    "color": "#10b981",
    "code": {
     "zh": "波動",
@@ -4912,7 +4912,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-EM",
    "nameZh": "電和磁",
    "nameEn": "Electricity and Magnetism",
-   "group": "必修",
+   "group": "core",
    "color": "#f59e0b",
    "code": {
     "zh": "電和磁",
@@ -4923,7 +4923,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-RP",
    "nameZh": "放射現象與核能",
    "nameEn": "Radioactivity and Nuclear Energy",
-   "group": "必修",
+   "group": "core",
    "color": "#8b5cf6",
    "code": {
     "zh": "放射現象與核能",
@@ -4934,7 +4934,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-AS",
    "nameZh": "天文學",
    "nameEn": "Astronomy",
-   "group": "選修",
+   "group": "elective",
    "color": "#ec4899",
    "code": {
     "zh": "天文學",
@@ -4945,7 +4945,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-AW",
    "nameZh": "原子世界",
    "nameEn": "Atomic World",
-   "group": "選修",
+   "group": "elective",
    "color": "#06b6d4",
    "code": {
     "zh": "原子世界",
@@ -4956,7 +4956,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-EE",
    "nameZh": "能量與能源的利用",
    "nameEn": "Energy and Use of Energy",
-   "group": "選修",
+   "group": "elective",
    "color": "#84cc16",
    "code": {
     "zh": "能量與能源的利用",
@@ -4967,7 +4967,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-MP",
    "nameZh": "醫學物理",
    "nameEn": "Medical Physics",
-   "group": "選修",
+   "group": "elective",
    "color": "#f97316",
    "code": {
     "zh": "醫學物理",
@@ -4978,7 +4978,7 @@ const DSE_PHYSICS_GRAPH = {
    "id": "PH-LAB",
    "nameZh": "實驗技能",
    "nameEn": "Experimental Skills",
-   "group": "SBA",
+   "group": "sba",
    "color": "#6b7280",
    "code": {
     "zh": "實驗技能",

@@ -1677,6 +1677,46 @@ const DSE_PHYSICS_GRAPH = {
       "zh": "d是光柵常數；n是譜線級數；中央亮紋最亮",
       "en": "d is the grating spacing; n is the order of the spectrum; the central bright fringe is brightest"
      }
+    },
+    {
+     "id": "ph-wv-light-08",
+     "name": {
+      "zh": "透鏡種類",
+      "en": "Types of Lenses"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "凸透鏡會聚（厚中間），凹透鏡發散（薄中間）；要會認實物和光路圖。",
+      "en": "Convex converges (thicker middle), concave diverges; identify from ray diagrams."
+     }
+    },
+    {
+     "id": "ph-wv-light-09",
+     "name": {
+      "zh": "透鏡成像公式",
+      "en": "Lens Formula"
+     },
+     "knowledgeType": "formula",
+     "formula": "\\frac{1}{u}+\\frac{1}{v}=\\frac{1}{f}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "u 物距 v 像距 f 焦距，用實數值代入；虛像 v 取負——最容易錯的符號規則。",
+      "en": "u object, v image, f focal length; virtual image v is negative—sign rule is the trap."
+     }
+    },
+    {
+     "id": "ph-wv-light-10",
+     "name": {
+      "zh": "電磁波譜",
+      "en": "EM Spectrum"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "從無線電波到 γ 射線頻率遞增；要記住可見光在中間、紫外在可見光之上、X 射線/γ 更高。",
+      "en": "Radio→γ increasing frequency; visible in middle, UV above, X-ray/γ higher."
+     }
     }
    ],
    "weight": "high",
@@ -2241,6 +2281,20 @@ const DSE_PHYSICS_GRAPH = {
       "zh": "自感係數L與線圈匝數有關；電感儲存磁能",
       "en": "Self-inductance L depends on the number of turns; an inductor stores magnetic energy"
      }
+    },
+    {
+     "id": "ph-em-induction-07",
+     "name": {
+      "zh": "高壓輸電",
+      "en": "High-voltage Transmission"
+     },
+     "knowledgeType": "concept",
+     "formula": "P_{\\rm loss}=I^2R",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "升壓降流減少 I²R 損耗；家用電再降壓。要解釋「為何高壓」——P=VI 下 V 高則 I 小。",
+      "en": "Step-up reduces current → less I²R loss; step-down for homes. Explain via P=VI."
+     }
     }
    ],
    "weight": "high",
@@ -2516,6 +2570,34 @@ const DSE_PHYSICS_GRAPH = {
       "zh": "減少暴露時間；增加距離；使用鉛或混凝土屏蔽；劑量限制",
       "en": "Reduce exposure time; increase distance; use lead or concrete shielding; dose limits"
      }
+    },
+    {
+     "id": "ph-rp-application-06",
+     "name": {
+      "zh": "核裂變與鏈式反應",
+      "en": "Nuclear Fission & Chain Reaction"
+     },
+     "knowledgeType": "concept",
+     "formula": "^{235}_{92}U+^{1}_{0}n\\to \\text{fragments}+\\text{neutrons}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "裂變釋能靠質量虧損（E=mc²）；一個中子引發多個中子為鏈式反應，需控制棒控制。",
+      "en": "Energy from mass defect (E=mc²); chain reaction needs moderation/control rods."
+     }
+    },
+    {
+     "id": "ph-rp-application-07",
+     "name": {
+      "zh": "核聚變與質能方程",
+      "en": "Fusion & E=mc²"
+     },
+     "knowledgeType": "formula",
+     "formula": "E=mc^2",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "聚變（氫結合為氦）釋能更大、燃料豐富但需極高溫；E=mc² 用於計算質量虧損對應能量。",
+      "en": "Fusion releases more energy, needs extreme temperature; E=mc² links mass defect to energy."
+     }
     }
    ],
    "weight": "low",
@@ -2617,6 +2699,19 @@ const DSE_PHYSICS_GRAPH = {
       "zh": "證據包括宇宙膨脹、宇宙微波背景輻射；哈勃定律支持膨脹說",
       "en": "Evidence includes cosmic expansion and the cosmic microwave background; Hubble's law supports expansion"
      }
+    },
+    {
+     "id": "ph-as-astro-07",
+     "name": {
+      "zh": "赫羅圖",
+      "en": "H-R Diagram"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "橫軸表面溫度（從右到左升高）、縱軸光度；主序帶斜跨，恆星演化路徑在圖上移動。",
+      "en": "Temperature on x-axis (increasing left), luminosity on y; main sequence diagonal, evolution paths move on it."
+     }
     }
    ],
    "weight": "mid",
@@ -2717,6 +2812,33 @@ const DSE_PHYSICS_GRAPH = {
      "pitfall": {
       "zh": "單色性、方向性、相干性；應用於通信、醫療、工業",
       "en": "Monochromatic, directional and coherent; used in communication, medicine and industry"
+     }
+    },
+    {
+     "id": "ph-aw-atomic-07",
+     "name": {
+      "zh": "能級與線狀光譜",
+      "en": "Energy Levels & Line Spectra"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "電子在離散能級間躍遷發射/吸收特定波長光子；ΔE=hf。每種原子有特徵譜線。",
+      "en": "Electrons jump between discrete levels emitting/absorbing photons; ΔE=hf; each atom has characteristic lines."
+     }
+    },
+    {
+     "id": "ph-aw-atomic-08",
+     "name": {
+      "zh": "發射與吸收光譜",
+      "en": "Emission & Absorption Spectra"
+     },
+     "knowledgeType": "concept",
+     "formula": "\\Delta E=hf",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "發射光譜是亮線，吸收光譜是暗線；兩者互補，都對應能級差。",
+      "en": "Emission = bright lines, absorption = dark lines; complementary, both from level differences."
      }
     }
    ],
@@ -2920,6 +3042,19 @@ const DSE_PHYSICS_GRAPH = {
       "zh": "示蹤劑聚集在特定組織；PET掃描檢測代謝；碘-131治療甲狀腺癌",
       "en": "Tracers accumulate in specific tissues; PET scans detect metabolism; iodine-131 treats thyroid cancer"
      }
+    },
+    {
+     "id": "ph-mp-medical-07",
+     "name": {
+      "zh": "輻射劑量與安全",
+      "en": "Radiation Dose & Safety"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "吸收劑量單位 Gray (Gy)，等效劑量用 Sievert (Sv)；防護三原則：時間/距離/屏蔽。",
+      "en": "Absorbed dose in Gray; equivalent dose in Sievert; protection: time/distance/shielding."
+     }
     }
    ],
    "weight": "low",
@@ -3042,6 +3177,330 @@ const DSE_PHYSICS_GRAPH = {
    "weight": "high",
    "diff": 2,
    "examWeight": "SBA 20%"
+  },
+  {
+   "id": "ph-ht-transfer",
+   "level": "topic",
+   "domain": "PH-HT",
+   "grades": [
+    "S4"
+   ],
+   "name": {
+    "zh": "熱傳遞",
+    "en": "Heat Transfer"
+   },
+   "weight": "mid",
+   "diff": 1,
+   "examWeight": "2-3",
+   "leaves": [
+    {
+     "id": "ph-ht-transfer-01",
+     "name": {
+      "zh": "傳導",
+      "en": "Conduction"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "固體中熱傳遞主要靠傳導；金屬導熱好，氣體/液體差。",
+      "en": "Conduction dominates in solids; metals conduct well, gases/liquids poorly."
+     }
+    },
+    {
+     "id": "ph-ht-transfer-02",
+     "name": {
+      "zh": "對流",
+      "en": "Convection"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "對流只發生在流體（液體/氣體）中，靠密度差引起循環。",
+      "en": "Convection only occurs in fluids, driven by density differences."
+     }
+    },
+    {
+     "id": "ph-ht-transfer-03",
+     "name": {
+      "zh": "輻射",
+      "en": "Radiation"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "輻射不需介質，可在真空中傳播；黑面吸輻射強，白面反射強。",
+      "en": "Radiation needs no medium; dark surfaces absorb well, white reflect."
+     }
+    },
+    {
+     "id": "ph-ht-transfer-04",
+     "name": {
+      "zh": "熱傳遞的應用",
+      "en": "Applications"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "暖水瓶/雙層玻璃靠真空+鍍銀減少傳導對流輻射；要會解釋為何某設計減少熱損。",
+      "en": "Vacuum flasks/double glazing reduce all three modes; explain how each design reduces loss."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ph-fm-projectile",
+   "level": "topic",
+   "domain": "PH-FM",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "拋體運動",
+    "en": "Projectile Motion"
+   },
+   "weight": "high",
+   "diff": 3,
+   "examWeight": "4-6",
+   "leaves": [
+    {
+     "id": "ph-fm-projectile-01",
+     "name": {
+      "zh": "拋體運動分解",
+      "en": "Decomposition"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "拋體分解成水平（勻速）和垂直（勻加速 g）兩個獨立方向，用坐標分解。",
+      "en": "Split into horizontal (uniform) and vertical (accel g) independent motions."
+     }
+    },
+    {
+     "id": "ph-fm-projectile-02",
+     "name": {
+      "zh": "水平拋射",
+      "en": "Horizontal Projection"
+     },
+     "knowledgeType": "formula",
+     "formula": "t=\\sqrt{\\frac{2h}{g}},\\quad x=v\\sqrt{\\frac{2h}{g}}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "落地時間只由高度決定，與水平速度無關——最常考的陷阱。",
+      "en": "Time of flight depends only on height, not horizontal speed—top pitfall."
+     }
+    },
+    {
+     "id": "ph-fm-projectile-03",
+     "name": {
+      "zh": "斜拋運動",
+      "en": "Oblique Projection"
+     },
+     "knowledgeType": "formula",
+     "formula": "T=\\frac{2u\\sin\\theta}{g},\\quad H=\\frac{u^2\\sin^2\\theta}{2g},\\quad R=\\frac{u^2\\sin 2\\theta}{g}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "45°時射程最大；要會把初速分解成 u sinθ 和 u cosθ。",
+      "en": "Max range at 45°; resolve initial velocity into u sinθ and u cosθ."
+     }
+    },
+    {
+     "id": "ph-fm-projectile-04",
+     "name": {
+      "zh": "拋體軌跡",
+      "en": "Trajectory"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "軌跡是拋物線；最高點時垂直速度為 0 但水平速度不為 0。",
+      "en": "Trajectory is parabolic; at apex vertical velocity is 0 but horizontal is not."
+     }
+    },
+    {
+     "id": "ph-fm-projectile-05",
+     "name": {
+      "zh": "拋體與能量",
+      "en": "Energy in Projectile"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "可用機械能守恆求最高點高度，比運動學更快；注意拋體整個過程機械能守恆（不計阻力）。",
+      "en": "Use conservation of mechanical energy for apex height; energy conserved throughout (no drag)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ph-fm-circular",
+   "level": "topic",
+   "domain": "PH-FM",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "圓周運動",
+    "en": "Circular Motion"
+   },
+   "weight": "high",
+   "diff": 3,
+   "examWeight": "4-6",
+   "leaves": [
+    {
+     "id": "ph-fm-circular-01",
+     "name": {
+      "zh": "角速度",
+      "en": "Angular Velocity"
+     },
+     "knowledgeType": "definition",
+     "formula": "\\omega=\\frac{2\\pi}{T}=2\\pi f",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "角速度單位是 rad/s 不是 rad；週期 T 與頻率 f 互為倒數。",
+      "en": "ω in rad/s not rad; T and f are reciprocals."
+     }
+    },
+    {
+     "id": "ph-fm-circular-02",
+     "name": {
+      "zh": "向心加速度",
+      "en": "Centripetal Acceleration"
+     },
+     "knowledgeType": "formula",
+     "formula": "a=\\frac{v^2}{r}=\\omega^2 r",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "向心加速度方向指向圓心，改變速度方向而非大小。",
+      "en": "Centripetal acceleration points to centre, changes direction not speed."
+     }
+    },
+    {
+     "id": "ph-fm-circular-03",
+     "name": {
+      "zh": "向心力",
+      "en": "Centripetal Force"
+     },
+     "knowledgeType": "formula",
+     "formula": "F=\\frac{mv^2}{r}=m\\omega^2 r",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "向心力不是獨立力，是合力（拉力/重力/摩擦力等）指向圓心的分量。",
+      "en": "Centripetal force is the net inward component, not a separate force."
+     }
+    },
+    {
+     "id": "ph-fm-circular-04",
+     "name": {
+      "zh": "錐擺運動",
+      "en": "Conical Pendulum"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "錐擺中張力水平分量提供向心力，垂直分量平衡重力——要畫力圖分解。",
+      "en": "In a conical pendulum, the horizontal component of tension is centripetal, vertical balances weight."
+     }
+    },
+    {
+     "id": "ph-fm-circular-05",
+     "name": {
+      "zh": "圓周運動實例",
+      "en": "Real-world Circular Motion"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "過山車頂部、彎道傾斜、轉盤摩擦等——先找向心力來源再套公式。",
+      "en": "Roller coaster top, banked curves, turntables—identify force source first."
+     }
+    }
+   ]
+  },
+  {
+   "id": "ph-fm-gravitation",
+   "level": "topic",
+   "domain": "PH-FM",
+   "grades": [
+    "S5"
+   ],
+   "name": {
+    "zh": "萬有引力",
+    "en": "Gravitation"
+   },
+   "weight": "high",
+   "diff": 3,
+   "examWeight": "3-5",
+   "leaves": [
+    {
+     "id": "ph-fm-gravitation-01",
+     "name": {
+      "zh": "萬有引力定律",
+      "en": "Law of Gravitation"
+     },
+     "knowledgeType": "law",
+     "formula": "F=G\\frac{Mm}{r^2}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "G 是引力常數（6.67×10⁻¹¹），距離 r 是質心距；兩物體間引力等大反向。",
+      "en": "G is universal constant; r is centre-to-centre distance; forces equal and opposite."
+     }
+    },
+    {
+     "id": "ph-fm-gravitation-02",
+     "name": {
+      "zh": "重力與萬有引力",
+      "en": "Weight vs Gravitation"
+     },
+     "knowledgeType": "concept",
+     "dataSheet": false,
+     "pitfall": {
+      "zh": "地表重力 g = GM/R²；g 隨高度增加而減小，隨緯度變化很小。",
+      "en": "g = GM/R² at surface; g decreases with altitude."
+     }
+    },
+    {
+     "id": "ph-fm-gravitation-03",
+     "name": {
+      "zh": "衛星運動",
+      "en": "Satellite Motion"
+     },
+     "knowledgeType": "concept",
+     "formula": "G\\frac{Mm}{r^2}=m\\frac{v^2}{r}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "衛星圓周運動中萬有引力=向心力；軌道半徑越大速度越小、週期越大。",
+      "en": "Gravitation provides centripetal force; larger orbit → smaller v, larger T."
+     }
+    },
+    {
+     "id": "ph-fm-gravitation-04",
+     "name": {
+      "zh": "宇宙速度",
+      "en": "Cosmic Velocities"
+     },
+     "knowledgeType": "concept",
+     "formula": "v=\\sqrt{\\frac{GM}{r}}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "第一宇宙速度約 7.9 km/s（繞地）；第二宇宙速度約 11.2 km/s（逃逸）。",
+      "en": "First cosmic ~7.9 km/s (orbit); second ~11.2 km/s (escape)."
+     }
+    },
+    {
+     "id": "ph-fm-gravitation-05",
+     "name": {
+      "zh": "天體質量計算",
+      "en": "Determining Mass"
+     },
+     "knowledgeType": "formula",
+     "formula": "M=\\frac{4\\pi^2 r^3}{GT^2}",
+     "dataSheet": true,
+     "pitfall": {
+      "zh": "由衛星軌道半徑和週期可求中心天體質量——考衛星題的標準套路。",
+      "en": "Mass from orbital radius & period; standard satellite question."
+     }
+    }
+   ]
   }
  ],
  "edges": [
@@ -3258,6 +3717,81 @@ const DSE_PHYSICS_GRAPH = {
   {
    "from": "ph-mp-medical",
    "to": "ph-rp-decay",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-motion",
+   "to": "ph-fm-projectile",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-fm-motion",
+   "to": "ph-fm-circular",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-fm-newton",
+   "to": "ph-fm-circular",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-fm-circular",
+   "to": "ph-fm-gravitation",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-fm-motion",
+   "to": "ph-fm-gravitation",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-ht-temp",
+   "to": "ph-ht-transfer",
+   "type": "prereq"
+  },
+  {
+   "from": "ph-ht-transfer",
+   "to": "ph-ht-shc",
+   "type": "related"
+  },
+  {
+   "from": "ph-fm-projectile",
+   "to": "ph-fm-circular",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-circular",
+   "to": "ph-fm-gravitation",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-gravitation",
+   "to": "ph-as-astro",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-projectile",
+   "to": "ph-fm-energy-conserve",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-circular",
+   "to": "ph-fm-work",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-wv-light",
+   "to": "ph-wv-sound",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-rp-application",
+   "to": "ph-fm-energy-conserve",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-mp-medical",
+   "to": "ph-rp-application",
    "type": "cotested"
   }
  ],
@@ -4902,6 +5436,134 @@ const DSE_PHYSICS_GRAPH = {
     "鈷-60工業探傷",
     "氫同位素示蹤"
    ]
+  },
+  {
+   "id": "ph-mp-ht-transfer-01",
+   "titleZh": "熱傳遞綜合題",
+   "titleEn": "Heat Transfer Combined",
+   "coreTopics": [
+    "ph-ht-transfer"
+   ],
+   "relatedTopics": [
+    "ph-ht-shc"
+   ],
+   "questionType": "解釋題",
+   "stem": "解釋為什麼暖水瓶能長時間保持溫度（真空層、鍍銀內壁、密封蓋各自減少哪種熱傳遞方式）。",
+   "solutionSkeleton": [
+    "指出三種熱傳遞方式：傳導/對流/輻射",
+    "逐個結構對應：真空隔傳導+對流、鍍銀反射輻射、蓋子密封防對流",
+    "總結：三管齊下減少全部三種熱損"
+   ],
+   "variation": [
+    "改問雙層玻璃窗/保溫飯盒的設計原理",
+    "給出實驗數據判斷哪種方式主導熱損"
+   ],
+   "appearances": [
+    {
+     "year": 2019,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "MC"
+    }
+   ],
+   "stemEn": "Explain why a vacuum flask keeps temperature (which mode each feature reduces)."
+  },
+  {
+   "id": "ph-mp-fm-projectile-01",
+   "titleZh": "拋體運動綜合題",
+   "titleEn": "Projectile Motion Problem",
+   "coreTopics": [
+    "ph-fm-projectile"
+   ],
+   "relatedTopics": [
+    "ph-fm-motion",
+    "ph-fm-energy-conserve"
+   ],
+   "questionType": "計算題",
+   "stem": "一個物體以 20 m/s 水平拋出，從 45 m 高平台落下，求落地時間與水平距離。",
+   "solutionSkeleton": [
+    "垂直方向用 h = ½gt² 求落地時間",
+    "水平方向用 x = vt 求水平距離",
+    "（延伸）落地速度分解求合速度"
+   ],
+   "variation": [
+    "改為斜拋，求最大高度與射程",
+    "與能量守恆結合：求落地速度"
+   ],
+   "appearances": [
+    {
+     "year": 2021,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ],
+   "stemEn": "A body is thrown horizontally at 20 m/s from a 45 m high platform; find time of flight and range."
+  },
+  {
+   "id": "ph-mp-fm-circular-01",
+   "titleZh": "圓周運動向心力題",
+   "titleEn": "Circular Motion Centripetal Force",
+   "coreTopics": [
+    "ph-fm-circular"
+   ],
+   "relatedTopics": [
+    "ph-fm-newton",
+    "ph-fm-gravitation"
+   ],
+   "questionType": "計算題",
+   "stem": "質量 0.5 kg 的物體繫於 1 m 繩端，以 4 m/s 做水平圓周運動，求繩的張力。",
+   "solutionSkeleton": [
+    "判斷向心力來源：繩張力（水平圓周時即為合力）",
+    "用 F = mv²/r 代入求張力",
+    "（延伸）錐擺：分解張力為水平（向心）與垂直（平衡重力）"
+   ],
+   "variation": [
+    "過山車頂部最小速度條件",
+    "轉盤上物體即將滑動的最大角速度"
+   ],
+   "appearances": [
+    {
+     "year": 2017,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ],
+   "stemEn": "A 0.5 kg mass on a 1 m string moves at 4 m/s in a horizontal circle; find tension."
+  },
+  {
+   "id": "ph-mp-fm-gravitation-01",
+   "titleZh": "衛星運動題",
+   "titleEn": "Satellite Orbital Motion",
+   "coreTopics": [
+    "ph-fm-gravitation"
+   ],
+   "relatedTopics": [
+    "ph-fm-circular",
+    "ph-as-astro"
+   ],
+   "questionType": "計算題",
+   "stem": "一顆衛星以 7000 km 半徑繞地球運動，地球質量 6×10²⁴ kg，求衛星軌道速度與週期。",
+   "solutionSkeleton": [
+    "萬有引力 = 向心力：GMm/r² = mv²/r",
+    "消去 m 求 v = √(GM/r)",
+    "由 T = 2πr/v 求週期"
+   ],
+   "variation": [
+    "求中心天體質量（由軌道半徑和週期反推）",
+    "同步衛星/靜止軌道條件",
+    "與選修天文結合：行星運動定律"
+   ],
+   "appearances": [
+    {
+     "year": 2020,
+     "source": "estimated",
+     "paper": "P1",
+     "question": "LQ"
+    }
+   ],
+   "stemEn": "A satellite orbits Earth at radius 7000 km (M=6×10²⁴ kg); find orbital speed and period."
   }
  ],
  "domains": [

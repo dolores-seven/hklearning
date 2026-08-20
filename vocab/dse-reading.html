@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DSE 理科读题训练 · Reading Trainer</title>
+<style>
+  :root {
+    --bg:#0f172a; --panel:#1e293b; --panel2:#273449; --text:#e2e8f0;
+    --muted:#94a3b8; --accent:#6366f1; --line:#334155;
+    --green:#22c55e; --yellow:#f59e0b; --red:#ef4444;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); min-height:100vh;
+  }
+  #app { max-width:860px; margin:0 auto; padding:20px 16px 60px; }
+  .brand { display:flex; align-items:baseline; gap:10px; margin-bottom:14px; }
+  .brand h1 { font-size:20px; font-weight:700; }
+  .brand .sub { font-size:12px; color:var(--muted); }
+
+  .chips { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:12px; }
+  .chip {
+    padding:5px 14px; border-radius:14px; font-size:13px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel2); color:var(--text);
+  }
+  .chip.on { background:var(--accent); border-color:var(--accent); color:#fff; }
+
+  .stats { display:flex; gap:16px; font-size:12px; color:var(--muted); margin-bottom:16px; flex-wrap:wrap; }
+  .stats b { color:var(--text); }
+
+  .card {
+    background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:18px 20px; margin-bottom:16px;
+  }
+  .card-head { display:flex; align-items:center; gap:8px; margin-bottom:12px; font-size:12px; color:var(--muted); }
+  .card-head .idx { font-weight:700; color:var(--text); }
+  .subj-tag { padding:1px 8px; border-radius:8px; font-size:11px; }
+  .subj-tag.math { background:#6366f122; color:#818cf8; border:1px solid #6366f1; }
+  .subj-tag.physics { background:#22c55e22; color:#4ade80; border:1px solid #22c55e; }
+  .subj-tag.chemistry { background:#f59e0b22; color:#fbbf24; border:1px solid #f59e0b; }
+
+  .stem-en {
+    font-family:Georgia,"Times New Roman",serif; font-size:17px; line-height:1.8;
+    background:var(--panel2); border:1px solid var(--line); border-radius:10px;
+    padding:14px 16px; color:var(--text);
+  }
+  .stem-en .term {
+    color:#93c5fd; border-bottom:1px dashed #6366f1; cursor:pointer;
+    padding:0 1px; border-radius:3px;
+  }
+  .stem-en .term:hover { background:#6366f144; }
+  .stem-en .term.known { color:#6ee7b7; border-bottom-color:#22c55e; }
+
+  .dict-box {
+    display:none; margin-top:8px; font-size:13px; padding:8px 12px;
+    background:#6366f122; border:1px solid #6366f1; border-radius:8px;
+    color:#c7d2fe;
+  }
+  .dict-box.show { display:block; }
+  .dict-box b { color:#fff; }
+
+  .zh-row { margin-top:10px; }
+  .zh-btn {
+    font-size:12px; padding:4px 12px; border-radius:14px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel2); color:var(--muted);
+  }
+  .zh-btn:hover { border-color:var(--accent); color:var(--text); }
+  .zh-body {
+    display:none; margin-top:8px; font-size:14px; line-height:1.7;
+    background:var(--panel2); border:1px solid var(--line); border-radius:8px;
+    padding:10px 14px; color:#cbd5e1;
+  }
+  .zh-body.show { display:block; }
+
+  .self-check { margin-top:14px; }
+  .self-check .label { font-size:12px; color:var(--muted); margin-bottom:8px; }
+  .self-btns { display:flex; gap:8px; flex-wrap:wrap; }
+  .sb {
+    padding:6px 14px; border-radius:16px; font-size:13px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel2); color:var(--text);
+  }
+  .sb:hover { filter:brightness(1.2); }
+  .sb.ok { border-color:var(--green); color:#4ade80; }
+  .sb.part { border-color:var(--yellow); color:#fbbf24; }
+  .sb.no { border-color:var(--red); color:#f87171; }
+  .sb.done { background:var(--green); color:#fff; }
+
+  .quiz-area { margin-top:14px; border-top:1px dashed var(--line); padding-top:12px; }
+  .quiz-q { font-size:13px; margin-bottom:8px; }
+  .quiz-q b { color:#93c5fd; }
+  .quiz-opts { display:flex; flex-direction:column; gap:6px; }
+  .qo {
+    padding:8px 12px; border-radius:8px; font-size:13px; cursor:pointer;
+    border:1px solid var(--line); background:var(--panel2); color:var(--text);
+    text-align:left;
+  }
+  .qo:hover { border-color:var(--accent); }
+  .qo.correct { border-color:var(--green); background:#22c55e22; color:#4ade80; }
+  .qo.wrong { border-color:var(--red); background:#ef444422; color:#f87171; }
+  .quiz-fb { font-size:12px; margin-top:8px; min-height:18px; }
+
+  .nav { display:flex; gap:10px; margin-top:16px; }
+  .nav button {
+    flex:1; padding:10px; border-radius:8px; font-size:14px; cursor:pointer;
+    border:1px solid var(--line); background:var(--accent); color:#fff;
+  }
+  .nav button:disabled { opacity:.4; cursor:default; }
+  .nav button.ghost { background:var(--panel2); color:var(--text); }
+
+  .wronglist { margin-top:20px; }
+  .wronglist h3 { font-size:13px; color:var(--muted); margin-bottom:8px; }
+  .wrong-item {
+    display:flex; justify-content:space-between; align-items:center; gap:8px;
+    padding:8px 12px; border:1px solid var(--line); border-radius:8px; margin-bottom:6px;
+    font-size:12px; background:var(--panel2);
+  }
+  .wrong-item .wzh { color:var(--text); flex:1; }
+  .wrong-item .wsub { color:var(--muted); }
+  .wrong-item button { font-size:11px; padding:3px 10px; border-radius:12px; border:1px solid var(--line); background:var(--panel); color:var(--text); cursor:pointer; }
+  .hint { font-size:11px; color:var(--muted); margin-top:12px; line-height:1.7; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div class="brand">
+    <h1>📖 DSE 理科读题训练</h1>
+    <div class="sub">读真实真题题干 · 点读术语 · 判断是否读懂（不是背单词）</div>
+  </div>
+
+  <div class="chips" id="subj-chips">
+    <span class="chip on" data-sub="all">全部</span>
+    <span class="chip" data-sub="math">数学</span>
+    <span class="chip" data-sub="physics">物理</span>
+    <span class="chip" data-sub="chemistry">化学</span>
+  </div>
+
+  <div class="stats" id="stats">
+    <span>进度 <b id="stat-done">0</b>/<b id="stat-total">0</b></span>
+    <span>读懂了 <b id="stat-ok" style="color:#4ade80">0</b></span>
+    <span>没读懂 <b id="stat-no" style="color:#f87171">0</b></span>
+    <span>错词本 <b id="stat-wrong" style="color:#fbbf24">0</b></span>
+  </div>
+
+  <div class="card">
+    <div class="card-head">
+      <span class="idx" id="c-index">#1</span>
+      <span class="subj-tag" id="c-subj">数学</span>
+      <span id="c-topic"></span>
+    </div>
+    <div class="stem-en" id="stem-en"></div>
+    <div class="dict-box" id="dict-box"></div>
+    <div class="zh-row">
+      <button class="zh-btn" id="zh-toggle">显示中文翻译</button>
+      <div class="zh-body" id="zh-body"></div>
+    </div>
+
+    <div class="self-check">
+      <div class="label">我读懂了吗？（诚实自评，错题会进错题本）</div>
+      <div class="self-btns">
+        <button class="sb ok" data-s="ok">✅ 读懂了</button>
+        <button class="sb part" data-s="part">🟡 部分</button>
+        <button class="sb no" data-s="no">❌ 没读懂</button>
+      </div>
+    </div>
+
+    <div class="quiz-area">
+      <div class="quiz-q" id="quiz-q"></div>
+      <div class="quiz-opts" id="quiz-opts"></div>
+      <div class="quiz-fb" id="quiz-fb"></div>
+    </div>
+
+    <div class="nav">
+      <button class="ghost" id="btn-prev">← 上一题</button>
+      <button id="btn-next">下一题 →</button>
+    </div>
+  </div>
+
+  <div class="wronglist">
+    <h3>错词本（没读懂的题 + 术语答错的词）</h3>
+    <div id="wrong-items"></div>
+    <div id="wrong-empty" style="font-size:12px;color:var(--muted)">暂无错题，继续加油</div>
+  </div>
+
+  <div class="hint">
+    用法：读英文题干 → 点击<b style="color:#93c5fd">蓝色下划线</b>的术语看中文（语境学词，不是背单词）→ 判断自己读懂没 →
+    点「考考你」抽查一个术语 → 没读懂的自动进错词本，可随时回练。<br>
+    数据：366 道真实 DSE 风格题干（数学 165 / 物理 132 / 化学 69），来自三套知识图谱。
+  </div>
+</div>
+
+<script src="../math/graph-data.js"></script>
+<script src="../physics/graph-data.js"></script>
+<script src="../chemistry/graph-data.js"></script>
+<script>
+(function(){
+  // ============ 数据聚合 ============
+  const SUBJECTS = [
+    { key:'math', label:'数学', cls:'math', graph: DSE_MATH_GRAPH },
+    { key:'physics', label:'物理', cls:'physics', graph: DSE_PHYSICS_GRAPH },
+    { key:'chemistry', label:'化学', cls:'chemistry', graph: DSE_CHEM_GRAPH },
+  ];
+  const dict = [];   // {en, zh, subject}
+  const dictBySub = {};
+  SUBJECTS.forEach(s => dictBySub[s.key] = []);
+  const cards = [];  // {subject, topic, stemEn, stemZh, terms:[]}
+  const topicName = {};
+  SUBJECTS.forEach(s => {
+    s.graph.nodes.forEach(n => {
+      topicName[s.key+':'+n.id] = (n.name&&n.name.zh) || n.id;
+      if (n.name && n.name.en && n.name.zh) { dict.push({en:n.name.en, zh:n.name.zh, subject:s.key}); }
+      (n.leaves||[]).forEach(l => {
+        if (l.name && l.name.en && l.name.zh) { dict.push({en:l.name.en, zh:l.name.zh, subject:s.key}); }
+      });
+    });
+    s.graph.motherProblems.forEach(m => {
+      if (m.titleEn && m.titleZh) { dict.push({en:m.titleEn, zh:m.titleZh, subject:s.key}); }
+      (m.variants||[]).forEach(v => {
+        if (v.stemEn && v.stemZh) {
+          cards.push({ subject:s.key, topic:m.coreTopics[0], stemEn:v.stemEn, stemZh:v.stemZh, _gid:cards.length });
+        }
+      });
+    });
+  });
+  // 词典去重（en+subject），并按长度降序
+  const seen = new Set();
+  const uniq = dict.filter(d => { const k = d.en.toLowerCase()+'|'+d.subject; if (seen.has(k)) return false; seen.add(k); return true; });
+  uniq.sort((a,b) => b.en.length - a.en.length);
+  uniq.forEach(d => dictBySub[d.subject].push(d));
+  const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  const escRe = s => s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+
+  // ============ 状态 ============
+  let curSub = 'all';
+  let curIdx = 0;
+  let filtered = cards.slice();
+  const LS = {
+    get(k,d){ try{ return JSON.parse(localStorage.getItem('dse-read-'+k)) ?? d; }catch(e){ return d; } },
+    set(k,v){ localStorage.setItem('dse-read-'+k, JSON.stringify(v)); },
+  };
+  const selfReport = LS.get('self', {});   // cardIdx -> 'ok'|'part'|'no'
+  const wrongWords = LS.get('wrong', {});  // en -> {zh, subject, count}
+
+  // ============ 术语高亮 ============
+  function highlight(text, terms) {
+    // 按词包裹：术语词加 data-zh（精确释义），普通词可点（显示整句中文）
+    const termMap = {};
+    terms.forEach(t => termMap[t.en.toLowerCase()] = t);
+    return text.replace(/([A-Za-z][A-Za-z0-9'-]*)/g, function(m){
+      const key = m.toLowerCase();
+      const t = termMap[key];
+      if (t) return '<span class="term word" data-zh="'+esc(t.zh)+'" data-sub="'+t.subject+'" data-w="'+esc(m)+'">'+esc(m)+'</span>';
+      return '<span class="word" data-w="'+esc(m)+'">'+esc(m)+'</span>';
+    });
+  }
+  // 匹配题干的术语（优先同科目 + 长词）
+  function matchTerms(stemEn, subject) {
+    const lower = ' '+stemEn.toLowerCase()+' ';
+    const hit = [];
+    const pool = dictBySub[subject].slice();
+    uniq.forEach(d => {
+      if (d.subject !== subject && !pool.some(p => p.en.toLowerCase() === d.en.toLowerCase())) pool.push(d);
+    });
+    pool.sort((a,b) => b.en.length - a.en.length);
+    pool.forEach(d => {
+      const re = new RegExp('\\b'+escRe(d.en)+'\\b','gi');
+      if (re.test(stemEn)) hit.push(d);
+    });
+    return hit.slice(0, 14);
+  }
+
+  // ============ 渲染 ============
+  function current() { return filtered[curIdx]; }
+  function refreshStats() {
+    const gids = new Set(filtered.map(c => c._gid));
+    const done = Object.keys(selfReport).filter(k => gids.has(+k)).length;
+    const okN = Object.keys(selfReport).filter(k => gids.has(+k) && selfReport[k]==='ok').length;
+    const noN = Object.keys(selfReport).filter(k => gids.has(+k) && selfReport[k]==='no').length;
+    document.getElementById('stat-total').textContent = filtered.length;
+    document.getElementById('stat-done').textContent = done;
+    document.getElementById('stat-ok').textContent = okN;
+    document.getElementById('stat-no').textContent = noN;
+    document.getElementById('stat-wrong').textContent = Object.keys(wrongWords).length;
+  }
+  function renderCard() {
+    const c = current();
+    if (!c) { document.getElementById('stem-en').textContent = '（该科目暂无读题卡）'; return; }
+    document.getElementById('c-index').textContent = '#'+(curIdx+1)+' / '+filtered.length;
+    const s = SUBJECTS.find(x=>x.key===c.subject);
+    const sj = document.getElementById('c-subj');
+    sj.textContent = s.label;
+    sj.className = 'subj-tag ' + s.cls;
+    document.getElementById('c-topic').textContent = topicName[c.subject+':'+c.topic] || '';
+    const terms = matchTerms(c.stemEn, c.subject);
+    document.getElementById('stem-en').innerHTML = highlight(c.stemEn, terms);
+    document.getElementById('zh-body').textContent = c.stemZh;
+    document.getElementById('zh-body').classList.remove('show');
+    document.getElementById('zh-toggle').textContent = '显示中文翻译';
+    document.getElementById('dict-box').classList.remove('show');
+    document.getElementById('quiz-q').textContent = '';
+    document.getElementById('quiz-opts').innerHTML = '';
+    document.getElementById('quiz-fb').textContent = '';
+    // 自评状态
+    const rep = selfReport[c._gid];
+    document.querySelectorAll('.sb').forEach(b => b.classList.toggle('done', rep===b.dataset.s));
+    // 下一题禁用判断
+    document.getElementById('btn-next').disabled = curIdx >= filtered.length-1;
+    document.getElementById('btn-prev').disabled = curIdx <= 0;
+    renderWrong();
+    refreshStats();
+  }
+  // 点读：任何词可点（术语词给精确释义+考考你，普通词给整句中文=语境理解）
+  const subjLabel = k => k==='math'?'数学':k==='physics'?'物理':'化学';
+  document.getElementById('stem-en').addEventListener('click', e => {
+    const w = e.target.closest('.word');
+    if (!w) return;
+    const box = document.getElementById('dict-box');
+    if (w.dataset.zh) {
+      box.innerHTML = '<b>'+esc(w.dataset.zh)+'</b> <span style="opacity:.8">('+subjLabel(w.dataset.sub)+')</span> —— <span class="en">'+esc(w.dataset.w)+'</span>';
+      box.classList.add('show');
+      startQuiz(w.dataset.w, w.dataset.zh, w.dataset.sub);
+    } else {
+      const c = current();
+      box.innerHTML = '<b>'+esc(w.dataset.w)+'</b> <span style="opacity:.7">（整句意思）</span><div style="margin-top:4px">'+esc(c.stemZh)+'</div>';
+      box.classList.add('show');
+      document.getElementById('quiz-q').textContent = '';
+      document.getElementById('quiz-opts').innerHTML = '';
+      document.getElementById('quiz-fb').textContent = '';
+    }
+  });
+  // 中文对照
+  document.getElementById('zh-toggle').addEventListener('click', function(){
+    const b = document.getElementById('zh-body');
+    const show = !b.classList.contains('show');
+    b.classList.toggle('show', show);
+    this.textContent = show ? '隐藏中文翻译' : '显示中文翻译';
+  });
+  // 自评
+  document.querySelectorAll('.sb').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const c = current(); if (!c) return;
+      selfReport[current()._gid] = btn.dataset.s;
+      LS.set('self', selfReport);
+      document.querySelectorAll('.sb').forEach(b => b.classList.toggle('done', b===btn));
+      refreshStats();
+    });
+  });
+  // 术语测验
+  function startQuiz(en, zh, subject) {
+    document.getElementById('quiz-q').innerHTML = '考考你：「<b>'+esc(en)+'</b>」是什么意思？';
+    const pool = dictBySub[subject].filter(d => d.zh !== zh);
+    const opts = [{text:zh, correct:true}];
+    const picked = new Set([zh]);
+    while (opts.length < 4 && pool.length) {
+      const d = pool[Math.floor(Math.random()*pool.length)];
+      if (!picked.has(d.zh)) { picked.add(d.zh); opts.push({text:d.zh, correct:false}); }
+    }
+    opts.sort(() => Math.random()-0.5);
+    const box = document.getElementById('quiz-opts');
+    box.innerHTML = opts.map((o,i) => '<button class="qo" data-i="'+i+'">'+esc(o.text)+'</button>').join('');
+    box.querySelectorAll('.qo').forEach(btn => {
+      btn.onclick = () => {
+        const o = opts[+btn.dataset.i];
+        box.querySelectorAll('.qo').forEach(b => b.classList.remove('correct','wrong'));
+        if (o.correct) {
+          btn.classList.add('correct');
+          document.getElementById('quiz-fb').textContent = '✓ 答对了！';
+        } else {
+          btn.classList.add('wrong');
+          const okBtn = box.querySelectorAll('.qo')[opts.findIndex(x=>x.correct)];
+          okBtn.classList.add('correct');
+          document.getElementById('quiz-fb').textContent = '✗ 记错了 → 已加入错词本';
+          wrongWords[en.toLowerCase()] = {zh, subject, count:(wrongWords[en.toLowerCase()]||{}).count+1 || 1};
+          LS.set('wrong', wrongWords);
+          renderWrong(); refreshStats();
+        }
+      };
+    });
+  }
+  // 错词本
+  function renderWrong() {
+    const wrap = document.getElementById('wrong-items');
+    const items = [];
+    // 1. 自评「没读懂」的题
+    Object.entries(selfReport).forEach(([gid, v]) => {
+      if (v !== 'no') return;
+      const c = cards[+gid];
+      if (!c) return;
+      const s = SUBJECTS.find(x=>x.key===c.subject);
+      items.push('<div class="wrong-item"><span class="wzh">'+esc(c.stemZh.slice(0,38))+'…</span>'+
+        '<span class="wsub">'+s.label+'</span>'+
+        '<button data-g="'+gid+'">回练</button></div>');
+    });
+    // 2. 术语答错的词
+    Object.entries(wrongWords).forEach(([en,d]) => {
+      items.push('<div class="wrong-item"><span class="wzh">'+esc(d.zh)+'</span>'+
+        '<span style="color:#93c5fd">'+esc(en)+'</span>'+
+        '<span class="wsub">'+d.subject+'×'+d.count+'</span>'+
+        '<button data-w="'+esc(en)+'">移除</button></div>');
+    });
+    document.getElementById('wrong-empty').style.display = items.length ? 'none':'block';
+    wrap.innerHTML = items.slice(0,30).join('');
+    wrap.querySelectorAll('button[data-g]').forEach(b => {
+      b.onclick = () => { curSub='all'; filtered = cards.map(c=>c); curIdx = cards.findIndex(c=>c._gid===+b.dataset.g); renderCard(); };
+    });
+    wrap.querySelectorAll('button[data-w]').forEach(b => {
+      b.onclick = () => { delete wrongWords[b.dataset.w]; LS.set('wrong', wrongWords); renderWrong(); refreshStats(); };
+    });
+  }
+  // 科目切换
+  document.getElementById('subj-chips').addEventListener('click', e => {
+    const chip = e.target.closest('.chip'); if (!chip) return;
+    curSub = chip.dataset.sub;
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c===chip));
+    filtered = curSub==='all' ? cards.slice() : cards.filter(c => c.subject===curSub);
+    curIdx = 0;
+    renderCard();
+  });
+  // 导航
+  document.getElementById('btn-next').addEventListener('click', () => { if (curIdx < filtered.length-1) { curIdx++; renderCard(); } });
+  document.getElementById('btn-prev').addEventListener('click', () => { if (curIdx > 0) { curIdx--; renderCard(); } });
+  // 键盘
+  document.addEventListener('keydown', e => {
+    if (e.key==='ArrowRight') document.getElementById('btn-next').click();
+    if (e.key==='ArrowLeft') document.getElementById('btn-prev').click();
+  });
+
+  renderCard();
+})();
+</script>
+</body>
+</html>

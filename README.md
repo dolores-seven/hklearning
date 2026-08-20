@@ -9,6 +9,7 @@
 | **打开数学图谱** | 双击 `math/dse-math-map.html` |
 | **打开物理图谱** | 双击 `physics/dse-physics-map.html` |
 | **打开化学图谱** | 双击 `chemistry/dse-chemistry-map.html` |
+| **读题训练**（读英文真题题干） | 双击 `vocab/dse-reading.html` |
 | **看术语清单** | `vocab/术语清单.md` |
 | **数据契约校验** | `shared/contract-check.js` |
 | **生产线手册** | `shared/DSE知识图谱生产线手册.md` |

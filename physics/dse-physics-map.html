@@ -230,6 +230,8 @@
     difficulty:  { zh:'难度', en:'Difficulty' },
     examFreq:    { zh:'考试频率', en:'Exam frequency' },
     examSec:     { zh:'主要出题位置', en:'Main section' },
+    marks:       { zh:'卷一占分', en:'Marks (P1)' },
+    marksNote:   { zh:'出题说明', en:'Exam note' },
     weightMap:   { zh:{ high:'高频', mid:'中频', low:'低频' }, en:{ high:'High', mid:'Mid', low:'Low' } },
     expandHint:  { zh:'双击展开公式', en:'Double-click to expand' },
     collapseHint:{ zh:'双击收起', en:'Double-click to collapse' },
@@ -559,6 +561,7 @@
         <span class="tag2">${t('grade')}: ${node.grades.join(' / ')}</span>
         <span class="tag2">${t('weight')}: ${weightMap[node.weight] || '—'}</span>
         <span class="tag2">${t('difficulty')}: ${node.diff ? '★'.repeat(node.diff) : '—'}</span>
+        ${node.examWeight ? `<span class="tag2" style="background:#16a34a22;color:#4ade80">${t('marks')}: ${node.examWeight}</span>` : ''}
       </div>`;
 
       // 考试频率 & 出题位置（如果有数据）
@@ -705,7 +708,9 @@
     const lg = document.getElementById('legend');
     let h = `<div class="lg-cap">${t('domainT')} · ${t('topic')}</div>`;
     G.domains.forEach(d => {
-      h += `<div class="li"><span class="dot" style="background:${d.color}"></span> ${nm(d.code)}</div>`;
+      h += `<div class="li"><span class="dot" style="background:${d.color}"></span> ${nm(d.code)}` +
+        (d.marksRange ? ` <span style="font-size:10px;color:var(--muted)">${d.marksRange}</span>` : '') +
+        `</div>`;
     });
     h += `<div class="lg-cap">${LANG==='zh'?'知识类型':'Knowledge type'} · ${t('leafW')}</div>`;
     Object.entries(G.meta.knowledgeTypes).forEach(([k,v]) => {

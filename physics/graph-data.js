@@ -235,7 +235,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 1
+   "diff": 1,
+   "examWeight": "2-3"
   },
   {
    "id": "ph-ht-shc",
@@ -321,7 +322,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-ht-latent",
@@ -421,7 +423,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-ht-kinetic",
@@ -507,7 +510,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "2-4"
   },
   {
    "id": "ph-fm-motion",
@@ -607,7 +611,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-fm-newton",
@@ -721,7 +726,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "5-7"
   },
   {
    "id": "ph-fm-momentum",
@@ -807,7 +813,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-fm-conserve",
@@ -893,7 +900,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-fm-work",
@@ -993,7 +1001,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-fm-energy",
@@ -1093,7 +1102,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-fm-energy-conserve",
@@ -1193,7 +1203,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-wv-prop",
@@ -1307,7 +1318,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-wv-trans",
@@ -1393,7 +1405,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "2-4"
   },
   {
    "id": "ph-wv-water",
@@ -1465,7 +1478,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "2-3"
   },
   {
    "id": "ph-wv-sound",
@@ -1551,7 +1565,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-wv-light",
@@ -1665,7 +1680,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-em-charge",
@@ -1751,7 +1767,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-em-circuit",
@@ -1851,7 +1868,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-em-resistance",
@@ -1951,7 +1969,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-em-power",
@@ -2037,7 +2056,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-em-force",
@@ -2123,7 +2143,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-em-induction",
@@ -2223,7 +2244,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "4-6"
   },
   {
    "id": "ph-rp-decay",
@@ -2323,7 +2345,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "3-5"
   },
   {
    "id": "ph-rp-isotope",
@@ -2409,7 +2432,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 1
+   "diff": 1,
+   "examWeight": "2-4"
   },
   {
    "id": "ph-rp-application",
@@ -2495,7 +2519,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "low",
-   "diff": 1
+   "diff": 1,
+   "examWeight": "2-4"
   },
   {
    "id": "ph-as-astro",
@@ -2595,7 +2620,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "10-13 (P2)"
   },
   {
    "id": "ph-aw-atomic",
@@ -2695,7 +2721,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "mid",
-   "diff": 3
+   "diff": 3,
+   "examWeight": "10-13 (P2)"
   },
   {
    "id": "ph-ee-energy",
@@ -2795,7 +2822,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "low",
-   "diff": 1
+   "diff": 1,
+   "examWeight": "10-13 (P2)"
   },
   {
    "id": "ph-mp-medical",
@@ -2895,7 +2923,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "low",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "10-13 (P2)"
   },
   {
    "id": "ph-lab-skills",
@@ -3011,7 +3040,8 @@ const DSE_PHYSICS_GRAPH = {
     }
    ],
    "weight": "high",
-   "diff": 2
+   "diff": 2,
+   "examWeight": "SBA 20%"
   }
  ],
  "edges": [
@@ -4884,7 +4914,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "熱和氣體",
     "en": "Heat and Gases"
-   }
+   },
+   "marksRange": "12-18",
+   "difficultyLevel": 3,
+   "marksNoteZh": "每年 MC + 乙部一条结构题",
+   "marksNoteEn": "MC + one Section B structured question yearly"
   },
   {
    "id": "PH-FM",
@@ -4895,7 +4929,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "力和運動",
     "en": "Force and Motion"
-   }
+   },
+   "marksRange": "25-35",
+   "difficultyLevel": 4,
+   "marksNoteZh": "最重模块，常以一条10-14分多部分大题出现",
+   "marksNoteEn": "Heaviest module, often a 10-14 mark multi-part question"
   },
   {
    "id": "PH-WV",
@@ -4906,7 +4944,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "波動",
     "en": "Waves"
-   }
+   },
+   "marksRange": "18-25",
+   "difficultyLevel": 3,
+   "marksNoteZh": "光、声、叠加、透镜光学",
+   "marksNoteEn": "Light, sound, superposition, lens optics"
   },
   {
    "id": "PH-EM",
@@ -4917,7 +4959,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "電和磁",
     "en": "Electricity and Magnetism"
-   }
+   },
+   "marksRange": "22-30",
+   "difficultyLevel": 4,
+   "marksNoteZh": "常是乙部最长一条题；光电效应与必修衔接是失分点",
+   "marksNoteEn": "Often the longest Section B question; photoelectric link is a common pitfall"
   },
   {
    "id": "PH-RP",
@@ -4928,7 +4974,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "放射現象與核能",
     "en": "Radioactivity and Nuclear Energy"
-   }
+   },
+   "marksRange": "8-14",
+   "difficultyLevel": 3,
+   "marksNoteZh": "通常捆绑一条情境丰富题目（反应堆/医学同位素）",
+   "marksNoteEn": "Usually tied to a context-rich question (reactor/medical isotopes)"
   },
   {
    "id": "PH-AS",
@@ -4939,7 +4989,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "天文學",
     "en": "Astronomy"
-   }
+   },
+   "marksRange": "10-13 (Paper 2)",
+   "difficultyLevel": 3,
+   "marksNoteZh": "选修 E1；赫罗图数据题考起很多人",
+   "marksNoteEn": "Elective E1; H-R diagram data questions challenge many"
   },
   {
    "id": "PH-AW",
@@ -4950,7 +5004,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "原子世界",
     "en": "Atomic World"
-   }
+   },
+   "marksRange": "10-13 (Paper 2)",
+   "difficultyLevel": 4,
+   "marksNoteZh": "选修 E2；一半内容与必修放射重叠",
+   "marksNoteEn": "Elective E2; half overlaps with core Radioactivity"
   },
   {
    "id": "PH-EE",
@@ -4961,7 +5019,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "能量與能源的利用",
     "en": "Energy and Use of Energy"
-   }
+   },
+   "marksRange": "10-13 (Paper 2)",
+   "difficultyLevel": 2,
+   "marksNoteZh": "选修 E3；适合热学底子好的同学",
+   "marksNoteEn": "Elective E3; good for students with solid thermal foundation"
   },
   {
    "id": "PH-MP",
@@ -4972,7 +5034,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "醫學物理",
     "en": "Medical Physics"
-   }
+   },
+   "marksRange": "10-13 (Paper 2)",
+   "difficultyLevel": 3,
+   "marksNoteZh": "选修 E4；奖励肯细读情境的人",
+   "marksNoteEn": "Elective E4; rewards careful context reading"
   },
   {
    "id": "PH-LAB",
@@ -4983,7 +5049,11 @@ const DSE_PHYSICS_GRAPH = {
    "code": {
     "zh": "實驗技能",
     "en": "Experimental Skills"
-   }
+   },
+   "marksRange": "SBA 20%",
+   "difficultyLevel": 2,
+   "marksNoteZh": "校本评核，非卷面分",
+   "marksNoteEn": "School-based assessment, not paper marks"
   }
  ]
 };

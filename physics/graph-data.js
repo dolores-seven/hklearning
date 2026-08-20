@@ -3895,7 +3895,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Net force 6 N; a = 6/2 = 3 m/s².",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "淨力 = 10-4 = 6 N",
+       "pts": 1
+      },
+      {
+       "content": "a = F/m = 6/2",
+       "pts": 1
+      },
+      {
+       "content": "a = 3 m/s² + 單位",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 10 N 而非淨力 6 N（漏摩擦力）。",
+     "lossEn": "Using 10 N instead of net 6 N (ignoring friction)."
     },
     {
      "difficulty": "intermediate",
@@ -3903,7 +3919,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "3 kg on frictionless 30° incline; find acceleration.",
      "answerZh": "下滑分量 mg sin30°=3×10×0.5=15 N；a=15/3=5 m/s²。",
      "answerEn": "Down-slope component mg sin30° = 15 N; a = 5 m/s².",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "下滑分量 mg sin30° = 15 N",
+       "pts": 1
+      },
+      {
+       "content": "a = 15/3",
+       "pts": 1
+      },
+      {
+       "content": "a = 5 m/s²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 mg 而非 mg sinθ（未沿斜面對齊）。",
+     "lossEn": "Using mg instead of mg sinθ (not resolving along slope)."
     },
     {
      "difficulty": "challenge",
@@ -3913,7 +3945,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "a = 25/5 = 5 m/s²; T on 2 kg = 10 N.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "整體 a = 25/(2+3) = 5 m/s²",
+       "pts": 1
+      },
+      {
+       "content": "對 2 kg 隔離：T = 2×5",
+       "pts": 1
+      },
+      {
+       "content": "T = 10 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只算整體不算張力（題問的是 T）。",
+     "lossEn": "Solving whole system but not the asked tension."
     }
    ]
   },
@@ -3965,7 +4013,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Object falls 5 m; impact speed?",
      "answerZh": "½mv²=mgh → v=√(2gh)=√(2×10×5)=10 m/s。",
      "answerEn": "v = √(2gh) = 10 m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "½mv² = mgh",
+       "pts": 1
+      },
+      {
+       "content": "v = √(2gh)",
+       "pts": 1
+      },
+      {
+       "content": "v = √(2×10×5) = 10 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "質量沒消去（其實兩邊都有 m 可約）。",
+     "lossEn": "Not cancelling mass (m appears on both sides)."
     },
     {
      "difficulty": "intermediate",
@@ -3975,7 +4039,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "60 - 36 = 24 J.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "mgh = 2×10×3 = 60 J（初能量）",
+       "pts": 1
+      },
+      {
+       "content": "½mv² = ½×2×36 = 36 J（末動能）",
+       "pts": 1
+      },
+      {
+       "content": "克服摩擦做功 = 60-36 = 24 J",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把摩擦功算成總能量而非差值。",
+     "lossEn": "Taking friction work as total energy instead of difference."
     },
     {
      "difficulty": "challenge",
@@ -3983,7 +4063,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "0.5 kg launched by spring (k=200, compressed 0.2 m). Max speed?",
      "answerZh": "½kx²=½mv² → ½×200×0.04=½×0.5×v² → 4=0.25v² → v=4 m/s。",
      "answerEn": "½kx² = ½mv² → v = 4 m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "½kx² = ½mv²",
+       "pts": 1
+      },
+      {
+       "content": "½×200×0.04 = ½×0.5×v²",
+       "pts": 1
+      },
+      {
+       "content": "v = 4 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "彈性勢能公式寫成 kx² 而漏 ½。",
+     "lossEn": "Writing kx² instead of ½kx²."
     }
    ]
   },
@@ -4033,7 +4129,19 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "In v-t graph, what do slope and area represent?",
      "answerZh": "斜率=加速度；面積=位移。",
      "answerEn": "Slope = acceleration; area = displacement.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "斜率 = 加速度",
+       "pts": 1
+      },
+      {
+       "content": "面積 = 位移",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把兩者對調。",
+     "lossEn": "Swapping slope and area meaning."
     },
     {
      "difficulty": "intermediate",
@@ -4041,7 +4149,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "v-t: 0-4s 0→8 m/s, 4-8s constant 8 m/s. Total displacement?",
      "answerZh": "0-4s 面積=½×4×8=16 m；4-8s 面積=4×8=32 m；總=48 m。",
      "answerEn": "Triangle 16 m + rectangle 32 m = 48 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "0-4s 三角形面積 = ½×4×8 = 16 m",
+       "pts": 1
+      },
+      {
+       "content": "4-8s 矩形面積 = 4×8 = 32 m",
+       "pts": 1
+      },
+      {
+       "content": "總位移 = 48 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只算一段面積（漏另一段）。",
+     "lossEn": "Only computing one segment area."
     },
     {
      "difficulty": "challenge",
@@ -4051,7 +4175,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Uniform acceleration; s=½at² → a=4 m/s².",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "s-t 拋物線 → 勻加速",
+       "pts": 1
+      },
+      {
+       "content": "s = ½at² = 2t²",
+       "pts": 1
+      },
+      {
+       "content": "a = 4 m/s²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為拋物線是變速運動但加速度求錯（比較係數）。",
+     "lossEn": "Misreading coefficient comparison for a."
     }
    ]
   },
@@ -4103,7 +4243,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "2 kg at 4 m/s hits stationary 2 kg, perfectly inelastic. Common velocity?",
      "answerZh": "動量守恆：2×4=(2+2)v → v=2 m/s。",
      "answerEn": "2×4 = 4v → v = 2 m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "動量守恆：2×4 = (2+2)v",
+       "pts": 1
+      },
+      {
+       "content": "v = 2 m/s",
+       "pts": 1
+      },
+      {
+       "content": "方向與原運動相同",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用動能守恆（完全非彈性不守動能）。",
+     "lossEn": "Using KE conservation (inelastic collision loses KE)."
     },
     {
      "difficulty": "intermediate",
@@ -4111,7 +4267,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "0.5 kg at 3 m/s elastic collision with stationary 1 kg. Final speeds?",
      "answerZh": "動量+動能守恆：0.5×3=0.5v₁+1v₂ 且 ½×0.5×9=½×0.5v₁²+½×1v₂² → v₁=-1, v₂=2 m/s。",
      "answerEn": "Conserve p and KE: v₁=-1 m/s, v₂=2 m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "動量守恆：0.5×3 = 0.5v₁+1v₂",
+       "pts": 1
+      },
+      {
+       "content": "動能守恆：½×0.5×9 = ½×0.5v₁²+½×1v₂²",
+       "pts": 1
+      },
+      {
+       "content": "聯立解 v₁=-1, v₂=2 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "彈性碰撞只列動量方程（缺動能方程無法求兩個末速）。",
+     "lossEn": "Listing only momentum for elastic collision."
     },
     {
      "difficulty": "challenge",
@@ -4121,7 +4293,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "0 = v + 12 → v = -12 m/s (left).",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "爆炸：系統初動量 = 0",
+       "pts": 1
+      },
+      {
+       "content": "0 = 1×v + 2×6",
+       "pts": 1
+      },
+      {
+       "content": "v = -12 m/s（向左）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏負號（方向）；只求大小。",
+     "lossEn": "Missing negative sign (direction)."
     }
    ]
   },
@@ -4242,7 +4430,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Two 4 Ω in series on 12 V; current?",
      "answerZh": "R=4+4=8 Ω；I=V/R=12/8=1.5 A。",
      "answerEn": "R=8 Ω; I=1.5 A.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "總電阻 R = 4+4 = 8 Ω",
+       "pts": 1
+      },
+      {
+       "content": "I = V/R = 12/8",
+       "pts": 1
+      },
+      {
+       "content": "I = 1.5 A",
+       "pts": 1
+      }
+     ],
+     "lossZh": "串聯當並聯計算（串聯電阻相加）。",
+     "lossEn": "Adding parallel instead of series (series adds)."
     },
     {
      "difficulty": "intermediate",
@@ -4252,7 +4456,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "R = 3 Ω; I = 8 A.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "1/R = 1/4+1/12 = 1/3",
+       "pts": 1
+      },
+      {
+       "content": "R = 3 Ω",
+       "pts": 1
+      },
+      {
+       "content": "I = 24/3 = 8 A",
+       "pts": 1
+      }
+     ],
+     "lossZh": "並聯電阻直接相加（要取倒數和）。",
+     "lossEn": "Simply adding parallel resistances (use reciprocal sum)."
     },
     {
      "difficulty": "challenge",
@@ -4262,7 +4482,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "I=0.5 A; R=12 Ω.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "燈泡電流 I = P/V = 6/6 = 0.5 A？改：I=P/V=3/6=0.5 A",
+       "pts": 1
+      },
+      {
+       "content": "燈泡電阻 = 6/0.5 = 12 Ω",
+       "pts": 1
+      },
+      {
+       "content": "R 分壓 6 V → R = 6/0.5 = 12 Ω",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用燈泡額定功率求錯電流（串聯中電流相等）。",
+     "lossEn": "Wrong current from bulb rating (series current shared)."
     }
    ]
   },
@@ -4384,7 +4620,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Flux 0.1→0.3 Wb in 0.2 s; induced emf?",
      "answerZh": "ε=ΔΦ/Δt=(0.3-0.1)/0.2=1.0 V。",
      "answerEn": "ε = ΔΦ/Δt = 1.0 V.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "ε = ΔΦ/Δt",
+       "pts": 1
+      },
+      {
+       "content": "ΔΦ = 0.3-0.1 = 0.2 Wb",
+       "pts": 1
+      },
+      {
+       "content": "ε = 0.2/0.2 = 1.0 V",
+       "pts": 1
+      }
+     ],
+     "lossZh": "單位寫錯（Wb/s = V）。",
+     "lossEn": "Wrong unit (Wb/s = V)."
     },
     {
      "difficulty": "intermediate",
@@ -4394,7 +4646,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "Flux increases; induced field opposes; direction via right-hand rule.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "N 極插入 → 磁通增加",
+       "pts": 1
+      },
+      {
+       "content": "楞次定律：感應磁場抗拒插入（N 朝上）",
+       "pts": 1
+      },
+      {
+       "content": "右手定則定電流方向",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「抗拒」未用右手定則給出方向。",
+     "lossEn": "Saying \"opposes\" without giving direction via right-hand rule."
     },
     {
      "difficulty": "challenge",
@@ -4404,7 +4672,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "ε = BLv = 0.4 V.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "ε = BLv",
+       "pts": 1
+      },
+      {
+       "content": "ε = 0.2×0.5×4",
+       "pts": 1
+      },
+      {
+       "content": "ε = 0.4 V",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏 B、L、v 三者需互相垂直的條件。",
+     "lossEn": "Forgetting B, L, v must be mutually perpendicular."
     }
    ]
   },
@@ -4729,7 +5013,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Transformer 200:400 turns, primary 110 V; secondary voltage?",
      "answerZh": "Vs/Vp=Ns/Np → Vs=110×400/200=220 V。",
      "answerEn": "Vs = 110×2 = 220 V.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Vs/Vp = Ns/Np",
+       "pts": 1
+      },
+      {
+       "content": "Vs = 110×400/200",
+       "pts": 1
+      },
+      {
+       "content": "Vs = 220 V",
+       "pts": 1
+      }
+     ],
+     "lossZh": "匝數比寫反（次級/初級）。",
+     "lossEn": "Reversing turns ratio."
     },
     {
      "difficulty": "intermediate",
@@ -4739,7 +5039,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "At 10 kV loss 100 kW; at 100 kV 1 kW; 100× reduction.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "10 kV：I = P/V = 100 A",
+       "pts": 1
+      },
+      {
+       "content": "損耗 I²R = 100000 W",
+       "pts": 1
+      },
+      {
+       "content": "100 kV：I=10 A，損耗 1000 W → 降為 1%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 P=I²R 而非 P=VI 算輸電損耗。",
+     "lossEn": "Using P=VI instead of I²R for line loss."
     },
     {
      "difficulty": "challenge",
@@ -4747,7 +5063,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Transformer: primary 220 V 2 A, secondary 110 V 3.5 A; efficiency?",
      "answerZh": "Pin=440 W；Pout=385 W；η=385/440=87.5%。",
      "answerEn": "η = 385/440 = 87.5%.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Pin = 220×2 = 440 W",
+       "pts": 1
+      },
+      {
+       "content": "Pout = 110×3.5 = 385 W",
+       "pts": 1
+      },
+      {
+       "content": "η = 385/440 = 87.5%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "效率定義寫反（輸出/輸入）。",
+     "lossEn": "Reversing efficiency (output/input)."
     }
    ]
   },
@@ -5005,7 +5337,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "6 V, 0.5 A; resistance?",
      "answerZh": "R=V/I=6/0.5=12 Ω。",
      "answerEn": "R = 12 Ω.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "R = V/I",
+       "pts": 1
+      },
+      {
+       "content": "R = 6/0.5",
+       "pts": 1
+      },
+      {
+       "content": "R = 12 Ω",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 R=VI 而非 R=V/I。",
+     "lossEn": "Using R=VI instead of R=V/I."
     },
     {
      "difficulty": "intermediate",
@@ -5013,7 +5361,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Wire length doubled, area doubled; resistance?",
      "answerZh": "R=ρL/A；L×2、A×2 → R 不變。",
      "answerEn": "R ∝ L/A; both double → R unchanged.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "R = ρL/A",
+       "pts": 1
+      },
+      {
+       "content": "L×2 且 A×2 → R 不變",
+       "pts": 1
+      },
+      {
+       "content": "說明比例關係",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只改長度不看截面積變化。",
+     "lossEn": "Changing length without considering area change."
     },
     {
      "difficulty": "challenge",
@@ -5023,7 +5387,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "R = R₀(1+αΔT) = 90.5 Ω.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "R = R₀(1+αΔT)",
+       "pts": 1
+      },
+      {
+       "content": "ΔT = 180°C",
+       "pts": 1
+      },
+      {
+       "content": "R = 50×1.81 = 90.5 Ω",
+       "pts": 1
+      }
+     ],
+     "lossZh": "ΔT 用絕對溫度（應是溫度差 180°C）。",
+     "lossEn": "Using absolute temperature for ΔT (use difference 180°C)."
     }
    ]
   },
@@ -5620,7 +6000,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Horizontal throw from 20 m at 10 m/s; time of flight?",
      "answerZh": "t=√(2h/g)=√(2×20/10)=2 s。",
      "answerEn": "t = √(2h/g) = 2 s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "垂直方向 h = ½gt²",
+       "pts": 1
+      },
+      {
+       "content": "t = √(2×20/10) = 2 s",
+       "pts": 1
+      },
+      {
+       "content": "（若問距離）x = vt",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用水平速度求落地時間（時間由高度決定）。",
+     "lossEn": "Using horizontal speed for time of flight."
     },
     {
      "difficulty": "intermediate",
@@ -5628,7 +6024,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Projectile at 20 m/s, 30°; max height and range?",
      "answerZh": "H=u²sin²θ/(2g)=400×0.25/20=5 m；R=u²sin2θ/g=400×sin60°/10=34.6 m。",
      "answerEn": "H = 5 m; R = 34.6 m.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "H = u²sin²θ/(2g) = 5 m",
+       "pts": 1
+      },
+      {
+       "content": "R = u²sin2θ/g = 34.6 m",
+       "pts": 1
+      },
+      {
+       "content": "分解初速 u sinθ / u cosθ",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 H 和 R 公式搞混（sin² 與 sin2θ 位置）。",
+     "lossEn": "Swapping H and R formulae."
     },
     {
      "difficulty": "challenge",
@@ -5638,7 +6050,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "t = 3 s; h = ½×10×9 = 45 m.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "水平：t = 45/15 = 3 s",
+       "pts": 1
+      },
+      {
+       "content": "垂直：h = ½gt²",
+       "pts": 1
+      },
+      {
+       "content": "h = ½×10×9 = 45 m",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 45 m 當高度直接代入（那是水平距離）。",
+     "lossEn": "Using 45 m as height when it's the range."
     }
    ]
   },
@@ -5689,7 +6117,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "0.5 kg at 4 m/s on 1 m circle; centripetal force?",
      "answerZh": "F=mv²/r=0.5×16/1=8 N。",
      "answerEn": "F = 0.5×16/1 = 8 N.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "F = mv²/r",
+       "pts": 1
+      },
+      {
+       "content": "F = 0.5×16/1",
+       "pts": 1
+      },
+      {
+       "content": "F = 8 N",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 r 當直徑（題給半徑）。",
+     "lossEn": "Using diameter instead of radius."
     },
     {
      "difficulty": "intermediate",
@@ -5699,7 +6143,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "mg = mv²/r → v = √(gr) = 7.07 m/s.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "頂部臨界：mg = mv²/r",
+       "pts": 1
+      },
+      {
+       "content": "v = √(gr)",
+       "pts": 1
+      },
+      {
+       "content": "v = √(10×5) = 7.07 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏「軌道恰不給力」的條件（N=0）。",
+     "lossEn": "Missing N=0 condition at critical speed."
     },
     {
      "difficulty": "challenge",
@@ -5707,7 +6167,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Conical pendulum: 0.2 kg, 1 m string, 60°; speed?",
      "answerZh": "T sinθ=mv²/(L sinθ)，T cosθ=mg → v²=gL sin²θ/cosθ=10×1×0.75/0.5=15 → v=3.87 m/s。",
      "answerEn": "Resolve tension; v = 3.87 m/s.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "分解張力：T sinθ 向心、T cosθ 平衡 mg",
+       "pts": 1
+      },
+      {
+       "content": "v² = gL sin²θ/cosθ",
+       "pts": 1
+      },
+      {
+       "content": "v = 3.87 m/s",
+       "pts": 1
+      }
+     ],
+     "lossZh": "直接用 T=mv²/r 而漏張力分量分解。",
+     "lossEn": "Using T=mv²/r without resolving tension."
     }
    ]
   },
@@ -6445,7 +6921,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "E from Q=2×10⁻⁶ at 0.5 m?",
      "answerZh": "E=kQ/r²=9×10⁹×2×10⁻⁶/0.25=72000 N/C。",
      "answerEn": "E = kQ/r² = 7.2×10⁴ N/C.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "E = kQ/r²",
+       "pts": 1
+      },
+      {
+       "content": "E = 9×10⁹×2×10⁻⁶/0.25",
+       "pts": 1
+      },
+      {
+       "content": "E = 72000 N/C",
+       "pts": 1
+      }
+     ],
+     "lossZh": "r² 漏平方（0.5²=0.25）。",
+     "lossEn": "Forgetting r² (0.5²=0.25)."
     },
     {
      "difficulty": "intermediate",
@@ -6453,7 +6945,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "Force between 3 μC and -4 μC at 0.2 m?",
      "answerZh": "F=kq₁q₂/r²=9×10⁹×3×10⁻⁶×4×10⁻⁶/0.04=2700 N（吸引）。",
      "answerEn": "F = 2700 N (attractive).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "F = kq₁q₂/r²",
+       "pts": 1
+      },
+      {
+       "content": "F = 9×10⁹×3×10⁻⁶×4×10⁻⁶/0.04",
+       "pts": 1
+      },
+      {
+       "content": "F = 2700 N（吸引）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "異號電荷說成排斥。",
+     "lossEn": "Calling opposite charges repulsive."
     },
     {
      "difficulty": "challenge",
@@ -6463,7 +6971,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "a = eE/m ≈ 3.5×10¹⁵ m/s².",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "F = eE",
+       "pts": 1
+      },
+      {
+       "content": "a = F/m = eE/m",
+       "pts": 1
+      },
+      {
+       "content": "a = 3.5×10¹⁵ m/s²",
+       "pts": 1
+      }
+     ],
+     "lossZh": "電子質量/電量代入錯（用質子）。",
+     "lossEn": "Using proton mass/charge for electron."
     }
    ]
   },
@@ -6514,7 +7038,23 @@ const DSE_PHYSICS_GRAPH = {
      "stemEn": "220 V 100 W bulb; current and resistance?",
      "answerZh": "I=P/V=100/220=0.455 A；R=V²/P=48400/100=484 Ω。",
      "answerEn": "I = 0.455 A; R = 484 Ω.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "I = P/V = 100/220",
+       "pts": 1
+      },
+      {
+       "content": "I = 0.455 A",
+       "pts": 1
+      },
+      {
+       "content": "R = V²/P = 484 Ω",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 P=V×I 求電阻（電阻要 V²/P）。",
+     "lossEn": "Using P=VI to find R (use V²/P)."
     },
     {
      "difficulty": "intermediate",
@@ -6524,7 +7064,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "E = 2×0.5 = 1 kWh.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "E = Pt",
+       "pts": 1
+      },
+      {
+       "content": "P = 2 kW, t = 0.5 h",
+       "pts": 1
+      },
+      {
+       "content": "E = 1 kWh",
+       "pts": 1
+      }
+     ],
+     "lossZh": "功率單位混用（kW×h 才得 kWh）。",
+     "lossEn": "Mixing units (kW×h for kWh)."
     },
     {
      "difficulty": "challenge",
@@ -6534,7 +7090,23 @@ const DSE_PHYSICS_GRAPH = {
      "answerEn": "60 W bulb has higher R, same current → higher I²R → brighter.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "串聯電流相同",
+       "pts": 1
+      },
+      {
+       "content": "60 W 燈泡電阻更大（R=V²/P）",
+       "pts": 1
+      },
+      {
+       "content": "功率 I²R 更大 → 60 W 更亮",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為額定功率大的更亮（串聯比的是實際功率）。",
+     "lossEn": "Thinking higher rating = brighter in series."
     }
    ]
   },

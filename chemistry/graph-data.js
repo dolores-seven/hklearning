@@ -2675,7 +2675,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "n(HCl)=0.0025 mol; NaOH needs same moles; V=0.0025/0.100=25.0 mL.",
      "years": [
       "2016"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "寫 n(HCl)=cV=0.100×25/1000=0.0025 mol",
+       "pts": 1
+      },
+      {
+       "content": "由 1:1 摩爾比得 n(NaOH)=n(HCl)",
+       "pts": 1
+      },
+      {
+       "content": "V(NaOH)=n/c=0.0025/0.100=25.0 mL",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忘記把 mL 換成 L（25 mL → 0.025 L）導致數量級錯誤。",
+     "lossEn": "Forgetting to convert mL to L (25→0.025 L), wrong magnitude."
     },
     {
      "difficulty": "intermediate",
@@ -2685,7 +2701,27 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "n(HCl)=0.002 mol; Na₂CO₃:2HCl=1:2 so n(Na₂CO₃)=0.001 mol per aliquot; total 0.01 mol; mass 1.06 g; purity 42.4%.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "n(HCl)=0.100×20/1000=0.002 mol",
+       "pts": 1
+      },
+      {
+       "content": "Na₂CO₃+2HCl→… 摩爾比 1:2，n(Na₂CO₃)=0.001 mol/份",
+       "pts": 1
+      },
+      {
+       "content": "乘以稀釋倍數 250/25=10 → 總量 0.01 mol → 1.06 g",
+       "pts": 1
+      },
+      {
+       "content": "純度=1.06/2.50×100%=42.4%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忽略稀釋倍數（25 mL 取樣 ×10 才是總量），直接把每份當總量。",
+     "lossEn": "Ignoring dilution factor (×10 for 250 mL total)."
     },
     {
      "difficulty": "challenge",
@@ -2695,7 +2731,27 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Total HCl 0.01 mol; residual 0.003 mol; reacted 0.007 mol; CaCO₃ 0.0035 mol = 0.35 g; 70%.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "總 HCl=0.200×50/1000=0.01 mol",
+       "pts": 1
+      },
+      {
+       "content": "剩餘 HCl=n(NaOH)=0.100×30/1000=0.003 mol",
+       "pts": 1
+      },
+      {
+       "content": "與 CaCO₃ 反應的 HCl=0.007 mol",
+       "pts": 1
+      },
+      {
+       "content": "CaCO₃:2HCl=1:2 → 0.0035 mol=0.35 g → 70%",
+       "pts": 1
+      }
+     ],
+     "lossZh": "返滴定方向搞反：NaOH 滴定的是「剩餘」HCl，不是樣品。",
+     "lossEn": "Back-titration confusion: NaOH neutralises residual HCl, not the sample."
     }
    ]
   },
@@ -2741,7 +2797,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Cathode Na⁺+e⁻→Na; anode 2Cl⁻→Cl₂+2e⁻; products Na and Cl₂.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "陰極（還原）：Na⁺+e⁻→Na",
+       "pts": 1
+      },
+      {
+       "content": "陽極（氧化）：2Cl⁻→Cl₂+2e⁻",
+       "pts": 1
+      },
+      {
+       "content": "產物 Na 與 Cl₂",
+       "pts": 1
+      }
+     ],
+     "lossZh": "電極與反應類型搞反：陽極是氧化（失電子），陰極是還原（得電子）。",
+     "lossEn": "Swapping electrodes: anode oxidises (loses e⁻), cathode reduces."
     },
     {
      "difficulty": "intermediate",
@@ -2751,7 +2823,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Anode Cu dissolves (Cu→Cu²⁺+2e⁻); cathode Cu deposits; concentration unchanged.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "陽極銅溶解 Cu→Cu²⁺+2e⁻（活性電極）",
+       "pts": 1
+      },
+      {
+       "content": "陰極銅沉積 Cu²⁺+2e⁻→Cu",
+       "pts": 1
+      },
+      {
+       "content": "電解液 CuSO₄ 濃度不變",
+       "pts": 1
+      }
+     ],
+     "lossZh": "誤以為濃度下降：活性銅電極會補充 Cu²⁺，濃度保持不變。",
+     "lossEn": "Wrongly assuming concentration drops; active Cu anode replenishes Cu²⁺."
     },
     {
      "difficulty": "challenge",
@@ -2761,7 +2849,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Molten gives Na+Cl₂; in aqueous, H₂O reduces first (H₂), OH⁻ oxidises first (O₂), also NaOH.",
      "years": [
       "2018"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "熔融：產 Na+Cl₂",
+       "pts": 1
+      },
+      {
+       "content": "溶液：H₂O 優先於 Na⁺ 還原產 H₂",
+       "pts": 1
+      },
+      {
+       "content": "OH⁻ 優先於 Cl⁻ 氧化產 O₂，另生成 NaOH",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忽視水參與反應：電解溶液時產 H₂/O₂ 而非 Na/Cl₂。",
+     "lossEn": "Ignoring water: aqueous electrolysis gives H₂/O₂, not Na/Cl₂."
     }
    ]
   },
@@ -2807,7 +2911,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Q = [NH₃]²/([N₂][H₂]³); adding N₂ increases denominator → Q<Kc → forward shift.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "寫出 Kc=[NH₃]²/([N₂][H₂]³)",
+       "pts": 1
+      },
+      {
+       "content": "增 [N₂] → 分母增大 → Q 瞬時減小",
+       "pts": 1
+      },
+      {
+       "content": "Q<Kc → 正向移動",
+       "pts": 1
+      }
+     ],
+     "lossZh": "沿用已淘汰的勒沙特列原理：2022 新綱要求用 Q vs Kc 解釋。",
+     "lossEn": "Using outdated Le Chatelier; new syllabus requires Q vs Kc."
     },
     {
      "difficulty": "intermediate",
@@ -2815,7 +2935,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "A⇌B has Kc=4.0; current [A]=2.0, [B]=3.0. Predict shift.",
      "answerZh": "Q=[B]/[A]=3.0/2.0=1.5 < Kc=4.0 → 正向移動（生成更多 B）。",
      "answerEn": "Q = 1.5 < 4.0 → forward shift (more B).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Q=[B]/[A]=3.0/2.0=1.5",
+       "pts": 1
+      },
+      {
+       "content": "比較 Q=1.5 < Kc=4.0",
+       "pts": 1
+      },
+      {
+       "content": "Q<Kc → 正向移動（生成更多 B）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "Q 計算方向寫反：Q 是「產物/反應物」，不是「反應物/產物」。",
+     "lossEn": "Q = products/reactants, not the reverse."
     },
     {
      "difficulty": "challenge",
@@ -2825,7 +2961,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Heating lowers Kc; current Q > new Kc → reverse; less SO₃ at new equilibrium.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "放熱反應升溫 → Kc 減小",
+       "pts": 1
+      },
+      {
+       "content": "此刻 Q（原濃度算）> 新 Kc → 逆向移動",
+       "pts": 1
+      },
+      {
+       "content": "結論：SO₃ 平衡濃度減少",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「升溫逆向」而無 Kc 變化邏輯：放熱反應 Kc 隨升溫而降。",
+     "lossEn": "Saying \"heat shifts reverse\" without Kc logic: exothermic Kc decreases on heating."
     }
    ]
   },
@@ -2868,7 +3020,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "C₃H₆O₂ releases CO₂ with NaHCO₃. Give structure and name.",
      "answerZh": "與 NaHCO₃ 反應→羧酸；C₃H₆O₂ 羧酸即丙酸 CH₃CH₂COOH（propanoic acid）。",
      "answerEn": "Reacts with NaHCO₃ → carboxylic acid; C₃H₆O₂ = propanoic acid CH₃CH₂COOH.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "由與 NaHCO₃ 反應 → 含 -COOH（羧酸）",
+       "pts": 1
+      },
+      {
+       "content": "C₃H₆O₂ 羧酸 = 丙酸",
+       "pts": 1
+      },
+      {
+       "content": "畫出結構 CH₃CH₂COOH 並命名 propanoic acid",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把 C₃H₆O₂ 當酯（酯不與 NaHCO₃ 放 CO₂）。",
+     "lossEn": "Taking C₃H₆O₂ as ester (esters don't give CO₂ with NaHCO₃)."
     },
     {
      "difficulty": "intermediate",
@@ -2878,7 +3046,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "NaHCO₃: acid gives CO₂ (butanoic/isobutanoic); ester does not. Draw both.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "NaHCO₃ 區分：酸放 CO₂ / 酯無反應",
+       "pts": 1
+      },
+      {
+       "content": "畫出丁酸 CH₃CH₂CH₂COOH 或異丁酸 (CH₃)₂CHCOOH",
+       "pts": 1
+      },
+      {
+       "content": "畫出酯（乙酸乙酯 CH₃COOC₂H₅）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏畫異構體：C₄H₈O₂ 的羧酸有正丁酸和異丁酸兩種。",
+     "lossEn": "Missing isomers: butanoic and isobutanoic acids."
     },
     {
      "difficulty": "challenge",
@@ -2886,7 +3070,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "X (C₄H₈O) oxidises to Y (C₄H₈O₂); X releases H₂ with Na. Identify X, Y.",
      "answerZh": "X 與 Na 放 H₂→醇；可氧化成酸→伯醇；C₄H₈O 醇=丁醇（CH₃CH₂CH₂CH₂OH 或支鏈）；Y 為相應丁酸。",
      "answerEn": "X is a primary alcohol (butanol isomer), Y the corresponding butanoic acid.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "X 與 Na 放 H₂ → 醇；可氧化成酸 → 伯醇",
+       "pts": 1
+      },
+      {
+       "content": "C₄H₈O 醇 = 丁醇（正丁醇或支鏈）",
+       "pts": 1
+      },
+      {
+       "content": "Y = 相應丁酸",
+       "pts": 1
+      }
+     ],
+     "lossZh": "忽略「可氧化成酸→伯醇」的關鍵限制（仲醇氧化只到酮）。",
+     "lossEn": "Missing key clue: oxidisable to acid → primary alcohol."
     }
    ]
   },
@@ -3246,7 +3446,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Solid NaCl non-conductive (ions fixed); graphite conducts (delocalised electrons).",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "NaCl 固態不導電（離子被晶格固定）",
+       "pts": 1
+      },
+      {
+       "content": "石墨導電（層內離域電子）",
+       "pts": 1
+      },
+      {
+       "content": "本質：自由電子 vs 固定離子",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為 NaCl 固態導電（它熔融/溶液態才導電）。",
+     "lossEn": "Thinking solid NaCl conducts (only molten/dissolved)."
     },
     {
      "difficulty": "intermediate",
@@ -3254,7 +3470,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Explain why ionic compounds have high mp but simple molecules low.",
      "answerZh": "離子化合物靠強離子鍵（靜電引力）連接巨大結構，需大量能量破壞；簡單分子間只有弱分子間力。",
      "answerEn": "Ionic: strong electrostatic forces in giant lattice; molecules: weak intermolecular forces.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "離子化合物：強離子鍵，巨大晶格",
+       "pts": 1
+      },
+      {
+       "content": "簡單分子：弱分子間力",
+       "pts": 1
+      },
+      {
+       "content": "破壞所需能量不同 → 熔點不同",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把分子間力當成共價鍵來解釋熔點。",
+     "lossEn": "Using covalent bond strength to explain molecular melting."
     },
     {
      "difficulty": "challenge",
@@ -3264,7 +3496,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Diamond (network covalent) > NaCl (ionic) > ice (weak H-bonds).",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "鑽石：共價網狀（最強）",
+       "pts": 1
+      },
+      {
+       "content": "NaCl：離子鍵（次之）",
+       "pts": 1
+      },
+      {
+       "content": "冰：氫鍵/範德華力（最弱）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把冰的氫鍵說成「共價鍵」（氫鍵是分子間力）。",
+     "lossEn": "Calling ice's H-bonds \"covalent bonds\" (they're intermolecular)."
     }
    ]
   },
@@ -3371,7 +3619,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Powder: larger surface area → more collisions → faster.",
      "years": [
       "2018"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "粉末更快",
+       "pts": 1
+      },
+      {
+       "content": "表面積大 → 碰撞機會多",
+       "pts": 1
+      },
+      {
+       "content": "結論：速率加快",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只答「粉末快」不給原因（要提碰撞理論）。",
+     "lossEn": "Answering \"powder faster\" without collision theory reason."
     },
     {
      "difficulty": "intermediate",
@@ -3381,7 +3645,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Two thiosulphate+acid at different temperatures; time to turbidity; control others.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "兩組硫代硫酸鈉+酸，不同溫度",
+       "pts": 1
+      },
+      {
+       "content": "量度變濁時間",
+       "pts": 1
+      },
+      {
+       "content": "控制其他變量（濃度/體積）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "未控制變量（兩組濃度不同則無可比性）。",
+     "lossEn": "Not controlling variables (different concentrations invalidate)."
     },
     {
      "difficulty": "challenge",
@@ -3389,7 +3669,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Catalyst speeds a reaction but doesn't shift equilibrium. Explain.",
      "answerZh": "催化劑提供替代反應途徑降低活化能；正逆反應同速加快；Kc 不變故平衡位置不變。",
      "answerEn": "Catalyst lowers Eₐ via alternative pathway; speeds both directions; Kc unchanged → no shift.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "催化劑降低活化能（替代途徑）",
+       "pts": 1
+      },
+      {
+       "content": "正逆反應同速加快",
+       "pts": 1
+      },
+      {
+       "content": "Kc 不變 → 平衡位置不變",
+       "pts": 1
+      }
+     ],
+     "lossZh": "以為催化劑能移動平衡（它只加快到達平衡）。",
+     "lossEn": "Thinking catalyst shifts equilibrium (it only speeds reaching it)."
     }
    ]
   },
@@ -3558,7 +3854,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Dissolve in water, filter out sand, evaporate to crystallise NaCl.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "加水溶解 NaCl（沙不溶）",
+       "pts": 1
+      },
+      {
+       "content": "過濾除沙",
+       "pts": 1
+      },
+      {
+       "content": "蒸發結晶得 NaCl",
+       "pts": 1
+      }
+     ],
+     "lossZh": "順序反了（先蒸發再過濾會把沙一起蒸乾）。",
+     "lossEn": "Wrong order (evaporating before filtering dries sand too)."
     },
     {
      "difficulty": "intermediate",
@@ -3566,7 +3878,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Desalinate seawater by distillation; principle and setup.",
      "answerZh": "加熱海水使水蒸發→冷凝管冷凝→收集純水；溫度計測蒸氣溫度；海鹽留在燒瓶。",
      "answerEn": "Heat seawater, condense vapour in condenser, collect pure water; salt remains.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "加熱海水使水蒸發",
+       "pts": 1
+      },
+      {
+       "content": "冷凝管冷凝蒸氣",
+       "pts": 1
+      },
+      {
+       "content": "收集純水，鹽留在燒瓶",
+       "pts": 1
+      }
+     ],
+     "lossZh": "溫度計位置/作用說錯（測蒸氣溫度）。",
+     "lossEn": "Wrong thermometer position/role (measures vapour)."
     },
     {
      "difficulty": "challenge",
@@ -3576,7 +3904,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Fractionating column refines separation; collect at 78°C; add boiling chips.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "分餾柱（填充物）多次冷凝蒸發",
+       "pts": 1
+      },
+      {
+       "content": "控制溫度 78°C 收集乙醇",
+       "pts": 1
+      },
+      {
+       "content": "加沸石防暴沸",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用普通蒸餾代替分餾：乙醇/水沸點接近需分餾柱。",
+     "lossEn": "Using simple distillation: ethanol/water need a fractionating column."
     }
    ]
   },
@@ -3686,7 +4030,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Add dilute HCl: Na₂CO₃ gives CO₂ (milky limewater), NaCl no change.",
      "years": [
       "2017"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "選對試劑：稀 HCl",
+       "pts": 1
+      },
+      {
+       "content": "Na₂CO₃ 放 CO₂（使石灰水變乳白）",
+       "pts": 1
+      },
+      {
+       "content": "NaCl 無明顯現象 → 判定",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「有氣泡」而未檢驗 CO₂（需指明石灰水變乳白）。",
+     "lossEn": "Saying \"bubbles\" without testing CO₂ (limewater milky)."
     },
     {
      "difficulty": "intermediate",
@@ -3696,7 +4056,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "First HCl identifies Na₂CO₃ (CO₂); then BaCl₂: Na₂SO₄ gives white BaSO₄ precipitate, NaCl none.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "第一步稀 HCl 區分 Na₂CO₃（放 CO₂）",
+       "pts": 1
+      },
+      {
+       "content": "第二步 BaCl₂：Na₂SO₄ 生成白色 BaSO₄ 沉澱",
+       "pts": 1
+      },
+      {
+       "content": "NaCl 兩步皆無現象 + 寫出方程式",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 BaCl₂ 一步區分三者：BaCl₂ 與 Na₂CO₃ 也會沉澱，無法區分。",
+     "lossEn": "Using BaCl₂ alone: it precipitates with Na₂CO₃ too, cannot distinguish."
     },
     {
      "difficulty": "challenge",
@@ -3704,7 +4080,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Distinguish dilute H₂SO₄, HCl, HNO₃ with minimal reagents.",
      "answerZh": "加 BaCl₂：H₂SO₄ 有白色 BaSO₄ 沉澱；剩下 HCl/HNO₃ 加 AgNO₃：HCl 有白色 AgCl 沉澱，HNO₃ 無現象。",
      "answerEn": "BaCl₂ gives white BaSO₄ with H₂SO₄; AgNO₃ gives white AgCl with HCl, none with HNO₃.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "BaCl₂ 檢出 H₂SO₄（白色 BaSO₄ 沉澱）",
+       "pts": 1
+      },
+      {
+       "content": "AgNO₃ 檢出 HCl（白色 AgCl 沉澱）",
+       "pts": 1
+      },
+      {
+       "content": "HNO₃ 無現象 → 推斷",
+       "pts": 1
+      }
+     ],
+     "lossZh": "用 AgNO₃ 檢 H₂SO₄：Ag₂SO₄ 微溶易混淆，應先檢 SO₄²⁻。",
+     "lossEn": "Testing H₂SO₄ with AgNO₃: Ag₂SO₄ slightly soluble, confusing; test SO₄²⁻ first."
     }
    ]
   },
@@ -3750,7 +4142,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Zn is anode (oxidation); electrons flow Zn→Cu externally; cathode Cu²⁺+2e⁻→Cu.",
      "years": [
       "2016"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "Zn 是負極（氧化：Zn→Zn²⁺+2e⁻）",
+       "pts": 1
+      },
+      {
+       "content": "電子經外電路從 Zn 流向 Cu",
+       "pts": 1
+      },
+      {
+       "content": "正極 Cu²⁺+2e⁻→Cu",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把負極當還原：負極發生氧化（失電子），是電子流出端。",
+     "lossEn": "Calling anode reduction: anode oxidises and emits electrons."
     },
     {
      "difficulty": "intermediate",
@@ -3758,7 +4166,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Given E° values, find cell voltage and spontaneity.",
      "answerZh": "電壓 = E°(正)-E°(負) = 0.34-(-0.76) = 1.10 V > 0，自發。",
      "answerEn": "Ecell = 0.34 - (-0.76) = 1.10 V > 0, spontaneous.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "E = E°(正極)-E°(負極)",
+       "pts": 1
+      },
+      {
+       "content": "代入 0.34-(-0.76)",
+       "pts": 1
+      },
+      {
+       "content": "E=1.10 V>0 → 自發",
+       "pts": 1
+      }
+     ],
+     "lossZh": "正負極 E° 次序搞反：用 E° 高的作正極，電壓 = 正 − 負。",
+     "lossEn": "Reversing E° order; use higher E° as cathode, Ecell = E_cathode − E_anode."
     },
     {
      "difficulty": "challenge",
@@ -3768,7 +4192,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Anode Mg dissolves; cathode Cu deposits; solution fades from blue; Mg+CuSO₄→MgSO₄+Cu.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "負極 Mg→Mg²⁺+2e⁻（氧化）",
+       "pts": 1
+      },
+      {
+       "content": "正極 Cu²⁺+2e⁻→Cu（還原）",
+       "pts": 1
+      },
+      {
+       "content": "離子方程式 + 預測現象（鎂溶解/銅析出/溶液變淺）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "現象描述不完整：漏「溶液藍色變淺」或「銅片紅色沉澱」。",
+     "lossEn": "Incomplete observations: missing colour fade or red Cu deposit."
     }
    ]
   },
@@ -3811,7 +4251,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "At equilibrium [H₂]=0.5, [I₂]=0.5, [HI]=1.0. Find Kc.",
      "answerZh": "Kc=[HI]²/([H₂][I₂])=1.0²/(0.5×0.5)=4.0。",
      "answerEn": "Kc = 1.0²/(0.5×0.5) = 4.0.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "寫出 Kc=[HI]²/([H₂][I₂])",
+       "pts": 1
+      },
+      {
+       "content": "代入 [HI]=1.0, [H₂]=0.5, [I₂]=0.5",
+       "pts": 1
+      },
+      {
+       "content": "Kc=1.0²/(0.5×0.5)=4.0",
+       "pts": 1
+      }
+     ],
+     "lossZh": "次冪錯誤：係數要變成指數（2HI → [HI]²）。",
+     "lossEn": "Power error: coefficient becomes exponent (2HI → [HI]²)."
     },
     {
      "difficulty": "intermediate",
@@ -3821,7 +4277,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "At equilibrium [H₂]=0.625, [I₂]=0.125, [HI]=0.75; Kc=7.2.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "由生成 1.5 mol HI 推消耗 0.75 mol H₂/I₂",
+       "pts": 1
+      },
+      {
+       "content": "求平衡濃度（除以 2 L）",
+       "pts": 1
+      },
+      {
+       "content": "代入 Kc 得 7.2",
+       "pts": 1
+      }
+     ],
+     "lossZh": "化學計量錯誤：1 mol HI 對應消耗 0.5 mol H₂（係數比 1:2）。",
+     "lossEn": "Stoichiometry: 2HI uses 1H₂, so 1.5 HI uses 0.75 H₂."
     },
     {
      "difficulty": "challenge",
@@ -3829,7 +4301,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "PCl₅⇌PCl₃+Cl₂ with Kc=64; start 0.2 mol in 1 L. Find equilibrium concentrations.",
      "answerZh": "設分解 x：Kc=x²/(0.2-x)=64；解得 x≈0.197；[PCl₃]=[Cl₂]≈0.197 mol/L，[PCl₅]≈0.003 mol/L。",
      "answerEn": "Let x decompose: x²/(0.2-x)=64 → x≈0.197; [PCl₃]=[Cl₂]≈0.197, [PCl₅]≈0.003.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "設分解 x mol/L，Kc=x²/(0.2-x)=64",
+       "pts": 1
+      },
+      {
+       "content": "解二次方程得 x≈0.197",
+       "pts": 1
+      },
+      {
+       "content": "平衡濃度 [PCl₃]=[Cl₂]≈0.197, [PCl₅]≈0.003",
+       "pts": 1
+      }
+     ],
+     "lossZh": "Kc 很大時 x 接近 0.2，直接忽略「0.2-x」會得錯解；需解完整方程。",
+     "lossEn": "When Kc is large, x≈0.2; neglecting (0.2−x) gives wrong answer."
     }
    ]
   },
@@ -3874,7 +4362,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "C₂H₄+H₂O→C₂H₅OH; phosphoric acid catalyst, heat/pressure.",
      "years": [
       "2019"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "方程式 C₂H₄+H₂O→C₂H₅OH",
+       "pts": 1
+      },
+      {
+       "content": "條件：磷酸催化/加熱加壓（或濃硫酸水合）",
+       "pts": 1
+      },
+      {
+       "content": "反應類型：加成（水化）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏寫條件或把水化誤寫成取代。",
+     "lossEn": "Missing conditions or calling hydration substitution."
     },
     {
      "difficulty": "intermediate",
@@ -3884,7 +4388,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Oxidise ethanol to acid (KMnO₄); esterify with conc. H₂SO₄ + heat.",
      "years": [
       "2022"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "氧化：C₂H₅OH+[O]→CH₃COOH+H₂O（酸性 KMnO₄）",
+       "pts": 1
+      },
+      {
+       "content": "酯化：CH₃COOH+C₂H₅OH⇌CH₃COOC₂H₅+H₂O",
+       "pts": 1
+      },
+      {
+       "content": "酯化條件：濃 H₂SO₄ + 加熱",
+       "pts": 1
+      }
+     ],
+     "lossZh": "酯化方程式漏「可逆符號」或漏濃硫酸條件。",
+     "lossEn": "Esterification missing ⇌ or conc. H₂SO₄."
     },
     {
      "difficulty": "challenge",
@@ -3892,7 +4412,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Design routes from ethene to polyethylene and to ethanoic acid; compare reaction types.",
      "answerZh": "聚乙烯：nC₂H₄→加聚（催化劑、加壓）；乙酸：C₂H₄+H₂O→C₂H₅OH→氧化→CH₃COOH。加聚 vs 水化+氧化。",
      "answerEn": "PE via addition polymerisation; ethanoic acid via hydration then oxidation.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "聚乙烯：nC₂H₄→加聚（催化劑）",
+       "pts": 1
+      },
+      {
+       "content": "乙酸：C₂H₄→C₂H₅OH→氧化→CH₃COOH",
+       "pts": 1
+      },
+      {
+       "content": "反應類型對比：加聚 vs 水化+氧化",
+       "pts": 1
+      }
+     ],
+     "lossZh": "兩條路線的反應類型混淆。",
+     "lossEn": "Confusing reaction types of the two routes."
     }
    ]
   },
@@ -3936,7 +4472,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "A has high mp, non-conducting solid, conducts molten. Deduce bonding.",
      "answerZh": "離子化合物（熔融時離子游離導電；固態離子固定不導電）。",
      "answerEn": "Ionic compound (mobile ions when molten, fixed when solid).",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "高熔點 → 離子或共價網狀",
+       "pts": 1
+      },
+      {
+       "content": "熔融才導電 → 離子化合物（游離離子）",
+       "pts": 1
+      },
+      {
+       "content": "排除共價網狀（熔融也不導電）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只憑「高熔點」就下結論，忽略導電性證據。",
+     "lossEn": "Concluding from high mp alone, ignoring conductivity."
     },
     {
      "difficulty": "intermediate",
@@ -3946,7 +4498,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "B is giant covalent (diamond/SiO₂); no charge carriers even molten.",
      "years": [
       "2020"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "B 高熔點且不導電 → 共價網狀",
+       "pts": 1
+      },
+      {
+       "content": "鑽石/SiO₂ 無自由電荷載體",
+       "pts": 1
+      },
+      {
+       "content": "對比 A（離子）與 B（共價網狀）",
+       "pts": 1
+      }
+     ],
+     "lossZh": "共價網狀熔融態以為可導電（其實沒有游離離子）。",
+     "lossEn": "Thinking molten covalent network conducts (no free ions)."
     },
     {
      "difficulty": "challenge",
@@ -3954,7 +4522,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Metal C conducts less as temperature rises. Explain.",
      "answerZh": "溫度升→金屬離子振動加劇→阻礙離域電子流動→電阻升、導電降。",
      "answerEn": "Heating increases ion vibration, scattering delocalised electrons → higher resistance.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "溫度升 → 金屬離子振動加劇",
+       "pts": 1
+      },
+      {
+       "content": "阻礙離域電子流動",
+       "pts": 1
+      },
+      {
+       "content": "電阻升 → 導電降",
+       "pts": 1
+      }
+     ],
+     "lossZh": "與半導體混淆：金屬升溫導電下降，半導體相反。",
+     "lossEn": "Confusing with semiconductors: metals conduct worse when hot."
     }
    ]
   },
@@ -3998,7 +4582,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Use collision theory: why higher concentration speeds reaction.",
      "answerZh": "濃度增→單位體積粒子數增→碰撞頻率增→有效碰撞增多→速率加快。",
      "answerEn": "More particles per volume → higher collision frequency → more effective collisions.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "濃度增 → 單位體積粒子數增",
+       "pts": 1
+      },
+      {
+       "content": "碰撞頻率增",
+       "pts": 1
+      },
+      {
+       "content": "有效碰撞增多 → 速率加快",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「碰撞更多」未區分有效/無效碰撞。",
+     "lossEn": "Saying \"more collisions\" without distinguishing effective ones."
     },
     {
      "difficulty": "intermediate",
@@ -4008,7 +4608,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Heating boosts effective fraction exponentially (more particles exceed Eₐ), not just frequency.",
      "years": [
       "2021"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "升溫 → 分子動能增",
+       "pts": 1
+      },
+      {
+       "content": "能量≥Eₐ 的比例指數上升",
+       "pts": 1
+      },
+      {
+       "content": "濃度只線性增碰撞頻率",
+       "pts": 1
+      }
+     ],
+     "lossZh": "把升溫與濃度都當成「線性增碰撞」。",
+     "lossEn": "Treating temperature and concentration as same linear effect."
     },
     {
      "difficulty": "challenge",
@@ -4016,7 +4632,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Why do enzymes have optimal temperature?",
      "answerZh": "低溫：碰撞少速率慢；升溫：速率升但高溫使酶變性（三級結構破壞）失活；故存在最適溫度。",
      "answerEn": "Cold: slow; heating raises rate until enzyme denatures (structure destroyed); hence optimum.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "低溫碰撞少 → 慢",
+       "pts": 1
+      },
+      {
+       "content": "升溫速率升",
+       "pts": 1
+      },
+      {
+       "content": "過熱酶變性（結構破壞）→ 失活",
+       "pts": 1
+      }
+     ],
+     "lossZh": "漏「高溫變性失活」這一半（只答升溫加快）。",
+     "lossEn": "Missing denaturation half of the answer."
     }
    ]
   },
@@ -4060,7 +4692,19 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "In paper chromatography, why draw baseline with pencil not pen?",
      "answerZh": "鉛筆線是石墨不溶於展開劑；鋼筆墨水會溶入展開劑污染色譜。",
      "answerEn": "Pencil graphite is insoluble in the solvent; ink would run and contaminate.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "鉛筆線 = 石墨不溶於展開劑",
+       "pts": 1
+      },
+      {
+       "content": "鋼筆墨水會溶入污染色譜",
+       "pts": 1
+      }
+     ],
+     "lossZh": "回答「鉛筆好寫」這類非化學原因。",
+     "lossEn": "Giving non-chemical reason (e.g. \"easier to write\")."
     },
     {
      "difficulty": "intermediate",
@@ -4068,7 +4712,23 @@ const DSE_CHEM_GRAPH = {
      "stemEn": "Spot moves 4.2 cm, solvent front 7.0 cm. Find Rf.",
      "answerZh": "Rf = 4.2/7.0 = 0.60。",
      "answerEn": "Rf = 4.2/7.0 = 0.60.",
-     "years": []
+     "years": [],
+     "marks": [
+      {
+       "content": "Rf = 距離樣品/距離溶劑前緣",
+       "pts": 1
+      },
+      {
+       "content": "Rf = 4.2/7.0",
+       "pts": 1
+      },
+      {
+       "content": "Rf = 0.60",
+       "pts": 1
+      }
+     ],
+     "lossZh": "分子分母寫反（是樣品距離 ÷ 溶劑前緣距離）。",
+     "lossEn": "Reversing numerator/denominator."
     },
     {
      "difficulty": "challenge",
@@ -4078,7 +4738,23 @@ const DSE_CHEM_GRAPH = {
      "answerEn": "Different partition between stationary/mobile phases; stronger mobile affinity travels further.",
      "years": [
       "2023"
-     ]
+     ],
+     "marks": [
+      {
+       "content": "分配係數不同（固定相/流動相）",
+       "pts": 1
+      },
+      {
+       "content": "對流動相親和力大者移動遠",
+       "pts": 1
+      },
+      {
+       "content": "對固定相吸附強者移動近",
+       "pts": 1
+      }
+     ],
+     "lossZh": "只說「成分不同」不講分配機制。",
+     "lossEn": "Saying \"different components\" without partition mechanism."
     }
    ]
   }

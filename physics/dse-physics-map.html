@@ -252,6 +252,8 @@
     edgeToggle:  { zh:'点击图例中的边可开关', en:'Click an edge in the legend to toggle' },
     freqHighlight: { zh:'频率高亮', en:'Frequency highlight' },
     freqHighlightHint: { zh:'节点边框颜色→考试频率', en:'Node border color → exam frequency' },
+    beginnerMode: { zh:'新手模式', en:'Beginner mode' },
+    beginnerHint: { zh:'只看必修基础(S4/S5) · 前置学习链 · 必背公式', en:'Core only (S4/S5) · learning path · must-memorise formulas' },
   };
   const t = k => T[k][LANG];
   const nm = o => typeof o === 'string' ? o : (o ? (o[LANG] || o.zh || o.en || '') : '');
@@ -263,6 +265,7 @@
   /* ---------- state ---------- */
   let moduleView = 'all';                    // all | core | M2
   let grades = new Set(['S4','S5','S6']);
+  let beginnerMode = false;                  // 新手模式：只看必修基础+学习链+必背公式
   let expanded = new Set();                  // expanded topic ids
   let selected = null;
   let searchTerm = '';
@@ -274,6 +277,9 @@
   const domGroup = id => (G.domains.find(d=>d.id===id)||{}).group;
   const inModule = n => moduleView==='all' || domGroup(n.domain)===moduleView;
   const inGrades = n => n.grades.some(g => grades.has(g));
+  // 新手模式：只显示必修 + S4/S5 的基础课题（隐藏 S6 复习性课题与选修/SBA）
+  const beginnerOK = n => domGroup(n.domain)==='必修' && (n.grades.includes('S4')||n.grades.includes('S5'));
+  const visibleNode = n => inModule(n) && inGrades(n) && !(beginnerMode && !beginnerOK(n));
 
   /* ---------- build simulation model ---------- */
   const leafParent = {};
@@ -284,10 +290,11 @@
     const addTopic = n => {
       simNodes.push({ id:n.id, ref:n, level:'topic', x:n._x||(Math.random()*600-300), y:n._y||(Math.random()*400-200), vx:0, vy:0 });
     };
-    G.nodes.forEach(n => { if (inModule(n)) addTopic(n); });
+    G.nodes.forEach(n => { if (inModule(n) && !(beginnerMode && !beginnerOK(n))) addTopic(n); });
 
     const has = id => simNodes.some(s=>s.id===id);
     G.edges.forEach(e => {
+      if (beginnerMode && e.type!=='prereq') return;   // 新手模式：只保留前置学习链
       if (has(e.from) && has(e.to) && e.from!==e.to) {
         simEdges.push({ source:e.from, target:e.to, type:e.type, evidence:e.evidence });
       }
@@ -443,6 +450,16 @@
       if (selected===s.id) c.setAttribute('stroke-width','2.5');
       gEl.appendChild(c);
 
+      // 必背公式标记：dataSheet=true 的公式叶加金色外圈
+      if (s.level==='leaf' && s.ref.dataSheet) {
+        const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        ring.setAttribute('r', r+3);
+        ring.setAttribute('fill','none');
+        ring.setAttribute('stroke','#fbbf24');
+        ring.setAttribute('stroke-width','1.6');
+        gEl.appendChild(ring);
+      }
+
       // expand marker on topics
       if (s.level==='topic' && (s.ref.leaves||[]).length) {
         const mk = document.createElementNS('http://www.w3.org/2000/svg','circle');
@@ -497,9 +514,9 @@
       if (s.level==='leaf') {
         // leaf visible only if its parent topic passes filters
         const p = G.nodes.find(n=>n.id===s.parent);
-        if (p && inModule(p) && inGrades(p)) set.add(s.id);
+        if (p && visibleNode(p)) set.add(s.id);
       } else {
-        if (inModule(s.ref) && inGrades(s.ref)) set.add(s.id);
+        if (visibleNode(s.ref)) set.add(s.id);
       }
     });
     return set;
@@ -717,6 +734,16 @@
         ${t('freqHighlightHint')}
       </div>`;
     }
+    // 新手模式切换
+    h += `<div class="li edge-toggle ${beginnerMode?'':'off'}" data-beginner="1">
+      <div style="width:14px;height:14px;border:2px solid;border-radius:3px;margin-right:6px;${beginnerMode?'background:#10b981;border-color:#10b981':'border-color:#94a3b8'}"></div>
+      <span>${t('beginnerMode')}</span>
+    </div>`;
+    if (beginnerMode) {
+      h += `<div class="li" style="font-size:10px;color:var(--muted);padding-left:22px">
+        ${t('beginnerHint')}
+      </div>`;
+    }
     lg.innerHTML = h;
     lg.querySelectorAll('.edge-toggle').forEach(el => {
       el.onclick = () => {
@@ -730,6 +757,14 @@
       el.onclick = () => {
         frequencyHighlight = !frequencyHighlight;
         buildLegend(); render();
+      };
+    });
+    // 新手模式切换
+    lg.querySelectorAll('[data-beginner]').forEach(el => {
+      el.onclick = () => {
+        beginnerMode = !beginnerMode;
+        expanded.clear(); selected=null; closeDetail();
+        buildModel(); render(); buildLegend();
       };
     });
   }
@@ -825,7 +860,7 @@
     if (!q) return;
     let hit=null;
     for (const n of G.nodes) {
-      if (!inModule(n)) continue;
+      if (!visibleNode(n)) continue;
       if (n.name.zh.toLowerCase().includes(q) || n.name.en.toLowerCase().includes(q)) { hit=n.id; break; }
       if ((n.leaves||[]).some(l => (l.name.zh+l.name.en).toLowerCase().includes(q))) { hit=n.id; break; }
     }

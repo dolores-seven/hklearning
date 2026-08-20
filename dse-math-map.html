@@ -115,6 +115,12 @@
   #detail .mp-stem { font-size:12px; color:var(--text); margin-top:4px; line-height:1.6; }
   #detail .mp-skel { font-size:11.5px; color:#93c5fd; margin-top:4px; line-height:1.6; }
   #detail .mp-var { font-size:11.5px; color:#6ee7b7; margin-top:4px; line-height:1.6; }
+  #detail .mp-variants { margin-top:6px; border-top:1px dashed rgba(51,65,85,.5); padding-top:5px; }
+  #detail .mp-vtag { font-size:9px; padding:1px 5px; border-radius:6px; border:1px solid; margin-left:4px; vertical-align:1px; }
+  #detail .mp-v { font-size:11.5px; margin:4px 0; line-height:1.5; }
+  #detail .mp-v summary { cursor:pointer; color:#93c5fd; font-size:11.5px; }
+  #detail .mp-v .vstem { color:var(--text); }
+  #detail .mp-v .vans { color:#6ee7b7; margin-top:3px; padding-left:10px; border-left:2px solid #334155; }
   #detail .mp-group { font-size:10px; color:var(--muted); letter-spacing:1px; text-transform:uppercase; margin:6px 0 2px; }
   #detail .meta-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:2px; }
   #detail .tag2 { font-size:10px; padding:2px 8px; border-radius:8px; background:var(--panel2); color:var(--muted); }
@@ -244,6 +250,15 @@
     motherP:     { zh:'母题', en:'Mother problems' },
     asCore:      { zh:'作为主角', en:'As core topic' },
     asRelated:   { zh:'作为配角', en:'As related topic' },
+    variants:    { zh:'变式题', en:'Variants' },
+    diffBasic:   { zh:'基础', en:'Basic' },
+    diffInt:     { zh:'进阶', en:'Intermediate' },
+    diffChal:    { zh:'挑战', en:'Challenge' },
+    diffComp:    { zh:'综合', en:'Comprehensive' },
+    diffCalc:    { zh:'计算', en:'Calculation' },
+    diffConcept: { zh:'概念', en:'Concept' },
+    diffExp:     { zh:'实验', en:'Experiment' },
+    vAnswer:     { zh:'答案', en:'Answer' },
     stem:        { zh:'题干', en:'Stem' },
     solution:    { zh:'解法骨架', en:'Solution skeleton' },
     variation:   { zh:'变式方向', en:'Variations' },
@@ -591,13 +606,34 @@
     const asRelated = (G.motherProblems||[]).filter(m => (m.relatedTopics||[]).includes(topicId));
     if (asCore.length || asRelated.length) {
       html += `<div class="sec"><h4>${t('motherP')}</h4>`;
-      const renderMP = m => `
+      const renderMP = m => {
+        const skel = m.solutionSkeleton || m.skeleton;
+        const skelStr = Array.isArray(skel) ? skel.join(' → ') : String(skel||'').replace(/\n/g, ' → ');
+        const vart = m.variation || m.variations;
+        const varStr = Array.isArray(vart) ? vart.join('；') : String(vart||'');
+        // 变式题（variants）：具体可刷的题，含题干+答案要点+难度
+        const diffMap = { basic:'diffBasic', intermediate:'diffInt', challenge:'diffChal', comprehensive:'diffComp', calc:'diffCalc', concept:'diffConcept', experiment:'diffExp' };
+        const variants = (m.variants||[]).map((v,i) => {
+          const dt = t(diffMap[v.difficulty] || 'diffBasic');
+          const dtColor = { basic:'#22c55e', intermediate:'#f59e0b', challenge:'#ef4444', comprehensive:'#a855f7', calc:'#3b82f6', concept:'#06b6d4', experiment:'#ec4899' }[v.difficulty] || '#94a3b8';
+          const vstem = LANG==='zh' ? (v.stemZh||v.stemEn||'') : (v.stemEn||v.stemZh||'');
+          const vans = LANG==='zh' ? (v.answerZh||v.answerEn||'') : (v.answerEn||v.answerZh||'');
+          const yrs = (v.years||[]).length ? ` <span class="mp-vtag" style="border-color:#64748b;color:#94a3b8">${v.years.join('/')}</span>` : '';
+          return `<div class="mp-v"><details>
+            <summary>${t('variants')} ${i+1} <span class="mp-vtag" style="border-color:${dtColor};color:${dtColor}">${esc(dt)}</span>${yrs}</summary>
+            <div class="vstem">${esc(vstem)}</div>
+            <div class="vans">${t('vAnswer')}: ${esc(vans)}</div>
+          </details></div>`;
+        }).join('');
+        return `
         <div class="mp">
           <div class="mp-title">${esc(LANG==='zh' ? m.titleZh : (m.titleEn||m.titleZh))}</div>
           ${m.stem ? `<div class="mp-stem">${t('stem')}: ${esc(LANG==='zh' ? m.stem : (m.stemEn||m.stem))}</div>` : ''}
-          ${(m.solutionSkeleton||[]).length ? `<div class="mp-skel">${t('solution')}: ${esc(m.solutionSkeleton.join(' → '))}</div>` : ''}
-          ${(m.variation||[]).length ? `<div class="mp-var">${t('variation')}: ${esc(m.variation.join('；'))}</div>` : ''}
+          ${skelStr ? `<div class="mp-skel">${t('solution')}: ${esc(skelStr)}</div>` : ''}
+          ${varStr ? `<div class="mp-var">${t('variation')}: ${esc(varStr)}</div>` : ''}
+          ${variants ? `<div class="mp-variants">${variants}</div>` : ''}
         </div>`;
+      };
       if (asCore.length) html += `<div class="mp-group">${t('asCore')}</div>` + asCore.map(renderMP).join('');
       if (asRelated.length) html += `<div class="mp-group">${t('asRelated')}</div>` + asRelated.map(renderMP).join('');
       html += `</div>`;

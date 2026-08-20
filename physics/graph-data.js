@@ -3885,6 +3885,36 @@ const DSE_PHYSICS_GRAPH = {
     "連接體(繩索張力)",
     "彈簧-質量系統(簡諧運動聯繫)",
     "多物體系統(整體+隔離法)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "質量 2 kg 物體受 10 N 水平拉力，摩擦力 4 N，求加速度。",
+     "stemEn": "2 kg object pulled by 10 N with 4 N friction; find acceleration.",
+     "answerZh": "淨力=10-4=6 N；a=F/m=6/2=3 m/s²。",
+     "answerEn": "Net force 6 N; a = 6/2 = 3 m/s².",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "3 kg 物體在無摩擦斜面上（30°）下滑，求加速度。",
+     "stemEn": "3 kg on frictionless 30° incline; find acceleration.",
+     "answerZh": "下滑分量 mg sin30°=3×10×0.5=15 N；a=15/3=5 m/s²。",
+     "answerEn": "Down-slope component mg sin30° = 15 N; a = 5 m/s².",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "連接體：2 kg 和 3 kg 用繩連接，受 25 N 拉力（桌面無摩擦），求加速度與繩張力。",
+     "stemEn": "2 kg + 3 kg connected by string, pulled by 25 N (frictionless). Find a and tension.",
+     "answerZh": "整體 a=25/5=5 m/s²；對 2 kg：T=2×5=10 N。",
+     "answerEn": "a = 25/5 = 5 m/s²; T on 2 kg = 10 N.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -3927,6 +3957,34 @@ const DSE_PHYSICS_GRAPH = {
     "滑塊下斜面(摩擦力生熱→內能)",
     "彈簧系統(彈性勢能↔動能)",
     "完全非彈性碰撞(動能損失→內能/聲能)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "物體從 5 m 高自由下落，落地時速度多大？",
+     "stemEn": "Object falls 5 m; impact speed?",
+     "answerZh": "½mv²=mgh → v=√(2gh)=√(2×10×5)=10 m/s。",
+     "answerEn": "v = √(2gh) = 10 m/s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "2 kg 物體從斜面頂端（高 3 m）滑下，到地速度 6 m/s，求克服摩擦力做功。",
+     "stemEn": "2 kg slides from 3 m height, reaches bottom at 6 m/s; work against friction?",
+     "answerZh": "mgh-½mv²=2×10×3-½×2×36=60-36=24 J。",
+     "answerEn": "60 - 36 = 24 J.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "彈簧壓縮釋放：0.5 kg 物體被壓縮 0.2 m 的彈簧（k=200 N/m）彈出，求最大速度。",
+     "stemEn": "0.5 kg launched by spring (k=200, compressed 0.2 m). Max speed?",
+     "answerZh": "½kx²=½mv² → ½×200×0.04=½×0.5×v² → 4=0.25v² → v=4 m/s。",
+     "answerEn": "½kx² = ½mv² → v = 4 m/s.",
+     "years": []
+    }
    ]
   },
   {
@@ -3967,6 +4025,34 @@ const DSE_PHYSICS_GRAPH = {
     "v-t圖求加速度(斜率)和位移(面積)",
     "多階段運動(分段計算)",
     "反向運動(往返問題)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "v-t 圖中斜率代表什麼？曲線下面積代表什麼？",
+     "stemEn": "In v-t graph, what do slope and area represent?",
+     "answerZh": "斜率=加速度；面積=位移。",
+     "answerEn": "Slope = acceleration; area = displacement.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "物體 v-t 圖：0-4s 從 0 到 8 m/s，4-8s 保持 8 m/s，求總位移。",
+     "stemEn": "v-t: 0-4s 0→8 m/s, 4-8s constant 8 m/s. Total displacement?",
+     "answerZh": "0-4s 面積=½×4×8=16 m；4-8s 面積=4×8=32 m；總=48 m。",
+     "answerEn": "Triangle 16 m + rectangle 32 m = 48 m.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "s-t 圖為拋物線，判斷物體運動類型並求加速度（s=2t²）。",
+     "stemEn": "s-t is parabolic (s=2t²); motion type and acceleration?",
+     "answerZh": "勻加速直線運動；s=½at²=2t² → a=4 m/s²。",
+     "answerEn": "Uniform acceleration; s=½at² → a=4 m/s².",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -4009,6 +4095,34 @@ const DSE_PHYSICS_GRAPH = {
     "斜碰(二維動量守恆)",
     "爆炸問題(初動量=0)",
     "反衝問題(槍炮反衝)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "2 kg 以 4 m/s 運動的物體與靜止 2 kg 物體完全非彈性碰撞，碰後共同速度？",
+     "stemEn": "2 kg at 4 m/s hits stationary 2 kg, perfectly inelastic. Common velocity?",
+     "answerZh": "動量守恆：2×4=(2+2)v → v=2 m/s。",
+     "answerEn": "2×4 = 4v → v = 2 m/s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "0.5 kg 以 3 m/s 與靜止 1 kg 彈性碰撞，求碰後兩者速度。",
+     "stemEn": "0.5 kg at 3 m/s elastic collision with stationary 1 kg. Final speeds?",
+     "answerZh": "動量+動能守恆：0.5×3=0.5v₁+1v₂ 且 ½×0.5×9=½×0.5v₁²+½×1v₂² → v₁=-1, v₂=2 m/s。",
+     "answerEn": "Conserve p and KE: v₁=-1 m/s, v₂=2 m/s.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "爆炸問題：靜止 3 kg 物體炸成 1 kg 和 2 kg，2 kg 以 6 m/s 向右，求 1 kg 速度。",
+     "stemEn": "Explosion: 3 kg at rest splits into 1 kg and 2 kg; 2 kg moves right at 6 m/s.",
+     "answerZh": "動量守恆：0=1×v+2×6 → v=-12 m/s（向左 12 m/s）。",
+     "answerEn": "0 = v + 12 → v = -12 m/s (left).",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4050,6 +4164,34 @@ const DSE_PHYSICS_GRAPH = {
     "折射定律(空氣→玻璃、斯涅爾定律)",
     "全反射(光導纖維原理)",
     "薄膜干涉(牛頓圈、肥皂膜顏色)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "波速 340 m/s、頻率 170 Hz，求波長。",
+     "stemEn": "v=340 m/s, f=170 Hz; wavelength?",
+     "answerZh": "λ=v/f=340/170=2 m。",
+     "answerEn": "λ = v/f = 2 m.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "橫波與縱波的區別？聲波屬於哪種？",
+     "stemEn": "Difference between transverse and longitudinal? Sound type?",
+     "answerZh": "橫波質點垂直傳播方向振動（繩波）；縱波平行（聲波）；聲波是縱波。",
+     "answerEn": "Transverse perpendicular, longitudinal parallel; sound is longitudinal.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "波從深水傳到淺水，波速減小，頻率與波長如何變化？",
+     "stemEn": "Wave to shallow water: v decreases; f and λ?",
+     "answerZh": "頻率不變（波源決定）；λ=v/f 減小。",
+     "answerEn": "f unchanged (source); λ decreases.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -4092,6 +4234,36 @@ const DSE_PHYSICS_GRAPH = {
     "含電動機電路(非純電阻，P=VI不能用I²R)",
     "最大功率傳輸(內阻=外阻)",
     "電容充放電(Q=CV、時間常數RC)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "串聯電路：兩個 4 Ω 電阻串聯接 12 V，求電流。",
+     "stemEn": "Two 4 Ω in series on 12 V; current?",
+     "answerZh": "R=4+4=8 Ω；I=V/R=12/8=1.5 A。",
+     "answerEn": "R=8 Ω; I=1.5 A.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "並聯：4 Ω 和 12 Ω 並聯接 24 V，求總電阻與總電流。",
+     "stemEn": "4 Ω and 12 Ω parallel on 24 V; total R and I?",
+     "answerZh": "1/R=1/4+1/12=1/3 → R=3 Ω；I=24/3=8 A。",
+     "answerEn": "R = 3 Ω; I = 8 A.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "燈泡 6 V 3 W 與電阻串聯接 12 V，燈泡正常發光，求電阻值。",
+     "stemEn": "6 V 3 W bulb in series with R on 12 V; bulb normal. Find R.",
+     "answerZh": "燈泡電流 I=P/V=3/6=0.5 A；燈泡電阻=6/0.5=12 Ω；R 分壓 6 V，R=6/0.5=12 Ω。",
+     "answerEn": "I=0.5 A; R=12 Ω.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4133,6 +4305,36 @@ const DSE_PHYSICS_GRAPH = {
     "β衰變(中子→質子+電子)",
     "γ衰變(能量釋放、質量數質子數不變)",
     "半衰期應用(碳14測年、放射性治療)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "放射性樣品半衰期 5 年，20 年後剩餘比例？",
+     "stemEn": "Half-life 5 y; fraction left after 20 y?",
+     "answerZh": "20/5=4 個半衰期 → (½)⁴=1/16。",
+     "answerEn": "4 half-lives → 1/16.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "某樣品初始 8000 個原子，半衰期 3 天，9 天後剩多少？",
+     "stemEn": "8000 atoms, half-life 3 d; left after 9 d?",
+     "answerZh": "9/3=3 個半衰期 → 8000×(½)³=1000。",
+     "answerEn": "3 half-lives → 1000.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "α、β、γ 三種射線的穿透力與電離能力比較。",
+     "stemEn": "Compare penetration and ionising power of α, β, γ.",
+     "answerZh": "穿透：γ>β>α；電離：α>β>γ；α 易被紙擋住，β 需鋁板，γ 需鉛/混凝土。",
+     "answerEn": "Penetration γ>β>α; ionising α>β>γ.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4174,6 +4376,36 @@ const DSE_PHYSICS_GRAPH = {
     "磁鐵插入/拔出線圈(磁通量變化)",
     "變壓器原理(原副線圈電壓電流關係)",
     "發電機原理(機械能轉電能)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "磁通量在 0.2 s 內從 0.1 Wb 變為 0.3 Wb，求感應電動勢。",
+     "stemEn": "Flux 0.1→0.3 Wb in 0.2 s; induced emf?",
+     "answerZh": "ε=ΔΦ/Δt=(0.3-0.1)/0.2=1.0 V。",
+     "answerEn": "ε = ΔΦ/Δt = 1.0 V.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "用楞次定律判斷：磁鐵 N 極插入線圈時感應電流方向。",
+     "stemEn": "N pole pushed into coil; induced current direction by Lenz?",
+     "answerZh": "插入時磁通增加，線圈產生反向磁場（N 極朝上）抗拒插入；用右手定則得電流方向。",
+     "answerEn": "Flux increases; induced field opposes; direction via right-hand rule.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "導體棒長 0.5 m 以 4 m/s 垂直磁場（B=0.2 T）運動，求感應電動勢。",
+     "stemEn": "Rod 0.5 m moves 4 m/s in B=0.2 T; induced emf?",
+     "answerZh": "ε=BLv=0.2×0.5×4=0.4 V。",
+     "answerEn": "ε = BLv = 0.4 V.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4215,6 +4447,34 @@ const DSE_PHYSICS_GRAPH = {
     "薄膜干涉(牛頓圈、肥皂膜)",
     "單縫衍射(中央亮紋寬度)",
     "光柵衍射(譜線位置dsinθ=nλ)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "雙縫干涉：縫距 0.1 mm、屏距 1 m、波長 600 nm，求條紋間距。",
+     "stemEn": "Double slit: d=0.1 mm, D=1 m, λ=600 nm; fringe spacing?",
+     "answerZh": "Δy=λD/d=600×10⁻⁹×1/10⁻⁴=6×10⁻³ m=6 mm。",
+     "answerEn": "Δy = λD/d = 6 mm.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "單縫衍射：縫寬 0.05 mm、波長 500 nm、屏距 2 m，中央明紋寬度？",
+     "stemEn": "Single slit: a=0.05 mm, λ=500 nm, D=2 m; central maximum width?",
+     "answerZh": "半寬 y=λD/a=500×10⁻⁹×2/5×10⁻⁵=0.02 m；全寬 0.04 m。",
+     "answerEn": "Half-width 0.02 m; full width 0.04 m.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "薄膜干涉：肥皂膜厚度 0.3 μm、折射率 1.3，反射加強的波長？",
+     "stemEn": "Soap film t=0.3 μm, n=1.3; reflected constructive wavelength?",
+     "answerZh": "2nt=(m+½)λ（一側半波損失）→ λ=2nt/(m+½)；m=1 → λ=2×1.3×0.3×10⁻⁶/1.5=520 nm。",
+     "answerEn": "2nt = (m+½)λ → λ ≈ 520 nm.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4256,6 +4516,34 @@ const DSE_PHYSICS_GRAPH = {
     "冰變水再變水蒸氣(三態變化)",
     "燃料燃燒放熱(Q=mq值)",
     "量熱器熱損失考慮"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "2 kg 水升溫 10°C，吸熱多少？（c=4200 J/kg°C）",
+     "stemEn": "Heat to raise 2 kg water 10°C?",
+     "answerZh": "Q=mcΔT=2×4200×10=84000 J。",
+     "answerEn": "Q = 84000 J.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "混合溫度：0.5 kg 80°C 水與 0.5 kg 20°C 水混合，平衡溫度？",
+     "stemEn": "Mix 0.5 kg 80°C and 0.5 kg 20°C water; equilibrium?",
+     "answerZh": "熱平衡：0.5×4200×(80-T)=0.5×4200×(T-20) → T=50°C。",
+     "answerEn": "Heat gained = heat lost → T = 50°C.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "用比熱容測金屬：0.2 kg 金屬加熱到 100°C 放入 0.4 kg 20°C 水，平衡 25°C，求金屬比熱容。",
+     "stemEn": "Metal 0.2 kg at 100°C into 0.4 kg 20°C water; equil 25°C; c of metal?",
+     "answerZh": "金屬放熱=水吸熱：0.2×c×75=0.4×4200×5 → c=0.4×4200×5/15=560 J/kg°C。",
+     "answerEn": "0.2×c×75 = 0.4×4200×5 → c = 560 J/kg°C.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4297,6 +4585,32 @@ const DSE_PHYSICS_GRAPH = {
     "等壓膨脹(V₁/T₁=V₂/T₂)",
     "氣體密封問題(質量不變)",
     "氣體混合問題(理想氣體方程)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "理想氣體 3 L、1 atm，恆溫膨脹到 6 L，壓強？",
+     "stemEn": "Ideal gas 3 L, 1 atm, isothermal to 6 L; P?",
+     "answerZh": "P₁V₁=P₂V₂ → P₂=0.5 atm。",
+     "answerEn": "P₂ = 0.5 atm.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "氣體在 27°C、2 atm、4 L，升溫到 127°C 且體積 6 L，壓強？",
+     "stemEn": "Gas 27°C 2 atm 4 L → 127°C 6 L; P?",
+     "answerZh": "P₁V₁/T₁=P₂V₂/T₂ → P₂=2×4×400/(300×6)=1.78 atm。",
+     "answerEn": "P₂ = 2×4×400/(300×6) = 1.78 atm.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "潛熱：0°C 冰 0.5 kg 熔化成 0°C 水，需多少熱？（L=3.34×10⁵ J/kg）",
+     "stemEn": "Melt 0.5 kg ice at 0°C; heat needed?",
+     "answerZh": "Q=mL=0.5×3.34×10⁵=1.67×10⁵ J。",
+     "answerEn": "Q = mL = 1.67×10⁵ J.",
+     "years": []
+    }
    ]
   },
   {
@@ -4338,6 +4652,34 @@ const DSE_PHYSICS_GRAPH = {
     "粗糙斜面(有摩擦)",
     "上滑與下滑(摩擦力方向)",
     "連接斜面(多階段)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "5 kg 物體在 30° 斜面上靜止，求摩擦力。",
+     "stemEn": "5 kg at rest on 30° incline; find friction.",
+     "answerZh": "f=mg sin30°=5×10×0.5=25 N。",
+     "answerEn": "f = mg sin30° = 25 N.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "2 kg 物體沿 30° 斜面（μ=0.2）下滑，求加速度。",
+     "stemEn": "2 kg slides down 30° incline with μ=0.2; find a.",
+     "answerZh": "下滑分量 2×10×0.5=10 N；摩擦 μN=0.2×2×10×cos30°=3.46 N；a=(10-3.46)/2=3.27 m/s²。",
+     "answerEn": "a = (mg sinθ - μmg cosθ)/m = 3.27 m/s².",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "物體沿 45° 斜面以 2 m/s² 減速上滑，求動摩擦係數 μ。",
+     "stemEn": "Object decelerates up 45° incline at 2 m/s². Find μ.",
+     "answerZh": "上滑：-mg sin45°-μmg cos45°=ma → -10×0.707-μ×10×0.707=-2 → μ≈0.40。",
+     "answerEn": "-g sinθ - μg cosθ = a → μ ≈ 0.40.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4379,6 +4721,34 @@ const DSE_PHYSICS_GRAPH = {
     "降壓變壓器(用戶側)",
     "輸電線損失計算",
     "理想變壓器vs實際變壓器"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "理想變壓器初級 200 匝、次級 400 匝，初級 110 V，求次級電壓。",
+     "stemEn": "Transformer 200:400 turns, primary 110 V; secondary voltage?",
+     "answerZh": "Vs/Vp=Ns/Np → Vs=110×400/200=220 V。",
+     "answerEn": "Vs = 110×2 = 220 V.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "升壓後電壓從 10 kV 到 100 kV，輸送功率 1 MW、線阻 10 Ω，求省下的線路損耗比。",
+     "stemEn": "Step up 10 kV→100 kV, P=1 MW, line R=10 Ω; loss ratio?",
+     "answerZh": "10 kV：I=100 A，損耗 I²R=100000 W；100 kV：I=10 A，損耗 1000 W；降為 1%。",
+     "answerEn": "At 10 kV loss 100 kW; at 100 kV 1 kW; 100× reduction.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "變壓器效率：初級 220 V 2 A，次級 110 V 3.5 A，求效率。",
+     "stemEn": "Transformer: primary 220 V 2 A, secondary 110 V 3.5 A; efficiency?",
+     "answerZh": "Pin=440 W；Pout=385 W；η=385/440=87.5%。",
+     "answerEn": "η = 385/440 = 87.5%.",
+     "years": []
+    }
    ]
   },
   {
@@ -4420,6 +4790,34 @@ const DSE_PHYSICS_GRAPH = {
     "單擺(小角度近似)",
     "U型管液柱振動",
     "能量守恆驗證"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "彈簧振子：k=100 N/m、m=0.25 kg，求角頻率。",
+     "stemEn": "Spring-mass k=100, m=0.25; angular frequency?",
+     "answerZh": "ω=√(k/m)=√(100/0.25)=20 rad/s。",
+     "answerEn": "ω = √(k/m) = 20 rad/s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "單擺週期：L=1 m，g=10，求週期。",
+     "stemEn": "Pendulum L=1 m; period?",
+     "answerZh": "T=2π√(L/g)=2π√0.1=1.99 s。",
+     "answerEn": "T = 2π√(L/g) ≈ 1.99 s.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "簡諧運動總能量：振幅 0.1 m、k=200 N/m，求最大速度（m=0.5 kg）。",
+     "stemEn": "SHM amplitude 0.1, k=200, m=0.5; max speed?",
+     "answerZh": "½kA²=½mv_max² → v=√(kA²/m)=√(200×0.01/0.5)=2 m/s。",
+     "answerEn": "v = √(kA²/m) = 2 m/s.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -4461,6 +4859,34 @@ const DSE_PHYSICS_GRAPH = {
     "行星運動開普勒定律",
     "日月食形成條件",
     "潮汐力分析"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "地球表面 g=9.8，求 6400 km 高度處的重力加速度（R=6400 km）。",
+     "stemEn": "g at height 6400 km above surface (R=6400 km)?",
+     "answerZh": "g'=g(R/(R+h))²=9.8×(6400/12800)²=2.45 m/s²。",
+     "answerEn": "g' = g/4 = 2.45 m/s².",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "衛星繞地球半徑 7000 km，求軌道速度（M=6×10²⁴ kg）。",
+     "stemEn": "Satellite at r=7000 km; orbital speed?",
+     "answerZh": "v=√(GM/r)=√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=√(5.72×10⁷)=7560 m/s≈7.6 km/s。",
+     "answerEn": "v = √(GM/r) ≈ 7.6 km/s.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "月球週期 27.3 天、軌道半徑 3.84×10⁸ m，求地球質量。",
+     "stemEn": "Moon period 27.3 d, radius 3.84×10⁸ m; Earth mass?",
+     "answerZh": "M=4π²r³/(GT²)=4π²×(3.84×10⁸)³/(6.67×10⁻¹¹×(27.3×86400)²)=6.0×10²⁴ kg。",
+     "answerEn": "M = 4π²r³/GT² ≈ 6.0×10²⁴ kg.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4502,6 +4928,34 @@ const DSE_PHYSICS_GRAPH = {
     "汽車行駛功率(牽引力與速度)",
     "水泵功率(揚水高度與流量)",
     "電機效率(電能→機械能)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "機器在 10 s 內做功 500 J，求功率。",
+     "stemEn": "Machine does 500 J in 10 s; power?",
+     "answerZh": "P=W/t=500/10=50 W。",
+     "answerEn": "P = 500/10 = 50 W.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "電動機輸入功率 200 W，輸出機械功率 150 W，求效率。",
+     "stemEn": "Motor input 200 W, output 150 W; efficiency?",
+     "answerZh": "η=150/200=75%。",
+     "answerEn": "η = 150/200 = 75%.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "汽車以 20 m/s 勻速行駛，阻力 800 N，求引擎功率。",
+     "stemEn": "Car at 20 m/s, resistance 800 N; engine power?",
+     "answerZh": "P=Fv=800×20=16000 W=16 kW。",
+     "answerEn": "P = Fv = 16 kW.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4543,6 +4997,34 @@ const DSE_PHYSICS_GRAPH = {
     "內接法測電阻(電壓表內阻)",
     "惠斯通電橋精確測量",
     "電阻與溫度關係實驗"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "伏安法測電阻：電壓 6 V、電流 0.5 A，求電阻。",
+     "stemEn": "6 V, 0.5 A; resistance?",
+     "answerZh": "R=V/I=6/0.5=12 Ω。",
+     "answerEn": "R = 12 Ω.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "電阻定律：同材料導線長度加倍、截面積加倍，電阻如何變？",
+     "stemEn": "Wire length doubled, area doubled; resistance?",
+     "answerZh": "R=ρL/A；L×2、A×2 → R 不變。",
+     "answerEn": "R ∝ L/A; both double → R unchanged.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "電阻與溫度：鎢絲 20°C 時 R=50 Ω，溫度係數 α=0.0045/°C，求 200°C 時電阻。",
+     "stemEn": "Tungsten 50 Ω at 20°C, α=0.0045; R at 200°C?",
+     "answerZh": "R=R₀(1+αΔT)=50×(1+0.0045×180)=50×1.81=90.5 Ω。",
+     "answerEn": "R = R₀(1+αΔT) = 90.5 Ω.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -4584,6 +5066,34 @@ const DSE_PHYSICS_GRAPH = {
     "深淺區折射(波速變化)",
     "光纖全反射原理",
     "聲波反射(回聲定位)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "入射角 45°、折射角 30°，求折射率。",
+     "stemEn": "Angle of incidence 45°, refraction 30°; n?",
+     "answerZh": "n=sin45°/sin30°=0.707/0.5=1.414。",
+     "answerEn": "n = sin45°/sin30° = 1.414.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "光從玻璃（n=1.5）射向空氣，求全反射臨界角。",
+     "stemEn": "Glass (n=1.5) to air; critical angle?",
+     "answerZh": "sin C=1/n=1/1.5=0.667 → C=41.8°。",
+     "answerEn": "sin C = 1/n → C = 41.8°.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "光纖中光線全反射傳播，內芯 n₁=1.5、包層 n₂=1.45，求臨界角。",
+     "stemEn": "Optical fibre n₁=1.5, n₂=1.45; critical angle?",
+     "answerZh": "sin C=n₂/n₁=1.45/1.5=0.967 → C=75.2°。",
+     "answerEn": "sin C = n₂/n₁ → C = 75.2°.",
+     "years": []
+    }
    ]
   },
   {
@@ -4625,6 +5135,32 @@ const DSE_PHYSICS_GRAPH = {
     "空氣柱駐波(開管/閉管)",
     "共振實驗(單擺耦合)",
     "風琴管頻率計算"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "駐波：弦長 1 m 基頻駐波，波長？",
+     "stemEn": "Standing wave on 1 m string, fundamental; λ?",
+     "answerZh": "基頻：λ/2=L → λ=2 m。",
+     "answerEn": "Fundamental: λ/2 = L → λ = 2 m.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "管長 0.5 m 閉管基頻駐波，波長？",
+     "stemEn": "Closed pipe 0.5 m, fundamental; λ?",
+     "answerZh": "閉管：λ/4=L → λ=2 m。",
+     "answerEn": "Closed: λ/4 = L → λ = 2 m.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "共振：固有頻率與驅動頻率相同時振幅最大，舉兩例應用/危害。",
+     "stemEn": "Resonance: amplitude max when driving = natural; two examples.",
+     "answerZh": "應用：樂器共鳴箱、微波爐加熱水分子；危害：地震使建築共振倒塌、橋樑風振。",
+     "answerEn": "Uses: musical resonance, microwave; hazards: seismic/structural resonance.",
+     "years": []
+    }
    ]
   },
   {
@@ -4666,6 +5202,34 @@ const DSE_PHYSICS_GRAPH = {
     "遏止電壓測量",
     "光強與光電流關係",
     "光顏色與能量對應"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "光子能量：波長 500 nm 的光子能量（h=6.63×10⁻³⁴, c=3×10⁸）。",
+     "stemEn": "Photon energy at λ=500 nm?",
+     "answerZh": "E=hc/λ=6.63×10⁻³⁴×3×10⁸/5×10⁻⁷=3.98×10⁻¹⁹ J。",
+     "answerEn": "E = hc/λ ≈ 3.98×10⁻¹⁹ J.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "金屬逸出功 2 eV，入射光子能量 3 eV，求最大動能（1 eV=1.6×10⁻¹⁹）。",
+     "stemEn": "Work function 2 eV, photon 3 eV; max KE?",
+     "answerZh": "KEmax=hf-W=3-2=1 eV=1.6×10⁻¹⁹ J。",
+     "answerEn": "KEmax = 1 eV.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "光電效應：紅限頻率 4×10¹⁴ Hz，用 6×10¹⁴ Hz 光照射，求截止電壓。",
+     "stemEn": "Threshold 4×10¹⁴ Hz, light 6×10¹⁴ Hz; stopping voltage?",
+     "answerZh": "KEmax=h(f-f₀)=6.63×10⁻³⁴×2×10¹⁴=1.33×10⁻¹⁹ J；V=KEmax/e=0.83 V。",
+     "answerEn": "KE = h(f-f₀); V = KE/e ≈ 0.83 V.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4707,6 +5271,34 @@ const DSE_PHYSICS_GRAPH = {
     "核聚變(輕核結合)",
     "質能方程應用",
     "核電站原理"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "質量虧損 0.01 kg，求釋放能量（c=3×10⁸）。",
+     "stemEn": "Mass defect 0.01 kg; energy released?",
+     "answerZh": "E=mc²=0.01×9×10¹⁶=9×10¹⁴ J。",
+     "answerEn": "E = mc² = 9×10¹⁴ J.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "核反應：²³⁵U 裂變釋能約 200 MeV，求每 kg 鈾釋放能量（1 MeV=1.6×10⁻¹³）。",
+     "stemEn": "²³⁵U fission ~200 MeV; energy per kg?",
+     "answerZh": "每核子數 6.02×10²³/235≈2.56×10²⁴ 核/kg；E=2.56×10²⁴×200×1.6×10⁻¹³=8.2×10¹³ J。",
+     "answerEn": "E ≈ 8.2×10¹³ J/kg.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "比較核裂變與核聚變：原料、條件、能量密度。",
+     "stemEn": "Compare fission and fusion: fuel, conditions, energy density.",
+     "answerZh": "裂變用重核（鈾）需中子誘發、可控；聚變用輕核（氫）需極高溫、能量密度更大、燃料豐富。",
+     "answerEn": "Fission: heavy nuclei, neutron-triggered, controllable; fusion: light nuclei, extreme heat, denser.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -4748,6 +5340,34 @@ const DSE_PHYSICS_GRAPH = {
     "CT三維重建",
     "MRI軟組織成像",
     "B超胎兒檢查"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "X 射線成像原理：為什麼骨頭在 X 光片上呈白色？",
+     "stemEn": "X-ray imaging: why do bones appear white?",
+     "answerZh": "骨含鈣密度高，吸收 X 射線多 → 底片少曝光 → 白色。",
+     "answerEn": "Bones dense (calcium) absorb more X-rays → whiter image.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "CT 與普通 X 光的區別？",
+     "stemEn": "CT vs plain X-ray?",
+     "answerZh": "CT 多角度掃描+電腦重組橫斷面圖像，可看軟組織；普通 X 光是單一投影。",
+     "answerEn": "CT takes many angles and reconstructs cross-sections; sees soft tissue.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "超聲波成像：原理與 X 光的本質區別？",
+     "stemEn": "Ultrasound imaging: principle and difference from X-ray?",
+     "answerZh": "超聲波是機械波，靠組織介面反射成像，無游離輻射；X 光是電磁輻射，有輻射風險。",
+     "answerEn": "Ultrasound = mechanical waves, reflections at tissue boundaries, no radiation; X-ray = ionising EM.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -4789,6 +5409,32 @@ const DSE_PHYSICS_GRAPH = {
     "I-V圖求電阻",
     "周期測量求頻率",
     "直線化求斜率(如g=4π²L/T²)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "實驗重複 5 次得 2.1, 2.2, 2.0, 2.1, 2.1，求平均值。",
+     "stemEn": "Five readings 2.1,2.2,2.0,2.1,2.1; mean?",
+     "answerZh": "平均=(2.1+2.2+2.0+2.1+2.1)/5=2.1。",
+     "answerEn": "Mean = 2.1.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "作圖求斜率：直線過 (1,3) 和 (5,7)，斜率？",
+     "stemEn": "Line through (1,3),(5,7); slope?",
+     "answerZh": "斜率=(7-3)/(5-1)=1。",
+     "answerEn": "Slope = 1.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "如何判斷一組數據中的離群點（outlier）並處理？",
+     "stemEn": "How to identify and handle outliers?",
+     "answerZh": "用平均值±範圍/標準差判斷明顯偏離者；核對實驗記錄確認錯誤後剔除，不隨意刪除。",
+     "answerEn": "Identify via deviation from mean; verify then exclude only if justified.",
+     "years": []
+    }
    ]
   },
   {
@@ -4830,6 +5476,32 @@ const DSE_PHYSICS_GRAPH = {
     "風力發電功率計算",
     "太陽能電池效率",
     "能源轉換鏈分析"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "可再生能源與不可再生能源各舉兩例。",
+     "stemEn": "Two renewable and two non-renewable examples.",
+     "answerZh": "可再生：太陽能、風能、水能；不可再生：煤、石油、天然氣。",
+     "answerEn": "Renewable: solar, wind, hydro; non-renewable: coal, oil, gas.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "風力發電的局限？",
+     "stemEn": "Limitations of wind power?",
+     "answerZh": "依賴風況不穩定、需大片土地、噪音、對鳥類影響；儲能困難。",
+     "answerEn": "Intermittent, land use, noise, bird impact; storage difficult.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "太陽能電池直接轉換能量形式為何？效率瓶頸在哪？",
+     "stemEn": "Solar cell energy conversion? Efficiency bottleneck?",
+     "answerZh": "光能→電能（光伏效應）；瓶頸：材料吸收光譜有限、反射損失、熱效應。",
+     "answerEn": "Light→electricity; bottlenecks: spectral response, reflection, heat.",
+     "years": []
+    }
    ]
   },
   {
@@ -4871,6 +5543,34 @@ const DSE_PHYSICS_GRAPH = {
     "鈷-60放射治療",
     "碳-14年代測定",
     "示蹤劑追蹤"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "放射性同位素在醫學上的兩個應用。",
+     "stemEn": "Two medical uses of radioisotopes.",
+     "answerZh": "放射治療（殺癌細胞）、醫學影像（示蹤劑如 I-131 甲狀腺）。",
+     "answerEn": "Radiotherapy; medical imaging/tracers (I-131).",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "碳測年：碳-14 半衰期 5730 年，樣品剩 1/8，年齡？",
+     "stemEn": "C-14 half-life 5730 y; sample has 1/8; age?",
+     "answerZh": "1/8=(½)³ → 3 個半衰期 → 3×5730=17190 年。",
+     "answerEn": "3 half-lives → 17190 y.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "輻射防護三原則並舉例。",
+     "stemEn": "Three radiation protection principles with examples.",
+     "answerZh": "時間（縮短暴露）、距離（遠離源，如長柄鉗）、屏蔽（鉛/混凝土阻擋）。",
+     "answerEn": "Time, distance, shielding.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -4912,6 +5612,34 @@ const DSE_PHYSICS_GRAPH = {
     "斜拋運動(仰角拋出)",
     "自由落體(初速為0)",
     "上拋運動(對稱性)"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "物體從 20 m 高以 10 m/s 水平拋出，求落地時間。",
+     "stemEn": "Horizontal throw from 20 m at 10 m/s; time of flight?",
+     "answerZh": "t=√(2h/g)=√(2×20/10)=2 s。",
+     "answerEn": "t = √(2h/g) = 2 s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "斜拋：初速 20 m/s、角度 30°，求最大高度和射程。",
+     "stemEn": "Projectile at 20 m/s, 30°; max height and range?",
+     "answerZh": "H=u²sin²θ/(2g)=400×0.25/20=5 m；R=u²sin2θ/g=400×sin60°/10=34.6 m。",
+     "answerEn": "H = 5 m; R = 34.6 m.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "以 15 m/s 水平拋出，落在 45 m 外。求拋出高度。",
+     "stemEn": "Thrown at 15 m/s, lands 45 m away. Height?",
+     "answerZh": "t=45/15=3 s；h=½gt²=½×10×9=45 m。",
+     "answerEn": "t = 3 s; h = ½×10×9 = 45 m.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -4953,6 +5681,34 @@ const DSE_PHYSICS_GRAPH = {
     "豎直圓周運動(過山車最高點)",
     "衛星軌道(萬有引力提供向心力)",
     "轉彎摩擦力分析"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "0.5 kg 物體以 4 m/s 在 1 m 半徑圓周運動，求向心力。",
+     "stemEn": "0.5 kg at 4 m/s on 1 m circle; centripetal force?",
+     "answerZh": "F=mv²/r=0.5×16/1=8 N。",
+     "answerEn": "F = 0.5×16/1 = 8 N.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "過山車在頂部最小速度：半徑 5 m，車與軌道恰好不脫離。",
+     "stemEn": "Roller coaster at top of 5 m loop; minimum speed?",
+     "answerZh": "mg=mv²/r → v=√(gr)=√(10×5)=7.07 m/s。",
+     "answerEn": "mg = mv²/r → v = √(gr) = 7.07 m/s.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "錐擺：質量 0.2 kg、繩長 1 m、θ=60°，求速率。",
+     "stemEn": "Conical pendulum: 0.2 kg, 1 m string, 60°; speed?",
+     "answerZh": "T sinθ=mv²/(L sinθ)，T cosθ=mg → v²=gL sin²θ/cosθ=10×1×0.75/0.5=15 → v=3.87 m/s。",
+     "answerEn": "Resolve tension; v = 3.87 m/s.",
+     "years": []
+    }
    ]
   },
   {
@@ -4994,6 +5750,34 @@ const DSE_PHYSICS_GRAPH = {
     "多普勒效應(來源)",
     "音頻與音調",
     "聲強與響度"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "聲波在空氣中的速度約多少？",
+     "stemEn": "Speed of sound in air?",
+     "answerZh": "約 340 m/s（室溫）。",
+     "answerEn": "~340 m/s at room temperature.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "音調由什麼決定？響度由什麼決定？",
+     "stemEn": "What determines pitch and loudness?",
+     "answerZh": "音調由頻率決定（頻率高音調高）；響度由振幅決定。",
+     "answerEn": "Pitch by frequency; loudness by amplitude.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "超聲波測距：聲波往返用 0.02 s，求距離。",
+     "stemEn": "Ultrasound round trip 0.02 s; distance?",
+     "answerZh": "d=v×t/2=340×0.02/2=3.4 m。",
+     "answerEn": "d = v×t/2 = 3.4 m.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -5035,6 +5819,34 @@ const DSE_PHYSICS_GRAPH = {
     "質譜儀(磁場偏轉)",
     "迴旋加速器(加速條件)",
     "速度選擇器"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "帶電粒子以速度 v 垂直進入磁場 B，受力的方向由什麼定則判斷？",
+     "stemEn": "Charged particle moving perpendicular to B; direction rule?",
+     "answerZh": "佛萊明左手定則（若為正電荷）；洛倫茲力 F=qvB 垂直於 v 和 B。",
+     "answerEn": "Fleming's left-hand rule; F=qvB perpendicular to v and B.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "質子以 2×10⁶ m/s 垂直進入 B=0.5 T，求洛倫茲力（e=1.6×10⁻¹⁹）。",
+     "stemEn": "Proton at 2×10⁶ m/s in B=0.5 T; Lorentz force?",
+     "answerZh": "F=qvB=1.6×10⁻¹⁹×2×10⁶×0.5=1.6×10⁻¹³ N。",
+     "answerEn": "F = qvB = 1.6×10⁻¹³ N.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "帶電粒子在磁場中做圓周運動，證明週期與速度無關。",
+     "stemEn": "Charged particle in B moves in circle; show period independent of v.",
+     "answerZh": "qvB=mv²/r → r=mv/qB；T=2πr/v=2πm/qB，不含 v → 週期與速度無關。",
+     "answerEn": "T = 2πm/qB, independent of v.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -5076,6 +5888,34 @@ const DSE_PHYSICS_GRAPH = {
     "斷電自感(電流漸減)",
     "變壓器互感",
     "RL電路暫態"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "自感應：線圈電流變化率 2 A/s、自感 0.5 H，求感應電動勢。",
+     "stemEn": "Coil L=0.5 H, dI/dt=2 A/s; induced emf?",
+     "answerZh": "ε=L(dI/dt)=0.5×2=1 V。",
+     "answerEn": "ε = L dI/dt = 1 V.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "斷開電路瞬間燈泡為何閃亮？用自感應解釋。",
+     "stemEn": "Why does a bulb flash when circuit is broken?",
+     "answerZh": "電流突降→線圈產生自感電動勢維持電流→燈泡短暫閃亮。",
+     "answerEn": "Sudden current drop induces emf maintaining current → flash.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "變壓器空載時初級電流很小，用互感應/反電動勢解釋。",
+     "stemEn": "Why is no-load primary current small?",
+     "answerZh": "初級產生磁通在自身感應反電動勢，接近電源電壓時淨驅動電壓小→電流小。",
+     "answerEn": "Back emf nearly balances supply voltage → small net driving voltage → small current.",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5117,6 +5957,32 @@ const DSE_PHYSICS_GRAPH = {
     "測量電阻(溫度影響)",
     "單擺週期實驗",
     "焦利定律實驗"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "實驗「驗證牛頓第二定律」需控制哪些變量？",
+     "stemEn": "Verifying F=ma: controlled variables?",
+     "answerZh": "控制質量不變，改變力（掛鉤碼質量）；或控制力不變，改變質量。",
+     "answerEn": "Hold mass constant, vary force (or vice versa).",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "實驗誤差：測量斜面加速度比理論值小，原因？",
+     "stemEn": "Measured acceleration on incline less than theoretical; why?",
+     "answerZh": "有摩擦力（未完全光滑）、空氣阻力、計時誤差。",
+     "answerEn": "Friction, air resistance, timing errors.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "設計實驗測量物體密度，列出步驟、儀器與誤差來源。",
+     "stemEn": "Design experiment to measure density.",
+     "answerZh": "天平測質量；量筒排水法測體積；ρ=m/V；誤差：讀數、排水殘留、溫度。",
+     "answerEn": "Balance for m; displacement for V; ρ=m/V; reading errors.",
+     "years": []
+    }
    ]
   },
   {
@@ -5158,6 +6024,34 @@ const DSE_PHYSICS_GRAPH = {
     "氫光譜解釋",
     "離子形成",
     "化學鍵與電子"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "盧瑟福 α 散射實驗的主要結論？",
+     "stemEn": "Key conclusion of Rutherford's α-scattering?",
+     "answerZh": "原子有微小緻密的帶正電核；大部分空間是空的，電子繞核運動。",
+     "answerEn": "Atom has tiny dense positive nucleus; mostly empty space.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "玻爾模型中電子躍遷：高能級到低能級發射什麼？",
+     "stemEn": "Bohr model: electron falls to lower level; emits?",
+     "answerZh": "發射光子，能量 ΔE=hf 對應能級差。",
+     "answerEn": "Emits photon, ΔE = hf = level difference.",
+     "years": [
+      "2021"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "線狀光譜如何證實能級存在？",
+     "stemEn": "How do line spectra confirm energy levels?",
+     "answerZh": "譜線是離散波長→電子躍遷只在特定能級差→能級量子化。",
+     "answerEn": "Discrete wavelengths → only specific level differences → quantised levels.",
+     "years": []
+    }
    ]
   },
   {
@@ -5198,6 +6092,34 @@ const DSE_PHYSICS_GRAPH = {
     "鐵軌膨脹隙設計",
     "雙金屬片溫控開關",
     "液體膨脹體積變化"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "攝氏 25°C 換算成熱力學溫標。",
+     "stemEn": "Convert 25°C to Kelvin.",
+     "answerZh": "T=25+273=298 K。",
+     "answerEn": "T = 298 K.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "金屬棒長 1 m，α=2×10⁻⁵/°C，升溫 50°C 伸長多少？",
+     "stemEn": "Rod 1 m, α=2×10⁻⁵, ΔT=50; elongation?",
+     "answerZh": "ΔL=αL₀ΔT=2×10⁻⁵×1×50=1×10⁻³ m=1 mm。",
+     "answerEn": "ΔL = αL₀ΔT = 1 mm.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "雙金屬片為何彎曲？溫度升高時向哪邊彎？",
+     "stemEn": "Why does a bimetallic strip bend on heating?",
+     "answerZh": "兩金屬膨脹係數不同，受熱伸長量不同 → 彎曲，向膨脹係數小的一側彎。",
+     "answerEn": "Different expansion coefficients → unequal elongation → bends toward smaller α.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -5239,6 +6161,34 @@ const DSE_PHYSICS_GRAPH = {
     "布朗運動實驗",
     "理想氣體狀態方程",
     "熱力學溫標定義"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "理想氣體：壓強 1 atm、體積 2 L，等溫壓縮到 1 L，壓強變為？",
+     "stemEn": "Isothermal: 1 atm, 2 L → 1 L; pressure?",
+     "answerZh": "P₁V₁=P₂V₂ → P₂=1×2/1=2 atm。",
+     "answerEn": "P₂ = 2 atm.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "查理定律：氣體 27°C 時 1 atm，體積不變升溫到 127°C，壓強？",
+     "stemEn": "Charles/constant V: 27°C 1 atm → 127°C; P?",
+     "answerZh": "P/T 不變 → P₂=P₁×T₂/T₁=1×400/300=1.33 atm。",
+     "answerEn": "P₂ = 1×400/300 = 1.33 atm.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "動力論解釋：為何溫度升高氣體壓強增大（體積不變）？",
+     "stemEn": "Kinetic theory: why does P increase with T at constant V?",
+     "answerZh": "溫度升→分子平均動能升→撞擊器壁的頻率和力度升→壓強增大。",
+     "answerEn": "Higher T → faster molecules → more frequent/harder wall collisions → higher P.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -5280,6 +6230,36 @@ const DSE_PHYSICS_GRAPH = {
     "碰撞時間計算",
     "反衝現象分析",
     "衝量-動量圖像題"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "2 kg 物體受 10 N 力作用 3 s，求衝量與動量變化。",
+     "stemEn": "2 kg under 10 N for 3 s; impulse and Δp?",
+     "answerZh": "J=Ft=30 N·s；Δp=30 kg·m/s。",
+     "answerEn": "J = Ft = 30 N·s; Δp = 30 kg·m/s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "0.5 kg 球以 4 m/s 撞牆反彈 3 m/s，碰撞時間 0.05 s，求平均力。",
+     "stemEn": "0.5 kg ball rebounds 3 m/s from 4 m/s in 0.05 s; average force?",
+     "answerZh": "Δp=0.5×(3-(-4))=3.5 kg·m/s；F=Δp/t=3.5/0.05=70 N。",
+     "answerEn": "Δp = 3.5; F = 70 N.",
+     "years": [
+      "2019"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "高空墜落緩衝：1 kg 物體從 5 m 掉到軟墊，減速距離 0.5 m，求平均衝擊力。",
+     "stemEn": "1 kg falls 5 m onto pad, decelerates over 0.5 m; average force?",
+     "answerZh": "v=√(2gh)=10 m/s；由 v²=2as → a=v²/2s=100/1=100 m/s²；F-mg=ma → F=1×110=110 N。",
+     "answerEn": "a = v²/2s = 100; F = m(g+a) = 110 N.",
+     "years": [
+      "2020"
+     ]
+    }
    ]
   },
   {
@@ -5321,6 +6301,34 @@ const DSE_PHYSICS_GRAPH = {
     "彈簧壓縮勢能儲存",
     "重力勢能零點選擇",
     "保守力與非保守力區別"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "2 kg 物體從地面舉到 3 m，重力勢能增加多少？",
+     "stemEn": "Raise 2 kg by 3 m; ΔPE?",
+     "answerZh": "ΔPE=mgh=2×10×3=60 J。",
+     "answerEn": "ΔPE = mgh = 60 J.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "彈簧（k=100 N/m）拉伸 0.2 m，儲存多少彈性勢能？",
+     "stemEn": "Spring k=100 stretched 0.2 m; elastic PE?",
+     "answerZh": "PE=½kx²=½×100×0.04=2 J。",
+     "answerEn": "PE = ½kx² = 2 J.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "1 kg 物體沿無摩擦軌道從 4 m 高滑下，經過半徑 1 m 圓環頂部，求頂部速度。",
+     "stemEn": "1 kg slides from 4 m through a 1 m radius loop; speed at top?",
+     "answerZh": "mgh=mg(2r)+½mv² → v²=2g(h-2r)=2×10×(4-2)=40 → v=6.32 m/s。",
+     "answerEn": "v² = 2g(h-2r) = 40 → v = 6.32 m/s.",
+     "years": [
+      "2023"
+     ]
+    }
    ]
   },
   {
@@ -5362,6 +6370,32 @@ const DSE_PHYSICS_GRAPH = {
     "反射波紋觀測",
     "干涉圖樣分析",
     "衍射狹縫寬度測量"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "水波槽實驗中，用什麼方法顯示波的波峰？",
+     "stemEn": "How to visualise wave crests in a ripple tank?",
+     "answerZh": "頻閃燈照射使波峰看似靜止；或用投影看到明暗條紋。",
+     "answerEn": "Strobe light freezes crests; projection shows fringes.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "水波遇障礙物繞射：波長與縫寬比如何影響繞射程度？",
+     "stemEn": "Water waves diffract: effect of λ vs slit width?",
+     "answerZh": "波長接近或大於縫寬時繞射明顯；縫寬遠大於波長時繞射弱。",
+     "answerEn": "Diffraction significant when λ ≈ or > slit width.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "從水波槽實驗如何測量波速？",
+     "stemEn": "Measure wave speed in ripple tank?",
+     "answerZh": "量波長（明紋間距）和頻率（閃光燈頻率）；v=fλ。",
+     "answerEn": "Measure λ (fringe spacing) and f (strobe); v = fλ.",
+     "years": []
+    }
    ]
   },
   {
@@ -5403,6 +6437,34 @@ const DSE_PHYSICS_GRAPH = {
     "均勻電場中運動",
     "帶電粒子平衡",
     "導體球電荷分布"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "點電荷 Q=2×10⁻⁶ C 距場點 0.5 m，求電場強度（k=9×10⁹）。",
+     "stemEn": "E from Q=2×10⁻⁶ at 0.5 m?",
+     "answerZh": "E=kQ/r²=9×10⁹×2×10⁻⁶/0.25=72000 N/C。",
+     "answerEn": "E = kQ/r² = 7.2×10⁴ N/C.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "庫侖力：q₁=3 μC、q₂=-4 μC、相距 0.2 m，求作用力。",
+     "stemEn": "Force between 3 μC and -4 μC at 0.2 m?",
+     "answerZh": "F=kq₁q₂/r²=9×10⁹×3×10⁻⁶×4×10⁻⁶/0.04=2700 N（吸引）。",
+     "answerEn": "F = 2700 N (attractive).",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "兩平行板電場 2×10⁴ N/C，電子（e=1.6×10⁻¹⁹ C, m=9.1×10⁻³¹）在內，求加速度。",
+     "stemEn": "Electron in E=2×10⁴ N/C; acceleration?",
+     "answerZh": "F=eE=3.2×10⁻¹⁵ N；a=F/m=3.2×10⁻¹⁵/9.1×10⁻³¹=3.5×10¹⁵ m/s²。",
+     "answerEn": "a = eE/m ≈ 3.5×10¹⁵ m/s².",
+     "years": [
+      "2022"
+     ]
+    }
    ]
   },
   {
@@ -5444,6 +6506,36 @@ const DSE_PHYSICS_GRAPH = {
     "實際功率與額定功率",
     "輸電線路損失",
     "最大功率傳輸條件"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "燈泡 220 V 100 W，求工作電流和電阻。",
+     "stemEn": "220 V 100 W bulb; current and resistance?",
+     "answerZh": "I=P/V=100/220=0.455 A；R=V²/P=48400/100=484 Ω。",
+     "answerEn": "I = 0.455 A; R = 484 Ω.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "電熱水器 2000 W 使用 30 分鐘，消耗多少電能（kWh）？",
+     "stemEn": "2000 W heater for 30 min; energy in kWh?",
+     "answerZh": "E=Pt=2×0.5=1 kWh。",
+     "answerEn": "E = 2×0.5 = 1 kWh.",
+     "years": [
+      "2020"
+     ]
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "兩燈泡 60 W 和 100 W（均 220 V）串聯接 220 V，哪個更亮？",
+     "stemEn": "60 W and 100 W bulbs in series on 220 V; which brighter?",
+     "answerZh": "串聯電流相同；60 W 燈泡電阻更大（R=V²/P），功率 I²R 更大 → 60 W 更亮。",
+     "answerEn": "60 W bulb has higher R, same current → higher I²R → brighter.",
+     "years": [
+      "2021"
+     ]
+    }
    ]
   },
   {
@@ -5485,6 +6577,32 @@ const DSE_PHYSICS_GRAPH = {
     "碘-131治療應用",
     "鈷-60工業探傷",
     "氫同位素示蹤"
+   ],
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "同位素的定義？",
+     "stemEn": "Definition of isotopes?",
+     "answerZh": "同元素（質子數相同）中子數不同的原子。",
+     "answerEn": "Same element (same protons), different neutrons.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "鈾-235 與鈾-238 的用途差異。",
+     "stemEn": "U-235 vs U-238 uses?",
+     "answerZh": "U-235 可裂變用於核燃料/核武；U-238 不可裂變，用於增殖或貧鈾。",
+     "answerEn": "U-235 fissile (fuel); U-238 non-fissile.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "示蹤劑：為什麼選用短半衰期同位素做醫學示蹤？",
+     "stemEn": "Why use short half-life isotopes as medical tracers?",
+     "answerZh": "短半衰期→輻射快速衰減，減少患者暴露；仍有足夠活性完成成像。",
+     "answerEn": "Short half-life → radiation decays fast, less patient exposure, still detectable.",
+     "years": []
+    }
    ]
   },
   {
@@ -5516,7 +6634,35 @@ const DSE_PHYSICS_GRAPH = {
      "question": "MC"
     }
    ],
-   "stemEn": "Explain why a vacuum flask keeps temperature (which mode each feature reduces)."
+   "stemEn": "Explain why a vacuum flask keeps temperature (which mode each feature reduces).",
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "列舉熱傳遞的三種方式。",
+     "stemEn": "Three modes of heat transfer?",
+     "answerZh": "傳導、對流、輻射。",
+     "answerEn": "Conduction, convection, radiation.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "暖水瓶內膽鍍銀的作用？",
+     "stemEn": "Purpose of silvering in a vacuum flask?",
+     "answerZh": "鍍銀表面反射輻射，減少輻射熱損。",
+     "answerEn": "Silver reflects radiation, reducing radiative heat loss.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "雙層玻璃窗為何保溫？",
+     "stemEn": "Why do double-glazed windows insulate?",
+     "answerZh": "夾層空氣是熱的不良導體減少傳導；密閉無對流；兩層玻璃各自減少輻射交換。",
+     "answerEn": "Air gap reduces conduction; sealed prevents convection; double panes limit radiation.",
+     "years": [
+      "2023"
+     ]
+    }
+   ]
   },
   {
    "id": "ph-mp-fm-projectile-01",
@@ -5548,7 +6694,33 @@ const DSE_PHYSICS_GRAPH = {
      "question": "LQ"
     }
    ],
-   "stemEn": "A body is thrown horizontally at 20 m/s from a 45 m high platform; find time of flight and range."
+   "stemEn": "A body is thrown horizontally at 20 m/s from a 45 m high platform; find time of flight and range.",
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "從 45 m 高平台以 20 m/s 水平拋出，落地時間與水平距離？",
+     "stemEn": "Horizontal throw from 45 m at 20 m/s; time and range?",
+     "answerZh": "t=√(2×45/10)=3 s；x=20×3=60 m。",
+     "answerEn": "t = 3 s; x = 60 m.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "斜拋 30°、初速 20 m/s，求射程和最大高度。",
+     "stemEn": "Projectile 30°, 20 m/s; range and max height?",
+     "answerZh": "R=u²sin2θ/g=400×sin60°/10=34.6 m；H=u²sin²θ/2g=400×0.25/20=5 m。",
+     "answerEn": "R = 34.6 m; H = 5 m.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "拋體在最高點的加速度與速度各是多少？",
+     "stemEn": "At apex of projectile, acceleration and velocity?",
+     "answerZh": "加速度=g（向下不變）；速度=水平分量 u cosθ（垂直分量為 0）。",
+     "answerEn": "a = g downward; v = u cosθ horizontal.",
+     "years": []
+    }
+   ]
   },
   {
    "id": "ph-mp-fm-circular-01",
@@ -5580,7 +6752,35 @@ const DSE_PHYSICS_GRAPH = {
      "question": "LQ"
     }
    ],
-   "stemEn": "A 0.5 kg mass on a 1 m string moves at 4 m/s in a horizontal circle; find tension."
+   "stemEn": "A 0.5 kg mass on a 1 m string moves at 4 m/s in a horizontal circle; find tension.",
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "0.5 kg 以 4 m/s 在 1 m 繩端圓周運動，繩張力？",
+     "stemEn": "0.5 kg at 4 m/s on 1 m string; tension?",
+     "answerZh": "T=mv²/r=0.5×16/1=8 N。",
+     "answerEn": "T = 8 N.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "水平圓周（錐擺）中張力的水平分量提供什麼？垂直分量呢？",
+     "stemEn": "In a conical pendulum, what do tension components provide?",
+     "answerZh": "水平分量提供向心力；垂直分量平衡重力。",
+     "answerEn": "Horizontal: centripetal; vertical: balances weight.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "過山車圓環頂部：最小速度條件？",
+     "stemEn": "Roller coaster loop top: minimum speed condition?",
+     "answerZh": "重力恰提供向心力 mg=mv²/r → v=√(gr)。",
+     "answerEn": "mg = mv²/r → v = √(gr).",
+     "years": [
+      "2021"
+     ]
+    }
+   ]
   },
   {
    "id": "ph-mp-fm-gravitation-01",
@@ -5613,7 +6813,33 @@ const DSE_PHYSICS_GRAPH = {
      "question": "LQ"
     }
    ],
-   "stemEn": "A satellite orbits Earth at radius 7000 km (M=6×10²⁴ kg); find orbital speed and period."
+   "stemEn": "A satellite orbits Earth at radius 7000 km (M=6×10²⁴ kg); find orbital speed and period.",
+   "variants": [
+    {
+     "difficulty": "basic",
+     "stemZh": "衛星軌道半徑 7000 km，軌道速度？",
+     "stemEn": "Satellite r=7000 km; orbital speed?",
+     "answerZh": "v=√(GM/r)≈√(6.67×10⁻¹¹×6×10²⁴/7×10⁶)=7560 m/s≈7.6 km/s。",
+     "answerEn": "v ≈ 7.6 km/s.",
+     "years": []
+    },
+    {
+     "difficulty": "intermediate",
+     "stemZh": "同步衛星：為何軌道必須在赤道正上方？",
+     "stemEn": "Geostationary: why equatorial orbit?",
+     "answerZh": "衛星須與地球同角速度且週期 24h，軌道面必須通過地心；要在赤道平面才能始終對準同一點。",
+     "answerEn": "Must orbit in equatorial plane to stay above same point with 24h period.",
+     "years": []
+    },
+    {
+     "difficulty": "challenge",
+     "stemZh": "兩衛星軌道半徑比 4:1，週期比？",
+     "stemEn": "Two satellites, r ratio 4:1; period ratio?",
+     "answerZh": "T²∝r³（開普勒第三定律）→ T₁/T₂=(4)³ᐟ²=8:1。",
+     "answerEn": "T² ∝ r³ → ratio 8:1.",
+     "years": []
+    }
+   ]
   }
  ],
  "domains": [

@@ -3793,6 +3793,56 @@ const DSE_PHYSICS_GRAPH = {
    "from": "ph-mp-medical",
    "to": "ph-rp-application",
    "type": "cotested"
+  },
+  {
+   "from": "ph-fm-newton",
+   "to": "ph-fm-momentum",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-em-charge",
+   "to": "ph-em-circuit",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-em-charge",
+   "to": "ph-em-force",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-ht-latent",
+   "to": "ph-ht-kinetic",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-wv-prop",
+   "to": "ph-wv-sound",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-ht-transfer",
+   "to": "ph-ht-shc",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-gravitation",
+   "to": "ph-fm-energy",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-rp-decay",
+   "to": "ph-aw-atomic",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-em-force",
+   "to": "ph-em-circuit",
+   "type": "cotested"
+  },
+  {
+   "from": "ph-fm-motion",
+   "to": "ph-fm-conserve",
+   "type": "cotested"
   }
  ],
  "motherProblems": [

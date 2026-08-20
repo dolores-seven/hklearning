@@ -4620,15 +4620,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "因式分解或求根",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Factorise or find roots"
       },
       {
        "content": "x=1 與 x=3",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "x = 1 and x = 3"
       },
       {
        "content": "寫成交點坐標",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Write as intersection coordinates"
       }
      ],
      "lossZh": "只求 x 值不寫成坐標形式。",
@@ -4646,15 +4649,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "寫出判別式 Δ = b²-4ac",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Write the discriminant Δ = b² − 4ac"
       },
       {
        "content": "兩交點 → Δ>0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Two intersections → Δ > 0"
       },
       {
        "content": "解出 k<1",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Solve to get k < 1"
       }
      ],
      "lossZh": "漏「Δ>0」條件或符號方向寫反。",
@@ -4672,21 +4678,35 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "判斷直線過圓心 (0,0)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Notice the line passes through the centre (0,0)"
       },
       {
        "content": "過圓心的直線必割圓（距離=0≠半徑）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "A line through the centre always cuts the circle (distance = 0 ≠ radius)"
       },
       {
        "content": "結論：無解",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conclusion: no solution"
       }
      ],
      "lossZh": "硬套判別式而不先看幾何位置（過圓心直線不可能相切）。",
      "lossEn": "Forcing discriminant without seeing line passes through centre.",
      "years": []
     }
+   ],
+   "solutionSkeletonEn": [
+    "Write the discriminant Δ = b² − 4ac",
+    "Substitute the condition Δ < 0",
+    "Solve the quadratic inequality for the range of k"
+   ],
+   "variationEn": [
+    "Real roots → Δ ≥ 0",
+    "Tangent (one intersection) → Δ = 0",
+    "Two distinct intersections → Δ > 0",
+    "Rephrased: \"intersects the line y = c\""
    ]
   },
   {
@@ -4920,15 +4940,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "通項 aₙ=a₁+(n-1)d",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "General term aₙ = a₁ + (n−1)d"
       },
       {
        "content": "a₁₀=29",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a₁₀ = 29"
       },
       {
        "content": "求和 Sₙ=n/2(a₁+aₙ)=155",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Sum Sₙ = n/2(a₁+aₙ) = 155"
       }
      ],
      "lossZh": "項數用錯（第 10 項是 +9d 不是 +10d）。",
@@ -4946,15 +4969,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "公比 r³ = a₆/a₃ = 8",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Common ratio r³ = a₆/a₃ = 8"
       },
       {
        "content": "r=2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "r = 2"
       },
       {
        "content": "a₁=2，通項 aₙ=2ⁿ",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a₁ = 2, general term aₙ = 2ⁿ"
       }
      ],
      "lossZh": "把 a₆/a₃ 當 r²（間隔 3 項是 r³）。",
@@ -4972,15 +4998,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "公差 d=-3，通項 aₙ=43-3n",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Common difference d = −3, aₙ = 43−3n"
       },
       {
        "content": "找最後一個非負項 aₙ≥0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Find the last non-negative term aₙ ≥ 0"
       },
       {
        "content": "n=14",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "n = 14"
       }
      ],
      "lossZh": "把「和最大」誤當「項最大」；用 aₙ>0 判斷。",
@@ -4989,6 +5018,16 @@ const DSE_MATH_GRAPH = {
       "2022"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Decide whether it is an AP or a GP",
+    "General term aₙ = a + (n−1)d or arⁿ⁻¹",
+    "Sum formula Sₙ; use the infinite sum when |r| < 1"
+   ],
+   "variationEn": [
+    "Deduce the general term from Sₙ (using Sₙ − Sₙ₋₁)",
+    "Grouped sum of mixed AP + GP",
+    "Sequence combined with logs/exponentials (compound interest, growth)"
    ]
   },
   {
@@ -5348,11 +5387,13 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "指數化 x-1=2³",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Exponentiate: x − 1 = 2³"
       },
       {
        "content": "x=9",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "x = 9"
       }
      ],
      "lossZh": "漏驗定義域（x-1>0）。",
@@ -5370,15 +5411,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "合併 log：log[x(x-3)]=1",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Combine logs: log[x(x−3)] = 1"
       },
       {
        "content": "x(x-3)=10 → 解二次",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "x(x−3) = 10 → solve the quadratic"
       },
       {
        "content": "驗根捨 -2，取 x=5",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Reject x = −2, take x = 5"
       }
      ],
      "lossZh": "漏驗根（-2 使 log 無意義）。",
@@ -5396,15 +5440,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "換底 logₓ2 = 1/log₂x",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Change base: logₓ2 = 1/log₂x"
       },
       {
        "content": "設 y 解二次方程",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Let y, solve the quadratic"
       },
       {
        "content": "還原 x=2^y",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Recover x = 2^y"
       }
      ],
      "lossZh": "不會換底公式把兩個不同底統一。",
@@ -5413,6 +5460,16 @@ const DSE_MATH_GRAPH = {
       "2023"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Convert the log form to exponential form",
+    "Combine logs using the laws of logarithms",
+    "Solve and verify the roots (argument > 0)"
+   ],
+   "variationEn": [
+    "Change base then solve",
+    "Unknown base",
+    "Mixed log and exponential equations"
    ]
   },
   {
@@ -6256,15 +6313,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "距離公式",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Distance formula"
       },
       {
        "content": "√32=4√2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "√32 = 4√2"
       },
       {
        "content": "中點 (3,4)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Midpoint (3,4)"
       }
      ],
      "lossZh": "距離算成 √(4+16)=√20（應是 16+16）。",
@@ -6282,15 +6342,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "中點 (4,4)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Midpoint (4,4)"
       },
       {
        "content": "AB 斜率 → 垂直斜率 -2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Slope of AB → perpendicular slope −2"
       },
       {
        "content": "點斜式 → 2x+y=12",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Point-slope form → 2x + y = 12"
       }
      ],
      "lossZh": "垂直斜率取反數不取負倒數。",
@@ -6308,15 +6371,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "點到直線距離公式",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Point-to-line distance formula"
       },
       {
        "content": "d=2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "d = 2"
       },
       {
        "content": "弦長=2√(r²-d²)=2√21",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Chord = 2√(r²−d²) = 2√21"
       }
      ],
      "lossZh": "用 r-d 當弦長。",
@@ -6325,6 +6391,16 @@ const DSE_MATH_GRAPH = {
       "2023"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Midpoint formula",
+    "Distance formula",
+    "Negative reciprocal slope + point-slope form"
+   ],
+   "variationEn": [
+    "Checking three collinear points",
+    "Fourth vertex of a parallelogram",
+    "Area of a triangle (shoelace / splitting)"
    ]
   },
   {
@@ -6410,15 +6486,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "分子 C(3,2)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Numerator C(3,2)"
       },
       {
        "content": "分母 C(5,2)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Denominator C(5,2)"
       },
       {
        "content": "3/10",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "3/10"
       }
      ],
      "lossZh": "用有放回（無放回才用組合）。",
@@ -6436,15 +6515,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "總數 36",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Total 36"
       },
       {
        "content": "和 7 有 6 種",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Sum 7 has 6 outcomes"
       },
       {
        "content": "P=1/6",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "P = 1/6"
       }
      ],
      "lossZh": "漏列對稱組合（如 (1,6) 和 (6,1)）。",
@@ -6462,15 +6544,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "捆綁法 4!×2!",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Bundling method 4!×2!"
       },
       {
        "content": "總數 5!",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Total 5!"
       },
       {
        "content": "2/5",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "2/5"
       }
      ],
      "lossZh": "漏乘 2!（甲乙內部排列）。",
@@ -6479,6 +6564,16 @@ const DSE_MATH_GRAPH = {
       "2022"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Total using C(10,3)",
+    "'At least' via complementary event or cases",
+    "P = favourable / total"
+   ],
+   "variationEn": [
+    "At most / exactly k items",
+    "With replacement",
+    "Then conditional probability"
    ]
   },
   {
@@ -8176,15 +8271,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "配方成 (x-3)²-4",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Complete square to (x−3)²−4"
       },
       {
        "content": "頂點 (3,-4)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Vertex (3,−4)"
       },
       {
        "content": "最小值 -4",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Minimum −4"
       }
      ],
      "lossZh": "配方常數項算錯（+5 變成 -9+5=-4）。",
@@ -8202,15 +8300,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "設交點式 y=a(x-1)(x-3)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Set y = a(x−1)(x−3)"
       },
       {
        "content": "對稱軸 x=2，頂點 (2,-4)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Axis x = 2, vertex (2,−4)"
       },
       {
        "content": "a=4，展開",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a = 4, expand"
       }
      ],
      "lossZh": "以為頂點橫坐標是 (1+3)/2 以外的值。",
@@ -8228,15 +8329,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "開口向上且恆 ≥0 → Δ≤0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Opens up and always ≥ 0 → Δ ≤ 0"
       },
       {
        "content": "k²-16≤0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "k² − 16 ≤ 0"
       },
       {
        "content": "-4≤k≤4",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "−4 ≤ k ≤ 4"
       }
      ],
      "lossZh": "把「恆≥0」誤當 Δ≥0（開口向上要 Δ≤0）。",
@@ -8245,6 +8349,16 @@ const DSE_MATH_GRAPH = {
       "2020"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Complete the square: y = a(x−h)² + k",
+    "Vertex (h, k)",
+    "Determine the extremum from the opening direction"
+   ],
+   "variationEn": [
+    "Find vertex / axis of symmetry",
+    "Optimisation problems (area, profit)",
+    "Combine with the discriminant for intersections"
    ]
   },
   {
@@ -8629,15 +8743,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "寫出正弦定理",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Write the sine rule"
       },
       {
        "content": "代入 a/sinA = b/sinB",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Substitute a/sinA = b/sinB"
       },
       {
        "content": "b=10√2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "b = 10√2"
       }
      ],
      "lossZh": "對應邊角配錯。",
@@ -8655,15 +8772,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "餘弦定理 c²=a²+b²-2ab cosC",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Cosine rule c² = a² + b² − 2ab cosC"
       },
       {
        "content": "cos60°=½",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "cos 60° = ½"
       },
       {
        "content": "c=√57",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "c = √57"
       }
      ],
      "lossZh": "中間項符號或 cos60° 值錯。",
@@ -8681,15 +8801,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "面積公式 S=½ab sinC",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Area formula S = ½ab sinC"
       },
       {
        "content": "sin30°=½",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "sin 30° = ½"
       },
       {
        "content": "S=12",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "S = 12"
       }
      ],
      "lossZh": "用 ½×底×高但沒對應角。",
@@ -8698,6 +8821,16 @@ const DSE_MATH_GRAPH = {
       "2022"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Use the cosine rule to find the third side",
+    "Area = ½ ab sinC",
+    "(Use the sine rule to find angles)"
+   ],
+   "variationEn": [
+    "Sine rule to find angles/sides",
+    "Two sides and the included angle given",
+    "cos being negative for obtuse angles is normal"
    ]
   },
   {
@@ -11263,11 +11396,13 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "韋達定理",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Apply Vieta's formulas"
       },
       {
        "content": "5、6",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Sum 5, product 6"
       }
      ],
      "lossZh": "符號錯（-b/a 是 5 不是 -5）。",
@@ -11285,15 +11420,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "α+β、αβ",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "α+β, αβ"
       },
       {
        "content": "(α+β)²-2αβ",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "(α+β)² − 2αβ"
       },
       {
        "content": "13",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "13"
       }
      ],
      "lossZh": "忘了 2αβ 的符號。",
@@ -11311,15 +11449,18 @@ const DSE_MATH_GRAPH = {
      "marks": [
       {
        "content": "新根和",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "New sum of roots"
       },
       {
        "content": "新根積",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "New product of roots"
       },
       {
        "content": "x²+3x+1=0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "x² + 3x + 1 = 0"
       }
      ],
      "lossZh": "新根和化簡錯。",
@@ -11328,6 +11469,18 @@ const DSE_MATH_GRAPH = {
       "2022"
      ]
     }
+   ],
+   "solutionSkeletonEn": [
+    "Let the roots be α and β",
+    "α + β = −b/a, αβ = c/a",
+    "Convert the condition into equations in α+β and αβ",
+    "Solve the equation for the parameter",
+    "Substitute back to verify"
+   ],
+   "variationEn": [
+    "One root is N times the other",
+    "Two roots have the same/opposite signs (discriminant + Vieta)",
+    "New equation with function values as roots"
    ]
   },
   {

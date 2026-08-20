@@ -2679,15 +2679,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "寫 n(HCl)=cV=0.100×25/1000=0.0025 mol",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "n(HCl) = cV = 0.100×25/1000 = 0.0025 mol"
       },
       {
        "content": "由 1:1 摩爾比得 n(NaOH)=n(HCl)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "n(NaOH) = n(HCl) from the 1:1 ratio"
       },
       {
        "content": "V(NaOH)=n/c=0.0025/0.100=25.0 mL",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "V(NaOH) = n/c = 0.0025/0.100 = 25.0 mL"
       }
      ],
      "lossZh": "忘記把 mL 換成 L（25 mL → 0.025 L）導致數量級錯誤。",
@@ -2705,19 +2708,23 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "n(HCl)=0.100×20/1000=0.002 mol",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "n(HCl) = 0.100×20/1000 = 0.002 mol"
       },
       {
        "content": "Na₂CO₃+2HCl→… 摩爾比 1:2，n(Na₂CO₃)=0.001 mol/份",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Na₂CO₃+2HCl→… ratio 1:2, n(Na₂CO₃)=0.001 mol/aliquot"
       },
       {
        "content": "乘以稀釋倍數 250/25=10 → 總量 0.01 mol → 1.06 g",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "× dilution factor 250/25=10 → total 0.01 mol → 1.06 g"
       },
       {
        "content": "純度=1.06/2.50×100%=42.4%",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Purity = 1.06/2.50×100% = 42.4%"
       }
      ],
      "lossZh": "忽略稀釋倍數（25 mL 取樣 ×10 才是總量），直接把每份當總量。",
@@ -2735,24 +2742,39 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "總 HCl=0.200×50/1000=0.01 mol",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Total HCl = 0.200×50/1000 = 0.01 mol"
       },
       {
        "content": "剩餘 HCl=n(NaOH)=0.100×30/1000=0.003 mol",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Residual HCl = n(NaOH) = 0.100×30/1000 = 0.003 mol"
       },
       {
        "content": "與 CaCO₃ 反應的 HCl=0.007 mol",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "HCl reacted with CaCO₃ = 0.007 mol"
       },
       {
        "content": "CaCO₃:2HCl=1:2 → 0.0035 mol=0.35 g → 70%",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "CaCO₃:2HCl = 1:2 → 0.0035 mol = 0.35 g → 70%"
       }
      ],
      "lossZh": "返滴定方向搞反：NaOH 滴定的是「剩餘」HCl，不是樣品。",
      "lossEn": "Back-titration confusion: NaOH neutralises residual HCl, not the sample."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Write the neutralisation ionic equation H⁺ + OH⁻ → H₂O",
+    "n(NaOH) = cV = 0.100 × 20.0/1000",
+    "n(HCl) from the 1:1 mole ratio",
+    "c(HCl) = n/V = 0.0800 mol/L"
+   ],
+   "variationEn": [
+    "Back titration (excess base then titrate back)",
+    "Purity calculation of an impure sample",
+    "Indicator choice and endpoint colour"
    ]
   },
   {
@@ -2801,15 +2823,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "陰極（還原）：Na⁺+e⁻→Na",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Cathode (reduction): Na⁺+e⁻→Na"
       },
       {
        "content": "陽極（氧化）：2Cl⁻→Cl₂+2e⁻",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Anode (oxidation): 2Cl⁻→Cl₂+2e⁻"
       },
       {
        "content": "產物 Na 與 Cl₂",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Products Na and Cl₂"
       }
      ],
      "lossZh": "電極與反應類型搞反：陽極是氧化（失電子），陰極是還原（得電子）。",
@@ -2827,15 +2852,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "陽極銅溶解 Cu→Cu²⁺+2e⁻（活性電極）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Anode Cu dissolves Cu→Cu²⁺+2e⁻ (active electrode)"
       },
       {
        "content": "陰極銅沉積 Cu²⁺+2e⁻→Cu",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Cathode Cu deposits Cu²⁺+2e⁻→Cu"
       },
       {
        "content": "電解液 CuSO₄ 濃度不變",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "CuSO₄ concentration unchanged"
       }
      ],
      "lossZh": "誤以為濃度下降：活性銅電極會補充 Cu²⁺，濃度保持不變。",
@@ -2853,20 +2881,34 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "熔融：產 Na+Cl₂",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Molten: Na + Cl₂"
       },
       {
        "content": "溶液：H₂O 優先於 Na⁺ 還原產 H₂",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Aqueous: H₂O reduces before Na⁺ → H₂"
       },
       {
        "content": "OH⁻ 優先於 Cl⁻ 氧化產 O₂，另生成 NaOH",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "OH⁻ oxidises before Cl⁻ → O₂, also NaOH"
       }
      ],
      "lossZh": "忽視水參與反應：電解溶液時產 H₂/O₂ 而非 Na/Cl₂。",
      "lossEn": "Ignoring water: aqueous electrolysis gives H₂/O₂, not Na/Cl₂."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Cathode (reduction): Na⁺ + e⁻ → Na",
+    "Anode (oxidation): 2Cl⁻ → Cl₂ + 2e⁻",
+    "Describe ion migration and product collection",
+    "(Extension) Difference in electrolysing NaCl(aq)"
+   ],
+   "variationEn": [
+    "Electrolysing CuSO₄(aq) (active electrode)",
+    "Electroplating principle",
+    "Electrolysis combined with industrial metal extraction"
    ]
   },
   {
@@ -2915,15 +2957,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "寫出 Kc=[NH₃]²/([N₂][H₂]³)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Write Kc = [NH₃]²/([N₂][H₂]³)"
       },
       {
        "content": "增 [N₂] → 分母增大 → Q 瞬時減小",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Adding [N₂] → denominator larger → Q drops"
       },
       {
        "content": "Q<Kc → 正向移動",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Q < Kc → forward shift"
       }
      ],
      "lossZh": "沿用已淘汰的勒沙特列原理：2022 新綱要求用 Q vs Kc 解釋。",
@@ -2939,15 +2984,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "Q=[B]/[A]=3.0/2.0=1.5",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Q = [B]/[A] = 3.0/2.0 = 1.5"
       },
       {
        "content": "比較 Q=1.5 < Kc=4.0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Compare Q = 1.5 < Kc = 4.0"
       },
       {
        "content": "Q<Kc → 正向移動（生成更多 B）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Q < Kc → forward (more B)"
       }
      ],
      "lossZh": "Q 計算方向寫反：Q 是「產物/反應物」，不是「反應物/產物」。",
@@ -2965,20 +3013,34 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "放熱反應升溫 → Kc 減小",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Exothermic: heating → Kc decreases"
       },
       {
        "content": "此刻 Q（原濃度算）> 新 Kc → 逆向移動",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Current Q (original concentrations) > new Kc → reverse"
       },
       {
        "content": "結論：SO₃ 平衡濃度減少",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conclusion: equilibrium [SO₃] decreases"
       }
      ],
      "lossZh": "只說「升溫逆向」而無 Kc 變化邏輯：放熱反應 Kc 隨升溫而降。",
      "lossEn": "Saying \"heat shifts reverse\" without Kc logic: exothermic Kc decreases on heating."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Write Kc = [NH₃]²/([N₂][H₂]³)",
+    "Adding [N₂] increases the denominator → Q drops",
+    "Q < Kc → shifts forward",
+    "New equilibrium forms, Kc unchanged"
+   ],
+   "variationEn": [
+    "Effect of temperature on Kc (exothermic/endothermic)",
+    "Effect of pressure/volume changes",
+    "Why a catalyst does not shift equilibrium"
    ]
   },
   {
@@ -3024,15 +3086,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "由與 NaHCO₃ 反應 → 含 -COOH（羧酸）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Reacts with NaHCO₃ → contains -COOH"
       },
       {
        "content": "C₃H₆O₂ 羧酸 = 丙酸",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "C₃H₆O₂ acid = propanoic acid"
       },
       {
        "content": "畫出結構 CH₃CH₂COOH 並命名 propanoic acid",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Draw CH₃CH₂COOH and name propanoic acid"
       }
      ],
      "lossZh": "把 C₃H₆O₂ 當酯（酯不與 NaHCO₃ 放 CO₂）。",
@@ -3050,15 +3115,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "NaHCO₃ 區分：酸放 CO₂ / 酯無反應",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "NaHCO₃ distinguishes: acid gives CO₂ / ester no reaction"
       },
       {
        "content": "畫出丁酸 CH₃CH₂CH₂COOH 或異丁酸 (CH₃)₂CHCOOH",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Draw butanoic CH₃CH₂CH₂COOH or isobutanoic (CH₃)₂CHCOOH"
       },
       {
        "content": "畫出酯（乙酸乙酯 CH₃COOC₂H₅）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Draw the ester (ethyl ethanoate CH₃COOC₂H₅)"
       }
      ],
      "lossZh": "漏畫異構體：C₄H₈O₂ 的羧酸有正丁酸和異丁酸兩種。",
@@ -3074,20 +3142,34 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "X 與 Na 放 H₂ → 醇；可氧化成酸 → 伯醇",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "X + Na gives H₂ → alcohol; oxidisable to acid → primary alcohol"
       },
       {
        "content": "C₄H₈O 醇 = 丁醇（正丁醇或支鏈）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "C₄H₈O alcohol = butanol (n-butanol or branched)"
       },
       {
        "content": "Y = 相應丁酸",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Y = the corresponding butanoic acid"
       }
      ],
      "lossZh": "忽略「可氧化成酸→伯醇」的關鍵限制（仲醇氧化只到酮）。",
      "lossEn": "Missing key clue: oxidisable to acid → primary alcohol."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Reacts with NaHCO₃ → X is a carboxylic acid (-COOH)",
+    "Degree of unsaturation = 1 → the C=O in the acid",
+    "Write isomers of the C₄H₈O₂ acid (butanoic/isobutanoic)",
+    "Name and draw the structures"
+   ],
+   "variationEn": [
+    "Number of ester isomers",
+    "Functional group transformation chain (alcohol→aldehyde→acid→ester)",
+    "Deducing structure from mass/IR spectra"
    ]
   },
   {
@@ -3670,15 +3752,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "NaCl 固態不導電（離子被晶格固定）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Solid NaCl does not conduct (ions fixed in lattice)"
       },
       {
        "content": "石墨導電（層內離域電子）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Graphite conducts (delocalised electrons in layers)"
       },
       {
        "content": "本質：自由電子 vs 固定離子",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Essence: free electrons vs fixed ions"
       }
      ],
      "lossZh": "以為 NaCl 固態導電（它熔融/溶液態才導電）。",
@@ -3694,15 +3779,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "離子化合物：強離子鍵，巨大晶格",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Ionic compounds: strong ionic bonds, giant lattice"
       },
       {
        "content": "簡單分子：弱分子間力",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Simple molecules: weak intermolecular forces"
       },
       {
        "content": "破壞所需能量不同 → 熔點不同",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Different energy to break → different melting points"
       }
      ],
      "lossZh": "把分子間力當成共價鍵來解釋熔點。",
@@ -3720,20 +3808,34 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "鑽石：共價網狀（最強）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Diamond: covalent network (strongest)"
       },
       {
        "content": "NaCl：離子鍵（次之）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "NaCl: ionic bonds (second)"
       },
       {
        "content": "冰：氫鍵/範德華力（最弱）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Ice: hydrogen bonds/van der Waals (weakest)"
       }
      ],
      "lossZh": "把冰的氫鍵說成「共價鍵」（氫鍵是分子間力）。",
      "lossEn": "Calling ice's H-bonds \"covalent bonds\" (they're intermolecular)."
     }
+   ],
+   "solutionSkeletonEn": [
+    "NaCl: giant ionic lattice, conducts molten/dissolved, not solid",
+    "Graphite: layered structure, covalent bonds + free electrons in layers",
+    "Graphite conducts (free electrons); NaCl needs mobile ions",
+    "Compare melting point / hardness etc."
+   ],
+   "variationEn": [
+    "Diamond vs graphite comparison",
+    "Metallic bonding and malleability",
+    "Polymer structure and properties"
    ]
   },
   {
@@ -3887,15 +3989,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "粉末更快",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Powder is faster"
       },
       {
        "content": "表面積大 → 碰撞機會多",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Larger surface area → more collisions"
       },
       {
        "content": "結論：速率加快",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conclusion: rate increases"
       }
      ],
      "lossZh": "只答「粉末快」不給原因（要提碰撞理論）。",
@@ -3913,15 +4018,18 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "兩組硫代硫酸鈉+酸，不同溫度",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Two thiosulphate+acid sets at different temperatures"
       },
       {
        "content": "量度變濁時間",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Measure time to turbidity"
       },
       {
        "content": "控制其他變量（濃度/體積）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Control other variables (concentration/volume)"
       }
      ],
      "lossZh": "未控制變量（兩組濃度不同則無可比性）。",
@@ -3937,20 +4045,34 @@ const DSE_CHEM_GRAPH = {
      "marks": [
       {
        "content": "催化劑降低活化能（替代途徑）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Catalyst lowers activation energy (alternative pathway)"
       },
       {
        "content": "正逆反應同速加快",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Speeds up forward and reverse equally"
       },
       {
        "content": "Kc 不變 → 平衡位置不變",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Kc unchanged → equilibrium position unchanged"
       }
      ],
      "lossZh": "以為催化劑能移動平衡（它只加快到達平衡）。",
      "lossEn": "Thinking catalyst shifts equilibrium (it only speeds reaching it)."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Identify dependent (rate) and independent (concentration) variables",
+    "Control variables: temperature, marble surface area, mass",
+    "Measurement: collect gas volume/mass over time",
+    "Safety measures and error discussion"
+   ],
+   "variationEn": [
+    "Effect of surface area (particle size)",
+    "Effect of temperature on rate",
+    "Role of catalysts"
    ]
   },
   {

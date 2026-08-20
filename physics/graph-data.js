@@ -3899,15 +3899,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "淨力 = 10-4 = 6 N",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Net force = 10−4 = 6 N"
       },
       {
        "content": "a = F/m = 6/2",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a = F/m = 6/2"
       },
       {
        "content": "a = 3 m/s² + 單位",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a = 3 m/s² + units"
       }
      ],
      "lossZh": "用 10 N 而非淨力 6 N（漏摩擦力）。",
@@ -3923,15 +3926,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "下滑分量 mg sin30° = 15 N",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Down-slope component mg sin30° = 15 N"
       },
       {
        "content": "a = 15/3",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a = 15/3"
       },
       {
        "content": "a = 5 m/s²",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "a = 5 m/s²"
       }
      ],
      "lossZh": "用 mg 而非 mg sinθ（未沿斜面對齊）。",
@@ -3949,20 +3955,35 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "整體 a = 25/(2+3) = 5 m/s²",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Whole system a = 25/(2+3) = 5 m/s²"
       },
       {
        "content": "對 2 kg 隔離：T = 2×5",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Isolate the 2 kg: T = 2×5"
       },
       {
        "content": "T = 10 N",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "T = 10 N"
       }
      ],
      "lossZh": "只算整體不算張力（題問的是 T）。",
      "lossEn": "Solving whole system but not the asked tension."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Draw a free-body diagram (FBD) to isolate forces",
+    "Apply F = ma to find acceleration",
+    "Use kinematic equations for velocity/displacement",
+    "Verify with the impulse-momentum theorem"
+   ],
+   "variationEn": [
+    "Block on an incline (with friction)",
+    "Connected bodies (string tension)",
+    "Spring-mass system (linked to SHM)",
+    "Multi-body systems (whole + isolation method)"
    ]
   },
   {
@@ -4017,15 +4038,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "½mv² = mgh",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "½mv² = mgh"
       },
       {
        "content": "v = √(2gh)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = √(2gh)"
       },
       {
        "content": "v = √(2×10×5) = 10 m/s",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = √(2×10×5) = 10 m/s"
       }
      ],
      "lossZh": "質量沒消去（其實兩邊都有 m 可約）。",
@@ -4043,15 +4067,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "mgh = 2×10×3 = 60 J（初能量）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "mgh = 2×10×3 = 60 J (initial energy)"
       },
       {
        "content": "½mv² = ½×2×36 = 36 J（末動能）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "½mv² = ½×2×36 = 36 J (final KE)"
       },
       {
        "content": "克服摩擦做功 = 60-36 = 24 J",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Work against friction = 60−36 = 24 J"
       }
      ],
      "lossZh": "把摩擦功算成總能量而非差值。",
@@ -4067,20 +4094,35 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "½kx² = ½mv²",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "½kx² = ½mv²"
       },
       {
        "content": "½×200×0.04 = ½×0.5×v²",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "½×200×0.04 = ½×0.5×v²"
       },
       {
        "content": "v = 4 m/s",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = 4 m/s"
       }
      ],
      "lossZh": "彈性勢能公式寫成 kx² 而漏 ½。",
      "lossEn": "Writing kx² instead of ½kx²."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Initial: list all forms of energy (KE/PE/internal)",
+    "Process: work done by external forces (W = Fs/Fd)",
+    "Final: energy redistributed",
+    "Apply conservation: initial energy + W = final energy"
+   ],
+   "variationEn": [
+    "Pendulum (PE↔KE, ignoring air resistance)",
+    "Block sliding down an incline (friction → internal energy)",
+    "Spring system (elastic PE↔KE)",
+    "Perfectly inelastic collision (KE loss → internal/sound)"
    ]
   },
   {
@@ -4247,15 +4289,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "動量守恆：2×4 = (2+2)v",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conserve momentum: 2×4 = (2+2)v"
       },
       {
        "content": "v = 2 m/s",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = 2 m/s"
       },
       {
        "content": "方向與原運動相同",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Direction same as original motion"
       }
      ],
      "lossZh": "用動能守恆（完全非彈性不守動能）。",
@@ -4271,15 +4316,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "動量守恆：0.5×3 = 0.5v₁+1v₂",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conserve momentum: 0.5×3 = 0.5v₁+1v₂"
       },
       {
        "content": "動能守恆：½×0.5×9 = ½×0.5v₁²+½×1v₂²",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Conserve KE: ½×0.5×9 = ½×0.5v₁²+½×1v₂²"
       },
       {
        "content": "聯立解 v₁=-1, v₂=2 m/s",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Solve: v₁ = −1, v₂ = 2 m/s"
       }
      ],
      "lossZh": "彈性碰撞只列動量方程（缺動能方程無法求兩個末速）。",
@@ -4297,20 +4345,36 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "爆炸：系統初動量 = 0",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Explosion: initial momentum = 0"
       },
       {
        "content": "0 = 1×v + 2×6",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "0 = 1×v + 2×6"
       },
       {
        "content": "v = -12 m/s（向左）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = −12 m/s (to the left)"
       }
      ],
      "lossZh": "漏負號（方向）；只求大小。",
      "lossEn": "Missing negative sign (direction)."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Confirm zero net external force (conservation condition)",
+    "Write initial momentum = final momentum",
+    "Resolve into x/y directions (oblique collisions)",
+    "Classify the collision (elastic/inelastic)"
+   ],
+   "variationEn": [
+    "1-D elastic collision (momentum + KE conserved)",
+    "Perfectly inelastic collision (stick together)",
+    "Oblique collision (2-D momentum conservation)",
+    "Explosion (initial momentum = 0)",
+    "Recoil (gun/rocket)"
    ]
   },
   {
@@ -4478,15 +4542,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "總電阻 R = 4+4 = 8 Ω",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Total resistance R = 4+4 = 8 Ω"
       },
       {
        "content": "I = V/R = 12/8",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "I = V/R = 12/8"
       },
       {
        "content": "I = 1.5 A",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "I = 1.5 A"
       }
      ],
      "lossZh": "串聯當並聯計算（串聯電阻相加）。",
@@ -4504,15 +4571,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "1/R = 1/4+1/12 = 1/3",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "1/R = 1/4+1/12 = 1/3"
       },
       {
        "content": "R = 3 Ω",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "R = 3 Ω"
       },
       {
        "content": "I = 24/3 = 8 A",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "I = 24/3 = 8 A"
       }
      ],
      "lossZh": "並聯電阻直接相加（要取倒數和）。",
@@ -4530,20 +4600,36 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "燈泡電流 I = P/V = 6/6 = 0.5 A？改：I=P/V=3/6=0.5 A",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Bulb current I = P/V = 3/6 = 0.5 A"
       },
       {
        "content": "燈泡電阻 = 6/0.5 = 12 Ω",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Bulb resistance = 6/0.5 = 12 Ω"
       },
       {
        "content": "R 分壓 6 V → R = 6/0.5 = 12 Ω",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "R takes 6 V → R = 6/0.5 = 12 Ω"
       }
      ],
      "lossZh": "用燈泡額定功率求錯電流（串聯中電流相等）。",
      "lossEn": "Wrong current from bulb rating (series current shared)."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Simplify the series/parallel circuit",
+    "Find the equivalent resistance (R = R1+R2 or 1/R = 1/R1+1/R2)",
+    "Use I = V/R for the total current",
+    "Current/voltage divider rules for each branch",
+    "Compute power: P = VI = I²R = V²/R"
+   ],
+   "variationEn": [
+    "Pure resistive circuits (mixed series/parallel)",
+    "Circuits with motors (non-ohmic; use P=VI not I²R)",
+    "Maximum power transfer (internal = external resistance)",
+    "Capacitor charge/discharge (Q = CV, time constant RC)"
    ]
   },
   {
@@ -4708,15 +4794,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "ε = ΔΦ/Δt",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ε = ΔΦ/Δt"
       },
       {
        "content": "ΔΦ = 0.3-0.1 = 0.2 Wb",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ΔΦ = 0.3−0.1 = 0.2 Wb"
       },
       {
        "content": "ε = 0.2/0.2 = 1.0 V",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ε = 0.2/0.2 = 1.0 V"
       }
      ],
      "lossZh": "單位寫錯（Wb/s = V）。",
@@ -4734,15 +4823,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "N 極插入 → 磁通增加",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "N pole inserted → flux increases"
       },
       {
        "content": "楞次定律：感應磁場抗拒插入（N 朝上）",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Lenz: induced field opposes insertion (N upward)"
       },
       {
        "content": "右手定則定電流方向",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Right-hand rule for the current direction"
       }
      ],
      "lossZh": "只說「抗拒」未用右手定則給出方向。",
@@ -4760,20 +4852,35 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "ε = BLv",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ε = BLv"
       },
       {
        "content": "ε = 0.2×0.5×4",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ε = 0.2×0.5×4"
       },
       {
        "content": "ε = 0.4 V",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "ε = 0.4 V"
       }
      ],
      "lossZh": "漏 B、L、v 三者需互相垂直的條件。",
      "lossEn": "Forgetting B, L, v must be mutually perpendicular."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Determine the change in magnetic flux (ΔΦ/Δt)",
+    "Use Lenz's law for the induced current direction",
+    "Compute induced emf (ε = −NΔΦ/Δt)",
+    "Analyse energy conversion (mechanical → electrical)"
+   ],
+   "variationEn": [
+    "Coil moving in a magnetic field (cutting field lines)",
+    "Magnet inserted/removed (flux change)",
+    "Transformer principle (primary/secondary voltage-current)",
+    "Generator principle (mechanical → electrical)"
    ]
   },
   {
@@ -8672,15 +8779,18 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "T = mv²/r",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "T = mv²/r"
       },
       {
        "content": "T = 0.5×16/1",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "T = 0.5×16/1"
       },
       {
        "content": "8 N",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "8 N"
       }
      ],
      "lossZh": "水平圓周張力直接 = 向心力（無垂直分量平衡）。",
@@ -8696,11 +8806,13 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "水平分量 → 向心力",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Horizontal component → centripetal force"
       },
       {
        "content": "垂直分量 → 平衡重力",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "Vertical component → balances weight"
       }
      ],
      "lossZh": "分量作用說反。",
@@ -8718,16 +8830,27 @@ const DSE_PHYSICS_GRAPH = {
      "marks": [
       {
        "content": "mg = mv²/r",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "mg = mv²/r"
       },
       {
        "content": "v = √(gr)",
-       "pts": 1
+       "pts": 1,
+       "contentEn": "v = √(gr)"
       }
      ],
      "lossZh": "漏臨界條件（N=0）。",
      "lossEn": "Missing N=0 condition."
     }
+   ],
+   "solutionSkeletonEn": [
+    "Identify the centripetal force source: string tension (net force for a horizontal circle)",
+    "Substitute into F = mv²/r for the tension",
+    "(Extension) Conical pendulum: resolve tension into horizontal (centripetal) and vertical (balances weight)"
+   ],
+   "variationEn": [
+    "Minimum speed at the top of a roller-coaster loop",
+    "Maximum angular speed before an object slides on a turntable"
    ]
   },
   {
